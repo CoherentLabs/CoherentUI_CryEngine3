@@ -10,7 +10,7 @@
 namespace CoherentUIPlugin
 {
 
-    CFullscreenTriangleDrawer::CFullscreenTriangleDrawer()
+	CFullscreenTriangleDrawer::CFullscreenTriangleDrawer()
 		: m_pVertexDeclaration(NULL)
 		, m_pVertexBuffer(NULL)
 		, m_pVertexShader9(NULL)
@@ -18,7 +18,7 @@ namespace CoherentUIPlugin
 		, m_pStateBlock(NULL)
 		, m_pVertexShader11(NULL)
 		, m_pPixelShader11(NULL)
-    {
+	{
 		ERenderType renderType = gEnv->pRenderer->GetRenderType();
 
 		if (renderType == eRT_DX9)
@@ -29,7 +29,7 @@ namespace CoherentUIPlugin
 		{
 			CreateDX11Resources();
 		}
-    }
+	}
 
 	void CFullscreenTriangleDrawer::CreateDX9Resources()
 	{
@@ -182,8 +182,8 @@ namespace CoherentUIPlugin
 		// TODO: implement
 	}
 
-    CFullscreenTriangleDrawer::~CFullscreenTriangleDrawer()
-    {
+	CFullscreenTriangleDrawer::~CFullscreenTriangleDrawer()
+	{
 		SAFE_RELEASE(m_pVertexDeclaration);
 		SAFE_RELEASE(m_pVertexBuffer);
 		SAFE_RELEASE(m_pVertexShader9);
@@ -192,7 +192,7 @@ namespace CoherentUIPlugin
 
 		SAFE_RELEASE(m_pVertexShader11);
 		SAFE_RELEASE(m_pPixelShader11);
-    }
+	}
 
 	void CFullscreenTriangleDrawer::Draw(void* pTexture)
 	{
@@ -208,9 +208,9 @@ namespace CoherentUIPlugin
 		}
 	}
 
-    void CFullscreenTriangleDrawer::DrawDX9(IDirect3DTexture9* texture)
-    {
-        float width = (float)gEnv->pRenderer->GetWidth();
+	void CFullscreenTriangleDrawer::DrawDX9(IDirect3DTexture9* texture)
+	{
+		float width = (float)gEnv->pRenderer->GetWidth();
 		float height = (float)gEnv->pRenderer->GetHeight();
 
 		IDirect3DDevice9* pDevice = static_cast<IDirect3DDevice9*>(gD3DDevice);
@@ -234,10 +234,10 @@ namespace CoherentUIPlugin
 		pDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0, 3);
 
 		m_pStateBlock->Apply();
-    }
+	}
 
-    void CFullscreenTriangleDrawer::DrawDX11(ID3D11Texture2D* texture)
-    {
-        // TODO: implement + cache a SRV for the resource
-    }
+	void CFullscreenTriangleDrawer::DrawDX11(ID3D11Texture2D* texture)
+	{
+		// TODO: implement + cache a SRV for the resource
+	}
 }

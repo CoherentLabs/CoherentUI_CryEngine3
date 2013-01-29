@@ -3,11 +3,11 @@
 
 namespace Coherent
 {
-    namespace UI
-    {
-        class View;
-        class SurfaceResponse;
-    }
+	namespace UI
+	{
+		class View;
+		class SurfaceResponse;
+	}
 }
 
 struct IDirect3DTexture9;
@@ -23,13 +23,13 @@ struct ID3D11PixelShader;
 namespace CoherentUIPlugin
 {
 
-    class CFullscreenTriangleDrawer
-    {
-        public:
-            CFullscreenTriangleDrawer();
-            ~CFullscreenTriangleDrawer();
+	class CFullscreenTriangleDrawer
+	{
+		public:
+			CFullscreenTriangleDrawer();
+			~CFullscreenTriangleDrawer();
 
-            void Draw(void* pTexture);
+			void Draw(void* pTexture);
 
 		private:
 			void CreateDX9Resources();
@@ -38,9 +38,9 @@ namespace CoherentUIPlugin
 			void DrawDX9(IDirect3DTexture9* pTexture);
 			void DrawDX11(ID3D11Texture2D* pTexture);
 
-        private:
+		private:
 			// DX9
-            IDirect3DVertexDeclaration9* m_pVertexDeclaration;
+			IDirect3DVertexDeclaration9* m_pVertexDeclaration;
 			IDirect3DVertexBuffer9* m_pVertexBuffer;
 			IDirect3DVertexShader9* m_pVertexShader9;
 			IDirect3DPixelShader9* m_pPixelShader9;
@@ -49,6 +49,6 @@ namespace CoherentUIPlugin
 			// DX11
 			ID3D11VertexShader* m_pVertexShader11;
 			ID3D11PixelShader* m_pPixelShader11;
-    };
+	};
 
 }
