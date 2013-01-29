@@ -1,0 +1,61 @@
+ li.tip
+ {
+	list-style-type: none;
+	width: 36px;
+	height: 36px;
+	border: 2px solid #fcac6a;
+	border-radius: 22px;
+	padding: 2px;
+	margin: 4px;
+	-webkit-transition: width 2s ease-in-out;
+	display: none;
+	overflow: hidden;
+	background-color: rgba(255, 235, 19, 0.2);
+ }
+ 
+ li.rollIn
+ {
+	width: 250px;
+ }
+ 
+ li.rollOut
+ {
+	width: 36px;
+ }
+ 
+ div.tipIcon
+ {
+	background-image: url('../img/icon.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 34px;
+	height: 34px;
+	float: right;
+ }
+ 
+.rollIn > div.tipIcon 
+{
+	-webkit-animation: turning_cw 1.25s infinite linear;
+}
+ 
+.rollOut > div.tipIcon
+{
+	-webkit-animation: turning_acw 1.25s infinite linear;
+}
+ 
+div.tipText
+{
+	width: 100%;
+	height: 32px;
+	padding-top: 6px;
+	padding-left: 6px;
+	display: none;
+	color: white;
+}
+
+#tipBox 
+{
+	position: relative;
+	top: 20px;
+	left: -5px;
+}

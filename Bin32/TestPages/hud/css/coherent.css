@@ -1,0 +1,379 @@
+body
+{
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	font-family: 'Audiowide', cursive;
+	-webkit-perspective: preserve-3d;
+}
+
+div
+{
+	-webkit-user-select: none;
+}
+
+.HealthBar
+{
+	opacity: 0.6;
+}
+
+.HealthBarTick
+{
+	margin: 2px;
+	width: 12px;
+	height: 25px;
+	float: left;
+	background-color: rgba(128, 128, 128, 0.3);
+	-webkit-box-shadow: inset 2px 2px 3px red;
+}
+
+.Filled.HealthBarTick
+{ 
+	background-color: #829F06;
+	-webkit-box-shadow: inset 2px 2px 3px #ffec13;
+}
+
+
+div.Digit
+{
+	overflow: hidden;
+	height: 40px;
+	width: 22px;
+	float: right;
+	padding: 2px;
+}
+
+div.Digit > img
+{
+	height: 100%;
+}
+
+div.Clear
+{
+	clear: both;
+}
+
+#hud
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+}
+
+#Interaction
+{
+	display: none;
+	position: absolute;
+	top: 645px;
+	left: 500px;
+	color: #ffec13;
+	text-shadow: 0px 0px 2px #000, 0px 0px 2px #000;
+}
+
+.WidgetMockup
+{
+	border: 2px solid orange;
+	background-color: #ffec13;
+	opacity: 0.5;
+}
+
+@-webkit-keyframes compassForward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(-25deg) translateZ(20px);
+	}                                                                      
+	50%                                                                    
+	{                                                                      
+		-webkit-transform: perspective(500) rotateX(-15deg) translateZ(30px) translateY(10px);
+	}                                                                      
+  	100%                                                                   
+	{                                                                      
+  		-webkit-transform: perspective(500) rotateX(-25deg) translateZ(20px);
+	}                                                                  
+ }                                                                     
+                                                                       
+ @-webkit-keyframes compassBackward                                    
+{                                                                      
+  	0%                                                                 
+	{                                                                  
+  		-webkit-transform: perspective(500) rotateX(-25deg) translateZ(20px);
+	}                                                                  
+	50%                                                                
+	{                                                                  
+		-webkit-transform: perspective(500) rotateX(-28deg) translateZ(20px) translateY(5px);
+	}                                                                  
+  	100%                                                               
+	{                                                                  
+  		-webkit-transform: perspective(500) rotateX(-25deg) translateZ(20px);
+	}
+ }
+ 
+#compass
+{
+	position: absolute;
+	top: 10px;
+	width: 400px;
+	left: -webkit-calc(50% - 200px);
+	height: 80px;
+	color: #ffec13;
+	-webkit-transform: perspective(500) rotateX(-25deg) translateZ(20px);
+}
+
+#compass.Forward
+{
+	-webkit-animation: compassForward 1s infinite;
+}
+
+#compass.Backward
+{
+	-webkit-animation: compassBackward 1s infinite;
+}
+
+#noisyGadget
+{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 200px;
+	height: 200px;
+	float: left;
+	-webkit-transform: perspective(500) rotateX(-20deg) rotateY(-20deg);
+}
+
+@-webkit-keyframes noisyForward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(-20deg) rotateY(-20deg);
+	}
+	50%
+	{
+		-webkit-transform: perspective(500) rotateX(-15deg) rotateY(-15deg) translateX(10px) translateY(10px);
+	}
+  	100%
+	{
+  		-webkit-transform: perspective(500) rotateX(-20deg) rotateY(-20deg);
+	}
+ }
+ 
+ @-webkit-keyframes noisyBackward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(-20deg) rotateY(-20deg);
+	}
+	50%
+	{
+		-webkit-transform: perspective(500) rotateX(-25deg) rotateY(-25deg) translateX(10px) translateY(20px);
+	}
+  	100%
+	{
+  		-webkit-transform: perspective(500) rotateX(-20deg) rotateY(-20deg);
+	}
+ }
+
+#noisyGadget.Forward
+{
+	-webkit-animation: noisyForward 1s infinite;
+}
+
+#noisyGadget.Backward
+{
+	-webkit-animation: noisyBackward 1s infinite;
+}
+
+#oscilloscopeHolder
+{
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+	width: 150px;
+	height: 80px;
+	background-image: url('../img/scope.png');
+	-webkit-transform: perspective(500) rotateX(20deg) rotateY(20deg);
+	opacity: 0.8;
+}
+
+#oscilloscope
+{
+	padding: 3px;
+}
+
+
+@-webkit-keyframes oscilloscopeForward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(20deg);
+	}
+	50%
+	{
+		-webkit-transform: perspective(500) rotateX(15deg) rotateY(15deg) translateX(10px) translateY(20px);
+	}
+  	100%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(20deg);
+	}
+ }
+ 
+ @-webkit-keyframes oscilloscopeBackward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(20deg);
+	}
+	50%
+	{
+		-webkit-transform: perspective(500) rotateX(25deg) rotateY(25deg) translateX(10px) translateY(20px);
+	}
+  	100%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(20deg);
+	}
+ }
+
+
+#oscilloscopeHolder.Forward
+{
+	-webkit-animation: oscilloscopeForward 1s infinite;
+}
+
+#oscilloscopeHolder.Backward
+{
+	-webkit-animation: oscilloscopeBackward 1s infinite;
+}
+
+@-webkit-keyframes playerStatsForward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(-20deg);
+	}
+	50%
+	{
+		-webkit-transform: perspective(500) rotateX(15deg) rotateY(-15deg) translateX(10px) translateY(20px);
+	}
+  	100%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(-20deg);
+	}
+ }
+ 
+ @-webkit-keyframes playerStatsBackward
+{
+  	0%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(-20deg);
+	}
+	50%
+	{
+		-webkit-transform: perspective(500) rotateX(25deg) rotateY(-25deg) translateX(10px) translateY(20px);
+	}
+  	100%
+	{
+  		-webkit-transform: perspective(500) rotateX(20deg) rotateY(-20deg);
+	}
+ }
+
+#playerStats
+{
+	position: absolute;
+	bottom: 30px;
+	right: 50px;
+	width: 160px;
+	height: 100px;
+	float: right;
+	text-align: center;
+	-webkit-transform: perspective(500) rotateX(20deg) rotateY(-20deg);
+}
+
+#playerStats.Forward
+{
+	-webkit-animation: playerStatsForward 1s infinite;
+}
+
+#playerStats.Backward
+{
+	-webkit-animation: playerStatsBackward 1s infinite;
+}
+
+@-webkit-keyframes turning_cw
+{
+  	0%
+	{
+  		-webkit-transform: rotate(0deg);
+	}
+  	100%
+	{
+  		-webkit-transform: rotate(360deg);
+	}
+ }
+  
+@-webkit-keyframes turning_acw
+{
+  	0%
+	{
+  		-webkit-transform: rotate(360deg);
+	}
+  	100%
+	{
+  		-webkit-transform: rotate(0deg);
+	}
+}
+
+div.OuterCircle
+{
+  	text-align: center;
+  	width: 100%;
+  	height: 100%;
+  	position: relative;
+  	opacity: 0.5;
+	background-image: url('../img/gadget_outer.png');
+  	-webkit-animation: turning_cw 5s infinite;
+}
+
+  	
+div.InnerCircle
+{
+  	position:absolute;
+  	width: 100%;
+  	height: 100%;
+	background-image: url('../img/gadget_inner.png');
+  	-webkit-transform: rotate(360deg); 
+  	-webkit-animation: turning_acw 4s infinite;
+}
+
+ div.CenterCircle
+{
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+	background-image: url('../img/gadget_center.png');
+  	-webkit-transform: rotate(360deg); 
+  	-webkit-animation: turning_cw 5s infinite;
+}
+
+ div.GadgetContent
+ {
+  	position:absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 100%;
+  	height: 100%;
+	background: rgba(0, 0, 0, 0);
+  	text-align: center;
+  	line-height: 200px;
+  	font-size: 32px;
+  	color: #ffec13;
+  	text-shadow: 0 4px 4px #fcac6a;
+  	font-weight: bold;
+}
+
+ div.GadgetContent > img
+ {
+	padding: 70px;
+	width: 60px;
+	height: 60px;
+ }

@@ -1,0 +1,701 @@
+<ObjectLayer>
+ <Layer Name="Sound" GUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" FullName="Sound" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" Color="6965523">
+  <LayerObjects>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{2274B000-D228-4D3D-8445-FF113A53867B}" Name="AV_water_in_cave" Pos="672.5,417.5,164" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:lake_calm" OuterRadius="10" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{F4A3DF01-7872-4234-82E3-20AA9B261D45}" Name="forest_upper_waterfall_small" Pos="869,347,165.5" FloorNumber="-1" Rotate="0.81915188,0,0,0.57357663" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="sounds/environment:forest:waterfall_medium" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{8694F307-10C5-427C-A95F-A9164E299FFA}" Name="AV_Hut8" Pos="513.58246,457.15915,152.34132" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{4DED070A-3276-4B5A-85F9-687864A851B5}" Name="AS_Hut9" Pos="418.21887,408.62656,146.787" FloorNumber="-1" Rotate="-0.49242353,0,0,0.87035573" ColorRGB="16763904" Width="0" Height="2.8" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.7562866,1.0003052,-0.022491455"/>
+     <Point Pos="-3.8600769,1.3900757,-0.013977051"/>
+     <Point Pos="-7.4801636,2.6372681,0.058227539"/>
+     <Point Pos="-6.2553711,6.0521088,-0.0046844482"/>
+     <Point Pos="-5.9390259,6.9347382,-0.018661499"/>
+     <Point Pos="-5.4424133,8.2931519,-0.0022735596"/>
+     <Point Pos="-0.48641968,6.4950562,-0.010101318"/>
+     <Point Pos="0.66653442,6.0997314,-0.030090332"/>
+     <Point Pos="2.0600281,5.597229,-0.013916016"/>
+    </Points>
+    <Entities>
+     <Entity Id="{983D776B-960C-4B19-83F7-D88EE73FCB28}"/>
+     <Entity Id="{2B7EAECA-4D7C-461C-9268-A7F748C30D13}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="1" Side4="1" Side5="0" Side6="1" Side7="1" Side8="0" Side9="1" Side10="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{071DD70E-5BB4-4AAA-8856-3B5E6B18F270}" Name="RV_Hut1" Pos="699.81989,351.3324,170.76404" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="1" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{23070C17-0A0B-42C3-BFC1-1A1040AF800D}" Name="AS_Tower1" Pos="388.90497,401.83908,145.20276" FloorNumber="-1" Rotate="-0.19936797,0,0,0.97992468" ColorRGB="16763904" Width="0" Height="5.9" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.4990845,-0.28765869,0"/>
+     <Point Pos="-4.7731323,1.8702698,0"/>
+     <Point Pos="-5.1782227,4.4121094,0"/>
+     <Point Pos="-4.2489014,5.138031,0"/>
+     <Point Pos="-3.4370117,5.9067383,0"/>
+     <Point Pos="-2.7426147,6.7181396,0"/>
+     <Point Pos="-0.22235107,6.3329468,0"/>
+     <Point Pos="1.8487549,3.9828796,0"/>
+     <Point Pos="1.463562,1.462616,0"/>
+    </Points>
+    <Entities>
+     <Entity Id="{95AD72B0-C1FD-487F-8E38-5C0E032EBD04}"/>
+     <Entity Id="{35AD72CD-DF1B-4436-80C0-74F275B2ED9B}"/>
+     <Entity Id="{9B57E9CB-3E64-4C64-AAD2-E7E91A50F7F8}"/>
+     <Entity Id="{A661A326-E70C-4723-A030-81A8EDD48C01}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="1" Side3="1" Side4="1" Side5="0" Side6="1" Side7="1" Side8="1" Side9="1" Side10="1" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{322F2119-38BD-448A-BFBC-E5AE809094E3}" Name="AS_forest" Pos="862.85962,294.37592,165.6684" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="70" AreaId="0" GroupId="1" Priority="10" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-133.16748,-40.107742,-7.4393921"/>
+     <Point Pos="-258.46466,5.3574829,-7.3873596"/>
+     <Point Pos="-296.59015,45.012421,-7.4046478"/>
+     <Point Pos="-242.7204,52.34967,-7.4107819"/>
+     <Point Pos="-220.34302,102.13318,-7.4069519"/>
+     <Point Pos="-208.32996,85.870209,-7.4473877"/>
+     <Point Pos="-151.43097,73.979462,-7.445694"/>
+     <Point Pos="-132.33685,85.124817,-7.3709106"/>
+     <Point Pos="2.1403809,86.874084,-4.2909851"/>
+     <Point Pos="20.890381,58.124084,-1.4464722"/>
+    </Points>
+    <Entities>
+     <Entity Id="{C7689179-48FB-465D-A7E8-3D6580434725}"/>
+     <Entity Id="{7D3AEB79-39C8-4F74-902B-2906D6F8D68F}"/>
+     <Entity Id="{509A1F75-DD29-402F-A377-DC21C5C5579A}"/>
+     <Entity Id="{DD1AD4F4-E2D6-41D8-ABA6-8440317A0D38}"/>
+     <Entity Id="{42A0C786-7319-4A3B-BE39-693141D7B5B1}"/>
+     <Entity Id="{8FA05F5E-AC19-4E27-8132-E93F0B45B860}"/>
+     <Entity Id="{B7623062-7CB8-4DAC-B6F2-ECCB110890B3}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{D608481C-088F-407C-9154-5B799947C05F}" Name="forest_lower_waterfall_sweetener2" Pos="592.43304,405.17462,141.86169" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_sweetener" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{6E313B1D-8594-48D4-8765-0DFF247C54A1}" Name="AV_Hut10" Pos="431.75693,400.36453,152.38615" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{7A5A251F-7E6A-4B3E-B315-BE99AF82CCA3}" Name="RV_Hut7" Pos="527.93738,452.95743,151.18707" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{3A333720-2A7E-4FA9-B8B3-DBBD1CA8E3C1}" Name="RSV_village_shore_waves" Pos="529.54224,553.75073,145.29691" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="24" bEnabled="0" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="5" MinWaitTime="3" soundName="Sounds/environment:forest:shorelapping_waves" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{A661A326-E70C-4723-A030-81A8EDD48C01}" Name="RSV_Towerdrips" Pos="392.74911,404.54257,166.04123" FloorNumber="-1" Rotate="0.99965733,0,0,0.026176956" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="4" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="19" MinWaitTime="8" soundName="Sounds/environment:forest:water_dripping_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{2B891D29-061C-4DFD-8FED-8B9E89FF8D7F}" Name="AS_Hut8" Pos="509.00955,456.55756,144.08423" FloorNumber="-1" Rotate="-0.17364815,0,0,0.98480779" ColorRGB="16763904" Width="0" Height="2.8" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.7562866,1.0003052,-0.022491455"/>
+     <Point Pos="-3.8600769,1.3900757,-0.013977051"/>
+     <Point Pos="-7.4801636,2.6372681,0.058227539"/>
+     <Point Pos="-6.2553406,6.052124,0.17471313"/>
+     <Point Pos="-5.9389648,6.9347534,0.20718384"/>
+     <Point Pos="-5.4424133,8.2931519,-0.0022735596"/>
+     <Point Pos="-0.48641968,6.4950562,-0.010101318"/>
+     <Point Pos="0.66653442,6.0997314,-0.030090332"/>
+     <Point Pos="2.0600281,5.597229,-0.013916016"/>
+    </Points>
+    <Entities>
+     <Entity Id="{8694F307-10C5-427C-A95F-A9164E299FFA}"/>
+     <Entity Id="{63BFF75C-E751-4D77-98B2-FB4DB8DCDCB6}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="1" Side4="1" Side5="0" Side6="1" Side7="1" Side8="0" Side9="1" Side10="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{61A53A2A-7931-4CF6-804A-E58A4243AFEF}" Name="AV_Hut6" Pos="544.07501,441.38821,153.65294" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{4001452C-42EC-4B6B-A7DC-9B3ADC0ECEBC}" Name="RSV_village_seagull2" Pos="494.86676,488.30865,144.4848" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="6" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="7" MinWaitTime="3" soundName="Sounds/environment:forest:seagulls_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{5156702F-F2E3-412F-8CE4-4155C5684D6E}" Name="SES_waterfall_big" Pos="700.17224,311.61057,165.26776" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_big" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{D3640938-46D9-4B05-B420-F208F16F689B}" Name="AV_village" Pos="527.54224,551.75073,145.29691" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" soundName="Sounds/environment:forest:village_path_ambience" OuterRadius="25" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{5ECA6338-0148-489A-A040-8E65AA4678CB}" Name="forest_lower_waterfall_sweetener1" Pos="585.05658,380.99844,165.75874" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_sweetener" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{EC702739-C2CA-4FC6-911B-365228B65E81}" Name="AS_forest_river" Pos="860.77844,354.91098,158.9825" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="15" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-27.90332,6.2397461,0"/>
+     <Point Pos="-40.478027,-2.8116455,0"/>
+     <Point Pos="-62.953125,-0.0091552734,0"/>
+     <Point Pos="-91.546753,5.052124,0"/>
+     <Point Pos="-138.48193,-1.7467041,0"/>
+     <Point Pos="-164.08105,-25.700165,0"/>
+     <Point Pos="-202.66296,-13.907043,0.024749756"/>
+     <Point Pos="-224.4715,-13.790192,0"/>
+     <Point Pos="-221.15771,-22.74057,0"/>
+     <Point Pos="-187.15784,-30.003906,-0.25836182"/>
+     <Point Pos="-175.30328,-39.71225,0"/>
+     <Point Pos="-148.38916,-41.382904,0"/>
+     <Point Pos="-143.104,-21.345123,0"/>
+     <Point Pos="-135.28516,-10.656006,0"/>
+     <Point Pos="-122.16943,-11.22998,0"/>
+     <Point Pos="-114.87567,-4.6246033,0"/>
+     <Point Pos="-105.76776,-5.7240295,0"/>
+     <Point Pos="-95.882324,-2.7001953,0"/>
+     <Point Pos="-82.937988,-7.0101318,0"/>
+     <Point Pos="-74.756348,-8.0175781,0"/>
+     <Point Pos="-53.306641,-7.0189209,0"/>
+     <Point Pos="-38.291504,-9.2484131,0"/>
+     <Point Pos="-19.291504,-0.73632813,0"/>
+     <Point Pos="0.75732422,-8.930542,-0.027923584"/>
+     <Point Pos="11.058594,-4.7791748,0"/>
+    </Points>
+    <Entities>
+     <Entity Id="{BF4C9179-8AD9-4061-B2AD-2849512A2AD5}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Side15="0" Side16="0" Side17="0" Side18="0" Side19="0" Side20="0" Side21="0" Side22="0" Side23="0" Side24="0" Side25="0" Side26="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{6BCF653A-085D-4E56-AC4A-16F1055252B8}" Name="RSV_hilltop_distant_stick_oneshot" Pos="583.16327,393.69717,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="13" MinWaitTime="10" soundName="Sounds/environment:forest:distant_stick_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{EB3E2D3E-1844-4A16-AEF0-746E2C78F487}" Name="forest_ambience_preview" Pos="773.17004,368.11935,167.95088" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:ambience_preview" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{1AA3243F-AA28-490D-931E-272641CA6679}" Name=" forest_waterfall_medium_ambience2" Pos="592.22058,401.85678,156.93869" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:waterfall_big_ambience" OuterRadius="16" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{20C62440-F99C-420F-9200-C5E648A14A83}" Name=" forest_waterfall_medium_ambience1" Pos="629.43414,343.71149,174.36243" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:waterfall_big_ambience" OuterRadius="12" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{33023442-AF70-4236-9307-00A15CDB069A}" Name="AS_Hut4" Pos="544.87646,479.2262,144.39" FloorNumber="-1" Rotate="0.70710677,0,0,-0.70710677" ColorRGB="16763904" Width="0" Height="3.3" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-6.2157898,-4.260498,0.058227539"/>
+     <Point Pos="-9.6405029,0.91259766,0.011505127"/>
+     <Point Pos="-11.025665,2.9125977,0.012557983"/>
+     <Point Pos="-12.232452,4.5413818,-0.0022735596"/>
+     <Point Pos="-11.449341,5.0151978,0.0018920898"/>
+     <Point Pos="-9.602478,6.2712402,-0.0078735352"/>
+     <Point Pos="-8.4014587,6.9337769,-0.0040893555"/>
+     <Point Pos="-7.3647461,7.6334839,-0.024429321"/>
+     <Point Pos="-5.8822632,8.7084961,-0.013916016"/>
+    </Points>
+    <Entities>
+     <Entity Id="{BFFF1169-85DF-4F87-AF1A-8FAE10CC1774}"/>
+     <Entity Id="{8931B468-68FC-4DA9-B8EA-1250D6269B09}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="1" Side3="0" Side4="1" Side5="1" Side6="0" Side7="1" Side8="0" Side9="1" Side10="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{DE515742-0706-4E32-A207-4A64E37F7539}" Name="AS_cave" Pos="653.10101,387.22507,159.68977" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="23.7" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-8.9449463,11.256653,0.048446655"/>
+     <Point Pos="18.144836,48.643738,0.25445557"/>
+     <Point Pos="51.218933,55.586273,0.014602661"/>
+     <Point Pos="73.127869,35.622894,0.069580078"/>
+     <Point Pos="62.885254,-5.7602844,0.10453796"/>
+     <Point Pos="55.078186,-9.6635437,0.099243164"/>
+    </Points>
+    <Entities>
+     <Entity Id="{90672944-871D-4B7D-8D24-06A694CE27D2}"/>
+     <Entity Id="{BBFC7B70-4F4F-4119-A326-090C4B8E9001}"/>
+     <Entity Id="{40404AD6-8FF2-4E77-9940-FAF148B50783}"/>
+     <Entity Id="{D5823BA5-D0A6-4C3D-80DB-C8901DAE3698}"/>
+     <Entity Id="{4B6CAFF9-3F91-44D0-84E3-A2DAA209590D}"/>
+     <Entity Id="{58BC88CC-47E1-4E7A-BE7A-39A9538532BE}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="1" Side3="1" Side4="1" Side5="1" Side6="0" Side7="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{B55D7643-3369-44C7-83E2-DD0CDE3A15EA}" Name="forest_lower_waterfall_sweetener" Pos="637.10999,339.80222,164.67746" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_sweetener" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{90672944-871D-4B7D-8D24-06A694CE27D2}" Name="AV_cave" Pos="695.66107,410.51517,172.88536" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:cave_ambience" OuterRadius="20" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="ReverbVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{14BCBE48-7ACB-427D-A147-5E378CDF94A7}" Name="RV_start_duct" Pos="856.43036,350.00528,165.22809" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Sewer"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{BD01674C-1BFE-40D9-A51C-C8E8BB883065}" Name="RSV_flies" Pos="539.42603,464.03162,154.97038" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="0.5" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="5" MinWaitTime="2" soundName="Sounds/environment:forest:flies_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="ReverbVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{CABCB64F-7709-48B4-BAFF-946869E4C4AC}" Name="RV_village" Pos="526.54224,550.75073,145.29691" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="1" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="no_effect"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{C425CA4F-4310-48B7-B25B-131C22B9DB4E}" Name="AV_Hut7" Pos="527.18658,453.6282,151.15396" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{69DC0056-725F-4BD4-B3D2-EC1209460A2E}" Name="AS_water_in_cave" Pos="681,419.125,163" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="6" AreaId="0" GroupId="0" Priority="0" Closed="1" DisplayFilled="0" DisplaySoundInfo="0" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-7,-2.125,0"/>
+     <Point Pos="-11,-0.125,0"/>
+     <Point Pos="-11,13.375,1"/>
+     <Point Pos="0,13.375,1"/>
+    </Points>
+    <Entities>
+     <Entity Id="{2274B000-D228-4D3D-8445-FF113A53867B}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{E33B0956-9082-4951-A4A7-E0CC72DAB992}" Name="AS_Hut3" Pos="553.82043,467.73422,144.53218" FloorNumber="-1" Rotate="0.70710677,0,0,-0.70710677" ColorRGB="16763904" Width="0" Height="3.1" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-5.2879639,-3.3222046,0.016677856"/>
+     <Point Pos="-7.3311157,-4.6723022,0.029006958"/>
+     <Point Pos="-8.9436035,-5.8557129,0.058227539"/>
+     <Point Pos="-11.405884,-2.1121216,0.027511597"/>
+     <Point Pos="-12.175079,-0.90197754,0.012069702"/>
+     <Point Pos="-13.155121,0.59008789,-0.0022735596"/>
+     <Point Pos="-4.1409912,6.2998657,-0.013916016"/>
+     <Point Pos="-3.6783142,5.5447388,-0.0099182129"/>
+     <Point Pos="-2.2988281,3.4213867,0.013504028"/>
+    </Points>
+    <Entities>
+     <Entity Id="{8D267793-33E6-4ACC-868F-956FE4C1D72D}"/>
+     <Entity Id="{054757AC-9347-44DF-A7D0-4935C8F35F16}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="0" Side4="1" Side5="0" Side6="1" Side7="1" Side8="1" Side9="0" Side10="0" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{63BFF75C-E751-4D77-98B2-FB4DB8DCDCB6}" Name="RV_Hut8" Pos="514.33325,456.48837,152.37444" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{8FA05F5E-AC19-4E27-8132-E93F0B45B860}" Name="RSV_forest_woodpecker_oneshot" Pos="782.52661,345.19724,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="20" bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" MaxWaitTime="23" MinWaitTime="15" soundName="Sounds/environment:forest:woodpecker_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="ReverbVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{B7623062-7CB8-4DAC-B6F2-ECCB110890B3}" Name="RV_forest" Pos="762.59509,311.50879,217.34094" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="1" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="no_effect"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{6627C366-7DB8-41A5-9B31-34578FA450A0}" Name="AV_hilltop" Pos="599.80292,388.81461,218.90161" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" soundName="Sounds/environment:forest:hilltop_ambience" OuterRadius="20" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{519D8967-BB0C-4720-B09B-A0940943A4BD}" Name="AS_white_water_02" Pos="587.13336,383.90793,137.82581" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="25" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-11.026855,33.631317,0.0056610107"/>
+     <Point Pos="-3.175354,47.053406,0.019134521"/>
+     <Point Pos="14.141724,33.167145,0.058288574"/>
+     <Point Pos="15.821716,-0.22946167,-0.042877197"/>
+     <Point Pos="7.4360352,-4.1824341,-0.08052063"/>
+    </Points>
+    <Entities>
+     <Entity Id="{1AA3243F-AA28-490D-931E-272641CA6679}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{4CBC2068-500D-4152-BD58-928A30F18201}" Name="RV_Hut5" Pos="537.86292,497.75253,150.42026" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{8931B468-68FC-4DA9-B8EA-1250D6269B09}" Name="AV_Hut4" Pos="549.9353,482.69952,151.8801" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{BFFF1169-85DF-4F87-AF1A-8FAE10CC1774}" Name="RV_Hut4" Pos="550.21429,482.9129,151.91321" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{63FD4F69-B9D3-448F-B399-482E420F6CE3}" Name="SES_Cave_Buzz01" Parent="{33721815-73E5-4B16-9A7C-DB26DD7A1310}" Pos="-0.011657715,-0.10159302,5.266861" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:electrical_humm_01_oneshot" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{983D776B-960C-4B19-83F7-D88EE73FCB28}" Name="AV_Hut9" Pos="421.82974,409.02939,152.38615" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{CB87CC6E-BB49-4D15-9DD1-28664E1AF2B8}" Name="AS_Hut2" Pos="561.45502,490.41357,144.34016" FloorNumber="-1" Rotate="0.70710677,0,0,-0.70710677" ColorRGB="16763904" Width="0" Height="2.4" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3.5961304,-3.84021,0.032943726"/>
+     <Point Pos="-4.3760071,-4.7012329,0.047424316"/>
+     <Point Pos="-5.3930664,-5.7783813,0.058227539"/>
+     <Point Pos="-9.7598267,-1.7697754,-0.0022735596"/>
+     <Point Pos="-4.366394,4.09198,-0.013916016"/>
+    </Points>
+    <Entities>
+     <Entity Id="{86D46BA7-5544-4F03-B579-E3A1FEA6FC46}"/>
+     <Entity Id="{779E59DA-BC08-4EF5-9BD0-EDD085A0D243}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="1" Side4="1" Side5="1" Side6="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{32186970-0F04-4B9C-AB57-0294A092907E}" Name="RSV_village_seagull01" Pos="528.54224,552.75073,145.29691" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="8" MinWaitTime="4" soundName="Sounds/environment:forest:seagulls_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="ReverbVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{BBFC7B70-4F4F-4119-A326-090C4B8E9001}" Name="RV_cave" Pos="696.42487,410.00272,172.81473" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Cave"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{509A1F75-DD29-402F-A377-DC21C5C5579A}" Name="RSV_forest_owl_cry_oneshot" Pos="767.93433,333.49887,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="21" MinWaitTime="11" soundName="Sounds/environment:forest:owl_cry_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{455DE477-7A82-4B53-AEBF-BBA877D6C4FC}" Name="AS_Tower2" Pos="388.90497,401.83908,150.02174" FloorNumber="-1" Rotate="-0.19936797,0,0,0.97992468" ColorRGB="16763904" Width="0" Height="15.3" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.4990845,-0.28765869,0"/>
+     <Point Pos="-4.7731323,1.8702698,0"/>
+     <Point Pos="-5.1782227,4.4121094,0"/>
+     <Point Pos="-4.2489014,5.138031,0"/>
+     <Point Pos="-3.4370117,5.9067383,0"/>
+     <Point Pos="-2.7426147,6.7181396,0"/>
+     <Point Pos="-0.22235107,6.3329468,0"/>
+     <Point Pos="1.8487549,3.9828796,0"/>
+     <Point Pos="1.463562,1.462616,0"/>
+    </Points>
+    <Entities>
+     <Entity Id="{95AD72B0-C1FD-487F-8E38-5C0E032EBD04}"/>
+     <Entity Id="{35AD72CD-DF1B-4436-80C0-74F275B2ED9B}"/>
+     <Entity Id="{9B57E9CB-3E64-4C64-AAD2-E7E91A50F7F8}"/>
+     <Entity Id="{A661A326-E70C-4723-A030-81A8EDD48C01}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="1" Side3="1" Side4="1" Side5="1" Side6="1" Side7="1" Side8="1" Side9="1" Side10="1" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{4FC27779-51E0-4464-8BAA-9604832710AE}" Name="AS_Hut7" Pos="524.64325,449.23438,144.08423" FloorNumber="-1" Rotate="0.7547096,0,0,-0.65605903" ColorRGB="16763904" Width="0" Height="2.8" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.7562866,1.0003052,-0.022491455"/>
+     <Point Pos="-3.8600769,1.3900757,-0.013977051"/>
+     <Point Pos="-7.4801636,2.6372681,0.058227539"/>
+     <Point Pos="-6.2553406,6.052124,0.17471313"/>
+     <Point Pos="-5.9389648,6.9347534,0.20718384"/>
+     <Point Pos="-5.4424133,8.2931519,-0.0022735596"/>
+     <Point Pos="-0.48641968,6.4950562,-0.010101318"/>
+     <Point Pos="0.66653442,6.0997314,-0.030090332"/>
+     <Point Pos="2.0600281,5.597229,-0.013916016"/>
+    </Points>
+    <Entities>
+     <Entity Id="{7A5A251F-7E6A-4B3E-B315-BE99AF82CCA3}"/>
+     <Entity Id="{C425CA4F-4310-48B7-B25B-131C22B9DB4E}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="1" Side4="1" Side5="0" Side6="1" Side7="1" Side8="0" Side9="1" Side10="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{BF4C9179-8AD9-4061-B2AD-2849512A2AD5}" Name="AV_forest_river" Pos="860.48547,350.59311,167.13321" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:river_busy" OuterRadius="5" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{C7689179-48FB-465D-A7E8-3D6580434725}" Name="AV_forest" Pos="776.052,320.83127,218.90161" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:forest_ambience" OuterRadius="10" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{7D3AEB79-39C8-4F74-902B-2906D6F8D68F}" Name="RSV_forest_distant_stick_oneshot" Pos="759.41235,325.71384,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="13" MinWaitTime="10" soundName="Sounds/environment:forest:distant_stick_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{7C5F747A-A5E3-40BA-8A20-2B19BEE2BA20}" Name="SES_Cave_Buzz03" Parent="{F57CD460-EA50-4196-A6BA-4F22B6694883}" Pos="0.018615723,0.073883057,5.5948334" FloorNumber="-1" Rotate="0.99976581,0.021640394,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:electrical_humm_03_oneshot" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{99199F7F-1025-4035-8B93-20667D46221E}" Name="RSVs_village_flies2" Pos="536.0849,486.38657,144.09007" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="3" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3.4655762,4.5041504,-0.05770874"/>
+     <Point Pos="-8.3348999,1.2384338,0.034927368"/>
+     <Point Pos="-5.0848999,-3.3865662,-0.34007263"/>
+    </Points>
+    <Entities>
+     <Entity Id="{BD01674C-1BFE-40D9-A51C-C8E8BB883065}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{CD8AA47F-8B2E-43D9-B386-F45485A46585}" Name="RSV_hilltop_owl_cry_oneshot" Pos="591.68524,401.48221,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="21" MinWaitTime="11" soundName="Sounds/environment:forest:owl_cry_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{6DB04881-C955-4EA0-8542-13A4C904912E}" Name="forest_lower_waterfall_small" Pos="604.31116,358.78085,163.50279" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_big" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{13608A81-D0E4-42A4-8A31-70BA5B43AE51}" Name="RSV_hilltop_woodpecker_oneshot" Pos="606.27753,413.18057,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="20" bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" MaxWaitTime="21" MinWaitTime="13" soundName="Sounds/environment:forest:woodpecker_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{42A0C786-7319-4A3B-BE39-693141D7B5B1}" Name="RSV_forest_bush_movement_oneshot" Pos="777.74243,340.20541,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" MaxWaitTime="16" MinWaitTime="12" soundName="Sounds/environment:forest:bush_movement_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{87B3FA86-4FB3-4915-BCE0-224BA4F65723}" Name="AS_duct" Pos="871.46075,339.97302,162.7029" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="5" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-13.487061,1.9320068,0"/>
+     <Point Pos="-9.5114136,16.08197,0.016494751"/>
+     <Point Pos="2.5882568,10.752136,-0.015304565"/>
+    </Points>
+    <Entities>
+     <Entity Id="{14BCBE48-7ACB-427D-A147-5E378CDF94A7}"/>
+     <Entity Id="{A7149790-277A-4402-BF19-92E896336407}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{7C13558B-3BBE-443F-B0E4-67077FD366E6}" Name="AS_Hut5" Pos="533.21893,500.11548,144.46811" FloorNumber="-1" Rotate="0.2987076,0,0,0.95434469" ColorRGB="16763904" Width="0" Height="2.7" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3.4930115,-3.8366089,0.032943726"/>
+     <Point Pos="-4.2728882,-4.6976318,0.047424316"/>
+     <Point Pos="-5.2899475,-5.7747803,0.058227539"/>
+     <Point Pos="-9.6567078,-1.7661743,-0.0022735596"/>
+     <Point Pos="-7.7111359,0.3772583,-0.0093841553"/>
+     <Point Pos="-6.938736,1.230896,0.011154175"/>
+     <Point Pos="-4.3812103,4.0731201,-0.013916016"/>
+     <Point Pos="-1.7808075,1.6963501,-0.0023651123"/>
+     <Point Pos="-1.1008148,1.0814209,-0.0082092285"/>
+    </Points>
+    <Entities>
+     <Entity Id="{0C044B93-D800-450B-A2FC-97EB0E1A29E2}"/>
+     <Entity Id="{4CBC2068-500D-4152-BD58-928A30F18201}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="1" Side4="1" Side5="1" Side6="0" Side7="1" Side8="1" Side9="0" Side10="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{A7149790-277A-4402-BF19-92E896336407}" Name="AV_duct" Pos="856.23413,352.22687,165.22809" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="" OuterRadius="10" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{0C044B93-D800-450B-A2FC-97EB0E1A29E2}" Name="AV_Hut5" Pos="537.11212,498.42331,150.38715" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="ReverbVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{48714C93-3AF5-40D7-86AA-156A1C766B01}" Name="RV_hilltop" Pos="594.97675,388.81461,217.34094" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="1" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="no_effect"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{8D267793-33E6-4ACC-868F-956FE4C1D72D}" Name="RV_Hut3" Pos="554.71857,473.9407,152.33974" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{C6E3D095-9443-4AC6-AC34-A2A5EA628249}" Name="SES_Cave_Buzz04" Parent="{F2032084-34D4-4495-B29F-94BE9D9AF900}" Pos="0.17608643,-0.088226318,5.2714233" FloorNumber="-1" Rotate="0.99960029,-0.028270567,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:electrical_humm_04_oneshot" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{AC4BE197-88FF-4679-92A6-157978EFBB8B}" Name="AS_white_water_01" Pos="605.24615,363.28528,148.93964" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="22" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="9.2874146,0.26147461,-0.028030396"/>
+     <Point Pos="17.138672,-1.0675049,-0.024841309"/>
+     <Point Pos="20.874084,-8.7536621,-0.0097503662"/>
+     <Point Pos="26.076843,-15.247589,-0.030136108"/>
+     <Point Pos="32.208191,-19.736877,-0.053619385"/>
+     <Point Pos="33.204895,-23.896698,-0.051315308"/>
+     <Point Pos="28.305542,-26.187347,-0.021133423"/>
+     <Point Pos="14.991943,-12.055817,-0.020095825"/>
+     <Point Pos="13.782898,-5.7161255,-0.015487671"/>
+     <Point Pos="1.310791,-7.8187866,0.014953613"/>
+     <Point Pos="-9.6295166,-4.3227539,0.028869629"/>
+     <Point Pos="-12.651184,1.1703186,0.064529419"/>
+     <Point Pos="-9.0450439,6.6091003,0.0032348633"/>
+     <Point Pos="-3.2314453,5.3318481,0.0042114258"/>
+    </Points>
+    <Entities>
+     <Entity Id="{20C62440-F99C-420F-9200-C5E648A14A83}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Side15="0" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{BF17F69E-BC11-4087-B999-0DA7859256AE}" Name="AV_Hut1" Pos="699.61127,351.14047,170.76404" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{D5823BA5-D0A6-4C3D-80DB-C8901DAE3698}" Name="RSV_creaks" Pos="697.17493,408.31165,172.7738" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="15" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="22" MinWaitTime="14" soundName="Sounds/environment:forest:creaks_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{86D46BA7-5544-4F03-B579-E3A1FEA6FC46}" Name="AV_Hut2" Pos="560.20758,495.04861,149.66843" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{263542A8-0A50-4778-A0DB-502E238E8C34}" Name="SES_waterfall_big_sweetener" Pos="698.06512,311.3179,164.94693" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_sweetener" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{F612F3A8-78E7-497B-979A-2517795FAD64}" Name="RSV_hilltop_bush_movement_oneshot" Pos="601.49335,408.18875,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" MaxWaitTime="14" MinWaitTime="11" soundName="Sounds/environment:forest:bush_movement_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{65009DAB-D17D-4E8C-8860-8A243CD825B0}" Name="AS_Hut1" Pos="701.19843,356.26428,164.25282" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="2.6" AreaId="0" GroupId="1" Priority="100" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="2.1776733,-2.3858032,0.03729248"/>
+     <Point Pos="-1.3890381,-5.7225037,0.042297363"/>
+     <Point Pos="-2.0940552,-6.3137512,0.054550171"/>
+     <Point Pos="-4.2662354,-8.3757935,0.09552002"/>
+     <Point Pos="-7.7022705,-4.6332703,0.035018921"/>
+     <Point Pos="-4.0170288,-1.2906189,0.023376465"/>
+     <Point Pos="-2.9129028,-2.5069885,0.0083312988"/>
+    </Points>
+    <Entities>
+     <Entity Id="{071DD70E-5BB4-4AAA-8856-3B5E6B18F270}"/>
+     <Entity Id="{BF17F69E-BC11-4087-B999-0DA7859256AE}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="1" Side3="0" Side4="1" Side5="1" Side6="1" Side7="1" Side8="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{054757AC-9347-44DF-A7D0-4935C8F35F16}" Name="AV_Hut3" Pos="553.96777,474.61148,152.30663" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{2E85C7AC-FB20-4A25-9B06-848E5B20C961}" Name="RSV_hilltop_nice_bird_oneshot" Pos="596.29852,405.05765,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" MaxWaitTime="18" MinWaitTime="11" soundName="Sounds/environment:forest:nice_bird_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{193BF8AE-80F3-4B44-8EEC-141DBDD40D99}" Name="RSVs_village_flies3" Pos="431.75,410,145.75" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="3" AreaId="0" GroupId="1" Priority="10" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3,3.75,0.5"/>
+     <Point Pos="-5.875,1.875,0"/>
+     <Point Pos="-2.75,-2,-0.375"/>
+    </Points>
+    <Entities>
+     <Entity Id="{BD01674C-1BFE-40D9-A51C-C8E8BB883065}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="SoundEventSpot" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{E32B42AF-E441-4A31-BA98-5B9194CA8FFB}" Name="forest_lower_waterfall_big" Pos="622.43225,354.60641,167.03763" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:waterfall_big" bOnce="0" bPlay="1"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{95AD72B0-C1FD-487F-8E38-5C0E032EBD04}" Name="RV_Tower" Pos="395.58356,403.01807,166.07434" FloorNumber="-1" Rotate="0.99965733,0,0,0.026176956" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Corridor_Narrow"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{6834B3B8-79D4-4E14-8C1C-F01BDDCBDF41}" Name="RSV_village_shore_waves1" Pos="494.86676,487.30865,144.4848" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="4" bEnabled="0" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="18" MinWaitTime="9" soundName="Sounds/environment:forest:shorelapping_waves" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="ReverbVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{44E310B9-608A-4C88-811D-D77171FF42E0}" Name="RV_village1" Pos="494.86676,489.30865,144.4848" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="1" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="no_effect"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{2B7EAECA-4D7C-461C-9268-A7F748C30D13}" Name="RV_Hut9" Pos="422.58054,408.35861,152.41927" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{80B159CB-7B48-43B9-AC5E-757E2C5D4220}" Name="AV_pier" Pos="494.86676,486.30865,144.4848" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" soundName="Sounds/environment:forest:pier_area_ambience" OuterRadius="3" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{9B57E9CB-3E64-4C64-AAD2-E7E91A50F7F8}" Name="RSV_Tower" Pos="393.74771,404.59494,166.04123" FloorNumber="-1" Rotate="0.99965733,0,0,0.026176956" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="4" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="28" MinWaitTime="14" soundName="Sounds/environment:forest:creaks_metal_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{58BC88CC-47E1-4E7A-BE7A-39A9538532BE}" Name="RSV_drips" Pos="697.17493,406.31165,172.7738" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="6" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="29" MinWaitTime="18" soundName="Sounds/environment:forest:water_dripping_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="AmbientVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{35AD72CD-DF1B-4436-80C0-74F275B2ED9B}" Name="AV_Tower" Pos="394.79868,403.64862,166.04123" FloorNumber="-1" Rotate="0.99965733,0,0,0.026176956" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AmbientVolume">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" soundName="Sounds/environment:forest:village_hut_ambience" OuterRadius="2" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{654EE7CD-7B9D-465D-8CBC-EFDBFDEB7AF6}" Name="AS_hilltop" Pos="559.67102,339.66891,128.18413" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="80" AreaId="0" GroupId="1" Priority="10" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-35.891724,42.331238,0.015151978"/>
+     <Point Pos="26.978577,95.104065,0.15696716"/>
+     <Point Pos="25.931458,103.77164,0.1282196"/>
+     <Point Pos="29.078979,112.83109,0.56587219"/>
+     <Point Pos="75.328979,136.58109,0.56587219"/>
+     <Point Pos="84.455078,66.660034,-0.033432007"/>
+     <Point Pos="58.456726,9.5571594,-0.14408875"/>
+    </Points>
+    <Entities>
+     <Entity Id="{6627C366-7DB8-41A5-9B31-34578FA450A0}"/>
+     <Entity Id="{48714C93-3AF5-40D7-86AA-156A1C766B01}"/>
+     <Entity Id="{6BCF653A-085D-4E56-AC4A-16F1055252B8}"/>
+     <Entity Id="{CD8AA47F-8B2E-43D9-B386-F45485A46585}"/>
+     <Entity Id="{2E85C7AC-FB20-4A25-9B06-848E5B20C961}"/>
+     <Entity Id="{F612F3A8-78E7-497B-979A-2517795FAD64}"/>
+     <Entity Id="{13608A81-D0E4-42A4-8A31-70BA5B43AE51}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{58C266CE-92D3-4646-9869-D0856C25A9AE}" Name="RSVs_village_flies" Pos="544.25,450.5,144.125" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="3" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.1323853,2.7091675,-0.092636108"/>
+     <Point Pos="-4.5,1.375,0"/>
+     <Point Pos="-2.125,-1.375,-0.375"/>
+    </Points>
+    <Entities>
+     <Entity Id="{BD01674C-1BFE-40D9-A51C-C8E8BB883065}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{210EA5D5-2578-4538-B5BA-DE6E4F156716}" Name="AS_pier" Pos="552.50006,428.75003,128.75" FloorNumber="-1" Rotate="0.99939084,0,0.034899492,0" ColorRGB="16763904" Width="0" Height="35" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-19.91217,14.941681,-0.25956726"/>
+     <Point Pos="-34.768494,18.366028,-0.20300293"/>
+     <Point Pos="-53.353119,16.838593,-0.39750671"/>
+     <Point Pos="-80.552948,6.438446,-0.41009521"/>
+     <Point Pos="-72.076996,100.08759,-9.2531586"/>
+     <Point Pos="-39.764862,106.55731,0.050369263"/>
+     <Point Pos="-20.069153,94.121094,8.8032074"/>
+     <Point Pos="-3.6831055,69.080994,0.4535675"/>
+     <Point Pos="17.750793,31.091553,0.62908936"/>
+    </Points>
+    <Entities>
+     <Entity Id="{80B159CB-7B48-43B9-AC5E-757E2C5D4220}"/>
+     <Entity Id="{4001452C-42EC-4B6B-A7DC-9B3ADC0ECEBC}"/>
+     <Entity Id="{44E310B9-608A-4C88-811D-D77171FF42E0}"/>
+     <Entity Id="{6834B3B8-79D4-4E14-8C1C-F01BDDCBDF41}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{40404AD6-8FF2-4E77-9940-FAF148B50783}" Name="RSV_bats" Pos="697.17493,409.31165,172.7738" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="8" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="23" MinWaitTime="14" soundName="Sounds/environment:forest:bats_in_cave_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{779E59DA-BC08-4EF5-9BD0-EDD085A0D243}" Name="RV_Hut2" Pos="560.95837,494.37784,149.70154" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{88568ADB-3D58-46DD-8F3F-96C1DE0C0726}" Name="AS_village" Pos="696.22168,742.04895,126.23425" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="70" AreaId="0" GroupId="1" Priority="10" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="0" Agent_width="0" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-58.016174,-262.33667,2.8717651"/>
+     <Point Pos="-107.46948,-288.39612,2.93013"/>
+     <Point Pos="-117.87964,-287.27853,2.8616638"/>
+     <Point Pos="-120.90466,-296.68497,2.8715363"/>
+     <Point Pos="-111.58722,-300.02768,2.872406"/>
+     <Point Pos="-110.5083,-306.96976,2.8739624"/>
+     <Point Pos="-193.72168,-377.04895,2.5157471"/>
+     <Point Pos="-335.38211,-435.6218,-4.0761261"/>
+     <Point Pos="-415.22943,-414.67392,-7.8250885"/>
+     <Point Pos="-250.44354,-203.91357,-4.9002991"/>
+    </Points>
+    <Entities>
+     <Entity Id="{D3640938-46D9-4B05-B420-F208F16F689B}"/>
+     <Entity Id="{CABCB64F-7709-48B4-BAFF-946869E4C4AC}"/>
+     <Entity Id="{32186970-0F04-4B9C-AB57-0294A092907E}"/>
+     <Entity Id="{3A333720-2A7E-4FA9-B8B3-DBBD1CA8E3C1}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{3E5E6BEA-001F-44C2-9A1A-62B7780DF617}" Name="AS_Hut10" Pos="433.8508,392.73203,146.68526" FloorNumber="-1" Rotate="0.96592581,0,0,-0.25881904" ColorRGB="16763904" Width="0" Height="2.7" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-4.9753571,1.7843628,0.038772583"/>
+     <Point Pos="-6.0563049,2.1907349,0.042221069"/>
+     <Point Pos="-7.4801636,2.6372681,0.058227539"/>
+     <Point Pos="-5.4424133,8.2931519,-0.0022735596"/>
+     <Point Pos="-2.6486206,7.3143921,0.0048675537"/>
+     <Point Pos="-1.5699921,6.8973999,-0.0014648438"/>
+     <Point Pos="2.0600281,5.597229,-0.013916016"/>
+    </Points>
+    <Entities>
+     <Entity Id="{9579AFF1-C8F4-49D2-88E6-674B0143534A}"/>
+     <Entity Id="{6E313B1D-8594-48D4-8765-0DFF247C54A1}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="0" Side3="1" Side4="1" Side5="1" Side6="0" Side7="1" Side8="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{F98A68EC-03D5-42D5-BCEB-F7B57A945B64}" Name="AS_Hut6" Pos="542.0625,437.53253,144.08423" FloorNumber="-1" Rotate="0.7547096,0,0,-0.65605903" ColorRGB="16763904" Width="0" Height="3.1" AreaId="0" GroupId="1" Priority="30" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-9.0325317,-5.7271729,0.058227539"/>
+     <Point Pos="-9.4946899,-4.9498291,0.039108276"/>
+     <Point Pos="-10.82962,-2.9016113,0.012069702"/>
+     <Point Pos="-13.07724,0.54705811,-0.0022735596"/>
+     <Point Pos="-7.8831177,3.8959961,0.032653809"/>
+     <Point Pos="-5.8606873,5.2224121,0.017120361"/>
+     <Point Pos="-4.1844788,6.3255615,-0.013916016"/>
+     <Point Pos="-3.7759399,5.6697998,-0.0099182129"/>
+     <Point Pos="-1.1982117,1.477478,0.018966675"/>
+    </Points>
+    <Entities>
+     <Entity Id="{61A53A2A-7931-4CF6-804A-E58A4243AFEF}"/>
+     <Entity Id="{3E6251EF-F431-4BB2-B5A4-1C6B7FBA3FEB}"/>
+    </Entities>
+    <SoundData Side1="1" Side2="1" Side3="0" Side4="1" Side5="1" Side6="0" Side7="1" Side8="1" Side9="0" Side10="1" Roof="1" Floor="1"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{3E6251EF-F431-4BB2-B5A4-1C6B7FBA3FEB}" Name="RV_Hut6" Pos="544.82581,440.71744,153.68605" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{9579AFF1-C8F4-49D2-88E6-674B0143534A}" Name="RV_Hut10" Pos="432.50772,399.69376,152.41927" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ReverbVolume">
+    <Properties bEnabled="1" Environment="3" bFullEffectWhenInside="0" OuterRadius="2" reverbpresetReverbPreset="Room_Small"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{DD1AD4F4-E2D6-41D8-ABA6-8440317A0D38}" Name="RSV_forest_nice_bird_oneshot" Pos="772.54761,337.07431,232.06595" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="10" bEnabled="1" bIgnoreCulling="1" bIgnoreObstruction="1" bLogBattleValue="0" MaxWaitTime="23" MinWaitTime="16" soundName="Sounds/environment:forest:nice_bird_oneshot" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Shape" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{D2FFC7F6-60A7-4D39-82BB-4F52970D8B90}" Name="RSVs_village_flies1" Pos="527.125,461.625,144.125" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="3" AreaId="0" GroupId="1" Priority="20" Closed="1" DisplayFilled="0" DisplaySoundInfo="1" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3.4048462,0.66439819,-0.092636108"/>
+     <Point Pos="-4.8488159,-5.0533142,-0.034713745"/>
+     <Point Pos="-1.3731689,-5.981781,-0.42593384"/>
+    </Points>
+    <Entities>
+     <Entity Id="{BD01674C-1BFE-40D9-A51C-C8E8BB883065}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="1"/>
+   </Object>
+   <Object Type="RandomSoundVolume" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{4B6CAFF9-3F91-44D0-84E3-A2DAA209590D}" Name="RSV_debris" Pos="697.17194,407.29956,172.76569" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RandomSoundVolume">
+    <Properties DiscRadius="12" bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" bLogBattleValue="0" MaxWaitTime="20" MinWaitTime="12" soundName="Sounds/environment:forest:falling_debris_light" bRandomPosition="1" bSensitiveToBattle="0"/>
+   </Object>
+   <Object Type="Entity" Layer="Sound" LayerGUID="{3176CC66-20D9-410B-9375-8B12C6A4F2F8}" Id="{7C33EAFE-B4CD-4551-8225-5E600A67C992}" Name="SES_Cave_Buzz02" Parent="{A94AAB49-D01D-461B-9007-A3DED9086AE7}" Pos="0.077758789,-0.11380005,5.2880096" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="SoundEventSpot">
+    <Properties bEnabled="1" bIgnoreCulling="0" bIgnoreObstruction="0" soundName="Sounds/environment:forest:electrical_humm_02_oneshot" bOnce="0" bPlay="1"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

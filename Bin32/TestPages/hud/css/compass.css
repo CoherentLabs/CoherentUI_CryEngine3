@@ -1,0 +1,41 @@
+#stage {
+	width: 400px;
+	height: 300px;
+	/*
+
+	Setting the perspective of the contents of the stage
+	but not the stage itself
+
+	*/
+	-webkit-perspective: 800;
+}
+
+.ring {
+	margin: 0 auto;
+	height: 110px;
+	width: 400px;
+	-webkit-transform-style: preserve-3d;
+}
+
+.poster {
+	position: absolute;
+	left: 150px;
+	width: 100px;
+	height: 100px;
+	opacity: 0.7;
+}
+
+.poster > p {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+#compassImage {
+	width: 100%;
+	height: 110px;
+	-webkit-transform-style: preserve-3d;
+	/*
+	overflow: hidden;
+	*/
+}

@@ -1,0 +1,17 @@
+<ObjectLayer>
+ <Layer Name="AB3_Environment" GUID="{5420E187-1B53-4751-B907-6A0F6752F18B}" FullName="AB3/AB3_Environment" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}">
+  <LayerObjects>
+   <Object Type="GravityVolume" Layer="AB3_Environment" LayerGUID="{5420E187-1B53-4751-B907-6A0F6752F18B}" Id="{2AAD942B-FCBB-4A3B-B6C7-3AAEAD2FFB73}" Name="GravityVolume2" Pos="593.32172,387.81775,152.965" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" MatLayersMask="0" Radius="3" Gravity="2" Falloff="0.8" Damping="1" StepSize="4" DontDisableInvisible="0" EntityClass="AreaBezierVolume">
+    <Properties bEnabled="1"/>
+    <Points>
+     <Point Pos="0,0,0" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="0.52484131,4.7060547,-3.3999939" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="1.0847778,11.622986,-8.7459869" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="1.0893555,17.69281,-13.491943" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="-0.11364746,23.499023,-13.518875" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="-2.4276733,27.967407,-13.565018" Angle="0" Width="0" IsDefaultWidth="1"/>
+    </Points>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{68a379e2-29b9-4d05-ae5f-b6d48e03d8f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{5ce42a72-0b72-4ea5-a6bb-148fdaef4dbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\DX11">
+      <UniqueIdentifier>{b0d3ffb6-db85-434e-8f06-a43152e2fa07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\DX9">
+      <UniqueIdentifier>{5eddeff5-1874-48fa-b49f-1cea5db63d32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samples">
+      <UniqueIdentifier>{698ae403-f4a1-40a1-b8e7-f03da273f85f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Installer">
+      <UniqueIdentifier>{2da3e8d6-0aec-498b-847b-1a9bed368ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{c070122a-9e71-4ec8-bc5a-259b65125c77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\readme.md" />
+    <None Include="..\license.txt" />
+    <None Include="..\authors.txt" />
+    <None Include="..\changelog.md" />
+    <None Include="..\tools\build_installer.bat">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\tools\D3D_Installer.nsi">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\tools\stylecode.bat">
+      <Filter>Tools</Filter>
+    </None>
+    <None Include="..\tools\codestyle.astylerc">
+      <Filter>Tools</Filter>
+    </None>
+    <None Include="..\tools\build.bat">
+      <Filter>Tools</Filter>
+    </None>
+    <None Include="..\latestredist.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CPluginD3DModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CPluginD3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dx9\CD3DSystemDX9.cpp">
+      <Filter>Systems\DX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dx11\CD3DSystemDX11.cpp">
+      <Filter>Systems\DX11</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CPluginD3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\IPluginD3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dx9\CD3DSystemDX9.h">
+      <Filter>Systems\DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dx9\d3d9hook.h">
+      <Filter>Systems\DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dx11\CD3DSystemDX11.h">
+      <Filter>Systems\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dx11\d3d11hook.h">
+      <Filter>Systems\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pp_tools.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\hooktools.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sample\D3DPlugin_Sample_impl.h">
+      <Filter>Samples</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

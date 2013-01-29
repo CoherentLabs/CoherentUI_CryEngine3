@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+    <title>Coherent UI Demo</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/coherent.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/tips.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/compass.css" type="text/css" />
+	<link rel='stylesheet' href='css/fonts.css' type='text/css'>
+
+</head>
+<body>
+<div id="hud">
+	<div class="WobblyWidget">
+		<ul id="tipBox">
+		</ul>
+	</div>
+	<div class="WobblyWidget" id="compass">
+		<div id="stage">
+			<div id="compassImage"></div>
+		</div>
+	</div>
+	<div class="WobblyWidget" id="oscilloscopeHolder">
+		<span id="oscilloscope"></span>
+	</div>
+	<div class="WobblyWidget" id="noisyGadget">
+		<div class="OuterCircle">
+			<div class="InnerCircle">
+			  <div class="CenterCircle">
+			  </div>
+			</div>
+		</div>
+		<div class="GadgetContent"><img src="img/Coherent UI - icon.png" /></div>
+	</div>
+	<div class="WobblyWidget" id="playerStats">
+		<div id="health">
+			<div class="Digit"><img src="img/digits.png"/></div>
+			<div class="Digit"><img src="img/digits.png"/></div>
+		</div>
+		<div class="Clear"></div>
+		<br />
+		<div id="healthBar"></div>
+	</div>
+	<div id="Interaction">Press (Esc) to exit interaction mode</div>
+</div>
+<div id="debug" style="position: absolute; bottom: -30px;"></div>
+    <!-- js -->
+    <script src="js/jquery/jquery-1.7.2.min.js"></script>
+	<script src="js/underscore/underscore-min.js"></script>
+	<script src="js/backbone/backbone-min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/compass.js"></script>
+
+	
+	<script src="js/coherent.js"></script>
+    <script src="js/player.js"></script>
+	<script src="js/tips.js"></script>
+	<script src="js/oscilloscope.js"></script>
+	<script type="text/javascript">
+		
+		/*jslint browser: true, nomen: true, plusplus: true */
+		(function ($, window) {
+			'use strict';
+
+			var HUD = {
+
+				Move: function (variation) {
+
+					var wobbles = $('.WobblyWidget'),
+				        animationClass = (variation >= 0) ? 'Forward' : 'Backward';
+                    
+					$(wobbles).addClass(animationClass);
+				},
+				
+				Stop: function () {
+					$('.WobblyWidget').removeClass('Forward').removeClass('Backward');
+				},
+				
+				Show: function () {
+					$('#hud').show();
+				},
+				
+				Hide: function () {
+					$('#hud').hide();
+				},
+                
+                Compass: (function () {
+				    var currentRotation = 0;
+                    return function (radians) {
+                        currentRotation += radians;
+                        Compass.SetRotation(currentRotation * 180 / 3.1415);
+                    };
+                }())
+			};
+
+			engine.on('OnPlayerMove', HUD.Move, HUD);
+			engine.on('OnPlayerRotated', HUD.Compass);
+			engine.on('OnPlayerStopped', HUD.Stop, HUD);
+			engine.on('ShowHud', HUD.Show, HUD);
+			engine.on('HideHud', HUD.Hide, HUD);
+
+
+			engine.on('Ready', function () {
+				if (!engine.isAttached) {
+					engine.trigger('OnPlayerRotated', 0);
+				}
+			});
+			
+			engine.on('Ready', function () {
+                // mockup input for testing purposes in browser
+				if (!engine.IsAttached) {
+				    var body = $('body');
+					body.keydown(function (event) {
+						var keyCode = event.keyCode;
+						if (keyCode === 40 || keyCode === 115 || keyCode === 83) {
+							engine.trigger('OnPlayerMove', -5); // 38 - down, 115 - s, move backwards
+						} else if (keyCode === 38 || keyCode === 119 || keyCode === 87) {
+							engine.trigger('OnPlayerMove', 10); // 40 - up, 119 - w, move forward
+						} else if (keyCode === 39 || keyCode === 100 || keyCode === 68) {
+							engine.trigger('OnPlayerRotated', 0.125);
+						} else if (keyCode === 37 || keyCode === 97 || keyCode === 65) {
+							engine.trigger('OnPlayerRotated', -0.125);
+						}
+					});
+					body.keyup(function (event) {
+						var keyCode = event.keyCode;
+						if (keyCode === 38 || keyCode === 125 || keyCode === 40 || keyCode === 119 || keyCode === 83 || keyCode === 87 || keyCode === 68 || keyCode === 65) {
+							engine.trigger('OnPlayerStopped');
+						}
+					});
+				}
+			});
+
+			window.HUD = HUD;
+		}($, window));
+
+		engine.on('SetAbsoluteCompassRotation', function (degrees) {
+			Compass.SetRotation(degrees);
+		});
+	</script>
+	<script id="tipTemplate" type="text/html">
+		<li class="tip">
+			<div class="tipIcon"></div>
+			<div class="tipText"><%= text %></div>
+		</li>	
+	</script>
+	<script id="healthBarTemplate" type="text/html">
+		<div class="HealthBar" id="<%= id %>">
+		<%
+			for (var i = 0; i < ticks; ++i)
+			{
+				print('<div class="HealthBarTick"></div>');
+			}
+		%>
+		</div>
+	</script>
+</body>
+</html>

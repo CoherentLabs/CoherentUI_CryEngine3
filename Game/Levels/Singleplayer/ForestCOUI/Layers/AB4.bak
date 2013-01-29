@@ -1,0 +1,86 @@
+<ObjectLayer>
+ <Layer Name="AB4" GUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}" FullName="AB4" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900">
+  <LayerObjects>
+   <Object Type="Entity" Layer="AB4" LayerGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}" Id="{BD3EC72D-D25F-4281-8A75-B0402D155D5D}" Name="RigidBodyEx15" Pos="699.79041,425.16104,177.27554" FloorNumber="-1" Rotate="0.77704465,0.036804389,0.0038682974,-0.6283567" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RigidBodyEx">
+    <Properties bCanTriggerAreas="0" bDamagesPlayerOnCollisionSP="0" DmgFactorWhenCollidingAI="1" bExcludeCover="0" esFaction="" bHeavyObject="0" bInteractLargeObject="0" bMissionCritical="0" object_Model="objects/props/storage/civil/basic_box.cgf" bPickable="0" bSerialize="0" soclasses_SmartObjectClass="" bUsable="0" UseText="">
+     <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
+     <Interest soaction_Action="" bInteresting="0" InterestLevel="1" Pause="15" Radius="20" bShared="0">
+      <vOffset x="0" y="0" z="0"/>
+     </Interest>
+     <Physics bActivateOnDamage="0" bCanBreakOthers="0" Density="-1" Mass="35" bPhysicalize="1" bPushableByPlayers="1" bResting="1" bRigidBody="1" bRigidBodyActive="1">
+      <Buoyancy water_damping="0" water_density="1000" water_resistance="1000"/>
+      <CGFPropsOverride player_can_break="">
+       <Constraint constraint_collides="" constraint_damping="" constraint_limit="" constraint_maxang="" constraint_minang=""/>
+       <Deformable explosion_scale="" hardness="" max_impulse="" max_stretch="" skin_dist="" stiffness="" thickness=""/>
+       <Joint bend="" limit="" pull="" push="" shift="" twist=""/>
+      </CGFPropsOverride>
+      <MP bClientOnly="0"/>
+      <Simulation damping="0" bFixedDamping="0" max_time_step="0.02" sleep_speed="0.04" bUseSimpleSolver="0"/>
+     </Physics>
+    </Properties>
+    <Properties2>
+     <Interest soaction_Action="" bInteresting="0" InterestLevel="-1" bOverrideArchetype="0" Pause="-1" Radius="-1" bShared="0"/>
+    </Properties2>
+   </Object>
+   <Object Type="Entity" Layer="AB4" LayerGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}" Id="{F8937D6F-2BD5-4B26-86AF-A5CDD715703C}" Name="RigidBodyEx16" Pos="698.90607,423.65515,177.03716" FloorNumber="-1" Rotate="0.96937245,0.018315915,-0.076291271,0.23272571" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RigidBodyEx">
+    <Properties bCanTriggerAreas="0" bDamagesPlayerOnCollisionSP="0" DmgFactorWhenCollidingAI="1" bExcludeCover="0" esFaction="" bHeavyObject="0" bInteractLargeObject="0" bMissionCritical="0" object_Model="objects/props/storage/civil/basic_box.cgf" bPickable="0" bSerialize="0" soclasses_SmartObjectClass="" bUsable="0" UseText="">
+     <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
+     <Interest soaction_Action="" bInteresting="0" InterestLevel="1" Pause="15" Radius="20" bShared="0">
+      <vOffset x="0" y="0" z="0"/>
+     </Interest>
+     <Physics bActivateOnDamage="0" bCanBreakOthers="0" Density="-1" Mass="35" bPhysicalize="1" bPushableByPlayers="1" bResting="1" bRigidBody="1" bRigidBodyActive="1">
+      <Buoyancy water_damping="0" water_density="1000" water_resistance="1000"/>
+      <CGFPropsOverride player_can_break="">
+       <Constraint constraint_collides="" constraint_damping="" constraint_limit="" constraint_maxang="" constraint_minang=""/>
+       <Deformable explosion_scale="" hardness="" max_impulse="" max_stretch="" skin_dist="" stiffness="" thickness=""/>
+       <Joint bend="" limit="" pull="" push="" shift="" twist=""/>
+      </CGFPropsOverride>
+      <MP bClientOnly="0"/>
+      <Simulation damping="0" bFixedDamping="0" max_time_step="0.02" sleep_speed="0.04" bUseSimpleSolver="0"/>
+     </Physics>
+    </Properties>
+    <Properties2>
+     <Interest soaction_Action="" bInteresting="0" InterestLevel="-1" bOverrideArchetype="0" Pause="-1" Radius="-1" bShared="0"/>
+    </Properties2>
+   </Object>
+   <Object Type="Entity" Layer="AB4" LayerGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}" Id="{3C368075-99B6-4EA0-A136-F0436984181E}" Name="RigidBodyEx14" Pos="700.76422,423.46741,177.2029" FloorNumber="-1" Rotate="0.92050487,0,0,-0.39073113" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="RigidBodyEx">
+    <Properties bCanTriggerAreas="0" bDamagesPlayerOnCollisionSP="0" DmgFactorWhenCollidingAI="1" bExcludeCover="0" esFaction="" bHeavyObject="0" bInteractLargeObject="0" bMissionCritical="0" object_Model="objects/props/storage/civil/basic_box.cgf" bPickable="0" bSerialize="0" soclasses_SmartObjectClass="" bUsable="0" UseText="">
+     <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
+     <Interest soaction_Action="" bInteresting="0" InterestLevel="1" Pause="15" Radius="20" bShared="0">
+      <vOffset x="0" y="0" z="0"/>
+     </Interest>
+     <Physics bActivateOnDamage="0" bCanBreakOthers="0" Density="-1" Mass="35" bPhysicalize="1" bPushableByPlayers="1" bResting="1" bRigidBody="1" bRigidBodyActive="1">
+      <Buoyancy water_damping="0" water_density="1000" water_resistance="1000"/>
+      <CGFPropsOverride player_can_break="">
+       <Constraint constraint_collides="" constraint_damping="" constraint_limit="" constraint_maxang="" constraint_minang=""/>
+       <Deformable explosion_scale="" hardness="" max_impulse="" max_stretch="" skin_dist="" stiffness="" thickness=""/>
+       <Joint bend="" limit="" pull="" push="" shift="" twist=""/>
+      </CGFPropsOverride>
+      <MP bClientOnly="0"/>
+      <Simulation damping="0" bFixedDamping="0" max_time_step="0.02" sleep_speed="0.04" bUseSimpleSolver="0"/>
+     </Physics>
+    </Properties>
+    <Properties2>
+     <Interest soaction_Action="" bInteresting="0" InterestLevel="-1" bOverrideArchetype="0" Pause="-1" Radius="-1" bShared="0"/>
+    </Properties2>
+   </Object>
+   <Object Type="Entity" Layer="AB4" LayerGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}" Id="{08DBA9A0-773C-47A7-B0A5-42D224F6DFEA}" Name="Light88" Pos="692.17096,399.67731,170.67444" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="0" Radius="100" _nVersion="0">
+     <Color clrDiffuse="0.618686,0.315763,0.238828" fDiffuseMultiplier="4" fHDRDynamic="4" fSpecularMultiplier="4"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+  </LayerObjects>
+  <ChildLayers>
+   <Layer Name="AB4_Art" GUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" FullName="AB4/AB4_Art" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+   <Layer Name="AB4_Lighting" GUID="{D60D8511-CC5A-46C9-B2D9-A9F838C039BC}" FullName="AB4/AB4_Lighting" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+   <Layer Name="AB4_Navigation" GUID="{31133E2F-BBFC-4C5C-8546-631CA92FE4C1}" FullName="AB4/AB4_Navigation" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+   <Layer Name="AB4_Logic" GUID="{5918DD9C-EAB6-4FE6-BD9D-C60C22CEC9C7}" FullName="AB4/AB4_Logic" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+   <Layer Name="AB4_Environment" GUID="{BB1375C8-222B-4757-87BF-164536B182AD}" FullName="AB4/AB4_Environment" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+  </ChildLayers>
+ </Layer>
+</ObjectLayer>

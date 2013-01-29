@@ -1,0 +1,5 @@
+<ObjectLayer>
+ <Layer Name="AB1_Environment" GUID="{8DF9AFD4-95B0-4B65-B222-18BD4DA78230}" FullName="AB1/AB1_Environment" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}">
+  <LayerObjects />
+ </Layer>
+</ObjectLayer>

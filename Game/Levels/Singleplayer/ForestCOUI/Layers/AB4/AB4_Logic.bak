@@ -1,0 +1,5 @@
+<ObjectLayer>
+ <Layer Name="AB4_Logic" GUID="{5918DD9C-EAB6-4FE6-BD9D-C60C22CEC9C7}" FullName="AB4/AB4_Logic" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}">
+  <LayerObjects />
+ </Layer>
+</ObjectLayer>
