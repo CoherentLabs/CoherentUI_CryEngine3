@@ -400,6 +400,11 @@ namespace CoherentUIPlugin
 
 	Coherent::UI::CoherentHandle CCoherentUISystem::CreateSharedTextureDX11( const CreateSurfaceTask& task, TexturePair* outTexturePair )
 	{
+		// The shared texture's format for DX11 must be DXGI_FORMAT_B8G8R8A8_UNORM.
+		// There is no corresponding ETEX_Format and after injecting the created
+		// texture, COM errors occur.
+		// TODO: Find a way to fool CryEngine into accepting a DXGI_FORMAT_B8G8R8A8_UNORM texture.
+
 		// Create shared texture
 		D3D11_TEXTURE2D_DESC desc;
 		memset( &desc, 0, sizeof( desc ) );
@@ -407,7 +412,7 @@ namespace CoherentUIPlugin
 		desc.Height = task.Height;
 		desc.MipLevels = 1;
 		desc.ArraySize = 1;
-		desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+		desc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
 		desc.SampleDesc.Count = 1;
 		desc.Usage = D3D11_USAGE_DEFAULT;
 		desc.BindFlags = D3D11_BIND_SHADER_RESOURCE | D3D11_BIND_RENDER_TARGET;
@@ -504,7 +509,7 @@ namespace CoherentUIPlugin
 		{
 			void* pD3DTextureDst = NULL;
 			ITexture* pCryTex = gD3DSystem->CreateTexture(
-				(void**)&pD3DTextureDst,
+				&pD3DTextureDst,
 				gEnv->pRenderer->GetWidth(),
 				gEnv->pRenderer->GetHeight(),
 				1,
@@ -548,7 +553,7 @@ namespace CoherentUIPlugin
 			// Create a new texture and scrap the old one
 			void* pD3DTextureDst = NULL;
 			ITexture* pCryTex = gD3DSystem->CreateTexture(
-									( void** )&pD3DTextureDst,
+									&pD3DTextureDst,
 									sampler.m_pITex->GetWidth(),
 									sampler.m_pITex->GetHeight(),
 									1,
