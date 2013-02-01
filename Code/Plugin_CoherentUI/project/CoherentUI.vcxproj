@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\CoherentGeometry.cpp" />
+    <ClCompile Include="..\src\CoherentHUDViewListener.cpp" />
     <ClCompile Include="..\src\CoherentInputEventListener.cpp" />
     <ClCompile Include="..\src\CoherentPlayerEventListener.cpp" />
     <ClCompile Include="..\src\CoherentSystemEventListener.cpp" />
@@ -51,6 +52,7 @@
   <ItemGroup>
     <ClInclude Include="..\inc\IPluginCoherentUI.h" />
     <ClInclude Include="..\src\CoherentGeometry.h" />
+    <ClInclude Include="..\src\CoherentHUDViewListener.h" />
     <ClInclude Include="..\src\CoherentInputEventListener.h" />
     <ClInclude Include="..\src\CoherentPlayerEventListener.h" />
     <ClInclude Include="..\src\CoherentSystemEventListener.h" />
@@ -148,7 +150,7 @@
     <ClCompile>
       <OmitFramePointers>true</OmitFramePointers>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\CoherentUI;$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\..\..\..\..\;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_FORCEDLL;PURE_CLIENT;CoherentUIPLUGIN_EXPORTS;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <FloatingPointModel>Precise</FloatingPointModel>
@@ -169,7 +171,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>CoherentUI.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\..\Bin32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\CryENGINE_PC_v3_4_0_3696\Bin32;$(ProjectDir)..\..\..\..\..\..\Build\Win32\Release Static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>cd $(ProjectDir)\..\tools
@@ -181,7 +183,7 @@ stylecode.bat
     <ClCompile>
       <OmitFramePointers>true</OmitFramePointers>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\CoherentUI;$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\..\..\..\..\;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_FORCEDLL;PURE_CLIENT;CoherentUIPLUGIN_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <FloatingPointModel>Precise</FloatingPointModel>
@@ -199,7 +201,7 @@ stylecode.bat
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>CoherentUI.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\..\Bin32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\CryENGINE_PC_v3_4_0_3696\Bin32;$(ProjectDir)..\..\..\..\..\..\Build\Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>cd $(ProjectDir)\..\tools

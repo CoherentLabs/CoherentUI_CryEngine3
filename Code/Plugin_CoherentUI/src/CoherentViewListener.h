@@ -34,7 +34,8 @@ namespace CoherentUIPlugin
 			virtual void CreateSurface( bool sharedMemory, unsigned width, unsigned height, Coherent::UI::SurfaceResponse* pResponse ) COHERENT_OVERRIDE;
 			virtual void DestroySurface( Coherent::UI::CoherentHandle surface, bool ) COHERENT_OVERRIDE;
 
-			bool RaycastGeometry(const Vec3& origin, const Vec3& dir, float& outDist, int& outViewX, int& outViewY);
+			virtual bool RaycastGeometry(const Vec3& origin, const Vec3& dir, float& outDist, int& outViewX, int& outViewY);
+
 			void SetCollisionMesh(const char* objFileName);
 			bool HasCollisionMesh() const;
 			void SetEngineObjectAndMaterialNames(const char* engineObjectName, const char* materialToOverrideName);
@@ -47,7 +48,7 @@ namespace CoherentUIPlugin
 			void DrawFrameDX11SharedMemory( Coherent::UI::CoherentHandle data, int width, int height );
 			void DrawFrameDX11SharedTexture( Coherent::UI::CoherentHandle data, int width, int height );
 
-		private:
+		protected:
 			void* m_pTexture; // IDirect3D9Texture* or ID3D11Texture2D*
 			int m_CryTextureID; // Used for removal from the CryEngine renderer when the listener is destroyed
 

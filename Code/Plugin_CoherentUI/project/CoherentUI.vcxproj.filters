@@ -83,6 +83,9 @@
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\CoherentHUDViewListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StdAfx.h">
@@ -116,6 +119,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CoherentSystemEventListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CoherentHUDViewListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

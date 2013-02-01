@@ -5,6 +5,7 @@
 #include "CoherentPlayerEventListener.h"
 #include "CoherentSystemEventListener.h"
 #include "CoherentViewListener.h"
+#include "CoherentHUDViewListener.h"
 #include "CPluginCoherentUI.h"
 #include "FullscreenTriangleDrawer.h"
 
@@ -286,7 +287,7 @@ namespace CoherentUIPlugin
 	void CCoherentUISystem::LoadCoherentUIViews()
 	{
 		m_ViewListeners.resize( VL_Count );
-		m_ViewListeners[VL_HUD].reset( new CCoherentViewListener() );
+		m_ViewListeners[VL_HUD].reset( new CCoherentHUDViewListener() );
 
 		m_ViewListeners[VL_StaticObj].reset( new CCoherentViewListener() );
 		m_ViewListeners[VL_StaticObj]->SetCollisionMesh("curve.obj");
@@ -314,6 +315,9 @@ namespace CoherentUIPlugin
 
 	void CCoherentUISystem::UpdateHUD()
 	{
+		static Vec3 lastPosition = Vec3Constants<Vec3::value_type>::fVec3_Zero;
+		static float lastRotation = 0;
+
 		CCoherentViewListener* pHUDListener = NULL;
 		pHUDListener = ( m_ViewListeners.size() > VL_HUD ? m_ViewListeners[VL_HUD].get() : NULL );
 
@@ -328,7 +332,38 @@ namespace CoherentUIPlugin
 
 			if ( pView && pHUDListener->IsReadyForBindings() )
 			{
-				pView->TriggerEvent( "SetAbsoluteCompassRotation", rotation );
+				if (rotation != lastRotation)
+				{
+					pView->TriggerEvent( "SetAbsoluteCompassRotation", rotation );
+					// Adjust the rotation for the map, too...
+					pView->TriggerEvent( "SetPlayerRotationOnMap", rotation - 45.0f );
+
+					lastRotation = rotation;
+				}
+
+				Vec3 cameraPosition = camera.GetPosition();
+				if ((cameraPosition - lastPosition).GetLengthSquared() > VEC_EPSILON)
+				{
+					pView->TriggerEvent( "SetPlayerPositionOnMap", cameraPosition.x, cameraPosition.y );
+
+					lastPosition = cameraPosition;
+				}
+			}
+		}
+	}
+
+	void CCoherentUISystem::ShowMap(bool show)
+	{
+		CCoherentViewListener* pHUDListener = NULL;
+		pHUDListener = ( m_ViewListeners.size() > VL_HUD ? m_ViewListeners[VL_HUD].get() : NULL );
+
+		if ( pHUDListener )
+		{
+			Coherent::UI::View* pView = pHUDListener->GetView();
+
+			if ( pView && pHUDListener->IsReadyForBindings() )
+			{
+				pView->TriggerEvent( "ShowMap", show );
 			}
 		}
 	}
@@ -476,6 +511,7 @@ namespace CoherentUIPlugin
 		info.Height = gEnv->pRenderer->GetHeight();
 		info.UsesSharedMemory = true;
 		info.IsTransparent = true;
+		info.SupportClickThrough = true;
 		if (m_ViewListeners[VL_HUD]->GetView() == nullptr)
 		{
 			m_pUISystem->CreateView(info, L"coui://Bin32/TestPages/hud/hud.html", m_ViewListeners[VL_HUD].get());
@@ -484,6 +520,7 @@ namespace CoherentUIPlugin
 		info.Width = 1024;
 		info.Height = 576;
 		info.IsTransparent = false;
+		info.SupportClickThrough = false;
 
 		if ( m_ViewListeners[VL_StaticObj]->GetView() == nullptr )
 		{

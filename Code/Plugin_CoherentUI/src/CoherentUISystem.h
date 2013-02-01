@@ -43,6 +43,7 @@ namespace CoherentUIPlugin
 			void* GetNativeTextureFromSharedHandle( Coherent::UI::CoherentHandle surface );
 			IPlayerEventListener* GetPlayerEventListener() const;
 			bool RaycastClosestViewListenersGeometry(const Vec3& origin, const Vec3& dir, int& outX, int& outY, CCoherentViewListener*& ppViewListener);
+			void ShowMap(bool show);
 
 			// ID3DListener methods
 			virtual void OnPrePresent() COHERENT_OVERRIDE;

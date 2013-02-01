@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/tips.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/compass.css" type="text/css" />
 	<link rel='stylesheet' href='css/fonts.css' type='text/css'>
+	<link rel='stylesheet' href='css/openlayers_default_style.css' type='text/css'>
+	<link rel='stylesheet' href='css/map.css' type='text/css'>
 
 </head>
 <body>
@@ -15,6 +17,8 @@
 	<div class="WobblyWidget">
 		<ul id="tipBox">
 		</ul>
+	</div>
+	<div id="map" class="smallmap">
 	</div>
 	<div class="WobblyWidget" id="compass">
 		<div id="stage">
@@ -51,12 +55,14 @@
 	<script src="js/backbone/backbone-min.js"></script>
 	<script src="js/jquery.sparkline.min.js"></script>
 	<script src="js/compass.js"></script>
+	<script src="js/OpenLayers/OpenLayers.js"></script>
 
 	
 	<script src="js/coherent.js"></script>
     <script src="js/player.js"></script>
 	<script src="js/tips.js"></script>
 	<script src="js/oscilloscope.js"></script>
+	<script src="js/map.js"></script>
 	<script type="text/javascript">
 		
 		/*jslint browser: true, nomen: true, plusplus: true */

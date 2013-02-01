@@ -101,6 +101,7 @@ namespace CoherentUIPlugin
 		, m_PlayerInputEnabled( true )
 		, m_DrawCoherentUI( true )
 		, m_DrawCursor( false )
+		, m_DrawMap( false )
 	{
 		RepeatFilter::Init();
 	}
@@ -219,6 +220,14 @@ namespace CoherentUIPlugin
 						TraceMouse( dummyx, dummyy, pViewListener );
 					}
 
+					return false;
+
+				case eKI_Tab:
+					m_DrawMap = !m_DrawMap;
+					if (gCoherentUISystem)
+					{
+						gCoherentUISystem->ShowMap(m_DrawMap);
+					}
 					return false;
 			}
 		}
@@ -397,6 +406,13 @@ namespace CoherentUIPlugin
 		static bool s_Mouse1Down = false;
 		static bool s_Mouse2Down = false;
 		static bool s_Mouse3Down = false;
+		static bool s_MouseWheel = false;
+
+		if (event.keyId == eKI_MouseWheelUp || event.keyId == eKI_MouseWheelDown)
+		{
+			s_MouseWheel = (event.state == eIS_Pressed);
+			return false;
+		}
 
 		if ( event.state == eIS_Down )
 		{
@@ -524,7 +540,7 @@ namespace CoherentUIPlugin
 
 		//------------------------------------------------------------------------------
 
-		if ( event.state == eIS_Changed && ( event.keyId == eKI_MouseZ || event.keyId == eKI_MouseX ) )
+		if ( s_MouseWheel && ( event.keyId == eKI_MouseZ || event.keyId == eKI_MouseX ) )
 		{
 			mouseEvent.Type = Coherent::UI::MouseEventData::MouseWheel;
 
