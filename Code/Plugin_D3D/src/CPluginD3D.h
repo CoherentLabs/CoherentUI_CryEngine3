@@ -19,8 +19,9 @@
 #define DECLARE_BROADCAST_EVENT(QUEUE, METHOD, ...) \
     void METHOD() \
     { \
-        for(auto iterQueue = QUEUE.begin(); iterQueue!=QUEUE.end(); ++iterQueue) \
-            (*iterQueue)->METHOD(__VA_ARGS__); \
+        if(m_bD3DHookInstalled) \
+            for(auto iterQueue = QUEUE.begin(); iterQueue!=QUEUE.end(); ++iterQueue) \
+                (*iterQueue)->METHOD(__VA_ARGS__); \
     }
 
 /**
@@ -97,7 +98,7 @@ namespace D3DPlugin
 
             const char* GetVersion() const
             {
-                return "1.7.0.0";
+                return "1.8.0.0";
             };
 
             const char* GetName() const

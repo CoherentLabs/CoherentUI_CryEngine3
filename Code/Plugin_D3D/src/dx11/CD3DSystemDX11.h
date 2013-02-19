@@ -39,19 +39,25 @@ namespace D3DPlugin
                 hookD3D( bActivate );
             };
 
-            void* GetDevice();
             eD3DType GetType()
             {
                 return m_pDevice ? D3D_DX11 : D3D_NONE;
             };
-            void* GetSwapChain()
+
+            void* GetDevice()
             {
-                return NULL;
-            }; // DX11 only
+                return m_pDevice;
+            }
+
             void* GetDeviceContext()
             {
-                return NULL;
-            }; // DX11 only
+                return m_pDeviceCtx;
+            };
+
+            void* GetSwapChain()
+            {
+                return m_pSwapChain;
+            };
 
             ITexture* CreateTexture( void** pD3DTextureDst, int width, int height, int numMips, ETEX_Format eTF, int flags );
             ITexture* InjectTexture( void* pD3DTextureSrc, int nWidth, int nHeight, ETEX_Format eTF, int flags );

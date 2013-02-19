@@ -310,10 +310,10 @@ namespace D3DPlugin
 
             else if ( m_bD3DHookInstalled )
             {
-                unhookVT( pD3DDevice, IDirect3DDevice9, Present );
-                unhookVT( pD3DDevice, IDirect3DDevice9, Reset );
-                unhookVT( pD3DDevice, IDirect3DDevice9, BeginScene );
-                unhookVT( pD3DDevice, IDirect3DDevice9, CreateTexture );
+                unhookVT( pD3DDevice, IDirect3DDevice9, Present, false );
+                unhookVT( pD3DDevice, IDirect3DDevice9, Reset, false );
+                unhookVT( pD3DDevice, IDirect3DDevice9, BeginScene, false );
+                unhookVT( pD3DDevice, IDirect3DDevice9, CreateTexture, false );
             }
 
             m_bD3DHookInstalled = bHook;

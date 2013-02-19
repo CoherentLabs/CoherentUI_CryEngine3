@@ -106,6 +106,24 @@
     <Filter Include="GameToken">
       <UniqueIdentifier>{a374aab6-582f-4301-a4d0-40cffab22626}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{b5826fac-e691-44d9-bf32-c745bc13e85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Lobby">
+      <UniqueIdentifier>{6338ab8c-e3d4-4774-b505-292a9aaea5a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Friend Manager">
+      <UniqueIdentifier>{cfdf51c9-6589-460b-ba2d-9d93ff9062ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Recording">
+      <UniqueIdentifier>{6935106f-5be2-4acc-8aae-4e2e9b59a629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Squad">
+      <UniqueIdentifier>{6632fdb1-1744-4326-acdf-729991628d6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HUD\EventSystems">
+      <UniqueIdentifier>{ff84d126-8b7f-4c7a-8c1b-11717b32b6ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameDll.cpp">
@@ -543,30 +561,6 @@
     <ClCompile Include="HUD\BitmapUi.cpp">
       <Filter>HUD</Filter>
     </ClCompile>
-    <ClCompile Include="HUD\UIEntityDynTexTag.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UIHUD3D.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UIInput.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UIManager.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UIMenuEvents.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UIMultiPlayer.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UIObjectives.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
-    <ClCompile Include="HUD\UISettings.cpp">
-      <Filter>HUD</Filter>
-    </ClCompile>
     <ClCompile Include="CinematicInput.cpp">
       <Filter>GameRules</Filter>
     </ClCompile>
@@ -731,8 +725,114 @@
     </ClCompile>
     <ClCompile Include="GameStateRecorder.cpp" />
     <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="FlowWeaponCustomizationNodes.cpp">
+      <Filter>Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\CryGameSpyVoiceCodec.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\CryLobbySessionHandler.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\GameAchievements.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\GameBrowser.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\GameLobby.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\GameLobbyData.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\GameLobbyManager.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\GameServerLists.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\MatchmakingEvents.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\MatchmakingHandler.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\ScriptBind_MatchMaking.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\SessionNames.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Lobby\SessionSearchSimulator.cpp">
+      <Filter>Network\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\FriendManager\GameFriendsManager.cpp">
+      <Filter>Network\Friend Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\DownloadMgr.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\RecordingBuffer.cpp">
+      <Filter>Network\Recording</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Squad\SquadManager.cpp">
+      <Filter>Network\Squad</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\GameNetworkUtils.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\CryHash.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIEntityDynTexTag.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIEntityTag.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
     <ClCompile Include="HUD\UIGameEvents.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIHUD3D.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIInput.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UILobbyMP.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIMenuEvents.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIMultiPlayer.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIObjectives.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UISettings.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include=".\HUD\UIDialogs.cpp">
+      <Filter>HUD\EventSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\WarningsManager.cpp">
       <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIManager.cpp">
+      <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRulesHostMigration.cpp">
+      <Filter>GameRules</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRulesManager.cpp">
+      <Filter>GameRules</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRulesManager.cpp" />
+    <ClCompile Include="Environment\Snow.cpp">
+      <Filter>Game Files\Environment</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1153,30 +1253,6 @@
     <ClInclude Include="HUD\BitmapUi.h">
       <Filter>HUD</Filter>
     </ClInclude>
-    <ClInclude Include="HUD\UIEntityDynTexTag.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UIHUD3D.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UIInput.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UIManager.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UIMenuEvents.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UIMultiPlayer.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UIObjectives.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD\UISettings.h">
-      <Filter>HUD</Filter>
-    </ClInclude>
     <ClInclude Include="CinematicInput.h">
       <Filter>GameRules</Filter>
     </ClInclude>
@@ -1318,11 +1394,137 @@
     <ClInclude Include="GameStateRecorder.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="FlowWeaponCustomizationNodes.h">
+      <Filter>Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\AutoLockData.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\CryGameSpyVoiceCodec.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\CryLobbySessionHandler.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameAchievements.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameBrowser.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameLobby.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameLobbyData.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameLobbyManager.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameServerLists.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\GameUserPackets.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\MatchMakingEvents.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\MatchMakingHandler.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\ScriptBind_MatchMaking.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\SessionNames.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\SessionSearchSimulator.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\FriendManager\GameFriendData.h">
+      <Filter>Network\Friend Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\FriendManager\GameFriendsManager.h">
+      <Filter>Network\Friend Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\DownloadMgr.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\RecordingBuffer.h">
+      <Filter>Network\Recording</Filter>
+    </ClInclude>
+    <ClInclude Include="ITelemetryCollector.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\GameNetworkDefines.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Squad\SquadManager.h">
+      <Filter>Network\Squad</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\GameNetworkUtils.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\CryHash.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIEntityDynTexTag.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIEntityTag.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
     <ClInclude Include="HUD\UIGameEvents.h">
-      <Filter>HUD</Filter>
+      <Filter>HUD\EventSystems</Filter>
     </ClInclude>
     <ClInclude Include="HUD\IUIGameEventSystem.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIHUD3D.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIInput.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UILobbyMP.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIMenuEvents.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIMultiPlayer.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIObjectives.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UISettings.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include=".\HUD\UIDialogs.h">
+      <Filter>HUD\EventSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\WarningsManager.h">
       <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIManager.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameRulesManager.h" />
+    <ClInclude Include="GameRulesManager.h">
+      <Filter>GameRules</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRulesManager.h" />
+    <ClInclude Include="IGameRulesManager.h" />
+    <ClInclude Include="Network\LobbyTaskQueue.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Lobby\MatchMakingTelemetry.h">
+      <Filter>Network\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment\Snow.h">
+      <Filter>Game Files\Environment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

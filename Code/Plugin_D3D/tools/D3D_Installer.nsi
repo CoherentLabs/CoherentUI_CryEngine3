@@ -6,7 +6,7 @@
 ##################################
 XPStyle on
 
-!define VERSION "1.7.0.0"
+!define VERSION "1.8.0.0"
 Name "D3D Plugin ${VERSION} for CryEngine"
 
 ; The file to write
@@ -87,7 +87,7 @@ SectionEnd
 
 ; Set Fileinfos
 VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductName" "D3D Plugin"
-VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "Copyright (c) 2012, The authors of the D3D Plugin project"
+VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "Copyright (c) 2013, The authors of the D3D Plugin project"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "D3D Plugin for CryEngine"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "${VERSION}"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductVersion" "${VERSION}"

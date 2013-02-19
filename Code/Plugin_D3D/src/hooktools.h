@@ -12,35 +12,44 @@
 #define MF_PTR(x) (*(void**)((void*)(&x)))
 #define MF_DATA(x) ((void*)x)
 
+// variant that optionally doesn't remember original function (e.g. if vtables are patched by libraries)
+#define _hookVT(ptr, INTERFACE, METHOD, REMEMBER) \
+    if(getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)] != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD)) \
+    { \
+        if(REMEMBER) \
+        { \
+            MF_PTR(PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD)) = getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)];\
+        } \
+        changeVTEx(getVT(ptr), PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD), PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD));\
+    }
+
+// variant that is used to initially remember original functions (after that well only call those initially remembered function)
 #define hookVT(ptr, INTERFACE, METHOD) \
     {\
         Concurrency::critical_section::scoped_lock lock( PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD) ); \
-        if(getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)] != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD)) \
-        { \
-            MF_PTR(PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD)) = getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)];\
-            changeVTEx(getVT(ptr), PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD), PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD));\
-        } \
+        _hookVT(ptr, INTERFACE, METHOD, true); \
     }
 
-#define unhookVT(ptr, INTERFACE, METHOD) \
+#define unhookVT(ptr, INTERFACE, METHOD, REMEMBER) \
     {\
         Concurrency::critical_section::scoped_lock lock( PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD) ); \
-        if(getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)] != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD)) \
+        if(REMEMBER) \
         { \
-            MF_PTR(PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD)) = getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)];\
+            if(getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)] != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD)) \
+            { \
+                MF_PTR(PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD)) = getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)];\
+            } \
         } \
         changeVTEx(getVT(ptr), PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD), PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD));\
     }
 
+// variant that will rehook the vtable if it has been patched by someone (but won't update remembered function)
 #define rehookVT(ptr, INTERFACE, METHOD) \
     {\
-        PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD).lock(); \
+        Concurrency::critical_section::scoped_lock lock( PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD) ); \
         if(getVT(ptr)[PPCAT(PPCAT(PPCAT(vt, INTERFACE),_), METHOD)] != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD)) \
         { \
-            PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD).unlock();\
-            hookVT(ptr, INTERFACE, METHOD);\
-        } else { \
-            PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD).unlock();\
+            _hookVT(ptr, INTERFACE, METHOD, false);\
         } \
     }
 
@@ -60,7 +69,7 @@
 
 #define CALL_ORGINAL_(RET, ...) \
     PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD).lock(); \
-    assert(MF_PTR(PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD)) != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD)); \
+    assert("Please mail hendrikpolczyn at gmail dot com this error message: SO1 " && (MF_PTR(PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD)) != PPCAT(PPCAT(PPCAT(fh, INTERFACE),_), METHOD))); \
     RET (PPCAT((This)->*,((PPCAT(PPCAT(PPCAT(f, INTERFACE),_), METHOD))PPCAT(PPCAT(PPCAT(fo, INTERFACE),_), METHOD))))(__VA_ARGS__); \
     PPCAT(PPCAT(PPCAT(cs, INTERFACE),_), METHOD).unlock();
 
@@ -78,22 +87,26 @@
     typedef rettype (STDMETHODCALLTYPE INTERFACE::*PPCAT(PPCAT(PPCAT(f, INTERFACE),_), method))
 
 
-template<typename func, typename vttype> bool changeVTEx( void** vt, vttype n, func target )
+template<typename func, typename vttype> bool changeVTEx( void** ppVt, vttype n, func pfTarget )
 {
-    DWORD OldProtections = 0;
+    DWORD dwOldProtections = 0;
     bool bRet = false;
 
-    if ( vt && !IsBadReadPtr( vt, sizeof( LPCVOID ) ) && !IsBadReadPtr( &vt[n], sizeof( LPCVOID ) ) )
+    if ( ppVt && !IsBadReadPtr( ppVt, sizeof( LPCVOID ) ) && !IsBadReadPtr( &ppVt[n], sizeof( LPCVOID ) ) )
     {
-        if ( VirtualProtect( &vt[n], sizeof( LPCVOID ), PAGE_EXECUTE_READWRITE, &OldProtections ) )
+        if ( VirtualProtect( &ppVt[n], sizeof( LPCVOID ), PAGE_EXECUTE_READWRITE, &dwOldProtections ) )
         {
-            if ( !IsBadWritePtr( &vt[n], sizeof( LPCVOID ) ) )
+            if ( !IsBadWritePtr( &ppVt[n], sizeof( LPCVOID ) ) )
             {
-                vt[n] = MF_PTR( target );
+                ppVt[n] = MF_PTR( pfTarget );
                 bRet = true;
             }
 
-            VirtualProtect( &vt[n], sizeof( LPCVOID ), OldProtections, &OldProtections );
+            // restore old access rights
+            VirtualProtect( &ppVt[n], sizeof( LPCVOID ), dwOldProtections, &dwOldProtections );
+
+            // flush instructions since vtable changed
+            FlushInstructionCache ( GetCurrentProcess (), NULL, 0 );
         }
     }
 

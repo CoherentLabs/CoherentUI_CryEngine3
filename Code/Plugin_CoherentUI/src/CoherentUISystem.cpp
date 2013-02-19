@@ -72,7 +72,7 @@ namespace CoherentUIPlugin
 		gEnv->pGameFramework->RegisterListener( this, "CCoherentUISystem", eFLPriority_HUD );
 		gEnv->pGameFramework->GetILevelSystem()->AddListener( this );
 
-		Coherent::UI::SystemSettings settings( L"\\Bin32", false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
+		Coherent::UI::SystemSettings settings( L"\\Bin32\\host", false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
 		m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug );
 
 		return m_pUISystem != NULL;

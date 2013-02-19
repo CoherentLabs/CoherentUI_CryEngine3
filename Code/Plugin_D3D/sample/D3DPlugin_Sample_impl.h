@@ -33,7 +33,7 @@ protected:
 
 			// Apply custom rendering
 			// Make window green (TODO: Remove this and add your own stuff)
-			m_pDevice.dx9->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(200,255,0), 1.0f, 0);
+			//m_pDevice.dx9->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(200,255,0), 1.0f, 0);
 
 			// Restore D3D State for next frame
 			m_pStateBlock->Apply();

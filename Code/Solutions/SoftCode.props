@@ -10,7 +10,11 @@
 	  <PreprocessorDefinitions>SOFTCODE_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
 	</ClCompile>
-	<Link>
+  </ItemDefinitionGroup>
+  
+  <!-- Automatic .def file generation for 360 -->
+  <ItemDefinitionGroup Condition="'$(SOFTCODE_ENABLED)|$(Platform)'=='true|Xbox 360'">
+  	<Link>
 		<!-- Disable standard .def file in favor or using /AutoDef -->
 		<ModuleDefinitionFile></ModuleDefinitionFile>
 		<!-- For some reason the AutomaticModuleDefinitionFile never makes it to the linker command line -->
