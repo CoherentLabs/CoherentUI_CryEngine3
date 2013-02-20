@@ -16,6 +16,7 @@ namespace CoherentUIPlugin
 
 	CCoherentViewListener::CCoherentViewListener( void* pTexture )
 		: m_pTexture( pTexture )
+		, m_pTextureSRV( NULL )
 		, m_ReadyForBindings( false )
 		, m_pView( NULL )
 		, m_CryTextureID( 0 )
@@ -258,17 +259,53 @@ namespace CoherentUIPlugin
 
 	void CCoherentViewListener::SetTexture( void* pTexture, int cryTexID )
 	{
+		ReleaseTexture();
+
 		m_CryTextureID = cryTexID;
 		m_pTexture = pTexture;
+
+		CreateShaderResourceViewForDX11Texture();
+	}
+
+	void CCoherentViewListener::CreateShaderResourceViewForDX11Texture()
+	{
+		if (gEnv->pRenderer->GetRenderType() != eRT_DX11 || m_pTexture == NULL)
+		{
+			return;
+		}
+
+		ID3D11Texture2D* pTexture = static_cast<ID3D11Texture2D*>( m_pTexture );
+
+		ID3D11Device* pDevice = static_cast<ID3D11Device*>( gD3DDevice );
+		ID3D11DeviceContext* pContext = NULL;
+		pDevice->GetImmediateContext( &pContext );
+
+		D3D11_TEXTURE2D_DESC texDesc;
+		pTexture->GetDesc(&texDesc);
+
+		D3D11_SHADER_RESOURCE_VIEW_DESC srvDesc;
+		srvDesc.Format = texDesc.Format;
+		srvDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
+		srvDesc.Texture2D.MipLevels = texDesc.MipLevels;
+		srvDesc.Texture2D.MostDetailedMip = 0;
+
+		pDevice->CreateShaderResourceView(pTexture, &srvDesc, &m_pTextureSRV);
 	}
 
 	void* CCoherentViewListener::GetTexture() const
 	{
+		if (gEnv->pRenderer->GetRenderType() == eRT_DX11)
+		{
+			return m_pTextureSRV;
+		}
+
 		return m_pTexture;
 	}
 
 	void CCoherentViewListener::ReleaseTexture()
 	{
+		SAFE_RELEASE(m_pTextureSRV);
+
 		if ( m_pTexture )
 		{
 			gEnv->pRenderer->RemoveTexture( m_CryTextureID );

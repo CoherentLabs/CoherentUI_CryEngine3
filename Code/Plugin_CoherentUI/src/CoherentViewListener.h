@@ -11,6 +11,8 @@ namespace Coherent
 	}
 }
 
+struct ID3D11ShaderResourceView;
+
 namespace CoherentUIPlugin
 {
 	class CCoherentGeometry;
@@ -48,8 +50,11 @@ namespace CoherentUIPlugin
 			void DrawFrameDX11SharedMemory( Coherent::UI::CoherentHandle data, int width, int height );
 			void DrawFrameDX11SharedTexture( Coherent::UI::CoherentHandle data, int width, int height );
 
+			void CreateShaderResourceViewForDX11Texture();
+
 		protected:
 			void* m_pTexture; // IDirect3D9Texture* or ID3D11Texture2D*
+			ID3D11ShaderResourceView* m_pTextureSRV; // Shader resource view for DX11 texture
 			int m_CryTextureID; // Used for removal from the CryEngine renderer when the listener is destroyed
 
 			bool m_ReadyForBindings;

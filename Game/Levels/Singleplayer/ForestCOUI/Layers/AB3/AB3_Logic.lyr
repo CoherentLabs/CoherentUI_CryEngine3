@@ -1,7 +1,7 @@
 <ObjectLayer>
  <Layer Name="AB3_Logic" GUID="{AEF81BA9-8BEC-4562-BCB4-5FBCE76A310F}" FullName="AB3/AB3_Logic" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}">
   <LayerObjects>
-   <Object Type="Entity" Layer="AB3_Logic" LayerGUID="{AEF81BA9-8BEC-4562-BCB4-5FBCE76A310F}" Id="{E776F70D-4969-4251-8C80-548D2D0D93E5}" Name="Waterfall_Screen_Effect_Trig_03" Pos="589.35529,409.50806,158.21483" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
+   <Object Type="Entity" Layer="AB3_Logic" LayerGUID="{AEF81BA9-8BEC-4562-BCB4-5FBCE76A310F}" Id="{E776F70D-4969-4251-8C80-548D2D0D93E5}" Name="Waterfall_Screen_Effect_Trig_03" Pos="589.35529,409.50806,158.21483" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
     <Properties bEnabled="1" esFactionFilter="" bInVehicleOnly="0" bOnlyLocalPlayer="0" bOnlyPlayers="1" PlaySequence="" ScriptCommand="" bTriggerOnce="0">
      <MultiplayerOptions bLocalOnly="0" bPerPlayer="0"/>
     </Properties>

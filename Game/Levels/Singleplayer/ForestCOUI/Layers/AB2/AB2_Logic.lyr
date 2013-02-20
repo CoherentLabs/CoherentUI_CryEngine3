@@ -17,7 +17,7 @@
     </Entities>
     <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Roof="0" Floor="0"/>
    </Object>
-   <Object Type="Entity" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{5195B053-828B-405B-86E4-EBFE6D6FD2BD}" Name="Waterfall_Screen_Effect_Trig_02" Pos="594.26099,370.61557,153.87082" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
+   <Object Type="Entity" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{5195B053-828B-405B-86E4-EBFE6D6FD2BD}" Name="Waterfall_Screen_Effect_Trig_02" Pos="594.26099,370.61557,153.87082" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
     <Properties bEnabled="1" esFactionFilter="" bInVehicleOnly="0" bOnlyLocalPlayer="0" bOnlyPlayers="1" PlaySequence="" ScriptCommand="" bTriggerOnce="0">
      <MultiplayerOptions bLocalOnly="0" bPerPlayer="0"/>
     </Properties>

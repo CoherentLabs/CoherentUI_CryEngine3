@@ -16,7 +16,7 @@ struct IDirect3DVertexBuffer9;
 struct IDirect3DVertexShader9;
 struct IDirect3DPixelShader9;
 struct IDirect3DStateBlock9;
-struct ID3D11Texture2D;
+struct ID3D11ShaderResourceView;
 struct ID3D11VertexShader;
 struct ID3D11PixelShader;
 
@@ -36,7 +36,7 @@ namespace CoherentUIPlugin
 			void CreateDX11Resources();
 
 			void DrawDX9(IDirect3DTexture9* pTexture);
-			void DrawDX11(ID3D11Texture2D* pTexture);
+			void DrawDX11(ID3D11ShaderResourceView* pTexture);
 
 		private:
 			// DX9
