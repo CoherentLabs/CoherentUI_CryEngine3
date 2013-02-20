@@ -391,11 +391,14 @@ bool CGame::Init(IGameFramework *pFramework)
 	}
 
 	// Initialize Coherent UI
-	PluginManager::IPluginBase* pCoherentUIPlugin = gPluginManager->GetPluginByName("CoherentUI");
-	m_pCoherentUIPlugin = static_cast<CoherentUIPlugin::IPluginCoherentUI*>(pCoherentUIPlugin ? pCoherentUIPlugin->GetConcreteInterface() : NULL);
-	if (m_pCoherentUIPlugin)
+	if (gPluginManager)
 	{
-		m_pCoherentUIPlugin->InitializeSystem();
+		PluginManager::IPluginBase* pCoherentUIPlugin = gPluginManager->GetPluginByName("CoherentUI");
+		m_pCoherentUIPlugin = static_cast<CoherentUIPlugin::IPluginCoherentUI*>(pCoherentUIPlugin ? pCoherentUIPlugin->GetConcreteInterface() : NULL);
+		if (m_pCoherentUIPlugin)
+		{
+			m_pCoherentUIPlugin->InitializeSystem();
+		}
 	}
 
 	//Even if there's no online multiplayer, we're still required to initialize the lobby as it hosts the PS3 trophies.
@@ -879,9 +882,12 @@ void CGame::OnActionEvent(const SActionEvent& event)
 		if (m_pCoherentUIPlugin)
 		{
 			IPlayerEventListener* pPlayerEventListner = m_pCoherentUIPlugin->GetPlayerEventListener();
-			CPlayer* pPlayer = static_cast<CPlayer*>(gEnv->pGameFramework->GetClientActor());
-			CRY_ASSERT(pPlayer != NULL);
-			pPlayer->RegisterPlayerEventListener(pPlayerEventListner);
+			if (pPlayerEventListner)
+			{
+				CPlayer* pPlayer = static_cast<CPlayer*>(gEnv->pGameFramework->GetClientActor());
+				CRY_ASSERT(pPlayer != NULL);
+				pPlayer->RegisterPlayerEventListener(pPlayerEventListner);
+			}
 		}
 		break;
   }
