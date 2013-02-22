@@ -1,1 +1,2 @@
-Coherent Labs
+Nick - Coherent Labs (http://coherent-labs.com/)
+Hendrik Polczynski - PakFileHandler, simplifications

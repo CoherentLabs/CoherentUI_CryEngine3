@@ -22,11 +22,9 @@
 
 
 CoherentUIPlugin::CCoherentUISystem* gCoherentUISystem = NULL;
-static bool s_NewFrame = false; // Needed for the DX11 hook mechanism of the D3D plugin
 
 namespace CoherentUIPlugin
 {
-
 	enum ViewListenerID
 	{
 		VL_HUD = 0,
@@ -76,7 +74,7 @@ namespace CoherentUIPlugin
         std::wstring sPathW; sPathW.assign(sPath.begin(), sPath.end()); 
 
 		Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
-		m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug );
+		m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr, &m_PakFileHandler );
 
 		return m_pUISystem != NULL;
 	}
@@ -223,12 +221,6 @@ namespace CoherentUIPlugin
 
 	void CCoherentUISystem::OnPostBeginScene()
 	{
-		if ( !s_NewFrame )
-		{
-			return;
-		}
-
-		s_NewFrame = false;
 		ExecutePendingCreateSurfaceTasks();
 
 		if ( m_pUISystem )
@@ -242,7 +234,6 @@ namespace CoherentUIPlugin
 	// IGameFramework methods
 	void CCoherentUISystem::OnPostUpdate( float fDeltaTime )
 	{
-		s_NewFrame = true;
 		SetTexturesForListeners();
 
 		if ( m_pUISystem )
@@ -517,7 +508,7 @@ namespace CoherentUIPlugin
 		info.SupportClickThrough = true;
 		if (m_ViewListeners[VL_HUD]->GetView() == nullptr)
 		{
-			m_pUISystem->CreateView(info, L"coui://Game/Libs/UI/CoherentUI/hud/hud.html", m_ViewListeners[VL_HUD].get());
+			m_pUISystem->CreateView(info, L"coui://Libs/UI/CoherentUI/hud/hud.html", m_ViewListeners[VL_HUD].get());
 		}
 
 		info.Width = 1024;

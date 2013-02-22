@@ -42,6 +42,7 @@
     <ClCompile Include="..\src\CPluginCoherentUI.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUIModule.cpp" />
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp" />
+    <ClCompile Include="..\src\PakFileHandler.cpp" />
     <ClCompile Include="..\src\StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -60,6 +61,7 @@
     <ClInclude Include="..\src\CoherentViewListener.h" />
     <ClInclude Include="..\src\CPluginCoherentUI.h" />
     <ClInclude Include="..\src\FullscreenTriangleDrawer.h" />
+    <ClInclude Include="..\src\PakFileHandler.h" />
     <ClInclude Include="..\src\StdAfx.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

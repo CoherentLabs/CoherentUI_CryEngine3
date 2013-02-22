@@ -5,6 +5,8 @@
 #include <ILevelSystem.h>
 #include <Coherent/UI/CoherentTypes.h>
 
+#include <PakFileHandler.h>
+
 namespace Coherent
 {
 	namespace UI
@@ -120,6 +122,9 @@ namespace CoherentUIPlugin
 			typedef std::map<Coherent::UI::CoherentHandle, TexturePair> HandleToSurfaceMap;
 			HandleToSurfaceMap m_Surfaces;
 			CryCriticalSection m_SurfacesCollectionLock;
+
+            // CryPak File Handler
+            PakFileHandler m_PakFileHandler;
 	};
 
 }
