@@ -72,7 +72,10 @@ namespace CoherentUIPlugin
 		gEnv->pGameFramework->RegisterListener( this, "CCoherentUISystem", eFLPriority_HUD );
 		gEnv->pGameFramework->GetILevelSystem()->AddListener( this );
 
-		Coherent::UI::SystemSettings settings( L"\\Bin32\\host", false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
+        std::string sPath( gPluginManager->GetPluginDirectory(PLUGIN_NAME) ); sPath += "\\host";
+        std::wstring sPathW; sPathW.assign(sPath.begin(), sPath.end()); 
+
+		Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
 		m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug );
 
 		return m_pUISystem != NULL;
@@ -514,7 +517,7 @@ namespace CoherentUIPlugin
 		info.SupportClickThrough = true;
 		if (m_ViewListeners[VL_HUD]->GetView() == nullptr)
 		{
-			m_pUISystem->CreateView(info, L"coui://Bin32/TestPages/hud/hud.html", m_ViewListeners[VL_HUD].get());
+			m_pUISystem->CreateView(info, L"coui://Game/Libs/UI/CoherentUI/hud/hud.html", m_ViewListeners[VL_HUD].get());
 		}
 
 		info.Width = 1024;
