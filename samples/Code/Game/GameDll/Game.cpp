@@ -391,15 +391,11 @@ bool CGame::Init(IGameFramework *pFramework)
 	}
 
 	// Initialize Coherent UI
-	if (gPluginManager)
-	{
-		PluginManager::IPluginBase* pCoherentUIPlugin = gPluginManager->GetPluginByName("CoherentUI");
-		m_pCoherentUIPlugin = static_cast<CoherentUIPlugin::IPluginCoherentUI*>(pCoherentUIPlugin ? pCoherentUIPlugin->GetConcreteInterface() : NULL);
-		if (m_pCoherentUIPlugin)
-		{
-			m_pCoherentUIPlugin->InitializeSystem();
-		}
-	}
+    m_pCoherentUIPlugin = PluginManager::safeUsePluginConcreteInterface<CoherentUIPlugin::IPluginCoherentUI*>("CoherentUI");
+    if (m_pCoherentUIPlugin)
+    {
+        m_pCoherentUIPlugin->InitializeSystem();
+    }
 
 	//Even if there's no online multiplayer, we're still required to initialize the lobby as it hosts the PS3 trophies.
 	//As info from the trophies must be considered when enumerating disk space on PS3, we can't finish the PlatformOS_PS3 init process
@@ -517,6 +513,8 @@ bool CGame::CompleteInit()
 	return true;
 }
 
+#include <IPluginManager_impl.h>
+
 void CGame::RegisterGameFlowNodes()
 {
 	// Initialize Game02 flow nodes
@@ -530,7 +528,8 @@ void CGame::RegisterGameFlowNodes()
 			pFactory = pFactory->m_pNext;
 		}
 	}
-}
+    PluginManager::RegisterPluginFlownodes();
+} // <--
 
 void CGame::ResetServerGameTokenSynch()
 {
