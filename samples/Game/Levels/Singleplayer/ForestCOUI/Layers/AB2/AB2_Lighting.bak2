@@ -1,0 +1,20 @@
+<ObjectLayer>
+ <Layer Name="AB2_Lighting" GUID="{6D0D5464-7445-4BD3-8E5C-D767F6CBBF03}" FullName="AB2/AB2_Lighting" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="14275974" ParentGUID="{0A8FBF02-DF2A-40FE-83B5-E7F03AF08DA9}">
+  <LayerObjects>
+   <Object Type="Entity" Layer="AB2_Lighting" LayerGUID="{6D0D5464-7445-4BD3-8E5C-D767F6CBBF03}" Id="{81222C39-1304-46D5-A2E2-6D4D22DD1D90}" Name="forest_ambient_light12" Pos="667.815,328.56116,167.8196" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="10" _nVersion="0">
+     <Color clrDiffuse="0.948965,0.796917,0.579547" fDiffuseMultiplier="2" fHDRDynamic="1" fSpecularMultiplier="0.1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Prefab" Layer="AB2_Lighting" LayerGUID="{6D0D5464-7445-4BD3-8E5C-D767F6CBBF03}" Id="{AEF5908E-3AA4-4CED-9565-35092B0C16FD}" Name="Prefab21" Pos="636.5578,384.81995,170.38438" FloorNumber="-1" Rotate="0.79335332,0,0,0.60876155" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB2_Lighting" LayerGUID="{6D0D5464-7445-4BD3-8E5C-D767F6CBBF03}" Id="{ECA7D59D-3DA9-4987-94B5-9C18F6F55353}" Name="Prefab19" Pos="621.98932,373.46216,166.85222" FloorNumber="-1" Rotate="-0.0087265866,0,0,0.99996191" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB2_Lighting" LayerGUID="{6D0D5464-7445-4BD3-8E5C-D767F6CBBF03}" Id="{2FDCA4A3-4578-4817-A6B5-2273FB072C4E}" Name="Prefab22" Pos="645.33698,391.60324,170.10449" FloorNumber="-1" Rotate="0.99984771,-0,0,-0.017452203" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB2_Lighting" LayerGUID="{6D0D5464-7445-4BD3-8E5C-D767F6CBBF03}" Id="{A4D631C5-7AB6-4243-ADA3-E276A48A29A7}" Name="Prefab20" Pos="636.51489,371.3656,169.89757" FloorNumber="-1" Rotate="0.73135376,0,0,-0.68199831" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

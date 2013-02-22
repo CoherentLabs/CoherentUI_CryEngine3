@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Condition="'$(ConfigurationType)|$(Platform)'=='DynamicLibrary|Xbox 360'">
+	<!-- Workaround: 360 linker OutputFile just reads this property directly. Seems IntDir unavailable. -->
+  	<OutputFile>$(SolutionDir)..\..\BinTemp\$(Platform)\$(Configuration)\$(ProjectName)\$(TargetName).dll</OutputFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(SOFTCODE_ENABLED)'=='true'">
+    <ClCompile>
+	  <PreprocessorDefinitions>SOFTCODE_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+	</ClCompile>
+  </ItemDefinitionGroup>
+  
+  <!-- Automatic .def file generation for 360 -->
+  <ItemDefinitionGroup Condition="'$(SOFTCODE_ENABLED)|$(Platform)'=='true|Xbox 360'">
+  	<Link>
+		<!-- Disable standard .def file in favor or using /AutoDef -->
+		<ModuleDefinitionFile></ModuleDefinitionFile>
+		<!-- For some reason the AutomaticModuleDefinitionFile never makes it to the linker command line -->
+		<!-- AutomaticModuleDefinitionFile>$(IntDir)Auto$(TargetName).def</AutomaticModuleDefinitionFile -->
+		<AdditionalOptions>/AutoDEF:"$(IntDir)Auto$(TargetName).def" %(AdditionalOptions)</AdditionalOptions>
+	</Link>
+	<!-- As the project .def is typically read-only we create a copy that is then updated via /AutoDEF -->
+	<PreBuildEvent>
+      <Command>copy "$(ProjectDir)$(ProjectName).def" "$(IntDir)Auto$(TargetName).def"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Creating $(IntDir)Auto$(TargetName).def</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+</Project>

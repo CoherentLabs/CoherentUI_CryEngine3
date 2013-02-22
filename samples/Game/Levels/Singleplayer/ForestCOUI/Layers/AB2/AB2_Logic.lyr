@@ -1,0 +1,54 @@
+<ObjectLayer>
+ <Layer Name="AB2_Logic" GUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" FullName="AB2/AB2_Logic" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="14275974" ParentGUID="{0A8FBF02-DF2A-40FE-83B5-E7F03AF08DA9}">
+  <LayerObjects>
+   <Object Type="Shape" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{417BB919-9258-4DA7-9216-D18958B381A7}" Name="Waterfall_Screen_Effect_Shape_02" Pos="618.41821,356.13763,145.87201" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="15" AreaId="0" GroupId="0" Priority="0" Closed="1" DisplayFilled="0" DisplaySoundInfo="0" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="4.0983887,8.6520386,0"/>
+     <Point Pos="-11.36731,6.7579346,0"/>
+     <Point Pos="-15.571289,9.8489685,-0.01373291"/>
+     <Point Pos="-17.574463,14.184845,0"/>
+     <Point Pos="-26.050354,8.833374,0"/>
+     <Point Pos="-19.11261,1.6580505,0.017501831"/>
+     <Point Pos="-12.394836,-1.8218689,0.026550293"/>
+    </Points>
+    <Entities>
+     <Entity Id="{5195B053-828B-405B-86E4-EBFE6D6FD2BD}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Entity" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{5195B053-828B-405B-86E4-EBFE6D6FD2BD}" Name="Waterfall_Screen_Effect_Trig_02" Pos="594.26099,370.61557,153.87082" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
+    <Properties bEnabled="1" esFactionFilter="" bInVehicleOnly="0" bOnlyLocalPlayer="0" bOnlyPlayers="1" PlaySequence="" ScriptCommand="" bTriggerOnce="0">
+     <MultiplayerOptions bLocalOnly="0" bPerPlayer="0"/>
+    </Properties>
+   </Object>
+   <Object Type="Portal" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{D153B55D-D5DE-4C33-A73E-B60916D1A8EF}" Name="Portal13" Pos="647,398,168.5" FloorNumber="-1" Rotate="0.70710683,0,0,-0.70710677" ColorRGB="3996260" Height="14" DisplayFilled="0" AmbientColor="0.453456,0.453456,0.453456" AffectedBySun="1" IgnoreSkyColor="1" IgnoreGI="1" ViewDistRatio="100" SkyOnly="0" OceanIsVisible="0" UseDeepness="1" DoubleSide="1" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="20.999969,0,0.5"/>
+     <Point Pos="21,6,0.5"/>
+     <Point Pos="0,6,0.5"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Portal" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{B2977F68-D7E2-4BA1-AEFE-EF79A88DA0DE}" Name="Portal12" Pos="708,375,167" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="3996260" Height="14" DisplayFilled="1" AmbientColor="1,1,1" AffectedBySun="1" IgnoreSkyColor="1" IgnoreGI="1" ViewDistRatio="100" SkyOnly="0" OceanIsVisible="0" UseDeepness="1" DoubleSide="1" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="12,0,0"/>
+     <Point Pos="12,3,0"/>
+     <Point Pos="0,3,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="VisArea" Layer="AB2_Logic" LayerGUID="{1FAB28FF-2E69-4502-B86A-D5AF47BC5A23}" Id="{9CBD86F9-DEF9-43A2-A606-20B726ABD140}" Name="VisArea1" Pos="729.5,443.75,158" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="33023" Height="24.9" DisplayFilled="1" AmbientColor="0.21952,0.21952,0.21952" AffectedBySun="0" IgnoreSkyColor="1" IgnoreGI="1" ViewDistRatio="100" SkyOnly="0" OceanIsVisible="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-81.5,-5.75,0"/>
+     <Point Pos="-81.5,-66.75,0"/>
+     <Point Pos="0,-67,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="0"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

@@ -1,0 +1,328 @@
+<ObjectLayer>
+ <Layer Name="AB3_Lighting" GUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" FullName="AB3/AB3_Lighting" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}">
+  <LayerObjects>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{9E8C4404-B305-42CB-AED9-7C8A7CD5B6F5}" Name="Prefab35" Pos="506.71643,446.22726,143.9659" FloorNumber="-1" Rotate="0.98901588,0,0,0.14780955" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Group" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Name="lighthouse" Pos="392.35089,399.41003,156.64879" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65280" MergeGeom="0" Opened="0">
+    <Objects>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{CF6B3B01-107A-4E29-943C-1337FA8B705C}" Name="Light69" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-2.2097168,0.83575439,3.3754425" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="3.54" _nVersion="0">
+       <Color clrDiffuse="0.334458,0.560499,0.907547" fDiffuseMultiplier="0.5" fHDRDynamic="0" fSpecularMultiplier="12.2"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{260D510D-4596-4425-93E5-888B5F3758CE}" Name="Light76" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-1.5765076,0.2666626,7.3978577" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="1.83" _nVersion="0">
+       <Color clrDiffuse="0.774227,0.573159,0.368591" fDiffuseMultiplier="0.9" fHDRDynamic="0" fSpecularMultiplier="0.7"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{B674F51F-7D56-46A4-A8BA-DD56145359B6}" Name="Light67" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="1.2790222,-0.39520264,-2.2270508" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="3.54" _nVersion="0">
+       <Color clrDiffuse="0.334458,0.560499,0.907547" fDiffuseMultiplier="0.5" fHDRDynamic="0" fSpecularMultiplier="12.2"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{A7514234-9F7D-4D5D-8D29-61A9A1A5D4EC}" Name="Light70" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="0.40005493,2.029541,-6.4636993" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="3.54" _nVersion="0">
+       <Color clrDiffuse="0.334458,0.560499,0.907547" fDiffuseMultiplier="0.5" fHDRDynamic="0" fSpecularMultiplier="12.2"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{05E9825C-E6F8-48FA-8C9B-D1697825C997}" Name="Light71" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-1.8436279,-2.336853,-6.3819122" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="3.54" _nVersion="0">
+       <Color clrDiffuse="0.334458,0.560499,0.907547" fDiffuseMultiplier="0.5" fHDRDynamic="0" fSpecularMultiplier="12.2"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{7DC9BD5F-B15E-459A-83EC-D079DE7E3F58}" Name="Light74" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.93865967,0.83911133,8.6488495" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="2.97" _nVersion="0">
+       <Color clrDiffuse="0.774227,0.573159,0.368591" fDiffuseMultiplier="0.4" fHDRDynamic="0" fSpecularMultiplier="1"/>
+       <Options bAffectsThisAreaOnly="0" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{368DF460-B93B-484E-9B3A-D3A10004A97F}" Name="Light68" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="1.147583,-0.52624512,3.3796387" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="3.54" _nVersion="0">
+       <Color clrDiffuse="0.334458,0.560499,0.907547" fDiffuseMultiplier="0.5" fHDRDynamic="0" fSpecularMultiplier="12.2"/>
+       <Options bAffectsThisAreaOnly="0" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{E1310C64-F486-47DD-9929-614D29FEE42F}" Name="Light15" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-2.5352783,0.95843506,-1.4541473" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="3.54" _nVersion="0">
+       <Color clrDiffuse="0.334458,0.560499,0.907547" fDiffuseMultiplier="0.5" fHDRDynamic="0" fSpecularMultiplier="12.2"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{C403DF6D-2080-4CE7-9D53-862878459A71}" Name="Light79" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="0.51464844,2.0757446,1.0792694" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="4.02" _nVersion="0">
+       <Color clrDiffuse="0.436813,0.493616,0.68002" fDiffuseMultiplier="3.1" fHDRDynamic="0" fSpecularMultiplier="0.1"/>
+       <Options bAffectsThisAreaOnly="0" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{E1D3BA73-D9C0-43FB-9142-968DDC724FEC}" Name="Lights.Mine_Lamp12" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.33435059,0.046264648,5.0558319" FloorNumber="-1" Rotate="0.88294756,0,0,-0.46947157" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+      <Properties2 bTurnedOn="1">
+       <LightProperties_Base Radius="3" bUseThisLight="1">
+        <Color clrDiffuse="0.907547,0.812241,0.45908" fDiffuseMultiplier="0.9" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIrradianceVolumes="0" nPostEffect="0" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Base>
+       <LightProperties_Destroyed Radius="10" bUseThisLight="0">
+        <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" bDeferredLight="0" bFakeLight="0" bIgnoreGeomCaster="0" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Destroyed>
+      </Properties2>
+     </Object>
+     <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{B0E6CAA5-3BCA-4288-86A6-8961E9F1521E}" Name="Lights.Mine_Lamp13" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.27926636,0.038085938,-0.22906494" FloorNumber="-1" Rotate="0.98480779,0,0,-0.17364815" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+      <Properties2 bTurnedOn="1">
+       <LightProperties_Base Radius="3" bUseThisLight="1">
+        <Color clrDiffuse="0.907547,0.812241,0.45908" fDiffuseMultiplier="0.9" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIrradianceVolumes="0" nPostEffect="0" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Base>
+       <LightProperties_Destroyed Radius="10" bUseThisLight="0">
+        <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" bDeferredLight="0" bFakeLight="0" bIgnoreGeomCaster="0" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Destroyed>
+      </Properties2>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{BAB6FAC3-F591-4838-86D9-5ECACDF202AF}" Name="Light78" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="0.83010864,0.42419434,10.915466" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="2.97" _nVersion="0">
+       <Color clrDiffuse="0.774227,0.573159,0.368591" fDiffuseMultiplier="7.6" fHDRDynamic="0" fSpecularMultiplier="1"/>
+       <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{7FF292C7-C88B-40FC-8FDC-284B94F9191F}" Name="Light14" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.46862793,0.30487061,-2.2270508" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="10" _nVersion="0">
+       <Color clrDiffuse="0.632043,0.573159,0.476177" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+       <Options bAffectsThisAreaOnly="0" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{A4BCDAC9-1E1A-4A25-93C5-FCB7A869C8B9}" Name="Lights.Mine_Lamp14" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.23852539,0.0092773438,-5.6160889" FloorNumber="-1" Rotate="0.97437006,0,0,-0.22495106" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+      <Properties2 bTurnedOn="1">
+       <LightProperties_Base Radius="3" bUseThisLight="1">
+        <Color clrDiffuse="0.907547,0.812241,0.45908" fDiffuseMultiplier="0.9" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIrradianceVolumes="0" nPostEffect="0" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Base>
+       <LightProperties_Destroyed Radius="10" bUseThisLight="0">
+        <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" bDeferredLight="0" bFakeLight="0" bIgnoreGeomCaster="0" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Destroyed>
+      </Properties2>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{145C83CF-5F09-412B-9415-680028B2EFE4}" Name="Light73" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.29870605,-0.033508301,4.5836792" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="4.02" _nVersion="0">
+       <Color clrDiffuse="0.88318,0.579547,0.302126" fDiffuseMultiplier="1.1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+       <Options bAffectsThisAreaOnly="0" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{082FF4D2-E965-4D6C-A6E1-B8C588AC4BF3}" Name="Light77" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="0.45892334,-1.161438,6.5089264" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="2" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+      <Properties bActive="1" Radius="2.97" _nVersion="0">
+       <Color clrDiffuse="0.368591,0.45908,0.774227" fDiffuseMultiplier="0.3" fHDRDynamic="0" fSpecularMultiplier="0.3"/>
+       <Options bAffectsThisAreaOnly="0" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" bNegativeLight="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+       <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+       <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+        <Rotation x="0" y="0" z="0"/>
+       </Style>
+      </Properties>
+     </Object>
+     <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{A0680EDE-0EA8-46AC-8FFC-1FDE7B858314}" Name="Lights.Mine_Lamp11" Parent="{AAE5B004-48BD-4556-89DF-A1D094F9DAEE}" Pos="-0.4944458,-0.0025634766,8.8777466" FloorNumber="-1" Rotate="0.88294756,0,0,-0.46947157" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+      <Properties2 bTurnedOn="1">
+       <LightProperties_Base Radius="3" bUseThisLight="1">
+        <Color clrDiffuse="0.907547,0.812241,0.45908" fDiffuseMultiplier="0.9" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIrradianceVolumes="0" nPostEffect="0" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Base>
+       <LightProperties_Destroyed Radius="10" bUseThisLight="0">
+        <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+        <Options bAffectsThisAreaOnly="1" nCastShadows="0" bDeferredLight="0" bFakeLight="0" bIgnoreGeomCaster="0" bUsedInRealTime="1" nViewDistRatio="100"/>
+        <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+        <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+        <Test bFillLight="0" bNegativeLight="0"/>
+        <vDirection x="0" y="1" z="0"/>
+        <vOffset x="0" y="0" z="0"/>
+       </LightProperties_Destroyed>
+      </Properties2>
+     </Object>
+    </Objects>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{4D50B504-A2B1-4767-9E98-D96E0630F66F}" Name="Prefab10" Pos="582.66504,484.16675,149.83946" FloorNumber="-1" Rotate="0.99691731,0,0,0.078459181" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{F12B2908-4D8C-41EB-88D5-4DF9A82266A5}" Name="Prefab38" Pos="416.20819,398.04993,146.96086" FloorNumber="-1" Rotate="0.99026811,0,0,0.13917309" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{6B82140D-3D47-4B1F-B9AF-2DC08171ABD6}" Name="Prefab39" Pos="403.08871,394.94214,146.27733" FloorNumber="-1" Rotate="-0.0261769,0,0,0.99965733" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{3BC5800D-AB49-404B-8AA2-4FD8422B97B3}" Name="Prefab17" Pos="607.20441,389.46994,157.68207" FloorNumber="-1" Rotate="0.71325046,0,0,0.70090932" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{31D8A811-1A0A-4843-93D0-11D0136BDBCD}" Name="Prefab9" Pos="570.55835,476.03265,146.4964" FloorNumber="-1" Rotate="0.99984771,0,0,-0.017452287" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{12DDAC2D-89F8-434E-9BF7-89047D10FDC1}" Name="Lights.Mine_Lamp15" Pos="541.07483,440.10968,145.10056" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+    <Properties2 bTurnedOn="1">
+     <LightProperties_Base Radius="4" bUseThisLight="1">
+      <Color clrDiffuse="0.991393,0.95737,0.415148" fDiffuseMultiplier="4" fHDRDynamic="0" fSpecularMultiplier="1"/>
+      <Options bAffectsThisAreaOnly="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIrradianceVolumes="0" nPostEffect="0" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" bUsedInRealTime="1" nViewDistRatio="100"/>
+      <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+      <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+      <Test bFillLight="0" bNegativeLight="0"/>
+      <vDirection x="0" y="1" z="0"/>
+      <vOffset x="0" y="0" z="0"/>
+     </LightProperties_Base>
+     <LightProperties_Destroyed Radius="10" bUseThisLight="0">
+      <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+      <Options bAffectsThisAreaOnly="1" nCastShadows="0" bDeferredLight="0" bFakeLight="0" bIgnoreGeomCaster="0" bUsedInRealTime="1" nViewDistRatio="100"/>
+      <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+      <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+      <Test bFillLight="0" bNegativeLight="0"/>
+      <vDirection x="0" y="1" z="0"/>
+      <vOffset x="0" y="0" z="0"/>
+     </LightProperties_Destroyed>
+    </Properties2>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{06D03C31-5E2A-48A1-A580-29DEA03F2445}" Name="Prefab31" Pos="547.07764,475.66013,144.31999" FloorNumber="-1" Rotate="0.44619769,0,0,0.89493448" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{26666E39-B3BF-4D96-AC66-33899E984018}" Name="Prefab12" Pos="580.2561,457.6503,155.2766" FloorNumber="-1" Rotate="0.76604438,0,0,0.64278769" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{CD461D3A-1FDC-464D-9516-DD80D4F820FE}" Name="ParticleEffect63" Pos="625.72253,350.50961,164.12804" FloorNumber="-1" Rotate="-0.15776461,-0.27479571,0.7015534,0.63829499" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Brush" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{FF9E6848-6205-4F03-B283-D95EDAC49B5B}" Name="wood_chair5" Pos="560.49457,496.93307,144.45563" FloorNumber="-1" Rotate="0.97437006,0,0,0.22495106" ColorRGB="16777215" MatLayersMask="0" Prefab="objects/props/furniture/wooden/wood_chair_a.cgf" NoCollision="0" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" Hideable="0" LodRatio="250" ViewDistRatio="1" MeshIntegrationType="0" NotTriangulate="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" RndFlags="536870920"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{9C23E84A-8F7E-428F-A949-5220E04109BF}" Name="ParticleEffect59" Pos="613.0191,360.34879,161.33669" FloorNumber="-1" Rotate="0.5078221,0.5724771,-0.54309118,-0.345599" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{C6F02253-288E-4F14-9629-DE4D80EEFEAA}" Name="Prefab29" Pos="559.78015,462.45624,144.5824" FloorNumber="-1" Rotate="-0.38268355,0,0,0.9238795" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{26F04353-972A-4731-AC19-DEBBE10E6675}" Name="Prefab13" Pos="590.04767,450.4931,154.24583" FloorNumber="-1" Rotate="0.30070573,0,0,0.95371699" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Brush" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{BEDD3D60-E36E-40B7-962A-1C9FCEED0D65}" Name="fireplace_a2" Pos="528.53113,453.20596,144.70607" FloorNumber="-1" Rotate="1,0,0,0" Scale="0.5,0.5,0.5" ColorRGB="16777215" MatLayersMask="0" Prefab="objects/props/misc/stacked_logs/stacked_logs_patch_a.cgf" NoCollision="0" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" Hideable="0" LodRatio="100" ViewDistRatio="100" MeshIntegrationType="0" NotTriangulate="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" RndFlags="536870920"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{5AE26061-BA22-4233-95AC-13A95E8C461A}" Name="Prefab36" Pos="524.22925,456.23236,144.54736" FloorNumber="-1" Rotate="0.77714586,0,0,0.6293205" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{8E07E863-6120-493D-8E1B-A94ACE3A1DF6}" Name="ParticleEffect61" Pos="603.08905,360.11859,157.57761" FloorNumber="-1" Rotate="-0.2668801,-0.3153801,0.71171737,0.56812745" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{FC60526C-F93A-426D-A8B4-E3C590DAA131}" Name="Prefab16" Pos="612.44873,407.48877,153.52232" FloorNumber="-1" Rotate="0.68835455,0,0,-0.7253744" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{E968DD6E-69DF-43DD-8CAD-695998E8308A}" Name="Prefab28" Pos="537.46246,486.58011,144.67863" FloorNumber="-1" Rotate="0.99862957,0,0,-0.052335843" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{AABEFA71-99FD-4184-98C2-5834175BC1F7}" Name="Lights.Mine_Lamp16" Pos="510.32385,455.11359,145.46913" FloorNumber="-1" Rotate="0.66654521,-0.64138597,0.29949746,0.23375811" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+    <Properties2 bTurnedOn="1">
+     <LightProperties_Base Radius="4" bUseThisLight="1">
+      <Color clrDiffuse="0.991393,0.95737,0.415148" fDiffuseMultiplier="4" fHDRDynamic="0" fSpecularMultiplier="1"/>
+      <Options bAffectsThisAreaOnly="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIrradianceVolumes="0" nPostEffect="0" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" bUsedInRealTime="1" nViewDistRatio="100"/>
+      <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+      <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+      <Test bFillLight="0" bNegativeLight="0"/>
+      <vDirection x="0" y="1" z="0"/>
+      <vOffset x="0" y="0" z="0"/>
+     </LightProperties_Base>
+     <LightProperties_Destroyed Radius="10" bUseThisLight="0">
+      <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+      <Options bAffectsThisAreaOnly="1" nCastShadows="0" bDeferredLight="0" bFakeLight="0" bIgnoreGeomCaster="0" bUsedInRealTime="1" nViewDistRatio="100"/>
+      <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+      <Style fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0"/>
+      <Test bFillLight="0" bNegativeLight="0"/>
+      <vDirection x="0" y="1" z="0"/>
+      <vOffset x="0" y="0" z="0"/>
+     </LightProperties_Destroyed>
+    </Properties2>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{46072573-5B27-4A4F-B607-7B00F363EC52}" Name="Prefab24" Pos="542.90033,505.93744,144.5" FloorNumber="-1" Rotate="0.38268337,0,0,0.92387956" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Brush" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{F92B7E73-CFF7-4825-A55F-A8FBFFB05AB6}" Name="wood_chair7" Pos="559.76575,496.87967,144.42786" FloorNumber="-1" Rotate="-0.3907313,0,0,0.92050475" ColorRGB="16777215" MatLayersMask="0" Prefab="objects/props/furniture/wooden/wood_table_a.cgf" NoCollision="0" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" Hideable="0" LodRatio="250" ViewDistRatio="1" MeshIntegrationType="0" NotTriangulate="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" RndFlags="536870920"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{DCA57D75-D701-4EC9-99C2-A183EA90B30A}" Name="Prefab14" Pos="601.51593,438.56985,151.71507" FloorNumber="-1" Rotate="0.50000006,0,0,0.86602545" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{4AB62177-8B2A-4BCA-ADD6-A61B92A3267B}" Name="ParticleEffect64" Pos="635.51489,340.74429,164.50322" FloorNumber="-1" Rotate="-0.29828256,-0.30346254,0.64087373,0.63892007" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{1D9A5282-50AD-402F-A8EC-F5C317F54989}" Name="ParticleEffect66" Pos="627.76672,347.32437,164.71149" FloorNumber="-1" Rotate="-0.20871219,-0.18382384,0.67982268,0.67859352" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{5FB9AC84-FD4C-4AB2-9623-FD2814536668}" Name="Prefab15" Pos="610.13708,423.04898,151.86932" FloorNumber="-1" Rotate="0.73727733,0,0,0.67559022" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{5E7F9588-5A1F-4E23-B195-1AA95F5F55B0}" Name="Prefab40" Pos="430.0921,408.12097,145.93164" FloorNumber="-1" Rotate="-0.3338069,0,0,0.94264144" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{804FED88-08DE-4E9A-8A9D-957864FAFE7D}" Name="ParticleEffect62" Pos="631.91754,344.47086,164.88435" FloorNumber="-1" Rotate="-0.24075338,-0.31335032,0.64077961,0.65821791" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{2DAD208E-4564-41E0-9A74-3DC973BB1C7F}" Name="Prefab34" Pos="518.27258,447.15604,144" FloorNumber="-1" Rotate="0.99691737,0,0,-0.07845895" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{59F73696-0430-42FD-BF62-76FC6BEEE705}" Name="Prefab25" Pos="527.20715,517.49323,144.42073" FloorNumber="-1" Rotate="0.98480779,0,0,-0.17364806" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{F7D24A96-5B10-4465-BAD1-6FC2B586E0E4}" Name="Prefab37" Pos="557.83936,482.80023,144.46916" FloorNumber="-1" Rotate="0.4771587,0,0,0.87881714" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{37F3489C-74EC-420A-AB5F-997A4E9BCBDB}" Name="Prefab32" Pos="529.45905,443.80646,144" FloorNumber="-1" Rotate="0.95630479,0,0,-0.29237157" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{033AB1A3-572C-44E8-8B80-35CBCB8E6463}" Name="Prefab33" Pos="539.29968,431.01007,144" FloorNumber="-1" Rotate="0.90996134,0,0,-0.41469309" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{8ABF4AA7-D546-44FC-8903-8C11581374A8}" Name="Prefab30" Pos="545.47552,453.05658,144.26198" FloorNumber="-1" Rotate="0.39874893,0,0,0.91706014" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Brush" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{B9AC74A8-4C96-4598-8771-686AF9E55C88}" Name="wood_chair6" Pos="559.74988,496.32162,144.4346" FloorNumber="-1" Rotate="-0.36650112,0,0,0.9304176" ColorRGB="16777215" MatLayersMask="0" Prefab="objects/props/furniture/wooden/wood_chair_a.cgf" NoCollision="0" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" Hideable="0" LodRatio="250" ViewDistRatio="1" MeshIntegrationType="0" NotTriangulate="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" RndFlags="536870920"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{51BACCBB-649C-49FF-A89E-13D0562539C1}" Name="ParticleEffect58" Pos="606.63617,359.55933,160.16885" FloorNumber="-1" Rotate="0.46068755,0.57305986,-0.54685098,-0.40040404" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{DBBF2ECE-EF71-4ACE-AA36-A5FADE947D2B}" Name="Prefab11" Pos="583.18268,471.8432,152.89137" FloorNumber="-1" Rotate="0.77162451,0,0,0.6360783" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{5648C5CE-34C5-4290-8912-52AE92C02E78}" Name="Prefab26" Pos="504.12695,522.08221,147.73372" FloorNumber="-1" Rotate="1,0,0,1.1920929e-007" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{5AB32ED6-7D81-4161-82E8-F4A98D548E07}" Name="Prefab18" Pos="608.7561,376.51547,161.86577" FloorNumber="-1" Rotate="0.92050487,-0,0,-0.39073116" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Prefab" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{D4B44FD6-BCC6-4F49-86F2-C8CCE65A4CF5}" Name="Prefab27" Pos="554.70532,493.35266,144.46916" FloorNumber="-1" Rotate="0.93969268,0,0,-0.34202003" ColorRGB="56575" MatLayersMask="0" MergeGeom="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
+   <Object Type="Brush" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{B34D95E9-E436-41BB-88BD-1D35764954A6}" Name="wood_chair4" Pos="559.19037,497.33383,144.42786" FloorNumber="-1" Rotate="0.35836804,0,0,0.9335804" ColorRGB="16777215" MatLayersMask="0" Prefab="objects/props/furniture/wooden/wood_chair_a.cgf" NoCollision="0" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" Hideable="0" LodRatio="250" ViewDistRatio="1" MeshIntegrationType="0" NotTriangulate="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" RndFlags="536870920"/>
+   <Object Type="Entity" Layer="AB3_Lighting" LayerGUID="{CD3E336B-0217-4554-93CB-F8BF3C829B29}" Id="{373EDCFA-8383-4501-B1BE-878FE839C03C}" Name="ParticleEffect60" Pos="621.7663,355.80685,163.56952" FloorNumber="-1" Rotate="-0.15730974,-0.19708814,0.76597899,0.59134263" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="ParticleEffect">
+    <Properties bActive="1" esAttachForm="Surface" esAttachType="" Comment="" bCountPerUnit="0" CountScale="1" bEnableSound="1" NetworkSync="0" ParticleEffect="Waterfall.Forest.Waterfall.middle_rapids" bPrime="1" PulsePeriod="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

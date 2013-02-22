@@ -1,0 +1,230 @@
+<ObjectLayer>
+ <Layer Name="AB1_Lighting" GUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" FullName="AB1/AB1_Lighting" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}">
+  <LayerObjects>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{77427606-2510-4338-A3EE-88EC491C69B7}" Name="caustics_10" Pos="781.18311,353.06241,166.62468" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="6" _nVersion="0">
+     <Color clrDiffuse="0.119264,0.242796,0.358654" fDiffuseMultiplier="5" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="1" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="1" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture="textures/water_caustics/water00caustics.tif"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="0.05" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0.001" y="0.001" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{94AB6B0C-5E34-4F2C-B220-AE6ABA3BE064}" Name="forest_ambient_light2" Pos="740.93341,347.00165,165.7791" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="10" _nVersion="0">
+     <Color clrDiffuse="0.948965,0.796917,0.579547" fDiffuseMultiplier="3" fHDRDynamic="1" fSpecularMultiplier="0.1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{B748CC2C-8DAB-4DB0-8D8C-BBC8980DEB03}" Name="Light83" Pos="696.88342,350.89456,165.98721" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="1" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="1.57" _nVersion="0">
+     <Color clrDiffuse="0.197516,0.378676,0.819964" fDiffuseMultiplier="1.5" fHDRDynamic="0" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{E7B18037-DE36-438E-A33A-4669F8E3223B}" Name="caustics_8" Pos="757.30579,354.78931,166.62468" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="14" _nVersion="0">
+     <Color clrDiffuse="0.119264,0.242796,0.358654" fDiffuseMultiplier="5" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="1" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="1" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture="textures/water_caustics/water00caustics.tif"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="0.05" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0.001" y="0.001" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{1F96113B-888B-4F6A-A7C5-E5E8FA3AE72A}" Name="Light84" Pos="697.86316,349.87195,167.99591" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="1" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="1.57" _nVersion="0">
+     <Color clrDiffuse="0.197516,0.378676,0.819964" fDiffuseMultiplier="4.9" fHDRDynamic="0" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Solid" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{609CBB67-196C-41F6-B644-C6A7DE966135}" Name="tunnel_start_shadow_caster_solid1" Pos="867.63782,348.11798,169.80652" FloorNumber="-1" Rotate="0.98162717,0,0,-0.19080898" ColorRGB="16776960" Material="Materials/special/shadow_proxy" MatLayersMask="0" RndFlags="8" ViewDistRatio="100" LMQuality="1">
+    <Brush ZeroTolerance="1">
+     <Face p1="-9.4281006,5.4202237,0.63109589" p2="-9.4281006,-5.4202232,0.63111115" p3="-9.4281006,-5.4202232,-0.63109589" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-9.4281006,-5.4202232,-0.63109589" p1="-9.4281006,-5.4202232,0.63111115" p2="-9.4281006,5.4202237,0.63109589" p3="-9.4281006,5.4202237,-0.63111115" p4="-9.4281006,5.4202237,-0.63111115" p5="-9.4281006,5.4202237,0.63109589" p6="9.4281006,5.4202237,0.63109589" p7="9.4281006,5.4202237,-0.63111115" p8="9.4281006,5.4202237,-0.63111115" p9="9.4281006,5.4202237,0.63109589" p10="9.4281006,-5.4202232,0.63111115" p11="9.4281006,-5.4202232,-0.63109589" p12="9.4281006,-5.4202232,-0.63109589" p13="9.4281006,-5.4202232,0.63111115" p14="-9.4281006,-5.4202232,0.63111115" p15="-9.4281006,-5.4202232,-0.63109589" p16="9.4281006,5.4202237,0.63109589" p17="-9.4281006,5.4202237,0.63109589" p18="-9.4281006,-5.4202232,0.63111115" p19="9.4281006,-5.4202232,0.63111115" p20="-9.4281006,-5.4202232,-0.63109589" p21="-9.4281006,5.4202237,-0.63111115" p22="9.4281006,5.4202237,-0.63111115" p23="9.4281006,-5.4202232,-0.63109589"/>
+     </Face>
+     <Face p1="9.4281006,5.4202237,0.63109589" p2="-9.4281006,5.4202237,0.63109589" p3="-9.4281006,5.4202237,-0.63111115" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="9.4281006,-5.4202232,0.63111115" p2="9.4281006,5.4202237,0.63109589" p3="9.4281006,5.4202237,-0.63111115" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-9.4281006,-5.4202232,0.63111115" p2="9.4281006,-5.4202232,0.63111115" p3="9.4281006,-5.4202232,-0.63109589" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-9.4281006,-5.4202232,0.63111115" p2="-9.4281006,5.4202237,0.63109589" p3="9.4281006,5.4202237,0.63109589" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="9.4281006,5.4202237,-0.63111115" p2="-9.4281006,5.4202237,-0.63111115" p3="-9.4281006,-5.4202232,-0.63109589" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{2877FD72-564F-427F-AFBF-3D3C1CFBE317}" Name="Light81" Pos="699.18628,350.98056,165.35806" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="1" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="2.1" _nVersion="0">
+     <Color clrDiffuse="0.592438,0.701169,0.835528" fDiffuseMultiplier="0.4" fHDRDynamic="0.2" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Solid" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{6291767D-0B08-41A8-BEBC-9212CFB956B6}" Name="tunnel_start_shadow_caster_solid2" Pos="869.64386,353.08313,168.12701" FloorNumber="-1" Rotate="0.69411522,-0.69411522,0.13492233,-0.13492233" ColorRGB="16776960" Material="Materials/special/shadow_proxy" MatLayersMask="0" RndFlags="8" ViewDistRatio="100" LMQuality="1">
+    <Brush ZeroTolerance="1">
+     <Face p1="-9.4281006,5.4202237,0.63109589" p2="-9.4281006,-5.4202232,0.63111115" p3="-9.4281006,-5.4202232,-0.63109589" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-9.4281006,-5.4202232,-0.63109589" p1="-9.4281006,-5.4202232,0.63111115" p2="-9.4281006,5.4202237,0.63109589" p3="-9.4281006,5.4202237,-0.63111115" p4="-9.4281006,5.4202237,-0.63111115" p5="-9.4281006,5.4202237,0.63109589" p6="9.4281006,5.4202237,0.63109589" p7="9.4281006,5.4202237,-0.63111115" p8="9.4281006,5.4202237,-0.63111115" p9="9.4281006,5.4202237,0.63109589" p10="9.4281006,-5.4202232,0.63111115" p11="9.4281006,-5.4202232,-0.63109589" p12="9.4281006,-5.4202232,-0.63109589" p13="9.4281006,-5.4202232,0.63111115" p14="-9.4281006,-5.4202232,0.63111115" p15="-9.4281006,-5.4202232,-0.63109589" p16="9.4281006,5.4202237,0.63109589" p17="-9.4281006,5.4202237,0.63109589" p18="-9.4281006,-5.4202232,0.63111115" p19="9.4281006,-5.4202232,0.63111115" p20="-9.4281006,-5.4202232,-0.63109589" p21="-9.4281006,5.4202237,-0.63111115" p22="9.4281006,5.4202237,-0.63111115" p23="9.4281006,-5.4202232,-0.63109589"/>
+     </Face>
+     <Face p1="9.4281006,5.4202237,0.63109589" p2="-9.4281006,5.4202237,0.63109589" p3="-9.4281006,5.4202237,-0.63111115" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="9.4281006,-5.4202232,0.63111115" p2="9.4281006,5.4202237,0.63109589" p3="9.4281006,5.4202237,-0.63111115" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-9.4281006,-5.4202232,0.63111115" p2="9.4281006,-5.4202232,0.63111115" p3="9.4281006,-5.4202232,-0.63109589" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-9.4281006,-5.4202232,0.63111115" p2="-9.4281006,5.4202237,0.63109589" p3="9.4281006,5.4202237,0.63109589" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="9.4281006,5.4202237,-0.63111115" p2="-9.4281006,5.4202237,-0.63111115" p3="-9.4281006,-5.4202232,-0.63109589" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Prototype="{A7CAA29D-5FF2-41F5-AF16-DC6405A431B6}" Type="EntityArchetype" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{7C60D07F-5A61-48BE-8331-9458C51805D2}" Name="Lights.Mine_Lamp17" Pos="697.07214,353.82764,165.83897" FloorNumber="-1" Rotate="-0.18634291,-0.3608129,-0.6100145,0.68042099" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0">
+    <Properties2 bTurnedOn="1">
+     <LightProperties_Base Radius="4" bUseThisLight="1" _nVersion="0">
+      <Color clrDiffuse="0.991393,0.95737,0.415148" fDiffuseMultiplier="4" fHDRDynamic="0" fSpecularMultiplier="1"/>
+      <Options bAffectsThisAreaOnly="1" bAmbientLight="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" nViewDistRatio="100"/>
+      <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+      <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0">
+       <Rotation x="0" y="0" z="0"/>
+      </Style>
+      <Test bFillLight="0"/>
+      <vDirection x="0" y="1" z="0"/>
+      <vOffset x="0" y="0" z="0"/>
+     </LightProperties_Base>
+     <LightProperties_Destroyed Radius="10" bUseThisLight="0" _nVersion="0">
+      <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+      <Options bAffectsThisAreaOnly="1" bAmbientLight="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="0" bDisableX360Opto="0" bFakeLight="0" nGlowSubmatId="0" bIgnoreGeomCaster="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" nViewDistRatio="100"/>
+      <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+      <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaScale="1" nLightStyle="0">
+       <Rotation x="0" y="0" z="0"/>
+      </Style>
+      <Test bFillLight="0"/>
+      <vDirection x="0" y="1" z="0"/>
+      <vOffset x="0" y="0" z="0"/>
+     </LightProperties_Destroyed>
+    </Properties2>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{343B1090-DE02-436B-A928-F685AE5DD24C}" Name="caustics_9" Pos="861.83588,350.33823,163.64326" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="14" _nVersion="0">
+     <Color clrDiffuse="0.166872,0.230998,0.288816" fDiffuseMultiplier="1" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="1" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="1" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture="textures/water_caustics/water00caustics.tif"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="0.05" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0.001" y="0.001" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="EnvironmentProbe" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{D7C5299A-3C41-467B-AC12-47DEF7C21912}" Name="forest_tunnel_start" Pos="865.5896,348.40326,165.02863" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" cubemap_resolution="256" preview_cubemap="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="20" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="EnvironmentLight">
+    <Properties bActive="1" Radius="10" _nVersion="-1">
+     <Color clrDiffuse="1,1,1" fDiffuseMultiplier="3" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" file_deferred_clip_geom="" _texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bDisableX360Opto="0" bIgnoresVisAreas="0"/>
+     <OptionsAdvanced texture_deferred_cubemap="Textures/cubemaps/forest/cubemap_forest_tunnel_start_cm.tif"/>
+     <Projection fBoxHeight="10" fBoxLength="10" bBoxProject="0" fBoxWidth="10"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{97D8FD9D-E405-4888-932E-A48201F1C5CC}" Name="caustics_11" Pos="798.10931,350.20657,166.62468" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="6" _nVersion="0">
+     <Color clrDiffuse="0.119264,0.242796,0.358654" fDiffuseMultiplier="5" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="1" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="1" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture="textures/water_caustics/water00caustics.tif"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="0.05" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0.001" y="0.001" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="EnvironmentProbe" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{82E5A2A7-C24F-4466-B7D3-EA4287EBC62B}" Name="Cabin_Interior_Environment_Probe" Pos="698,352.20667,165.87321" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" cubemap_resolution="128" preview_cubemap="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="EnvironmentLight">
+    <Properties bActive="1" Radius="10" _nVersion="-1">
+     <Color clrDiffuse="1,1,1" fDiffuseMultiplier="1" fHDRDynamic="0" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" file_deferred_clip_geom="" _texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bDisableX360Opto="0" bIgnoresVisAreas="0"/>
+     <OptionsAdvanced texture_deferred_cubemap="Textures/cubemaps/forest/cubemap_cabin_interior_environment_probe_cm.tif"/>
+     <Projection fBoxHeight="10" fBoxLength="10" bBoxProject="0" fBoxWidth="10"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{0E927FAF-03C3-4EA4-B08E-624F7A8AEF85}" Name="Light82" Pos="699.10419,352.99271,165.98721" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="1" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="1.57" _nVersion="0">
+     <Color clrDiffuse="0.302126,0.404541,0.632043" fDiffuseMultiplier="4.6" fHDRDynamic="0" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{FA74DBD7-CE9D-4282-B978-1C5AC26F80AD}" Name="forest_ambient_light8" Pos="824.83014,345.23935,166.14117" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="10" _nVersion="0">
+     <Color clrDiffuse="0.948965,0.796917,0.579547" fDiffuseMultiplier="2" fHDRDynamic="1" fSpecularMultiplier="0.1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="0" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="100" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0" y="0" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{C0FFBDF6-1FDC-4B8B-A031-C96C1B4BF3D5}" Name="caustics_12" Pos="808.3515,350.38889,166.62468" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="0" LodRatio="100" ViewDistRatio="5" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" Radius="6" _nVersion="0">
+     <Color clrDiffuse="0.119264,0.242796,0.358654" fDiffuseMultiplier="5" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbientLight="1" bCastShadow="0" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDisableX360Opto="0" bFakeLight="0" bIgnoresVisAreas="0" bIrradianceVolumes="0" nPostEffect="0" fShadowBias="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1"/>
+     <Projector bProjectInAllDirs="1" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture="textures/water_caustics/water00caustics.tif"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="0.05" texture_AttenuationMap="" fCoronaDistIntensityFactor="1" fCoronaDistSizeFactor="1" fCoronaIntensity="1" fCoronaScale="1" nCoronaShaftsMinSpec="3" nLensGhostsMinSpec="3" lightanimation_LightAnimation="" nLightStyle="0" fShaftBlendFactor="10" fShaftBrightness="10" fShaftDecayFactor="88" fShaftLength="95" fShaftSrcSize="19" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0">
+      <Rotation x="0.001" y="0.001" z="0"/>
+     </Style>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="AB1_Lighting" LayerGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}" Id="{A7B31FFE-CF28-475C-B762-A6CD104A11CE}" Name="Time_Of_Day_And_Color_Charts" Pos="790.55188,348.24002,166.10912" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
+    <Properties bEnabled="1" esFactionFilter="" bInVehicleOnly="0" bOnlyLocalPlayer="0" bOnlyPlayers="0" PlaySequence="" ScriptCommand="" bTriggerOnce="0">
+     <MultiplayerOptions bLocalOnly="0" bPerPlayer="0"/>
+    </Properties>
+    <FlowGraph Description="" Group="Lighting" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="10050" Class="Start" pos="-4520,-100,0" flags="0">
+       <Inputs InGame="1" InEditor="1"/>
+      </Node>
+      <Node Id="10052" Class="Time:TimeOfDay" pos="-4270,-100,0" flags="0">
+       <Inputs Time="15.5" ForceUpdate="0" Speed="0"/>
+      </Node>
+      <Node Id="10053" Name="Time_of_Day_Force_15:30_Standard_Lighting" Class="_commentbox" pos="-4522.2344,-138.50172,0" flags="0">
+       <Inputs TextSize="1" Color="0.0619075,0.227137,0.585973" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+       <ResizeBorder X="0" Y="0" Width="437" Height="141"/>
+       <NodeSize Width="437" Height="168.39063"/>
+      </Node>
+      <Node Id="10054" Name="Time_of_Day_Force_12:00_Stylized_Lighting" Class="_commentbox" pos="-4524.1729,-328.06174,0" flags="0">
+       <Inputs TextSize="1" Color="1,0.940601,0.133209" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+       <ResizeBorder X="0" Y="0" Width="437" Height="141"/>
+       <NodeSize Width="437" Height="168.39063"/>
+      </Node>
+      <Node Id="10055" Class="Time:TimeOfDay" pos="-4280,-290,0" flags="0">
+       <Inputs Time="12" ForceUpdate="0" Speed="0"/>
+      </Node>
+      <Node Id="10056" Class="Start" pos="-4510,-260,0" flags="0">
+       <Inputs InGame="1" InEditor="1"/>
+      </Node>
+      <Node Id="10057" Name="Time_of_Day_Force_9:30_Standard_Lighting" Class="_commentbox" pos="-4520.2344,-527.06177,0" flags="0">
+       <Inputs TextSize="1" Color="0.0619075,0.227137,0.585973" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+       <ResizeBorder X="0" Y="0" Width="437" Height="141"/>
+       <NodeSize Width="437" Height="168.39063"/>
+      </Node>
+      <Node Id="10058" Class="Time:TimeOfDay" pos="-4270,-480,0" flags="0">
+       <Inputs Time="9.5" ForceUpdate="0" Speed="0"/>
+      </Node>
+      <Node Id="10059" Class="Start" pos="-4500,-450,0" flags="0">
+       <Inputs InGame="1" InEditor="1"/>
+      </Node>
+     </Nodes>
+     <Edges>
+      <Edge nodeIn="10052" nodeOut="10050" portIn="Set" portOut="output" enabled="1"/>
+      <Edge nodeIn="10055" nodeOut="10056" portIn="Set" portOut="output" enabled="0"/>
+      <Edge nodeIn="10058" nodeOut="10059" portIn="Set" portOut="output" enabled="0"/>
+     </Edges>
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

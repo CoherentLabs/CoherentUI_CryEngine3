@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- IMPORTANT: Hand edit this file only, the UI doesn't support the filtering used below. -->
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <!-- First import the platform common properties-->
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(SolutionDir).\Common.$(Platform).$(Configuration).props" Condition="exists('$(SolutionDir).\Common.$(Platform).$(Configuration).props')"/>
+  </ImportGroup>
+  
+  <!-- Workaround: To support * Server Only configs using existing props files -->
+  <ImportGroup Label="PropertySheets" Condition="$(Configuration)=='Release Server Only'">
+    <Import Project="$(SolutionDir).\Common.$(Platform).Release.props" Condition="exists('$(SolutionDir).\Common.$(Platform).Release.props')"/>
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="$(Configuration)=='Profile Server Only'">
+    <Import Project="$(SolutionDir).\Common.$(Platform).Profile.props" Condition="exists('$(SolutionDir).\Common.$(Platform).Profile.props')"/>
+  </ImportGroup>
+  
+  <!-- Import the required SDK's based on the platform -->
+  <ImportGroup Condition="$(Platform)=='Xbox 360'" Label="PropertySheets">
+    <Import Project="$(SolutionDir).\XboxSDK.props" />
+  </ImportGroup>
+  <ImportGroup Condition="$(Platform)=='Win32'" Label="PropertySheets">
+    <Import Project="$(SolutionDir).\DirectXSDK.props" />
+    <Import Project="$(SolutionDir).\GFWLSDK.props" />
+  </ImportGroup>
+  <ImportGroup Condition="$(Platform)=='x64'" Label="PropertySheets">
+    <Import Project="$(SolutionDir).\DirectXSDK.props" />
+    <Import Project="$(SolutionDir).\GFWLSDK.props" />
+  </ImportGroup>
+  
+  <!-- Finally import the SoftCode and UserDebug properties-->
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(SolutionDir).\SoftCode.props" />
+	<Import Project="$(SolutionDir).\UserDebugSettings.props" />
+  </ImportGroup>
+
+  <!-- Include STLport, CryCommon & boost by default -->
+  <PropertyGroup Label="UserMacros">
+    <STLport>$(SolutionDir)..\SDKs\STLPORT</STLport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <IncludePath>$(STLport)\stlport;$(IncludePath)</IncludePath>
+	
+	<!-- Setup standardized intermediate and output directories -->
+	<OutDir Condition="'$(Platform)'=='Win32'">$(SolutionDir)..\..\Bin32\</OutDir>
+	<OutDir Condition="'$(Platform)'=='x64'">$(SolutionDir)..\..\Bin64\</OutDir>
+	<OutDir Condition="'$(Platform)'=='Xbox 360'">$(SolutionDir)..\..\BinXB\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\BinTemp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)..\CryEngine\CryCommon;$(SolutionDir)..\SDKs\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+	<Link>
+		<!-- Make all projects use a base address defintion file (see linker.exe /BASE) -->
+		<BaseAddress>@$(SolutionDir)BaseAddress.$(Platform).txt,$(ProjectName)</BaseAddress>
+	</Link>
+  </ItemDefinitionGroup>
+  
+</Project>

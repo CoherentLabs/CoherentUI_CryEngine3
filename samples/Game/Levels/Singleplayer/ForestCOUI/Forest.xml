@@ -1,0 +1,8 @@
+<MetaData>
+ <MiniMap Filename="Forest.dds" startX="208.14233" startY="-3.2078857" endX="1232.1423" endY="1020.7921" width="1024" height="1024"/>
+ <Attributes>
+	<loading_video value=""/>
+	<loading_image value="Levels/Singleplayer/Forest/LoadingForest.dds"/>
+	<DescriptionText text="@Loading_screen_info_forest"/>
+ </Attributes>
+</MetaData>

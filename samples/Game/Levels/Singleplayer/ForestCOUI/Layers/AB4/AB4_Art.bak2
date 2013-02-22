@@ -1,0 +1,56 @@
+<ObjectLayer>
+ <Layer Name="AB4_Art" GUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" FullName="AB4/AB4_Art" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}">
+  <LayerObjects>
+   <Object Type="Rope" Layer="AB4_Art" LayerGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" Id="{4E591911-EFE9-457D-BED4-F4F274F31B46}" Name="lamp_Rope2" Pos="708.18469,388.42078,170.33719" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65280" Material="materials/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.0099999998" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="2" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0.1" maxTimeStep="0.02" minEnergy="0" damping="0" gravity="0,0,-13">
+     <Sound Name="Sounds/physics:ropes:oil_lamp" SegmentToAttachTo="1" Offset="0"/>
+    </Rope>
+    <Points>
+     <Point Pos="-0.0089111328,0.027160645,-0.44503784"/>
+     <Point Pos="0.0089111328,-0.027191162,0.4450531"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Rope" Layer="AB4_Art" LayerGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" Id="{1EF9B627-59C9-4CF2-8108-0EC0FE3C7A17}" Name="lamp_Rope4" Pos="698.41364,392.75903,167.91623" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" Material="materials/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.0099999998" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="2" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0.1" maxTimeStep="0.02" minEnergy="0" damping="0" gravity="0,0,-13"/>
+    <Points>
+     <Point Pos="0.012084961,0.036712646,-0.36831665"/>
+     <Point Pos="-0.012084961,-0.036743164,0.36833191"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Rope" Layer="AB4_Art" LayerGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" Id="{5D96542D-2D2C-400A-8C5A-DC5BA0282390}" Name="lamp_Rope6" Pos="669.2384,404.60898,167.47755" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" Material="materials/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.0099999998" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="2" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0.1" maxTimeStep="0.02" minEnergy="0" damping="0" gravity="0,0,-13"/>
+    <Points>
+     <Point Pos="-0.0083618164,0.027038574,-0.38394165"/>
+     <Point Pos="0.0083618164,-0.027038574,0.38394165"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Rope" Layer="AB4_Art" LayerGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" Id="{AAA6C335-4376-4238-A893-6EF8A4A09F1F}" Name="lamp_Rope3" Pos="689.75385,400.38083,167.17377" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" Material="materials/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.0099999998" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="2" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0.1" maxTimeStep="0.02" minEnergy="0" damping="0" gravity="0,0,-13"/>
+    <Points>
+     <Point Pos="-0.057617188,0.0284729,-0.34512329"/>
+     <Point Pos="0.057617188,-0.0284729,0.34513855"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Rope" Layer="AB4_Art" LayerGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" Id="{E6EA5877-C4A5-4784-BA54-4065A2246AC7}" Name="lamp_Rope7" Pos="676.39282,419.48627,165.96703" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" Material="materials/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.0099999998" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="2" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0.1" maxTimeStep="0.02" minEnergy="0" damping="0" gravity="0,0,-13"/>
+    <Points>
+     <Point Pos="-0.0073852539,0.021972656,-0.44355774"/>
+     <Point Pos="0.0073852548,-0.021972656,0.44355774"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="Rope" Layer="AB4_Art" LayerGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" Id="{86389AA1-B6B8-4B16-9169-90ED5D7CE143}" Name="lamp_Rope8" Pos="686.79376,409.4502,169.18141" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65280" Material="materials/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.0099999998" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="2" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0.1" maxTimeStep="0.02" minEnergy="0" damping="0" gravity="0,0,-13"/>
+    <Points>
+     <Point Pos="-0.0072631836,0.020477295,-0.28688049"/>
+     <Point Pos="0.0072631836,-0.020477295,0.28688049"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

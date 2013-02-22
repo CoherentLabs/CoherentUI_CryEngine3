@@ -1,0 +1,24 @@
+Cry3DEngine			0x30000000
+CryAISystem 		0x31000000
+CryAnimation		0x31500000
+CryEntitySystem		0x32000000
+CryFont				0x32500000
+CryInput			0x33500000
+CryMovie			0x34000000
+CryNetwork			0x39500000
+CryPhysics			0x35000000
+CryScaleform		0x34500000
+CryScriptSystem		0x35500000
+CrySoundSystem		0x36000000
+CrySystem			0x36500000
+CryRenderD3D11		0x38000000		; Only one renderer loaded at a time, so all share the same address
+CryRenderD3D9			0x38000000
+CryRenderNULL			0x38000000
+CryAction			0x30500000
+GameDll				0x39000000		; Use "GameDll" to avoid having to specify it per-project
+DedicatedLauncher	0x37000000
+launcher			0x37000000
+Editor				0x37000000
+PlugMoz				0x37000000
+BrowserLauncher			0x37500000
+
