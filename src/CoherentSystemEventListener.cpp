@@ -5,15 +5,15 @@
 namespace CoherentUIPlugin
 {
 
-	CCoherentSystemEventListener::CCoherentSystemEventListener(CCoherentUISystem* pUISystem)
-		: m_IsReady( false )
-		, m_pUISystem( pUISystem )
-	{}
+    CCoherentSystemEventListener::CCoherentSystemEventListener( CCoherentUISystem* pUISystem )
+        : m_IsReady( false )
+        , m_pUISystem( pUISystem )
+    {}
 
-	void CCoherentSystemEventListener::SystemReady()
-	{
-		m_IsReady = true;
-		m_pUISystem->OnSystemReady();
-	}
+    void CCoherentSystemEventListener::SystemReady()
+    {
+        m_IsReady = true;
+        m_pUISystem->OnSystemReady();
+    }
 
 }

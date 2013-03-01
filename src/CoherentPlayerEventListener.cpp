@@ -7,17 +7,17 @@
 namespace CoherentUIPlugin
 {
 
-	CCoherentPlayerEventListener::CCoherentPlayerEventListener( CCoherentViewListener* pViewListener )
-		: m_pViewEventListener( pViewListener )
-	{
-	}
+    CCoherentPlayerEventListener::CCoherentPlayerEventListener( CCoherentViewListener* pViewListener )
+        : m_pViewEventListener( pViewListener )
+    {
+    }
 
-	void CCoherentPlayerEventListener::OnHealthChange( IActor* pActor, float fHealth )
-	{
-		if (m_pViewEventListener && m_pViewEventListener->GetView())
-		{
-			m_pViewEventListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth );
-		}
-	}
+    void CCoherentPlayerEventListener::OnHealthChange( IActor* pActor, float fHealth )
+    {
+        if ( m_pViewEventListener && m_pViewEventListener->GetView() )
+        {
+            m_pViewEventListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth );
+        }
+    }
 
 }

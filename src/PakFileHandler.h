@@ -13,11 +13,11 @@ namespace CoherentUIPlugin
     class PakFileHandler :
         public Coherent::UI::FileHandler
     {
-    public:
-        PakFileHandler();
-        virtual void ReadFile(const wchar_t*  sURL, Coherent::UI::ResourceResponse* pResponse);
-        virtual void WriteFile(const wchar_t* sURL, Coherent::UI::ResourceData* pResource);
+        public:
+            PakFileHandler();
+            virtual void ReadFile( const wchar_t*  sURL, Coherent::UI::ResourceResponse* pResponse );
+            virtual void WriteFile( const wchar_t* sURL, Coherent::UI::ResourceData* pResource );
 
-    private:
+        private:
     };
 }
