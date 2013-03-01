@@ -1,0 +1,24 @@
+<ObjectLayer>
+ <Layer Name="AB1_Logic" GUID="{339BE7CA-D974-4BE6-A18E-17B2657B2C77}" FullName="AB1/AB1_Logic" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}">
+  <LayerObjects>
+   <Object Type="Entity" Layer="AB1_Logic" LayerGUID="{339BE7CA-D974-4BE6-A18E-17B2657B2C77}" Id="{9FC4B744-E274-482E-9841-5E964DC7D40C}" Name="Waterfall_Screen_Effect_Trig_01" Pos="699.95886,320.71143,176.35965" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="AreaTrigger">
+    <Properties bEnabled="1" esFactionFilter="" bInVehicleOnly="0" bOnlyLocalPlayer="0" bOnlyPlayers="1" PlaySequence="" ScriptCommand="" bTriggerOnce="0">
+     <MultiplayerOptions bLocalOnly="0" bPerPlayer="0"/>
+    </Properties>
+   </Object>
+   <Object Type="Shape" Layer="AB1_Logic" LayerGUID="{339BE7CA-D974-4BE6-A18E-17B2657B2C77}" Id="{218EC84C-6BBE-47EE-B53D-D512AA68C580}" Name="Waterfall_Screen_Effect_Shape_01" Pos="720.17267,293.70529,158.49413" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16763904" Width="0" Height="20" AreaId="0" GroupId="0" Priority="0" Closed="1" DisplayFilled="0" DisplaySoundInfo="0" Agent_height="1.8" Agent_width="0.5" Render_voxel_grid="0" voxel_offset_x="0" voxel_offset_y="0" EntityClass="AreaShape">
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="1.81073,21.547058,0"/>
+     <Point Pos="-20.293884,28.529877,0"/>
+     <Point Pos="-43.549866,18.858276,0"/>
+     <Point Pos="-46.594971,-2.2109985,0"/>
+    </Points>
+    <Entities>
+     <Entity Id="{9FC4B744-E274-482E-9841-5E964DC7D40C}"/>
+    </Entities>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Roof="0" Floor="0"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

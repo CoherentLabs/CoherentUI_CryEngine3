@@ -1,0 +1,62 @@
+<ObjectLayer>
+ <Layer Name="Fish" GUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" FullName="Fish" External="1" Exportable="0" ExportLayerPak="0" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" Color="11830491">
+  <LayerObjects>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{4179B929-6740-4ED1-8406-33579808A9FD}" Name="Fish5" Pos="589.64917,373.72314,151.10817" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="10" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/fish/fresh_water/trout_b.chr" Size="1" SizeRandom="0.3"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="0" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="20" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="15" HeightMin="1" MaxAnimSpeed="0.1" SpeedMax="1" SpeedMin="0.5"/>
+     <Options bActivate="0" bFollowPlayer="0" bNoLanding="0" bObstacleAvoidance="0" Radius="20" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{5A2CA22A-A13B-46FE-B71C-325257DA015A}" Name="Fish6" Pos="533.79767,476.43594,139.17546" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="250" ViewDistRatio="30" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="10" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/fish/fresh_water/trout_b.chr" Size="1" SizeRandom="0.3"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="0" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="20" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="20" HeightMin="1" MaxAnimSpeed="2" SpeedMax="1" SpeedMin="0.5"/>
+     <Options bActivate="0" bFollowPlayer="1" bNoLanding="0" bObstacleAvoidance="1" Radius="20" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{B10F2F2F-BF49-480A-A7A6-D44595F2CF2A}" Name="Fish7" Pos="559.37927,448.0813,139.74034" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="250" ViewDistRatio="30" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="10" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/fish/fresh_water/trout_c.chr" Size="1" SizeRandom="0.3"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="0" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="20" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="20" HeightMin="1" MaxAnimSpeed="1" SpeedMax="1" SpeedMin="0.5"/>
+     <Options bActivate="0" bFollowPlayer="1" bNoLanding="0" bObstacleAvoidance="1" Radius="20" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{31B65631-C073-4F55-AA7B-417212CCDA3F}" Name="Fish8" Pos="502.87735,487.16754,137.21327" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="250" ViewDistRatio="30" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="30" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/fish/fresh_water/trout_a.chr" Size="1" SizeRandom="0.3"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="0" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="20" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="20" HeightMin="1" MaxAnimSpeed="3" SpeedMax="1" SpeedMin="0.5"/>
+     <Options bActivate="0" bFollowPlayer="1" bNoLanding="0" bObstacleAvoidance="1" Radius="40" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{98A7DD3D-F357-4578-8FFD-DC01370679E7}" Name="turtle_swimming_02" Pos="591.08661,374.31161,151.72049" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="3" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/turtles/red_eared_slider/red_eared_slider.chr" Size="0.3" SizeRandom="0.5"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="0" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="10" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="20" HeightMin="1" MaxAnimSpeed="0.7" SpeedMax="0.7" SpeedMin="0.2"/>
+     <Options bActivate="0" bFollowPlayer="0" bNoLanding="0" bObstacleAvoidance="0" Radius="20" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{A391368F-80BA-4423-92B2-1A396401C47D}" Name="turtle_swimming_01" Pos="540.76404,464.38638,140.4276" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="250" ViewDistRatio="30" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="5" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/turtles/red_eared_slider/red_eared_slider.chr" Size="0.4" SizeRandom="0.5"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="0" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="20" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="20" HeightMin="1" MaxAnimSpeed="0.5" SpeedMax="1" SpeedMin="0.5"/>
+     <Options bActivate="0" bFollowPlayer="1" bNoLanding="0" bObstacleAvoidance="1" Radius="20" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Fish" LayerGUID="{5C598AE3-F00B-42ED-B541-01777FD198A6}" Id="{3C12D0DD-F22F-464A-9512-33B87E2294D9}" Name="Fish4" Pos="586.53027,372.29181,151.72049" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" LodRatio="100" ViewDistRatio="100" GlobalInSegmentedWorld="0" HiddenInGame="0" RecvWind="0" Bending="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Fish">
+    <Properties>
+     <Boid nCount="10" gravity_at_death="-9.81" Mass="10" object_Model="objects/characters/animals/fish/tropical_fish/tropical_fish01.cgf" Size="2" SizeRandom="0"/>
+     <Flocking AttractDistMax="20" AttractDistMin="5" bEnableFlocking="1" FactorAlign="0" FactorCohesion="1" FactorSeparation="10" FieldOfViewAngle="250"/>
+     <Movement FactorAvoidLand="10" FactorHeight="0.4" FactorOrigin="0.1" FactorRandomAcceleration="2" HeightMax="20" HeightMin="1" MaxAnimSpeed="0.1" SpeedMax="1" SpeedMin="0.5"/>
+     <Options bActivate="0" bFollowPlayer="0" bNoLanding="0" bObstacleAvoidance="0" Radius="20" VisibilityDist="30"/>
+    </Properties>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>
