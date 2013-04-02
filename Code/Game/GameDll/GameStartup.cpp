@@ -152,6 +152,9 @@ string CGameStartup::m_rootDir;
 string CGameStartup::m_binDir;
 string CGameStartup::m_reqModName;
 
+int CGameStartup::m_lastMoveX = 0;
+int CGameStartup::m_lastMoveY = 0;
+
 bool CGameStartup::m_initWindow = false;
 
 CGameStartup::CGameStartup()
@@ -780,6 +783,9 @@ void CGameStartup::ShutdownWindow()
 //////////////////////////////////////////////////////////////////////////
 PLUGIN_SDK_WINPROC_INJECTOR(LRESULT CALLBACK CGameStartup::WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam))
 {
+	static int m_lastMoveX = 0;
+	static int m_lastMoveY = 0;
+
 	switch(msg)
 	{
 	case WM_CLOSE:
@@ -875,9 +881,20 @@ PLUGIN_SDK_WINPROC_INJECTOR(LRESULT CALLBACK CGameStartup::WndProc(HWND hWnd, UI
 	case WM_MOUSEMOVE:
 		if(gEnv && gEnv->pHardwareMouse)
 		{
+			m_lastMoveX = LOWORD(lParam);
+			m_lastMoveY = HIWORD(lParam);
 			gEnv->pHardwareMouse->Event(LOWORD(lParam),HIWORD(lParam),HARDWAREMOUSEEVENT_MOVE);
 		}
 		return 0;
+#if (_WIN32_WINNT >= 0x0400) || (_WIN32_WINDOWS > 0x0400)
+	case WM_MOUSEWHEEL:
+		if(gEnv && gEnv->pHardwareMouse)
+		{
+			short wheelDelta = GET_WHEEL_DELTA_WPARAM(wParam);
+			gEnv->pHardwareMouse->Event(m_lastMoveX, m_lastMoveY,HARDWAREMOUSEEVENT_WHEEL, wheelDelta);
+		}
+		return 0;
+#endif
 	case WM_LBUTTONDOWN:
 		if(gEnv && gEnv->pHardwareMouse)
 		{

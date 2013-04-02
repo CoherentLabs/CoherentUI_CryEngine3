@@ -6,7 +6,7 @@
 ##################################
 XPStyle on
 
-!define VERSION "1.8.0.0"
+!define VERSION "1.9.0.0"
 Name "D3D Plugin ${VERSION} for CryEngine"
 
 ; The file to write

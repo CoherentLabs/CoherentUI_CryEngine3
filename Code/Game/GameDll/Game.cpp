@@ -90,7 +90,7 @@
 
 
 #include <IPluginCoherentUI.h> // CoherentUI
-#include <IPluginManager.h>
+#include <IPluginManager_impl.h>
 
 
 
@@ -530,6 +530,8 @@ void CGame::RegisterGameFlowNodes()
 			pFactory = pFactory->m_pNext;
 		}
 	}
+
+	PluginManager::RegisterPluginFlownodes();
 }
 
 void CGame::ResetServerGameTokenSynch()

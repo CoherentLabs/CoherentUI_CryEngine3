@@ -98,7 +98,7 @@ namespace D3DPlugin
 
             const char* GetVersion() const
             {
-                return "1.8.0.0";
+                return "1.9.0.0";
             };
 
             const char* GetName() const

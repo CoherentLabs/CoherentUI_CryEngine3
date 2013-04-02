@@ -6,6 +6,45 @@
 
 #pragma once
 
+const DWORD dwForbiddenArea = PAGE_GUARD | PAGE_NOACCESS;
+const DWORD dwReadRights = PAGE_READONLY | PAGE_READWRITE | PAGE_WRITECOPY | PAGE_EXECUTE_READ | PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY;
+const DWORD dwWriteRights = PAGE_READWRITE | PAGE_WRITECOPY | PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY;
+
+#define ISINPAGE(PTR, MBI) ((UINT_PTR(PTR) >= UINT_PTR(MBI.BaseAddress)) && (UINT_PTR(PTR) < (UINT_PTR(MBI.BaseAddress) + MBI.RegionSize)))
+
+template<DWORD dwAccessRights>
+bool CheckAccess( void* pAddress, size_t nSize )
+{
+    if ( !pAddress || !nSize )
+    {
+        return false;
+    }
+
+    MEMORY_BASIC_INFORMATION sMBI;
+    bool bRet = false;
+
+    UINT_PTR pCurrentAddress = UINT_PTR( pAddress );
+    UINT_PTR pEndAdress = pCurrentAddress + ( nSize - 1 );
+
+    do
+    {
+        ZeroMemory( &sMBI, sizeof( sMBI ) );
+        VirtualQuery( LPCVOID( pCurrentAddress ), &sMBI, sizeof( sMBI ) );
+
+        bRet = ( sMBI.State & MEM_COMMIT ) // memory allocated and
+               && !( sMBI.Protect & dwForbiddenArea ) // access to page allowed and
+               && ( sMBI.Protect & dwAccessRights ); // the required rights
+
+        pCurrentAddress = ( UINT_PTR( sMBI.BaseAddress ) + sMBI.RegionSize );
+    }
+    while ( bRet && pCurrentAddress <= pEndAdress );
+
+    return bRet;
+}
+
+#define IsBadWritePtr(p,n) (!CheckAccess<dwWriteRights>(p,n))
+#define IsBadReadPtr(p,n) (!CheckAccess<dwReadRights>(p,n))
+
 #define getVT(ptr) (IsBadWritePtr(ptr, sizeof(INT_PTR)) ? NULL : *(void***)ptr)
 #define changeVT(n, target) changeVTEx(getVT(This), n, target)
 
