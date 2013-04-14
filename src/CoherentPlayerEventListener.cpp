@@ -7,16 +7,32 @@
 namespace CoherentUIPlugin
 {
 
-    CCoherentPlayerEventListener::CCoherentPlayerEventListener( CCoherentViewListener* pViewListener )
-        : m_pViewEventListener( pViewListener )
+    CCoherentPlayerEventListener::CCoherentPlayerEventListener()
     {
+    }
+
+    void CCoherentPlayerEventListener::AddViewListener( CCoherentViewListener* pViewListener )
+    {
+        m_ViewEventListeners.push_back( pViewListener );
+    }
+
+    void CCoherentPlayerEventListener::RemoveViewListener( CCoherentViewListener* pViewListener )
+    {
+        std::vector<CCoherentViewListener*>::iterator it = std::find( m_ViewEventListeners.begin(),
+                m_ViewEventListeners.end(), pViewListener );
+        m_ViewEventListeners.erase( it );
     }
 
     void CCoherentPlayerEventListener::OnHealthChange( IActor* pActor, float fHealth )
     {
-        if ( m_pViewEventListener && m_pViewEventListener->GetView() )
+        for ( size_t i = 0, count = m_ViewEventListeners.size(); i < count; ++i )
         {
-            m_pViewEventListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth );
+            CCoherentViewListener* pViewListener = m_ViewEventListeners[i];
+
+            if ( pViewListener->GetView() != nullptr )
+            {
+                pViewListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth );
+            }
         }
     }
 
