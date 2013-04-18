@@ -25,8 +25,7 @@ namespace CoherentUIPlugin
 
     CCoherentViewListener::~CCoherentViewListener()
     {
-        // TODO: causes exception
-        //ReleaseTexture();
+        ReleaseTexture();
 
         if ( m_pView )
         {

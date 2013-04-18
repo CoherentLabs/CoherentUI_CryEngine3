@@ -572,6 +572,7 @@ namespace CoherentUIPlugin
             int oldTextureID = sampler.m_pITex->GetTextureID();
             gEnv->pRenderer->RemoveTexture( oldTextureID );
             sampler.m_pITex = pCryTex;
+            pCryTex->AddRef();
 
             pViewListener->SetTexture( pD3DTextureDst, pCryTex->GetTextureID() );
         }
