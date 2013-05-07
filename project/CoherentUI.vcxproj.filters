@@ -89,6 +89,12 @@
     <ClCompile Include="..\src\PakFileHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StdAfx.h">
@@ -128,6 +134,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\PakFileHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ViewConfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

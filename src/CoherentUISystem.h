@@ -4,6 +4,7 @@
 #include <IGameFramework.h>
 #include <ILevelSystem.h>
 #include <Coherent/UI/CoherentTypes.h>
+#include <Coherent/UI/UISystem.h>
 
 #include <PakFileHandler.h>
 
@@ -13,12 +14,14 @@ namespace Coherent
     {
         class UISystem;
         class SurfaceResponse;
+        struct ViewInfo;
     }
 }
 
 struct IDirect3DTexture9;
 struct ID3D11Texture2D;
 struct IPlayerEventListener;
+struct ViewConfig;
 
 namespace CoherentUIPlugin
 {
@@ -28,11 +31,11 @@ namespace CoherentUIPlugin
     class CCoherentSystemEventListener;
     class CCoherentViewListener;
     class CFullscreenTriangleDrawer;
+    struct ViewConfig;
 
     class CCoherentUISystem :
         public D3DPlugin::ID3DEventListener,
-        public IGameFrameworkListener,
-        public ILevelSystemListener
+        public IGameFrameworkListener
     {
         public:
             CCoherentUISystem( void );
@@ -40,6 +43,13 @@ namespace CoherentUIPlugin
 
             bool InitializeCoherentUI();
             void OnSystemReady();
+            void OnError( const Coherent::UI::SystemError& error );
+
+            CCoherentViewListener* CreateView( ViewConfig* pConfig );
+            void DeleteView( CCoherentViewListener* pViewListener );
+            CCoherentViewListener* CreateHUDView( std::wstring path );
+            void DeleteHUDView();
+
             void QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse );
             void ReleaseSurface( Coherent::UI::CoherentHandle surface );
             void* GetNativeTextureFromSharedHandle( Coherent::UI::CoherentHandle surface );
@@ -61,14 +71,6 @@ namespace CoherentUIPlugin
             virtual void OnLoadGame( ILoadGame* pLoadGame ) COHERENT_OVERRIDE {}
             virtual void OnLevelEnd( const char* nextLevel ) COHERENT_OVERRIDE {}
             virtual void OnActionEvent( const SActionEvent& event ) COHERENT_OVERRIDE;
-
-            // ILevelSystemListener methods
-            virtual void OnLevelNotFound( const char* levelName ) COHERENT_OVERRIDE {}
-            virtual void OnLoadingStart( ILevelInfo* pLevel ) COHERENT_OVERRIDE;
-            virtual void OnLoadingComplete( ILevel* pLevel ) COHERENT_OVERRIDE {}
-            virtual void OnLoadingError( ILevelInfo* pLevel, const char* error ) COHERENT_OVERRIDE {}
-            virtual void OnLoadingProgress( ILevelInfo* pLevel, int progressAmount ) COHERENT_OVERRIDE {}
-            virtual void OnUnloadComplete( ILevel* pLevel ) COHERENT_OVERRIDE;
 
         private:
             struct CreateSurfaceTask
@@ -93,10 +95,6 @@ namespace CoherentUIPlugin
         private:
             void UpdateHUD();
 
-            void LoadCoherentUIViews();
-            void UnloadCoherentUIViews();
-
-            void CreateViewsForListeners();
             void SetTexturesForListeners();
             void ChangeEntityDiffuseTextureForMaterial( CCoherentViewListener* pViewListener, const char* entityName, const char* materialName );
 
@@ -109,7 +107,10 @@ namespace CoherentUIPlugin
             boost::scoped_ptr<CCoherentInputEventListener> m_InputEventsListener;
             boost::scoped_ptr<CCoherentPlayerEventListener> m_PlayerEventListener;
 
-            std::vector<boost::shared_ptr<CCoherentViewListener> > m_ViewListeners;
+            boost::scoped_ptr<CCoherentViewListener> m_HudViewListener;
+
+            typedef std::map<CCoherentViewListener*, ViewConfig*> View;
+            View m_Views;
 
             Coherent::UI::UISystem* m_pUISystem;
 

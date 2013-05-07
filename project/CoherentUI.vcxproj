@@ -41,6 +41,8 @@
     <ClCompile Include="..\src\CoherentViewListener.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUI.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUIModule.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp" />
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="..\src\PakFileHandler.cpp" />
     <ClCompile Include="..\src\StdAfx.cpp">
@@ -63,6 +65,7 @@
     <ClInclude Include="..\src\FullscreenTriangleDrawer.h" />
     <ClInclude Include="..\src\PakFileHandler.h" />
     <ClInclude Include="..\src\StdAfx.h" />
+    <ClInclude Include="..\src\ViewConfig.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

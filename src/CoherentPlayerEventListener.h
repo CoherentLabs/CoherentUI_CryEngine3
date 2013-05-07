@@ -10,11 +10,14 @@ namespace CoherentUIPlugin
     class CCoherentPlayerEventListener : public IPlayerEventListener
     {
         public:
-            CCoherentPlayerEventListener( CCoherentViewListener* pViewListener );
+            CCoherentPlayerEventListener();
+            void AddViewListener( CCoherentViewListener* pViewListener );
+            void RemoveViewListener( CCoherentViewListener* pViewListener );
+
             virtual void OnHealthChange( IActor* pActor, float fHealth ) COHERENT_OVERRIDE;
 
         private:
-            CCoherentViewListener* m_pViewEventListener;
+            std::vector<CCoherentViewListener*> m_ViewEventListeners;
     };
 
 }

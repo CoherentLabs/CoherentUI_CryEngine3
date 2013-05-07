@@ -8,6 +8,7 @@
 #include "CoherentHUDViewListener.h"
 #include "CPluginCoherentUI.h"
 #include "FullscreenTriangleDrawer.h"
+#include "ViewConfig.h"
 
 #include <Coherent/UI/UISystem.h>
 #include <Coherent/UI/View.h>
@@ -25,37 +26,37 @@ CoherentUIPlugin::CCoherentUISystem* gCoherentUISystem = NULL;
 
 namespace CoherentUIPlugin
 {
-    enum ViewListenerID
-    {
-        VL_HUD = 0,
-        VL_StaticObj,
-        VL_BreakableObj,
-
-        VL_Count
-    };
-
     CCoherentUISystem::CCoherentUISystem( void )
         : m_pUISystem( NULL )
     {
+        m_PlayerEventListener.reset( new CCoherentPlayerEventListener() );
     }
 
 
     CCoherentUISystem::~CCoherentUISystem( void )
     {
-        if ( gEnv->IsEditor() )
+        // unregister listeners
+        if ( m_pUISystem && gEnv )
         {
-            UnloadCoherentUIViews();
+            if ( gEnv->pGameFramework )
+            {
+                gEnv->pGameFramework->UnregisterListener( this );
+            }
+
+            if ( gEnv->pSystem && m_InputEventsListener )
+            {
+                gEnv->pInput->RemoveEventListener( m_InputEventsListener.get() );
+            }
         }
 
-        gEnv->pGameFramework->UnregisterListener( this );
-        ILevelSystem* pLevelSystem = gEnv->pGameFramework->GetILevelSystem();
-
-        if ( pLevelSystem )
+        // delete view listeners
+        for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
         {
-            pLevelSystem->RemoveListener( this );
+            CCoherentViewListener* pListener = iter->first;
+            delete pListener;
         }
 
-        m_ViewListeners.clear();
+        m_Views.clear();
 
         if ( m_pUISystem )
         {
@@ -65,10 +66,12 @@ namespace CoherentUIPlugin
 
     bool CCoherentUISystem::InitializeCoherentUI()
     {
+        // register listeners
         m_SystemEventsListener.reset( new CCoherentSystemEventListener( this ) );
+        m_InputEventsListener.reset( new CCoherentInputEventListener() );
 
         gEnv->pGameFramework->RegisterListener( this, "CCoherentUISystem", eFLPriority_HUD );
-        gEnv->pGameFramework->GetILevelSystem()->AddListener( this );
+        gEnv->pInput->AddEventListener( m_InputEventsListener.get() );
 
         std::string sPath( gPluginManager->GetPluginDirectory( PLUGIN_NAME ) );
         sPath += "\\host";
@@ -76,7 +79,7 @@ namespace CoherentUIPlugin
         sPathW.assign( sPath.begin(), sPath.end() );
 
         Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
-        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr, &m_PakFileHandler );
+        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr , &m_PakFileHandler );
 
         return m_pUISystem != NULL;
     }
@@ -85,6 +88,79 @@ namespace CoherentUIPlugin
     {
         // You can start creating views from now on.
         // In this example the views are created when a level is loading.
+    }
+
+    void CCoherentUISystem::OnError( const Coherent::UI::SystemError& error )
+    {
+    }
+
+    CCoherentViewListener* CCoherentUISystem::CreateView( ViewConfig* pConfig )
+    {
+        CCoherentViewListener* pViewListener = new CCoherentViewListener();
+
+        if ( !pConfig->CollisionMesh.empty() )
+        {
+            pViewListener->SetCollisionMesh( pConfig->CollisionMesh.c_str() );
+        }
+
+        string entityName;
+
+        if ( pConfig->Entity )
+        {
+            entityName = pConfig->Entity->GetName();
+        }
+
+        pViewListener->SetEngineObjectAndMaterialNames( entityName, pConfig->MaterialName.c_str() );
+
+        m_pUISystem->CreateView( pConfig->ViewInfo, pConfig->Url.c_str(), pViewListener );
+
+        m_Views.insert( View::value_type( pViewListener, pConfig ) );
+        return pViewListener;
+    }
+
+    void CCoherentUISystem::DeleteView( CCoherentViewListener* pViewListener )
+    {
+        // only delete views, when in editor mode. in game mode they
+        // will be deleted on instance destruction
+        if ( gEnv->IsEditor() )
+        {
+            View::iterator it = m_Views.find( pViewListener );
+
+            if ( it != m_Views.end() )
+            {
+                m_Views.erase( it );
+            }
+
+            delete pViewListener;
+        }
+    }
+
+    CCoherentViewListener* CCoherentUISystem::CreateHUDView( std::wstring path )
+    {
+        m_HudViewListener.reset( new CCoherentHUDViewListener() );
+
+        CRY_ASSERT( m_pUISystem );
+
+        Coherent::UI::ViewInfo info;
+        info.Width = gEnv->pRenderer->GetWidth();
+        info.Height = gEnv->pRenderer->GetHeight();
+        info.UsesSharedMemory = true;
+        info.IsTransparent = true;
+        info.SupportClickThrough = true;
+
+        if ( m_HudViewListener->GetView() == nullptr )
+        {
+            m_pUISystem->CreateView( info, path.c_str(), m_HudViewListener.get() );
+        }
+
+        m_PlayerEventListener.get()->AddViewListener( m_HudViewListener.get() );
+        return m_HudViewListener.get();
+    }
+
+    void CCoherentUISystem::DeleteHUDView()
+    {
+        m_PlayerEventListener.get()->RemoveViewListener( m_HudViewListener.get() );
+        m_HudViewListener.reset();
     }
 
     void CCoherentUISystem::QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse )
@@ -138,11 +214,11 @@ namespace CoherentUIPlugin
         float minDist = std::numeric_limits<float>::max();
         int viewX;
         int viewY;
-        int viewHitIndex = -1;
+        CCoherentViewListener* pHitListener = NULL;
 
-        for ( int i = 0, count = ( int )m_ViewListeners.size(); i < count; ++i )
+        for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
         {
-            CCoherentViewListener* pListener = m_ViewListeners[i].get();
+            CCoherentViewListener* pListener = iter->first;
 
             float t;
             int x, y;
@@ -155,16 +231,17 @@ namespace CoherentUIPlugin
                     viewX = x;
                     viewY = y;
 
-                    viewHitIndex = i;
+                    pHitListener = pListener;
+                    break;
                 }
             }
         }
 
-        if ( viewHitIndex != -1 )
+        if ( pHitListener != NULL )
         {
             outX = viewX;
             outY = viewY;
-            pViewListener = m_ViewListeners[viewHitIndex].get();
+            pViewListener = pHitListener;
 
             return true;
         }
@@ -180,9 +257,9 @@ namespace CoherentUIPlugin
             m_FullscreenDrawer.reset( new CFullscreenTriangleDrawer() );
         }
 
-        if ( m_ViewListeners.size() > VL_HUD && m_InputEventsListener && m_InputEventsListener->ShouldDrawCoherentUI() )
+        if ( m_HudViewListener && m_InputEventsListener && m_InputEventsListener->ShouldDrawCoherentUI() )
         {
-            void* pHUDTexture = m_ViewListeners[VL_HUD]->GetTexture();
+            void* pHUDTexture = m_HudViewListener->GetTexture();
 
             if ( pHUDTexture )
             {
@@ -193,20 +270,17 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::OnPreReset()
     {
-        for ( size_t i = 0; i < m_ViewListeners.size(); ++i )
+        if ( m_HudViewListener )
         {
-            if ( i == VL_HUD )
-            {
-                m_ViewListeners[i]->ReleaseTexture();
-            }
+            m_HudViewListener->ReleaseTexture();
+        }
 
-            else
-            {
-                // Textures set on objects cannot be released immediately
-                // as this will cause internal changes for some materials
-                // and lead to a crash.
-                m_ViewListeners[i]->SetTexture( NULL, 0 );
-            }
+        for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
+        {
+            // Textures set on objects cannot be released immediately
+            // as this will cause internal changes for some materials
+            // and lead to a crash.
+            iter->first->SetTexture( NULL, 0 );
         }
 
         m_FullscreenDrawer.reset(); // Clear resources for Fullscreen drawing
@@ -216,9 +290,9 @@ namespace CoherentUIPlugin
     {
         m_FullscreenDrawer.reset( new CFullscreenTriangleDrawer() );
 
-        if ( m_ViewListeners.size() > VL_HUD && m_ViewListeners[VL_HUD]->GetView() )
+        if ( m_HudViewListener && m_HudViewListener->GetView() )
         {
-            m_ViewListeners[VL_HUD]->GetView()->Resize( gEnv->pRenderer->GetWidth(), gEnv->pRenderer->GetHeight() );
+            m_HudViewListener->GetView()->Resize( gEnv->pRenderer->GetWidth(), gEnv->pRenderer->GetHeight() );
         }
     }
 
@@ -248,67 +322,9 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::OnActionEvent( const SActionEvent& event )
     {
-        if ( gEnv->IsEditor() && event.m_event == eAE_inGame )
-        {
-            LoadCoherentUIViews();
-        }
-
-        // Since CPlayer is not an iterface class, we cannot register
-        // a listener from within the Coherent UI DLL;
-        // The registration is done in CGame::OnActionEvent, when the
-        // player enters a level.
-    }
-
-    // ILevelSystemListener methods
-    void CCoherentUISystem::OnLoadingStart( ILevelInfo* pLevel )
-    {
-        // The editor executes OnLoadingStart multiple times without
-        // corresponding OnUnloadComplete calls;
-        // We will create the views when the player enters Game mode
-        if ( !gEnv->IsEditor() )
-        {
-            LoadCoherentUIViews();
-        }
-    }
-
-    void CCoherentUISystem::OnUnloadComplete( ILevel* pLevel )
-    {
-        if ( !gEnv->IsEditor() )
-        {
-            UnloadCoherentUIViews();
-        }
     }
 
     // Helper methods
-
-    void CCoherentUISystem::LoadCoherentUIViews()
-    {
-        m_ViewListeners.resize( VL_Count );
-        m_ViewListeners[VL_HUD].reset( new CCoherentHUDViewListener() );
-
-        m_ViewListeners[VL_StaticObj].reset( new CCoherentViewListener() );
-        m_ViewListeners[VL_StaticObj]->SetCollisionMesh( "curve.obj" );
-        m_ViewListeners[VL_StaticObj]->SetEngineObjectAndMaterialNames( "CoherentStaticEntity", "materials/placeholder_1024_576" );
-
-        m_ViewListeners[VL_BreakableObj].reset( new CCoherentViewListener() );
-        m_ViewListeners[VL_BreakableObj]->SetEngineObjectAndMaterialNames( "CoherentBreakableEntity", "materials/placeholder_1024_768" );
-
-        m_InputEventsListener.reset( new CCoherentInputEventListener() );
-        gEnv->pInput->AddEventListener( m_InputEventsListener.get() );
-
-        m_PlayerEventListener.reset( new CCoherentPlayerEventListener( m_ViewListeners[VL_HUD].get() ) );
-
-        CreateViewsForListeners();
-    }
-
-    void CCoherentUISystem::UnloadCoherentUIViews()
-    {
-        gEnv->pInput->RemoveEventListener( m_InputEventsListener.get() );
-        m_InputEventsListener.reset();
-        m_PlayerEventListener.reset();
-
-        m_ViewListeners.clear();
-    }
 
     void CCoherentUISystem::UpdateHUD()
     {
@@ -316,7 +332,7 @@ namespace CoherentUIPlugin
         static float lastRotation = 0;
 
         CCoherentViewListener* pHUDListener = NULL;
-        pHUDListener = ( m_ViewListeners.size() > VL_HUD ? m_ViewListeners[VL_HUD].get() : NULL );
+        pHUDListener = ( m_HudViewListener ? m_HudViewListener.get() : NULL );
 
         if ( pHUDListener )
         {
@@ -353,7 +369,7 @@ namespace CoherentUIPlugin
     void CCoherentUISystem::ShowMap( bool show )
     {
         CCoherentViewListener* pHUDListener = NULL;
-        pHUDListener = ( m_ViewListeners.size() > VL_HUD ? m_ViewListeners[VL_HUD].get() : NULL );
+        pHUDListener = ( m_HudViewListener ? m_HudViewListener.get() : NULL );
 
         if ( pHUDListener )
         {
@@ -494,53 +510,12 @@ namespace CoherentUIPlugin
         return Coherent::UI::CoherentHandle( result );
     }
 
-    void CCoherentUISystem::CreateViewsForListeners()
-    {
-        CRY_ASSERT( m_ViewListeners.size() == VL_Count && m_pUISystem );
-
-#if defined(COHERENT_UI_LIMITED_VERSION)
-#error The Starter version of Coherent UI supports the creation of a single view only! \
-To avoid warnings and unexpected black objects, comment all but one of the calls \
-to "CreateView" in this function. When done remove this error directive to compile successfully.
-#endif
-
-        Coherent::UI::ViewInfo info;
-        info.Width = gEnv->pRenderer->GetWidth();
-        info.Height = gEnv->pRenderer->GetHeight();
-        info.UsesSharedMemory = true;
-        info.IsTransparent = true;
-        info.SupportClickThrough = true;
-
-        if ( m_ViewListeners[VL_HUD]->GetView() == nullptr )
-        {
-            m_pUISystem->CreateView( info, L"coui://Libs/UI/CoherentUI/hud/hud.html", m_ViewListeners[VL_HUD].get() );
-        }
-
-        info.Width = 1024;
-        info.Height = 576;
-        info.IsTransparent = false;
-        info.SupportClickThrough = false;
-
-        if ( m_ViewListeners[VL_StaticObj]->GetView() == nullptr )
-        {
-            m_pUISystem->CreateView( info, L"http://www.google.co.uk", m_ViewListeners[VL_StaticObj].get() );
-        }
-
-        info.Width = 1024;
-        info.Height = 768;
-
-        if ( m_ViewListeners[VL_BreakableObj]->GetView() == nullptr )
-        {
-            m_pUISystem->CreateView( info, L"http://neography.com/experiment/circles/solarsystem/", m_ViewListeners[VL_BreakableObj].get() );
-        }
-    }
-
     void CCoherentUISystem::SetTexturesForListeners()
     {
         CCoherentViewListener* pListener = NULL;
 
         // Create HUD texture
-        pListener = ( m_ViewListeners.size() > VL_HUD ? m_ViewListeners[VL_HUD].get() : NULL );
+        pListener = ( m_HudViewListener ? m_HudViewListener.get() : NULL );
 
         if ( pListener && pListener->GetTexture() == NULL )
         {
@@ -558,18 +533,14 @@ to "CreateView" in this function. When done remove this error directive to compi
         }
 
         // Create textures for entities
-        pListener = ( m_ViewListeners.size() > VL_StaticObj ?  m_ViewListeners[VL_StaticObj].get() : NULL );
-
-        if ( pListener && pListener->GetTexture() == NULL )
+        for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
         {
-            ChangeEntityDiffuseTextureForMaterial( pListener, pListener->GetEngineObjectName(), pListener->GetOverriddenMaterialName() );
-        }
+            pListener = iter->first;
 
-        pListener = ( m_ViewListeners.size() > VL_BreakableObj ? m_ViewListeners[VL_BreakableObj].get() : NULL );
-
-        if ( pListener && pListener->GetTexture() == NULL )
-        {
-            ChangeEntityDiffuseTextureForMaterial( pListener, pListener->GetEngineObjectName(), pListener->GetOverriddenMaterialName() );
+            if ( pListener && pListener->GetTexture() == NULL )
+            {
+                ChangeEntityDiffuseTextureForMaterial( pListener, pListener->GetEngineObjectName(), pListener->GetOverriddenMaterialName() );
+            }
         }
     }
 
@@ -601,9 +572,9 @@ to "CreateView" in this function. When done remove this error directive to compi
             int oldTextureID = sampler.m_pITex->GetTextureID();
             gEnv->pRenderer->RemoveTexture( oldTextureID );
             sampler.m_pITex = pCryTex;
+            pCryTex->AddRef();
 
             pViewListener->SetTexture( pD3DTextureDst, pCryTex->GetTextureID() );
         }
     }
-
 }

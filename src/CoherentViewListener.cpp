@@ -310,6 +310,8 @@ namespace CoherentUIPlugin
         if ( m_pTexture )
         {
             gEnv->pRenderer->RemoveTexture( m_CryTextureID );
+            ID3D11Texture2D* pTexture = static_cast<ID3D11Texture2D*>( m_pTexture );
+            pTexture->Release();
             m_pTexture = NULL;
             m_CryTextureID = 0;
         }

@@ -12,6 +12,7 @@ namespace CoherentUIPlugin
             CCoherentSystemEventListener( CCoherentUISystem* pUISystem );
 
             virtual void SystemReady() COHERENT_OVERRIDE;
+            virtual void OnError( const Coherent::UI::SystemError& error );
 
             bool IsReady() const
             {
