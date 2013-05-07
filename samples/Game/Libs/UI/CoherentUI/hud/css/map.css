@@ -1,0 +1,17 @@
+
+.olControlAttribution {
+    bottom: 5px;
+}
+
+.smallmap {
+    width: 386px;
+    height: 256px;
+}
+
+#map {
+	position: absolute;
+	top: 120px;
+	left: 60px;
+	
+	-webkit-transform: perspective(500) rotateX(-20deg) rotateY(20deg);
+}
