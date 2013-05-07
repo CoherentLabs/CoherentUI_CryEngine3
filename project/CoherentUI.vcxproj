@@ -71,14 +71,6 @@
   <ItemGroup>
     <ResourceCompile Include="version.rc" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Plugin_D3D\project\D3D.vcxproj">
-      <Project>{3e7cb34e-8c3c-49be-a5a2-cee7e3fb430d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Plugin_SDK\project\PluginManager.vcxproj">
-      <Project>{90193419-7421-4233-bebd-148d6566622b}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{611E60F1-B300-47F1-9E33-591B5BAD59ED}</ProjectGuid>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
