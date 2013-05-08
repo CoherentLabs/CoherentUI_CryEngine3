@@ -518,7 +518,7 @@ namespace CoherentUIPlugin
 
             POINT cursorPos;
             ::GetCursorPos( &cursorPos );
-            ::ScreenToClient( HWND( gEnv->pRenderer->GetHWND() ), &cursorPos );
+            ::ScreenToClient( HWND( gEnv->pRenderer->GetCurrentContextHWND() ), &cursorPos );
             m_MouseX = cursorPos.x;
             m_MouseY = cursorPos.y;
 

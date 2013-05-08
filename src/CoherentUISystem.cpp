@@ -58,6 +58,8 @@ namespace CoherentUIPlugin
 
         m_Views.clear();
 
+        m_HudViewListener.reset();
+
         if ( m_pUISystem )
         {
             m_pUISystem->Uninitialize();
@@ -232,7 +234,6 @@ namespace CoherentUIPlugin
                     viewY = y;
 
                     pHitListener = pListener;
-                    break;
                 }
             }
         }
