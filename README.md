@@ -44,13 +44,21 @@ You should have the following folder structure now:
 8. Copy the contents of the `<Code>/CoherentUI_CryEngine3/samples` folder into `<CE3>`, overwriting files when asked
 9. Build the Game DLL using `<Code>/Solutions/CryEngine_GameCodeOnly.sln`.
 
-NOTE: There is a sample flow graph in `<Code>/CoherentUI_CryEngine3/samples/Game/Levels/Singleplayer/ForestCOUI/CoUIFlowNodes.xml`.
-
 Using the prebuilt versions
 ---------
 NOTE: The prebuilt versions are targeted for **Coherent UI 1.2.1.1 ProTrial**
 
-TODO: Build & commit binaries; Describe how to use them.
+There are prebuilt binaries in the `<Code>/CoherentUI_CryEngine3/Prebuilt` folder. To use them, just copy them over to the appropriate directory of `<CE3>` (i.e. Bin32 or Bin64).
+
+You should also copy the contents of the `<Code>/CoherentUI_CryEngine3/samples` folder into `<CE3>`, overwriting files when asked.
+
+Sample flow graph
+---------
+There is a sample flow graph in `<Code>/CoherentUI_CryEngine3/samples/Game/Levels/Singleplayer/ForestCOUI/CoUIFlowNodes.xml`.
+The easiest way to use it is to open the sandbox (editor), load the provided *ForestCOUI* level and import the flow graph into an entity.
+
+As an example, we'll import the sample into *CoherentBreakableEntity*'s flow. Select the *CoherentBreakableEntity* entity and click on "Create" in the *Flow Graph* section of the rollup bar.
+From the Flow Graph window, select `File -> Import...` and import *CoUIFlowNodes.xml*. Exit the Flow Graph window, save the level and export it to the engine (Ctrl+E). Now the flow graph will be used in the Launcher, too.
 
 CVars / Commands
 ================
