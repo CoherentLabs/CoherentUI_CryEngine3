@@ -69,6 +69,7 @@ Flownodes
 =========
 * ```CoherentUI_Plugin:OutputEntity``` TODO: Describe the flownodes inside your plugin
 * ```CoherentUI_Plugin:OutputHUD``` TODO: Describe the flownodes inside your plugin
+* ```CoherentUI_Plugin:Trigger``` TODO: Describe the flownodes inside your plugin
 
 Objects
 =======
