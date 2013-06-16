@@ -50,6 +50,8 @@ namespace CoherentUIPlugin
             CCoherentViewListener* CreateHUDView( std::wstring path );
             void DeleteHUDView();
 
+            Coherent::UI::View* CCoherentUISystem::GetView( int id );
+
             void QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse );
             void ReleaseSurface( Coherent::UI::CoherentHandle surface );
             void* GetNativeTextureFromSharedHandle( Coherent::UI::CoherentHandle surface );

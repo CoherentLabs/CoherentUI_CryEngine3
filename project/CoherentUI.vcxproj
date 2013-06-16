@@ -43,6 +43,7 @@
     <ClCompile Include="..\src\CPluginCoherentUIModule.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUITrigger.cpp" />
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="..\src\PakFileHandler.cpp" />
     <ClCompile Include="..\src\StdAfx.cpp">

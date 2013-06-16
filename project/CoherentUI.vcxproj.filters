@@ -95,6 +95,9 @@
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp">
       <Filter>Flownodes</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUITrigger.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StdAfx.h">

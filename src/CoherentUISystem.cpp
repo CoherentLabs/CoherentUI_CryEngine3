@@ -96,6 +96,25 @@ namespace CoherentUIPlugin
     {
     }
 
+    Coherent::UI::View* CCoherentUISystem::GetView( int id )
+    {
+        Coherent::UI::View* pHudView = m_HudViewListener->GetView();
+        if ( pHudView != nullptr && pHudView->GetId() == id )
+        {
+            return pHudView;
+        }
+
+        for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
+        {
+            Coherent::UI::View* pView = iter->first->GetView();
+            if ( pView->GetId() == id )
+            {
+                return pView;
+            }
+        }
+        return NULL;
+    }
+
     CCoherentViewListener* CCoherentUISystem::CreateView( ViewConfig* pConfig )
     {
         CCoherentViewListener* pViewListener = new CCoherentViewListener();
@@ -213,6 +232,20 @@ namespace CoherentUIPlugin
 
     bool CCoherentUISystem::RaycastClosestViewListenersGeometry( const Vec3& origin, const Vec3& dir, int& outX, int& outY, CCoherentViewListener*& pViewListener )
     {
+        // check hud view
+        float t;
+        int x, y;
+        if ( m_HudViewListener->RaycastGeometry( origin, dir, t, x, y ) )
+        {
+            outX = x;
+            outY = y;
+            pViewListener = m_HudViewListener.get();
+
+            return true;
+        }
+		
+
+        // check other views
         float minDist = std::numeric_limits<float>::max();
         int viewX;
         int viewY;
