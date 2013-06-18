@@ -95,7 +95,10 @@
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp">
       <Filter>Flownodes</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Flownodes\CFlowCUITrigger.cpp">
+    <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEvent.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEventFloat.cpp">
       <Filter>Flownodes</Filter>
     </ClCompile>
   </ItemGroup>

@@ -6,7 +6,7 @@
 
 namespace CoherentUIPlugin
 {
-    class CFlowCUITrigger : public CFlowBaseNode<eNCT_Instanced>
+    class CCFlowCUITriggerEvent : public CFlowBaseNode<eNCT_Instanced>
     {
         private:
 
@@ -15,20 +15,21 @@ namespace CoherentUIPlugin
                 EIP_ACTIVATE = 0,
                 EIP_VIEWID,
                 EIP_EVENT,
+                EIP_ARG1,
             };
 
         public:
-            CFlowCUITrigger( SActivationInfo* pActInfo )
+            CCFlowCUITriggerEvent( SActivationInfo* pActInfo )
             {
             }
 
-            virtual ~CFlowCUITrigger()
+            virtual ~CCFlowCUITriggerEvent()
             {
             }
 
             virtual IFlowNodePtr Clone( SActivationInfo* pActInfo )
             {
-                return new CFlowCUITrigger( pActInfo );
+                return new CCFlowCUITriggerEvent( pActInfo );
             }
 
             virtual void GetMemoryUsage( ICrySizer* s ) const
@@ -47,12 +48,13 @@ namespace CoherentUIPlugin
                     InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
                     InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
                     InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
+                    InputPortConfig<bool>( "Arg1",                _HELP( "argument 1 (optional: boolean)" ) ),
                     InputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
                 config.pOutputPorts = NULL;//output
-                config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI trigger" );
+                config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI event trigger (1 argument)" );
 
                 //config.nFlags |= EFLN_TARGET_ENTITY;
                 config.SetCategory( EFLN_APPROVED );
@@ -78,7 +80,16 @@ namespace CoherentUIPlugin
                             if ( pView )
                             {
                                 std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
-                                pView->TriggerEvent( sEvent.c_str() );
+
+                                if ( IsPortActive( pActInfo, EIP_ARG1 ) ) {
+                                    pView->TriggerEvent(sEvent.c_str(), 
+                                        GetPortBool( pActInfo, EIP_ARG1 ) 
+                                    );
+                                }
+
+                                else {
+                                    pView->TriggerEvent(sEvent.c_str());
+                                }
                             }
                         }
                         break;
@@ -90,4 +101,4 @@ namespace CoherentUIPlugin
     };
 }
 
-REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:Trigger", CoherentUIPlugin::CFlowCUITrigger, CFlowCUITrigger );
+REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:TriggerEvent", CoherentUIPlugin::CCFlowCUITriggerEvent, CCFlowCUITriggerEvent );
