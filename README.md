@@ -71,9 +71,9 @@ Flownodes
 CoherentUI_Plugin:OutputEntity
 ------------------------------
 
-  Renders a Coherent UI View on an entity
+Renders a Coherent UI View on an entity
   
-  **Inputs**
+**Inputs**
   
   - `Activate` Activate the node
   - `Url` Initial url to display on the view
@@ -84,30 +84,30 @@ CoherentUI_Plugin:OutputEntity
   - `Mesh` Geometry object for calculating correct click coordinates on the entity
   - `SharedMemory` Defines if the view uses shared memory for the rendering data transport or shared textures
 
-  **Outputs**
+**Outputs**
   
   - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
 CoherentUI_Plugin:OutputHUD
 ---------------------------
 
-  Renders a Coherent UI View on the HUD
+Renders a Coherent UI View on the HUD
   
-  **Inputs**
+**Inputs**
   
   - `Activate` Activate the node
   - `Path` Path to the html files defining the HUD (e.g. *coui://Libs/UI/CoherentUI/hud/hud.html*)
 
-  **Outputs**
-  
+**Outputs**
+
   - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
 CoherentUI_Plugin:TriggerEvent
 ------------------------------
 
-  Triggers an event on a Coherent UI View with an optional boolean parameter
+Triggers an event on a Coherent UI View with an optional boolean parameter
   
-  **Inputs**
+**Inputs**
   
   - `Activate` Activate the node
   - `ViewID` Id of the view as obtained from one of the output nodes
@@ -117,9 +117,9 @@ CoherentUI_Plugin:TriggerEvent
 CoherentUI_Plugin:TriggerEventFloat
 -----------------------------------
 
-  Triggers an event on a Coherent UI View with up to four float parameter
+Triggers an event on a Coherent UI View with up to four float parameter
   
-  **Inputs**
+**Inputs**
   
   - `Activate` Activate the node
   - `ViewID` Id of the view as obtained from one of the output nodes
