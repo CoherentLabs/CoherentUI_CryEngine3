@@ -75,18 +75,18 @@ CoherentUI_Plugin:OutputEntity
   
   **Inputs**
   
-    - `Activate` Activate the node
-    - `Url` Initial url to display on the view
-    - `Width` Width of the view in pixels
-    - `Height` Height of the view in pixels
-    - `Transparent` Defines if the view should be transparent or not
-    - `Clickable` Defines if the view should support click-through queries
-    - `Mesh` Geometry object for calculating correct click coordinates on the entity
-    - `SharedMemory` Defines if the view uses shared memory for the rendering data transport or shared textures
+    `Activate` Activate the node
+    `Url` Initial url to display on the view
+    `Width` Width of the view in pixels
+    `Height` Height of the view in pixels
+    `Transparent` Defines if the view should be transparent or not
+    `Clickable` Defines if the view should support click-through queries
+    `Mesh` Geometry object for calculating correct click coordinates on the entity
+    `SharedMemory` Defines if the view uses shared memory for the rendering data transport or shared textures
 
   **Outputs**
   
-    - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
+    `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
 CoherentUI_Plugin:OutputHUD
 ---------------------------
@@ -95,12 +95,12 @@ CoherentUI_Plugin:OutputHUD
   
   **Inputs**
   
-    - `Activate` Activate the node
-    - `Path` Path to the html files defining the HUD (e.g. *coui://Libs/UI/CoherentUI/hud/hud.html*)
+    `Activate` Activate the node
+    `Path` Path to the html files defining the HUD (e.g. *coui://Libs/UI/CoherentUI/hud/hud.html*)
 
   **Outputs**
   
-    - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
+    `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
 CoherentUI_Plugin:TriggerEvent
 ------------------------------
@@ -109,10 +109,10 @@ CoherentUI_Plugin:TriggerEvent
   
   **Inputs**
   
-    - `Activate` Activate the node
-    - `ViewID` Id of the view as obtained from one of the output nodes
-    - `Event` The event name
-    - `Arg1` Boolean argument to be send to the view (optional)
+    `Activate` Activate the node
+    `ViewID` Id of the view as obtained from one of the output nodes
+    `Event` The event name
+    `Arg1` Boolean argument to be send to the view (optional)
 
 CoherentUI_Plugin:TriggerEventFloat
 -----------------------------------
@@ -121,13 +121,13 @@ CoherentUI_Plugin:TriggerEventFloat
   
   **Inputs**
   
-    - `Activate` Activate the node
-    - `ViewID` Id of the view as obtained from one of the output nodes
-    - `Event` The event name
-    - `Arg1` First float argument to be send to the view (optional)
-    - `Arg2` Second float argument to be send to the view (optional)
-    - `Arg3` Third float argument to be send to the view (optional)
-    - `Arg4` Fourth float argument to be send to the view (optional)
+    `Activate` Activate the node
+    `ViewID` Id of the view as obtained from one of the output nodes
+    `Event` The event name
+    `Arg1` First float argument to be send to the view (optional)
+    `Arg2` Second float argument to be send to the view (optional)
+    `Arg3` Third float argument to be send to the view (optional)
+    `Arg4` Fourth float argument to be send to the view (optional)
 
 Objects
 =======
