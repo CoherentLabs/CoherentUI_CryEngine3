@@ -67,7 +67,9 @@ CVars / Commands
 
 Flownodes
 =========
-* `CoherentUI_Plugin:OutputEntity`
+
+CoherentUI_Plugin:OutputEntity
+------------------------------
 
   Renders a Coherent UI View on an entity
   
@@ -86,7 +88,8 @@ Flownodes
   
     - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
-* `CoherentUI_Plugin:OutputHUD`
+CoherentUI_Plugin:OutputHUD
+---------------------------
 
   Renders a Coherent UI View on the HUD
   
@@ -99,7 +102,8 @@ Flownodes
   
     - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
-* `CoherentUI_Plugin:TriggerEvent`
+CoherentUI_Plugin:TriggerEvent
+------------------------------
 
   Triggers an event on a Coherent UI View with an optional boolean parameter
   
@@ -110,7 +114,8 @@ Flownodes
     - `Event` The event name
     - `Arg1` Boolean argument to be send to the view (optional)
 
-* `CoherentUI_Plugin:TriggerEventFloat`
+CoherentUI_Plugin:TriggerEventFloat
+-----------------------------------
 
   Triggers an event on a Coherent UI View with up to four float parameter
   
