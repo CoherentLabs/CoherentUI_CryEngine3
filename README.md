@@ -67,10 +67,46 @@ CVars / Commands
 
 Flownodes
 =========
-* ```CoherentUI_Plugin:OutputEntity``` TODO: Describe the flownodes inside your plugin
-* ```CoherentUI_Plugin:OutputHUD``` TODO: Describe the flownodes inside your plugin
-* ```CoherentUI_Plugin:TriggerEvent``` TODO: Describe the flownodes inside your plugin
-* ```CoherentUI_Plugin:TriggerEventFloat``` TODO: Describe the flownodes inside your plugin
+* ```CoherentUI_Plugin:OutputEntity```
+  Renders a Coherent UI View on an entity
+  **Inputs**:
+    - *Activate*: Activate the node
+    - *Url*: Initial url to display on the view
+    - *Width*: Width of the view in pixels
+    - *Height*: Height of the view in pixels
+    - *Transparent*: Defines if the view should be transparent or not
+    - *Clickable*: Defines if the view should support click-through queries
+    - *Mesh*: Geometry object for calculating correct click coordinates on the entity
+    - *SharedMemory*: Defines if the view uses shared memory for the rendering data transport or shared textures
+  **Outputs**:
+    - *ViewID*: Id of the view for further use (e.g. for the TriggerEvent node)
+
+* ```CoherentUI_Plugin:OutputHUD```
+  Renders a Coherent UI View on the HUD
+  **Inputs**:
+    - *Activate*: Activate the node
+    - *Path*: Path to the html files defining the HUD (e.g. *coui://Libs/UI/CoherentUI/hud/hud.html*)
+  **Outputs**:
+    - *ViewID*: Id of the view for further use (e.g. for the TriggerEvent node)
+
+* ```CoherentUI_Plugin:TriggerEvent```
+  Triggers an event on a Coherent UI View with an optional boolean parameter
+  **Inputs**:
+    - *Activate*: Activate the node
+    - *ViewID*: Id of the view as obtained from one of the output nodes
+    - *Event*: The event name
+    - *Arg1*: Boolean argument to be send to the view (optional)
+
+* ```CoherentUI_Plugin:TriggerEventFloat```
+  Triggers an event on a Coherent UI View with up to four float parameter
+  **Inputs**:
+    - *Activate*: Activate the node
+    - *ViewID*: Id of the view as obtained from one of the output nodes
+    - *Event*: The event name
+    - *Arg1*: First float argument to be send to the view (optional)
+    - *Arg2*: Second float argument to be send to the view (optional)
+    - *Arg3*: Third float argument to be send to the view (optional)
+    - *Arg4*: Fourth float argument to be send to the view (optional)
 
 Objects
 =======
