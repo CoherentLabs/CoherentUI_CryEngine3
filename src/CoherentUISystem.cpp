@@ -98,10 +98,13 @@ namespace CoherentUIPlugin
 
     Coherent::UI::View* CCoherentUISystem::GetView( int id )
     {
-        Coherent::UI::View* pHudView = m_HudViewListener->GetView();
-        if ( pHudView != nullptr && pHudView->GetId() == id )
+        if ( m_HudViewListener )
         {
-            return pHudView;
+            Coherent::UI::View* pHudView = m_HudViewListener->GetView();
+            if ( pHudView != nullptr && pHudView->GetId() == id )
+            {
+                return pHudView;
+            }
         }
 
         for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
@@ -180,8 +183,11 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::DeleteHUDView()
     {
-        m_PlayerEventListener.get()->RemoveViewListener( m_HudViewListener.get() );
-        m_HudViewListener.reset();
+        if ( gEnv->IsEditor() )
+        {
+            m_PlayerEventListener.get()->RemoveViewListener( m_HudViewListener.get() );
+            m_HudViewListener.reset();
+        }
     }
 
     void CCoherentUISystem::QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse )
@@ -233,15 +239,18 @@ namespace CoherentUIPlugin
     bool CCoherentUISystem::RaycastClosestViewListenersGeometry( const Vec3& origin, const Vec3& dir, int& outX, int& outY, CCoherentViewListener*& pViewListener )
     {
         // check hud view
-        float t;
-        int x, y;
-        if ( m_HudViewListener->RaycastGeometry( origin, dir, t, x, y ) )
+        if ( m_HudViewListener )
         {
-            outX = x;
-            outY = y;
-            pViewListener = m_HudViewListener.get();
+            float t;
+            int x, y;
+            if ( m_HudViewListener->RaycastGeometry( origin, dir, t, x, y ) )
+            {
+                outX = x;
+                outY = y;
+                pViewListener = m_HudViewListener.get();
 
-            return true;
+                return true;
+            }
         }
 		
 

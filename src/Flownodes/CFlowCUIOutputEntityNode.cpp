@@ -114,27 +114,29 @@ namespace CoherentUIPlugin
                     case eFE_Activate:
                         if ( m_pEntity )
                         {
-                            if ( !m_pViewListener )
+                            if ( m_pViewListener )
                             {
-                                std::string sUrl = GetPortString( pActInfo, EIP_URL );
-                                std::wstring sUrlW( sUrl.length(), L' ' );
-                                sUrlW.assign( sUrl.begin(), sUrl.end() );
-
-                                Coherent::UI::ViewInfo info;
-                                info.Width = GetPortInt( pActInfo, EIP_WIDTH );
-                                info.Height = GetPortInt( pActInfo, EIP_HEIGHT );
-                                info.IsTransparent = GetPortBool( pActInfo, EIP_TRANSPARENT );
-                                info.UsesSharedMemory = GetPortBool( pActInfo, EIP_SHARED_MEMORY );
-                                info.SupportClickThrough = GetPortBool( pActInfo, EIP_CLICKABLE );
-
-                                ViewConfig viewConfig;
-                                viewConfig.ViewInfo = info;
-                                viewConfig.Url = sUrlW;
-                                viewConfig.Entity = m_pEntity;
-                                viewConfig.CollisionMesh = GetPortString( pActInfo, EIP_MESH );
-
-                                m_pViewListener = gCoherentUISystem->CreateView( &viewConfig );
+                                gCoherentUISystem->DeleteView( m_pViewListener );
                             }
+
+                            std::string sUrl = GetPortString( pActInfo, EIP_URL );
+                            std::wstring sUrlW( sUrl.length(), L' ' );
+                            sUrlW.assign( sUrl.begin(), sUrl.end() );
+
+                            Coherent::UI::ViewInfo info;
+                            info.Width = GetPortInt( pActInfo, EIP_WIDTH );
+                            info.Height = GetPortInt( pActInfo, EIP_HEIGHT );
+                            info.IsTransparent = GetPortBool( pActInfo, EIP_TRANSPARENT );
+                            info.UsesSharedMemory = GetPortBool( pActInfo, EIP_SHARED_MEMORY );
+                            info.SupportClickThrough = GetPortBool( pActInfo, EIP_CLICKABLE );
+
+                            ViewConfig viewConfig;
+                            viewConfig.ViewInfo = info;
+                            viewConfig.Url = sUrlW;
+                            viewConfig.Entity = m_pEntity;
+                            viewConfig.CollisionMesh = GetPortString( pActInfo, EIP_MESH );
+
+                            m_pViewListener = gCoherentUISystem->CreateView( &viewConfig );
                         }
 
                         break;

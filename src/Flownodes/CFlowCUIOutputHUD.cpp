@@ -94,15 +94,16 @@ namespace CoherentUIPlugin
                         break;
 
                     case eFE_Activate:
-                        if ( !m_pViewListener )
                         {
-                            std::string sPath = GetPortString( pActInfo, EIP_PATH );
-                            std::wstring sPathW( sPath.length(), L' ' );
-                            sPathW.assign( sPath.begin(), sPath.end() );
+                            if ( !m_pViewListener )
+                            {
+                                std::string sPath = GetPortString( pActInfo, EIP_PATH );
+                                std::wstring sPathW( sPath.length(), L' ' );
+                                sPathW.assign( sPath.begin(), sPath.end() );
 
-                            m_pViewListener = gCoherentUISystem->CreateHUDView( sPathW );
+                                m_pViewListener = gCoherentUISystem->CreateHUDView( sPathW );
+                            }
                         }
-
                         break;
 
                     case eFE_Update:
