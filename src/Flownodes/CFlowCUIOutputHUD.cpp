@@ -12,6 +12,8 @@ namespace CoherentUIPlugin
     {
         private:
             CCoherentViewListener* m_pViewListener;
+            std::wstring m_sPathW;
+            bool m_bViewNeedsUpdate;
 
             enum EInputPorts
             {
@@ -31,6 +33,7 @@ namespace CoherentUIPlugin
             CFlowCUIOutputHUD( SActivationInfo* pActInfo )
             {
                 m_pViewListener = NULL;
+                m_bViewNeedsUpdate = false;
             }
 
             virtual ~CFlowCUIOutputHUD()
@@ -89,30 +92,47 @@ namespace CoherentUIPlugin
                         break;
 
                     case eFE_Initialize:
-                        pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
                         INITIALIZE_OUTPUTS( pActInfo );
                         break;
 
                     case eFE_Activate:
                         {
-                            if ( !m_pViewListener )
-                            {
-                                std::string sPath = GetPortString( pActInfo, EIP_PATH );
-                                std::wstring sPathW( sPath.length(), L' ' );
-                                sPathW.assign( sPath.begin(), sPath.end() );
+                            // get the view definition
+                            std::string sPath = GetPortString( pActInfo, EIP_PATH );
+                            m_sPathW.assign( sPath.begin(), sPath.end() );
 
-                                m_pViewListener = gCoherentUISystem->CreateHUDView( sPathW );
-                            }
+                            // indicate that we have to create/update the view later
+                            m_bViewNeedsUpdate = true;
+                            pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
                         }
                         break;
 
                     case eFE_Update:
+                        // make sure the view is created, after the system is ready
+                        if ( m_bViewNeedsUpdate &&  gCoherentUISystem->IsReady() )
+                        {
+                            if ( m_pViewListener )
+                            {
+                                // update only
+                                Coherent::UI::View* view = m_pViewListener->GetView();
+                                view->Load( m_sPathW.c_str() );
+                            }
+                            else
+                            {
+                                // create
+                                m_pViewListener = gCoherentUISystem->CreateHUDView( m_sPathW );
+                            }
+                            m_bViewNeedsUpdate = false;
+                        }
+
+                        // set the view id output after the view is available
                         if ( m_pViewListener )
                         {
                             Coherent::UI::View* view = m_pViewListener->GetView();
                             if ( view )
                             {
                                 ActivateOutput<int>( pActInfo, EOP_VIEWID, view->GetId() );
+                                // updates are not necessary until next initialization
                                 pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, false );
                             }
                         }

@@ -81,9 +81,18 @@ namespace CoherentUIPlugin
         sPathW.assign( sPath.begin(), sPath.end() );
 
         Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
-        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr , &m_PakFileHandler );
+        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr, &m_PakFileHandler );
 
         return m_pUISystem != NULL;
+    }
+
+    bool CCoherentUISystem::IsReady()
+    {
+        if ( m_SystemEventsListener )
+        {
+            return m_SystemEventsListener.get()->IsReady();
+        }
+        return false;
     }
 
     void CCoherentUISystem::OnSystemReady()
@@ -94,6 +103,7 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::OnError( const Coherent::UI::SystemError& error )
     {
+        CryLogAlways( error.Error );
     }
 
     Coherent::UI::View* CCoherentUISystem::GetView( int id )
@@ -144,19 +154,14 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::DeleteView( CCoherentViewListener* pViewListener )
     {
-        // only delete views, when in editor mode. in game mode they
-        // will be deleted on instance destruction
-        if ( gEnv->IsEditor() )
+        View::iterator it = m_Views.find( pViewListener );
+
+        if ( it != m_Views.end() )
         {
-            View::iterator it = m_Views.find( pViewListener );
-
-            if ( it != m_Views.end() )
-            {
-                m_Views.erase( it );
-            }
-
-            delete pViewListener;
+            m_Views.erase( it );
         }
+
+        delete pViewListener;
     }
 
     CCoherentViewListener* CCoherentUISystem::CreateHUDView( std::wstring path )
@@ -183,11 +188,8 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::DeleteHUDView()
     {
-        if ( gEnv->IsEditor() )
-        {
-            m_PlayerEventListener.get()->RemoveViewListener( m_HudViewListener.get() );
-            m_HudViewListener.reset();
-        }
+        m_PlayerEventListener.get()->RemoveViewListener( m_HudViewListener.get() );
+        m_HudViewListener.reset();
     }
 
     void CCoherentUISystem::QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse )

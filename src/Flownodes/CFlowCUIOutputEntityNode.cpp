@@ -13,6 +13,8 @@ namespace CoherentUIPlugin
         private:
             CCoherentViewListener* m_pViewListener;
             IEntity* m_pEntity;
+            ViewConfig* m_pViewConfig;
+            bool m_bViewNeedsUpdate;
 
             enum EInputPorts
             {
@@ -39,6 +41,8 @@ namespace CoherentUIPlugin
             {
                 m_pViewListener = NULL;
                 m_pEntity = NULL;
+                m_pViewConfig = new ViewConfig();
+                m_bViewNeedsUpdate = false;
             }
 
             virtual ~CFlowCUIOutputEntityNode()
@@ -46,6 +50,10 @@ namespace CoherentUIPlugin
                 if ( m_pViewListener )
                 {
                     gCoherentUISystem->DeleteView( m_pViewListener );
+                }
+                if ( m_pViewConfig )
+                {
+                    delete m_pViewConfig;
                 }
             }
 
@@ -103,7 +111,6 @@ namespace CoherentUIPlugin
                         break;
 
                     case eFE_Initialize:
-                        pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
                         INITIALIZE_OUTPUTS( pActInfo );
                         break;
 
@@ -114,11 +121,7 @@ namespace CoherentUIPlugin
                     case eFE_Activate:
                         if ( m_pEntity )
                         {
-                            if ( m_pViewListener )
-                            {
-                                gCoherentUISystem->DeleteView( m_pViewListener );
-                            }
-
+                            // get the view definition
                             std::string sUrl = GetPortString( pActInfo, EIP_URL );
                             std::wstring sUrlW( sUrl.length(), L' ' );
                             sUrlW.assign( sUrl.begin(), sUrl.end() );
@@ -130,24 +133,38 @@ namespace CoherentUIPlugin
                             info.UsesSharedMemory = GetPortBool( pActInfo, EIP_SHARED_MEMORY );
                             info.SupportClickThrough = GetPortBool( pActInfo, EIP_CLICKABLE );
 
-                            ViewConfig viewConfig;
-                            viewConfig.ViewInfo = info;
-                            viewConfig.Url = sUrlW;
-                            viewConfig.Entity = m_pEntity;
-                            viewConfig.CollisionMesh = GetPortString( pActInfo, EIP_MESH );
+                            m_pViewConfig->ViewInfo = info;
+                            m_pViewConfig->Url = sUrlW;
+                            m_pViewConfig->Entity = m_pEntity;
+                            m_pViewConfig->CollisionMesh = GetPortString( pActInfo, EIP_MESH );
 
-                            m_pViewListener = gCoherentUISystem->CreateView( &viewConfig );
+                            // indicate that we have to create/update the view later
+                            m_bViewNeedsUpdate = true;
+                            pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
                         }
 
                         break;
 
                     case eFE_Update:
+                        // make sure the view is created/updated, after the system is ready
+                        if ( m_bViewNeedsUpdate &&  gCoherentUISystem->IsReady() )
+                        {
+                            if ( m_pViewListener )
+                            {
+                                gCoherentUISystem->DeleteView( m_pViewListener );
+                            }
+                            m_pViewListener = gCoherentUISystem->CreateView( m_pViewConfig );
+                            m_bViewNeedsUpdate = false;
+                        }
+
+                        // set the view id output after the view is available
                         if ( m_pViewListener )
                         {
                             Coherent::UI::View* view = m_pViewListener->GetView();
                             if ( view )
                             {
                                 ActivateOutput<int>( pActInfo, EOP_VIEWID, view->GetId() );
+                                // updates are not necessary until next initialization
                                 pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, false );
                             }
                         }

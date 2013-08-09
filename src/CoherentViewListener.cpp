@@ -43,6 +43,11 @@ namespace CoherentUIPlugin
         return m_pView;
     }
 
+    void CCoherentViewListener::OnError( const Coherent::UI::ViewError& error )
+    {
+        CryLogAlways( error.Error );
+    }
+
     void CCoherentViewListener::OnViewCreated( Coherent::UI::View* pView )
     {
         m_pView = pView;
