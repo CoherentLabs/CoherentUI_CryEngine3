@@ -4,9 +4,14 @@
 #include <Coherent/UI/View.h>
 #include "CoherentUISystem.h"
 
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
+
+using namespace rapidjson;
+
 namespace CoherentUIPlugin
 {
-    class CFlowCUITriggerEvent : public CFlowBaseNode<eNCT_Instanced>
+    class CFlowCUISendTokens : public CFlowBaseNode<eNCT_Instanced>
     {
         private:
 
@@ -14,22 +19,20 @@ namespace CoherentUIPlugin
             {
                 EIP_ACTIVATE = 0,
                 EIP_VIEWID,
-                EIP_EVENT,
-                EIP_ARG1,
             };
 
         public:
-            CFlowCUITriggerEvent( SActivationInfo* pActInfo )
+            CFlowCUISendTokens( SActivationInfo* pActInfo )
             {
             }
 
-            virtual ~CFlowCUITriggerEvent()
+            virtual ~CFlowCUISendTokens()
             {
             }
 
             virtual IFlowNodePtr Clone( SActivationInfo* pActInfo )
             {
-                return new CFlowCUITriggerEvent( pActInfo );
+                return new CFlowCUISendTokens( pActInfo );
             }
 
             virtual void GetMemoryUsage( ICrySizer* s ) const
@@ -47,14 +50,12 @@ namespace CoherentUIPlugin
                 {
                     InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
                     InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
-                    InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
-                    InputPortConfig<bool>( "Arg1",                _HELP( "argument 1 (optional: boolean)" ) ),
                     InputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
                 config.pOutputPorts = NULL;//output
-                config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI event trigger (1 argument)" );
+                config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI event trigger sending game tokens" );
 
                 //config.nFlags |= EFLN_TARGET_ENTITY;
                 config.SetCategory( EFLN_APPROVED );
@@ -79,17 +80,23 @@ namespace CoherentUIPlugin
                             Coherent::UI::View* pView = gCoherentUISystem->GetView( viewId );
                             if ( pView )
                             {
-                                std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
+                                StringBuffer buffer;
+                                Writer<StringBuffer> writer(buffer);
+                                writer.StartObject();
 
-                                if ( IsPortActive( pActInfo, EIP_ARG1 ) ) {
-                                    pView->TriggerEvent(sEvent.c_str(), 
-                                        GetPortBool( pActInfo, EIP_ARG1 ) 
-                                    );
+                                IGameTokenSystem *pGameTokenSystem = gEnv->pGame->GetIGameFramework()->GetIGameTokenSystem();
+                                if(pGameTokenSystem)
+                                {
+                                    IGameTokenIt* pIt = pGameTokenSystem->GetGameTokenIterator();
+                                    while(IGameToken *pGameToken=pIt->Next())
+                                    {
+                                        writer.String(pGameToken->GetName());
+                                        writer.String(pGameToken->GetValueAsString());
+                                    }
                                 }
+                                writer.EndObject();
 
-                                else {
-                                    pView->TriggerEvent(sEvent.c_str());
-                                }
+                                pView->TriggerEvent( "GameTokens", buffer.GetString() );
                             }
                         }
                         break;
@@ -101,4 +108,4 @@ namespace CoherentUIPlugin
     };
 }
 
-REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:TriggerEvent", CoherentUIPlugin::CFlowCUITriggerEvent, CFlowCUITriggerEvent );
+REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:SendTokens", CoherentUIPlugin::CFlowCUISendTokens, CFlowCUISendTokens );

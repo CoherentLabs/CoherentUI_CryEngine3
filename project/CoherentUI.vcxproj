@@ -43,6 +43,7 @@
     <ClCompile Include="..\src\CPluginCoherentUIModule.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUISendTokens.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEvent.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEventFloat.cpp" />
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp" />
@@ -159,7 +160,7 @@
     <ClCompile>
       <OmitFramePointers>true</OmitFramePointers>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\..\..\..\..\;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories);$(ProjectDir)..\CoherentUI\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\..\..\..\..\;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories);$(ProjectDir)..\CoherentUI\include;$(ProjectDir)..\inc\rapidjson</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_FORCEDLL;PURE_CLIENT;CoherentUIPLUGIN_EXPORTS;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <FloatingPointModel>Precise</FloatingPointModel>

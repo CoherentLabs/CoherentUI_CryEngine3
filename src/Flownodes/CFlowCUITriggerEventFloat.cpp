@@ -6,7 +6,7 @@
 
 namespace CoherentUIPlugin
 {
-    class CCFlowCUITriggerEventFloat : public CFlowBaseNode<eNCT_Instanced>
+    class CFlowCUITriggerEventFloat : public CFlowBaseNode<eNCT_Instanced>
     {
         private:
 
@@ -22,17 +22,17 @@ namespace CoherentUIPlugin
             };
 
         public:
-            CCFlowCUITriggerEventFloat( SActivationInfo* pActInfo )
+            CFlowCUITriggerEventFloat( SActivationInfo* pActInfo )
             {
             }
 
-            virtual ~CCFlowCUITriggerEventFloat()
+            virtual ~CFlowCUITriggerEventFloat()
             {
             }
 
             virtual IFlowNodePtr Clone( SActivationInfo* pActInfo )
             {
-                return new CCFlowCUITriggerEventFloat( pActInfo );
+                return new CFlowCUITriggerEventFloat( pActInfo );
             }
 
             virtual void GetMemoryUsage( ICrySizer* s ) const
@@ -131,4 +131,4 @@ namespace CoherentUIPlugin
     };
 }
 
-REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:TriggerEventFloat", CoherentUIPlugin::CCFlowCUITriggerEventFloat, CCFlowCUITriggerEventFloat );
+REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:TriggerEventFloat", CoherentUIPlugin::CFlowCUITriggerEventFloat, CFlowCUITriggerEventFloat );
