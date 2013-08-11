@@ -129,6 +129,16 @@ Triggers an event on a Coherent UI View with up to four float parameter
   - `Arg3` Third float argument to be send to the view (optional)
   - `Arg4` Fourth float argument to be send to the view (optional)
 
+CoherentUI_Plugin:SendTokens
+----------------------------
+
+Triggers an event on a Coherent UI View that receives the JSON encoded game tokens
+  
+**Inputs**
+  
+  - `Activate` Activate the node
+  - `ViewID` Id of the view as obtained from one of the output nodes
+
 Objects
 =======
 TODO: Describe custom object classes inside your plugin
