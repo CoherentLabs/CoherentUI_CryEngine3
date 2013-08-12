@@ -19,6 +19,7 @@ namespace CoherentUIPlugin
             {
                 EIP_ACTIVATE = 0,
                 EIP_VIEWID,
+                EIP_EVENT,
             };
 
         public:
@@ -50,6 +51,7 @@ namespace CoherentUIPlugin
                 {
                     InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
                     InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
+                    InputPortConfig<string>( "Event", "GameTokens",  NULL, _HELP( "event name" ), NULL ),
                     InputPortConfig_Null(),
                 };
 
@@ -96,7 +98,8 @@ namespace CoherentUIPlugin
                                 }
                                 writer.EndObject();
 
-                                pView->TriggerEvent( "GameTokens", buffer.GetString() );
+                                std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
+                                pView->TriggerEvent( sEvent.c_str(), buffer.GetString() );
                             }
                         }
                         break;

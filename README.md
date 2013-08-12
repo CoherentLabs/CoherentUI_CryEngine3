@@ -138,6 +138,7 @@ Triggers an event on a Coherent UI View that receives the JSON encoded game toke
   
   - `Activate` Activate the node
   - `ViewID` Id of the view as obtained from one of the output nodes
+  - `Event` The event name (default: GameTokens)
 
 Objects
 =======
