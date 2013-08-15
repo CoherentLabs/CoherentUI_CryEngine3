@@ -95,6 +95,18 @@
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp">
       <Filter>Flownodes</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEvent.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEventFloat.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUISendTokens.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUIHandleEvent.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StdAfx.h">

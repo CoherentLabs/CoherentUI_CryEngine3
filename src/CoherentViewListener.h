@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Coherent/UI/ViewListener.h>
+#include <Coherent/UI/Errors.h>
 
 namespace Coherent
 {
@@ -30,6 +31,7 @@ namespace CoherentUIPlugin
             bool IsReadyForBindings() const;
             Coherent::UI::View* GetView() const;
 
+            virtual void OnError( const Coherent::UI::ViewError& error ) COHERENT_OVERRIDE;
             virtual void OnViewCreated( Coherent::UI::View* pView ) COHERENT_OVERRIDE;
             virtual void OnReadyForBindings( int frameId, const wchar_t* path, bool isMainFrame ) COHERENT_OVERRIDE;
             virtual void OnDraw( Coherent::UI::CoherentHandle handle, bool sharedMem, int width, int height ) COHERENT_OVERRIDE;

@@ -81,9 +81,18 @@ namespace CoherentUIPlugin
         sPathW.assign( sPath.begin(), sPath.end() );
 
         Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
-        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr , &m_PakFileHandler );
+        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr, &m_PakFileHandler );
 
         return m_pUISystem != NULL;
+    }
+
+    bool CCoherentUISystem::IsReady()
+    {
+        if ( m_SystemEventsListener )
+        {
+            return m_SystemEventsListener.get()->IsReady();
+        }
+        return false;
     }
 
     void CCoherentUISystem::OnSystemReady()
@@ -94,6 +103,29 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::OnError( const Coherent::UI::SystemError& error )
     {
+        CryLogAlways( error.Error );
+    }
+
+    CCoherentViewListener* CCoherentUISystem::GetViewListener( int id )
+    {
+        if ( m_HudViewListener )
+        {
+            Coherent::UI::View* pHudView = m_HudViewListener->GetView();
+            if ( pHudView != nullptr && pHudView->GetId() == id )
+            {
+                return m_HudViewListener.get();
+            }
+        }
+
+        for ( View::const_iterator iter = m_Views.begin(); iter != m_Views.end(); ++iter )
+        {
+            Coherent::UI::View* pView = iter->first->GetView();
+            if ( pView->GetId() == id )
+            {
+                return iter->first;
+            }
+        }
+        return NULL;
     }
 
     CCoherentViewListener* CCoherentUISystem::CreateView( ViewConfig* pConfig )
@@ -122,19 +154,14 @@ namespace CoherentUIPlugin
 
     void CCoherentUISystem::DeleteView( CCoherentViewListener* pViewListener )
     {
-        // only delete views, when in editor mode. in game mode they
-        // will be deleted on instance destruction
-        if ( gEnv->IsEditor() )
+        View::iterator it = m_Views.find( pViewListener );
+
+        if ( it != m_Views.end() )
         {
-            View::iterator it = m_Views.find( pViewListener );
-
-            if ( it != m_Views.end() )
-            {
-                m_Views.erase( it );
-            }
-
-            delete pViewListener;
+            m_Views.erase( it );
         }
+
+        delete pViewListener;
     }
 
     CCoherentViewListener* CCoherentUISystem::CreateHUDView( std::wstring path )
@@ -213,6 +240,23 @@ namespace CoherentUIPlugin
 
     bool CCoherentUISystem::RaycastClosestViewListenersGeometry( const Vec3& origin, const Vec3& dir, int& outX, int& outY, CCoherentViewListener*& pViewListener )
     {
+        // check hud view
+        if ( m_HudViewListener )
+        {
+            float t;
+            int x, y;
+            if ( m_HudViewListener->RaycastGeometry( origin, dir, t, x, y ) )
+            {
+                outX = x;
+                outY = y;
+                pViewListener = m_HudViewListener.get();
+
+                return true;
+            }
+        }
+		
+
+        // check other views
         float minDist = std::numeric_limits<float>::max();
         int viewX;
         int viewY;

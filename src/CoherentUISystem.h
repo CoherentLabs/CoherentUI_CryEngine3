@@ -25,7 +25,6 @@ struct ViewConfig;
 
 namespace CoherentUIPlugin
 {
-
     class CCoherentInputEventListener;
     class CCoherentPlayerEventListener;
     class CCoherentSystemEventListener;
@@ -42,20 +41,25 @@ namespace CoherentUIPlugin
             ~CCoherentUISystem( void );
 
             bool InitializeCoherentUI();
-            void OnSystemReady();
-            void OnError( const Coherent::UI::SystemError& error );
+            bool IsReady();
 
             CCoherentViewListener* CreateView( ViewConfig* pConfig );
             void DeleteView( CCoherentViewListener* pViewListener );
             CCoherentViewListener* CreateHUDView( std::wstring path );
             void DeleteHUDView();
+            CCoherentViewListener* CCoherentUISystem::GetViewListener( int id );
 
             void QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse );
             void ReleaseSurface( Coherent::UI::CoherentHandle surface );
             void* GetNativeTextureFromSharedHandle( Coherent::UI::CoherentHandle surface );
+
             IPlayerEventListener* GetPlayerEventListener() const;
             bool RaycastClosestViewListenersGeometry( const Vec3& origin, const Vec3& dir, int& outX, int& outY, CCoherentViewListener*& ppViewListener );
             void ShowMap( bool show );
+
+            // Coherent::UI::EventListener methods
+            virtual void OnSystemReady();
+            virtual void OnError( const Coherent::UI::SystemError& error );
 
             // ID3DListener methods
             virtual void OnPrePresent() COHERENT_OVERRIDE;

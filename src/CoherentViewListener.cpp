@@ -43,6 +43,11 @@ namespace CoherentUIPlugin
         return m_pView;
     }
 
+    void CCoherentViewListener::OnError( const Coherent::UI::ViewError& error )
+    {
+        CryLogAlways( error.Error );
+    }
+
     void CCoherentViewListener::OnViewCreated( Coherent::UI::View* pView )
     {
         m_pView = pView;
@@ -143,13 +148,23 @@ namespace CoherentUIPlugin
         }
 
         char* pDest = static_cast<char*>( mapped.pData );
-        int bytesPerRow = width * 4; // 32 BPP
 
+        // copy and convert from BGRA to RGBA
+        int offsetSrc = 0;
+        int offsetDst = 0;
+        int rowOffset = mapped.RowPitch % width;
         for ( int row = 0; row < height; ++row )
         {
-            ::memcpy( pDest, pSrc, bytesPerRow );
-            pSrc += bytesPerRow;
-            pDest += mapped.RowPitch;
+            for ( int col = 0; col < width; ++col )
+            {
+                pDest[offsetDst] = pSrc[offsetSrc + 2];
+                pDest[offsetDst + 1] = pSrc[offsetSrc + 1];
+                pDest[offsetDst + 2] = pSrc[offsetSrc];
+                pDest[offsetDst + 3] = pSrc[offsetSrc + 3];
+                offsetSrc += 4;
+                offsetDst += 4;
+            }
+            offsetDst += rowOffset;
         }
 
         ::UnmapViewOfFile( pMapped );
