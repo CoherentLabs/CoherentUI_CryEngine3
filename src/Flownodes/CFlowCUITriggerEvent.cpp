@@ -2,6 +2,7 @@
 #include <Nodes/G2FlowBaseNode.h>
 #include <CPluginCoherentUI.h>
 #include <Coherent/UI/View.h>
+#include "CoherentViewListener.h"
 #include "CoherentUISystem.h"
 
 namespace CoherentUIPlugin
@@ -75,20 +76,18 @@ namespace CoherentUIPlugin
 
                     case eFE_Activate: 
                         {
-                            int viewId = GetPortInt( pActInfo, EIP_VIEWID );
-                            Coherent::UI::View* pView = gCoherentUISystem->GetView( viewId );
-                            if ( pView )
-                            {
-                                std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
-
-                                if ( IsPortActive( pActInfo, EIP_ARG1 ) ) {
-                                    pView->TriggerEvent(sEvent.c_str(), 
-                                        GetPortBool( pActInfo, EIP_ARG1 ) 
-                                    );
-                                }
-
-                                else {
-                                    pView->TriggerEvent(sEvent.c_str());
+                            if ( IsPortActive( pActInfo, EIP_ACTIVATE ) ) {
+                                int viewId = GetPortInt( pActInfo, EIP_VIEWID );
+                                CCoherentViewListener* pViewListener = gCoherentUISystem->GetViewListener( viewId );
+                                if ( pViewListener )
+                                {
+                                    Coherent::UI::View* pView = pViewListener->GetView();
+                                    if ( pView )
+                                    {
+                                        std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
+                                        bool bArg1 = GetPortBool( pActInfo, EIP_ARG1 );
+                                        pView->TriggerEvent(sEvent.c_str(), bArg1);
+                                    }
                                 }
                             }
                         }

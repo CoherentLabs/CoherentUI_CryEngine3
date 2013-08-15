@@ -2,6 +2,7 @@
 #include <Nodes/G2FlowBaseNode.h>
 #include <CPluginCoherentUI.h>
 #include <Coherent/UI/View.h>
+#include "CoherentViewListener.h"
 #include "CoherentUISystem.h"
 
 #include "rapidjson/writer.h"
@@ -78,28 +79,34 @@ namespace CoherentUIPlugin
 
                     case eFE_Activate: 
                         {
-                            int viewId = GetPortInt( pActInfo, EIP_VIEWID );
-                            Coherent::UI::View* pView = gCoherentUISystem->GetView( viewId );
-                            if ( pView )
-                            {
-                                StringBuffer buffer;
-                                Writer<StringBuffer> writer(buffer);
-                                writer.StartObject();
-
-                                IGameTokenSystem *pGameTokenSystem = gEnv->pGame->GetIGameFramework()->GetIGameTokenSystem();
-                                if(pGameTokenSystem)
+                            if ( IsPortActive( pActInfo, EIP_ACTIVATE ) ) {
+                                int viewId = GetPortInt( pActInfo, EIP_VIEWID );
+                                CCoherentViewListener* pViewListener = gCoherentUISystem->GetViewListener( viewId );
+                                if ( pViewListener )
                                 {
-                                    IGameTokenIt* pIt = pGameTokenSystem->GetGameTokenIterator();
-                                    while(IGameToken *pGameToken=pIt->Next())
+                                    Coherent::UI::View* pView = pViewListener->GetView();
+                                    if ( pView )
                                     {
-                                        writer.String(pGameToken->GetName());
-                                        writer.String(pGameToken->GetValueAsString());
+                                        StringBuffer buffer;
+                                        Writer<StringBuffer> writer(buffer);
+                                        writer.StartObject();
+
+                                        IGameTokenSystem *pGameTokenSystem = gEnv->pGame->GetIGameFramework()->GetIGameTokenSystem();
+                                        if(pGameTokenSystem)
+                                        {
+                                            IGameTokenIt* pIt = pGameTokenSystem->GetGameTokenIterator();
+                                            while(IGameToken *pGameToken=pIt->Next())
+                                            {
+                                                writer.String(pGameToken->GetName());
+                                                writer.String(pGameToken->GetValueAsString());
+                                            }
+                                        }
+                                        writer.EndObject();
+
+                                        std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
+                                        pView->TriggerEvent( sEvent.c_str(), buffer.GetString() );
                                     }
                                 }
-                                writer.EndObject();
-
-                                std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
-                                pView->TriggerEvent( sEvent.c_str(), buffer.GetString() );
                             }
                         }
                         break;

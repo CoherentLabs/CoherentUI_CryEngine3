@@ -119,7 +119,7 @@ namespace CoherentUIPlugin
                         break;
 
                     case eFE_Activate:
-                        if ( m_pEntity )
+                        if ( IsPortActive( pActInfo, EIP_ACTIVATE ) && m_pEntity )
                         {
                             // get the view definition
                             std::string sUrl = GetPortString( pActInfo, EIP_URL );

@@ -106,14 +106,14 @@ namespace CoherentUIPlugin
         CryLogAlways( error.Error );
     }
 
-    Coherent::UI::View* CCoherentUISystem::GetView( int id )
+    CCoherentViewListener* CCoherentUISystem::GetViewListener( int id )
     {
         if ( m_HudViewListener )
         {
             Coherent::UI::View* pHudView = m_HudViewListener->GetView();
             if ( pHudView != nullptr && pHudView->GetId() == id )
             {
-                return pHudView;
+                return m_HudViewListener.get();
             }
         }
 
@@ -122,7 +122,7 @@ namespace CoherentUIPlugin
             Coherent::UI::View* pView = iter->first->GetView();
             if ( pView->GetId() == id )
             {
-                return pView;
+                return iter->first;
             }
         }
         return NULL;

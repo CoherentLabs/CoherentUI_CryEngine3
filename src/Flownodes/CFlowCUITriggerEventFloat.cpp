@@ -2,6 +2,7 @@
 #include <Nodes/G2FlowBaseNode.h>
 #include <CPluginCoherentUI.h>
 #include <Coherent/UI/View.h>
+#include "CoherentViewListener.h"
 #include "CoherentUISystem.h"
 
 namespace CoherentUIPlugin
@@ -81,44 +82,27 @@ namespace CoherentUIPlugin
 
                     case eFE_Activate: 
                         {
-                            int viewId = GetPortInt( pActInfo, EIP_VIEWID );
-                            Coherent::UI::View* pView = gCoherentUISystem->GetView( viewId );
-                            if ( pView )
-                            {
-                                std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
+                            if ( IsPortActive( pActInfo, EIP_ACTIVATE ) ) {
+                                int viewId = GetPortInt( pActInfo, EIP_VIEWID );
+                                CCoherentViewListener* pViewListener = gCoherentUISystem->GetViewListener( viewId );
+                                if ( pViewListener )
+                                {
+                                    Coherent::UI::View* pView = pViewListener->GetView();
+                                    if ( pView )
+                                    {
+                                        std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
+                                        float fArg1 = GetPortFloat( pActInfo, EIP_ARG1 );
+                                        float fArg2 = GetPortFloat( pActInfo, EIP_ARG2 );
+                                        float fArg3 = GetPortFloat( pActInfo, EIP_ARG3 );
+                                        float fArg4 = GetPortFloat( pActInfo, EIP_ARG4 );
 
-                                if ( IsPortActive( pActInfo, EIP_ARG4 ) ) {
-                                    pView->TriggerEvent(sEvent.c_str(), 
-                                        GetPortFloat( pActInfo, EIP_ARG1 ),
-                                        GetPortFloat( pActInfo, EIP_ARG2 ),
-                                        GetPortFloat( pActInfo, EIP_ARG3 ),
-                                        GetPortFloat( pActInfo, EIP_ARG4 ) 
-                                    );
-                                }
-
-                                else if ( IsPortActive( pActInfo, EIP_ARG3 ) ) {
-                                    pView->TriggerEvent(sEvent.c_str(), 
-                                        GetPortFloat( pActInfo, EIP_ARG1 ),
-                                        GetPortFloat( pActInfo, EIP_ARG2 ),
-                                        GetPortFloat( pActInfo, EIP_ARG3 ) 
-                                    );
-                                }
-
-                                else if ( IsPortActive( pActInfo, EIP_ARG2 ) ) {
-                                    pView->TriggerEvent(sEvent.c_str(), 
-                                        GetPortFloat( pActInfo, EIP_ARG1 ),
-                                        GetPortFloat( pActInfo, EIP_ARG2 ) 
-                                    );
-                                }
-
-                                else if ( IsPortActive( pActInfo, EIP_ARG1 ) ) {
-                                    pView->TriggerEvent(sEvent.c_str(), 
-                                        GetPortFloat( pActInfo, EIP_ARG1 ) 
-                                    );
-                                }
-
-                                else {
-                                    pView->TriggerEvent(sEvent.c_str());
+                                        pView->TriggerEvent(sEvent.c_str(), 
+                                            GetPortFloat( pActInfo, EIP_ARG1 ),
+                                            GetPortFloat( pActInfo, EIP_ARG2 ),
+                                            GetPortFloat( pActInfo, EIP_ARG3 ),
+                                            GetPortFloat( pActInfo, EIP_ARG4 ) 
+                                        );
+                                    }
                                 }
                             }
                         }

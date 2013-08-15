@@ -41,6 +41,7 @@
     <ClCompile Include="..\src\CoherentViewListener.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUI.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUIModule.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUIHandleEvent.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUISendTokens.cpp" />

@@ -97,13 +97,16 @@ namespace CoherentUIPlugin
 
                     case eFE_Activate:
                         {
-                            // get the view definition
-                            std::string sPath = GetPortString( pActInfo, EIP_PATH );
-                            m_sPathW.assign( sPath.begin(), sPath.end() );
+                            if ( IsPortActive( pActInfo, EIP_ACTIVATE ) )
+                            {
+                                // get the view definition
+                                std::string sPath = GetPortString( pActInfo, EIP_PATH );
+                                m_sPathW.assign( sPath.begin(), sPath.end() );
 
-                            // indicate that we have to create/update the view later
-                            m_bViewNeedsUpdate = true;
-                            pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
+                                // indicate that we have to create/update the view later
+                                m_bViewNeedsUpdate = true;
+                                pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
+                            }
                         }
                         break;
 
@@ -116,6 +119,7 @@ namespace CoherentUIPlugin
                                 // update only
                                 Coherent::UI::View* view = m_pViewListener->GetView();
                                 view->Load( m_sPathW.c_str() );
+                                view->Reload( true );
                             }
                             else
                             {

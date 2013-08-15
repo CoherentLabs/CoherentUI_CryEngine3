@@ -47,7 +47,7 @@ namespace CoherentUIPlugin
             void DeleteView( CCoherentViewListener* pViewListener );
             CCoherentViewListener* CreateHUDView( std::wstring path );
             void DeleteHUDView();
-            Coherent::UI::View* CCoherentUISystem::GetView( int id );
+            CCoherentViewListener* CCoherentUISystem::GetViewListener( int id );
 
             void QueueCreateSurface( int width, int height, Coherent::UI::SurfaceResponse* pResponse );
             void ReleaseSurface( Coherent::UI::CoherentHandle surface );

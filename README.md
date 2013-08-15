@@ -102,6 +102,22 @@ Renders a Coherent UI View on the HUD
 
   - `ViewID` Id of the view for further use (e.g. for the TriggerEvent node)
 
+CoherentUI_Plugin:HandleEvent
+-----------------------------
+
+Handles an event from a Coherent UI View with an optional string and boolean parameter
+  
+**Inputs**
+  
+  - `Activate` Activate the node
+  - `ViewID` Id of the view as obtained from one of the output nodes
+  - `Event` The event name
+
+**Outputs**
+
+  - `Arg1` String argument received from the view (optional)
+  - `Arg2` Boolean argument received from the view (optional)
+
 CoherentUI_Plugin:TriggerEvent
 ------------------------------
 
