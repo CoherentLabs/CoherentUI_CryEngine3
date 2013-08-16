@@ -1,6 +1,7 @@
 #include <StdAfx.h>
 #include <Nodes/G2FlowBaseNode.h>
 #include <CPluginCoherentUI.h>
+#include <Coherent/UI/View.h>
 #include "CoherentViewListener.h"
 #include "CoherentUISystem.h"
 #include "ViewConfig.h"
@@ -12,6 +13,8 @@ namespace CoherentUIPlugin
         private:
             CCoherentViewListener* m_pViewListener;
             IEntity* m_pEntity;
+            ViewConfig* m_pViewConfig;
+            bool m_bViewNeedsUpdate;
 
             enum EInputPorts
             {
@@ -25,11 +28,21 @@ namespace CoherentUIPlugin
                 EIP_SHARED_MEMORY,
             };
 
+            enum EOutputPorts
+            {
+                EOP_VIEWID = 0
+            };
+
+#define INITIALIZE_OUTPUTS(x) \
+    ActivateOutput<int>(x, EOP_VIEWID, -1);
+
         public:
             CFlowCUIOutputEntityNode( SActivationInfo* pActInfo )
             {
                 m_pViewListener = NULL;
                 m_pEntity = NULL;
+                m_pViewConfig = new ViewConfig();
+                m_bViewNeedsUpdate = false;
             }
 
             virtual ~CFlowCUIOutputEntityNode()
@@ -37,6 +50,10 @@ namespace CoherentUIPlugin
                 if ( m_pViewListener )
                 {
                     gCoherentUISystem->DeleteView( m_pViewListener );
+                }
+                if ( m_pViewConfig )
+                {
+                    delete m_pViewConfig;
                 }
             }
 
@@ -69,8 +86,14 @@ namespace CoherentUIPlugin
                     InputPortConfig_Null(),
                 };
 
+                static const SOutputPortConfig outputs[] =
+                {
+                    OutputPortConfig<int>( "ViewID",                             _HELP( "id for further use" ),                        "nViewID" ),
+                    OutputPortConfig_Null(),
+                };
+
                 config.pInputPorts = inputs;
-                config.pOutputPorts = NULL;//outputs;
+                config.pOutputPorts = outputs;
                 config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI on entity" );
 
                 config.nFlags |= EFLN_TARGET_ENTITY;
@@ -88,6 +111,7 @@ namespace CoherentUIPlugin
                         break;
 
                     case eFE_Initialize:
+                        INITIALIZE_OUTPUTS( pActInfo );
                         break;
 
                     case eFE_SetEntityId:
@@ -95,34 +119,55 @@ namespace CoherentUIPlugin
                         break;
 
                     case eFE_Activate:
-                        if ( m_pEntity )
+                        if ( IsPortActive( pActInfo, EIP_ACTIVATE ) && m_pEntity )
                         {
-                            if ( !m_pViewListener )
-                            {
-                                std::string sUrl = GetPortString( pActInfo, EIP_URL );
-                                std::wstring sUrlW( sUrl.length(), L' ' );
-                                sUrlW.assign( sUrl.begin(), sUrl.end() );
+                            // get the view definition
+                            std::string sUrl = GetPortString( pActInfo, EIP_URL );
+                            std::wstring sUrlW( sUrl.length(), L' ' );
+                            sUrlW.assign( sUrl.begin(), sUrl.end() );
 
-                                Coherent::UI::ViewInfo info;
-                                info.Width = GetPortInt( pActInfo, EIP_WIDTH );
-                                info.Height = GetPortInt( pActInfo, EIP_HEIGHT );
-                                info.IsTransparent = GetPortBool( pActInfo, EIP_TRANSPARENT );
-                                info.UsesSharedMemory = GetPortBool( pActInfo, EIP_SHARED_MEMORY );
-                                info.SupportClickThrough = GetPortBool( pActInfo, EIP_CLICKABLE );
+                            Coherent::UI::ViewInfo info;
+                            info.Width = GetPortInt( pActInfo, EIP_WIDTH );
+                            info.Height = GetPortInt( pActInfo, EIP_HEIGHT );
+                            info.IsTransparent = GetPortBool( pActInfo, EIP_TRANSPARENT );
+                            info.UsesSharedMemory = GetPortBool( pActInfo, EIP_SHARED_MEMORY );
+                            info.SupportClickThrough = GetPortBool( pActInfo, EIP_CLICKABLE );
 
-                                ViewConfig viewConfig;
-                                viewConfig.ViewInfo = info;
-                                viewConfig.Url = sUrlW;
-                                viewConfig.Entity = m_pEntity;
-                                viewConfig.CollisionMesh = GetPortString( pActInfo, EIP_MESH );
+                            m_pViewConfig->ViewInfo = info;
+                            m_pViewConfig->Url = sUrlW;
+                            m_pViewConfig->Entity = m_pEntity;
+                            m_pViewConfig->CollisionMesh = GetPortString( pActInfo, EIP_MESH );
 
-                                m_pViewListener = gCoherentUISystem->CreateView( &viewConfig );
-                            }
+                            // indicate that we have to create/update the view later
+                            m_bViewNeedsUpdate = true;
+                            pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, true );
                         }
 
                         break;
 
                     case eFE_Update:
+                        // make sure the view is created/updated, after the system is ready
+                        if ( m_bViewNeedsUpdate &&  gCoherentUISystem->IsReady() )
+                        {
+                            if ( m_pViewListener )
+                            {
+                                gCoherentUISystem->DeleteView( m_pViewListener );
+                            }
+                            m_pViewListener = gCoherentUISystem->CreateView( m_pViewConfig );
+                            m_bViewNeedsUpdate = false;
+                        }
+
+                        // set the view id output after the view is available
+                        if ( m_pViewListener )
+                        {
+                            Coherent::UI::View* view = m_pViewListener->GetView();
+                            if ( view )
+                            {
+                                ActivateOutput<int>( pActInfo, EOP_VIEWID, view->GetId() );
+                                // updates are not necessary until next initialization
+                                pActInfo->pGraph->SetRegularlyUpdated( pActInfo->myID, false );
+                            }
+                        }
                         break;
                 }
             }
