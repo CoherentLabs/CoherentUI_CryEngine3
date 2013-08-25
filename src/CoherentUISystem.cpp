@@ -294,6 +294,15 @@ namespace CoherentUIPlugin
         return false;
     }
 
+    void CCoherentUISystem::SetCUIInput( bool enabled )
+    {
+        // set input to coherent ui
+        if ( m_InputEventsListener )
+        {
+            m_InputEventsListener->SetPlayerInput( !enabled );
+        }
+    }
+
     // ID3DListener methods
     void CCoherentUISystem::OnPrePresent()
     {
@@ -407,22 +416,6 @@ namespace CoherentUIPlugin
 
                     lastPosition = cameraPosition;
                 }
-            }
-        }
-    }
-
-    void CCoherentUISystem::ShowMap( bool show )
-    {
-        CCoherentViewListener* pHUDListener = NULL;
-        pHUDListener = ( m_HudViewListener ? m_HudViewListener.get() : NULL );
-
-        if ( pHUDListener )
-        {
-            Coherent::UI::View* pView = pHUDListener->GetView();
-
-            if ( pView && pHUDListener->IsReadyForBindings() )
-            {
-                pView->TriggerEvent( "ShowMap", show );
             }
         }
     }

@@ -107,6 +107,9 @@
     <ClCompile Include="..\src\Flownodes\CFlowCUIHandleEvent.cpp">
       <Filter>Flownodes</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Flownodes\CFlowCUISetInput.cpp">
+      <Filter>Flownodes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StdAfx.h">

@@ -45,6 +45,7 @@
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUISendTokens.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUISetInput.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEvent.cpp" />
     <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEventFloat.cpp" />
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp" />

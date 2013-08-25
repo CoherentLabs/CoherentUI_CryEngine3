@@ -101,7 +101,6 @@ namespace CoherentUIPlugin
         , m_PlayerInputEnabled( true )
         , m_DrawCoherentUI( true )
         , m_DrawCursor( false )
-        , m_DrawMap( false )
     {
         RepeatFilter::Init();
     }
@@ -221,16 +220,6 @@ namespace CoherentUIPlugin
                     }
 
                     return false;
-
-                case eKI_Tab:
-                    m_DrawMap = !m_DrawMap;
-
-                    if ( gCoherentUISystem )
-                    {
-                        gCoherentUISystem->ShowMap( m_DrawMap );
-                    }
-
-                    return false;
             }
         }
 
@@ -287,6 +276,43 @@ namespace CoherentUIPlugin
     bool CCoherentInputEventListener::OnInputEventUI( const SInputEvent& event )
     {
         return false;
+    }
+
+    void CCoherentInputEventListener::SetPlayerInput( bool enabled )
+    {
+        // if enabled == false, all player input will be sent to coherent ui
+        // and a cursor will be displayed
+        m_PlayerInputEnabled = enabled;
+
+        if ( m_DrawCursor != !enabled )
+        {
+            m_DrawCursor = !enabled;
+
+            ::ShowCursor( m_DrawCursor );
+
+            if ( gEnv )
+            {
+                // set player input
+                if ( gEnv->pGameFramework )
+                {
+                    gEnv->pGameFramework->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                }
+
+                // set cursor display
+                if ( gEnv->pSystem && gEnv->pSystem->GetIHardwareMouse() )
+                {
+                    if ( m_DrawCursor )
+                    {
+                        gEnv->pSystem->GetIHardwareMouse()->IncrementCounter();
+                    }
+
+                    else
+                    {
+                        gEnv->pSystem->GetIHardwareMouse()->DecrementCounter();
+                    }
+                }
+            }
+        }
     }
 
     bool CCoherentInputEventListener::ToKeyEventData( const SInputEvent& event, Coherent::UI::KeyEventData& keyEvent )
