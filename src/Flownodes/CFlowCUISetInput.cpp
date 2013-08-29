@@ -1,36 +1,32 @@
 #include <StdAfx.h>
 #include <Nodes/G2FlowBaseNode.h>
 #include <CPluginCoherentUI.h>
-#include <Coherent/UI/View.h>
-#include "CoherentViewListener.h"
 #include "CoherentUISystem.h"
 
 namespace CoherentUIPlugin
 {
-    class CFlowCUITriggerEvent : public CFlowBaseNode<eNCT_Instanced>
+    class CFlowCUISetInput : public CFlowBaseNode<eNCT_Instanced>
     {
         private:
 
             enum EInputPorts
             {
                 EIP_ACTIVATE = 0,
-                EIP_VIEWID,
-                EIP_EVENT,
-                EIP_ARG1,
+                EIP_ENABLED,
             };
 
         public:
-            CFlowCUITriggerEvent( SActivationInfo* pActInfo )
+            CFlowCUISetInput( SActivationInfo* pActInfo )
             {
             }
 
-            virtual ~CFlowCUITriggerEvent()
+            virtual ~CFlowCUISetInput()
             {
             }
 
             virtual IFlowNodePtr Clone( SActivationInfo* pActInfo )
             {
-                return new CFlowCUITriggerEvent( pActInfo );
+                return new CFlowCUISetInput( pActInfo );
             }
 
             virtual void GetMemoryUsage( ICrySizer* s ) const
@@ -46,16 +42,14 @@ namespace CoherentUIPlugin
             {
                 static const SInputPortConfig inputs[] =
                 {
-                    InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
-                    InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
-                    InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
-                    InputPortConfig<bool>( "Arg1",                _HELP( "argument 1 (optional: boolean)" ) ),
+                    InputPortConfig_Void( "Activate",                            _HELP( "activate input" ) ),
+                    InputPortConfig<bool>( "Enabled",                _HELP( "dis-/enable" ) ),
                     InputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
                 config.pOutputPorts = NULL;//output
-                config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI event trigger (1 argument)" );
+                config.sDescription = _HELP( PLUGIN_CONSOLE_PREFIX "CoherentUI enable input" );
 
                 //config.nFlags |= EFLN_TARGET_ENTITY;
                 config.SetCategory( EFLN_APPROVED );
@@ -77,17 +71,10 @@ namespace CoherentUIPlugin
                     case eFE_Activate: 
                         {
                             if ( IsPortActive( pActInfo, EIP_ACTIVATE ) ) {
-                                int viewId = GetPortInt( pActInfo, EIP_VIEWID );
-                                CCoherentViewListener* pViewListener = gCoherentUISystem->GetViewListener( viewId );
-                                if ( pViewListener && pViewListener->IsReadyForBindings() )
+                                if ( gCoherentUISystem->IsReady() )
                                 {
-                                    Coherent::UI::View* pView = pViewListener->GetView();
-                                    if ( pView )
-                                    {
-                                        std::string sEvent = GetPortString( pActInfo, EIP_EVENT );
-                                        bool bArg1 = GetPortBool( pActInfo, EIP_ARG1 );
-                                        pView->TriggerEvent(sEvent.c_str(), bArg1);
-                                    }
+                                    bool enabled = GetPortBool( pActInfo, EIP_ENABLED );
+                                    gCoherentUISystem->SetCUIInput( enabled );
                                 }
                             }
                         }
@@ -100,4 +87,4 @@ namespace CoherentUIPlugin
     };
 }
 
-REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:TriggerEvent", CoherentUIPlugin::CFlowCUITriggerEvent, CFlowCUITriggerEvent );
+REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:SetInput", CoherentUIPlugin::CFlowCUISetInput, CFlowCUISetInput );

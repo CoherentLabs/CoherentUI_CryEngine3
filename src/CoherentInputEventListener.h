@@ -46,16 +46,13 @@ namespace CoherentUIPlugin
                 return m_DrawCursor;
             }
 
-            bool ShouldDrawMap() const
-            {
-                return m_DrawMap;
-            }
-
             virtual int GetPriority() const COHERENT_OVERRIDE;
 
             virtual bool OnInputEvent( const SInputEvent& event ) COHERENT_OVERRIDE;
 
             virtual bool OnInputEventUI( const SInputEvent& event ) COHERENT_OVERRIDE;
+
+            virtual void SetPlayerInput( bool enabled );
 
         private:
             bool ToKeyEventData( const SInputEvent& event, Coherent::UI::KeyEventData& keyData );
@@ -71,7 +68,6 @@ namespace CoherentUIPlugin
             bool m_PlayerInputEnabled;
             bool m_DrawCoherentUI;
             bool m_DrawCursor;
-            bool m_DrawMap;
     };
 
 }

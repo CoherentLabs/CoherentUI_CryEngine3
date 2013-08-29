@@ -156,6 +156,17 @@ Triggers an event on a Coherent UI View that receives the JSON encoded game toke
   - `ViewID` Id of the view as obtained from one of the output nodes
   - `Event` The event name (default: GameTokens)
 
+CoherentUI_Plugin:SetInput
+--------------------------
+
+Switch input between player and Coherent UI. When enabled, all input is sent
+to Coherent UI and the mouse cursor is displayed.
+  
+**Inputs**
+  
+  - `Activate` Activate the node
+  - `Enabled` Boolean argument. True enables input to Coherent UI, false disables it
+
 Objects
 =======
 TODO: Describe custom object classes inside your plugin

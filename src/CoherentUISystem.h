@@ -55,7 +55,8 @@ namespace CoherentUIPlugin
 
             IPlayerEventListener* GetPlayerEventListener() const;
             bool RaycastClosestViewListenersGeometry( const Vec3& origin, const Vec3& dir, int& outX, int& outY, CCoherentViewListener*& ppViewListener );
-            void ShowMap( bool show );
+
+            void SetCUIInput( bool enabled );
 
             // Coherent::UI::EventListener methods
             virtual void OnSystemReady();

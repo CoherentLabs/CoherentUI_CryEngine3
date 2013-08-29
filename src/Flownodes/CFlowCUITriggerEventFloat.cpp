@@ -85,7 +85,7 @@ namespace CoherentUIPlugin
                             if ( IsPortActive( pActInfo, EIP_ACTIVATE ) ) {
                                 int viewId = GetPortInt( pActInfo, EIP_VIEWID );
                                 CCoherentViewListener* pViewListener = gCoherentUISystem->GetViewListener( viewId );
-                                if ( pViewListener )
+                                if ( pViewListener && pViewListener->IsReadyForBindings() )
                                 {
                                     Coherent::UI::View* pView = pViewListener->GetView();
                                     if ( pView )
