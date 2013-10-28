@@ -1,26 +1,36 @@
 <ObjectLayer>
  <Layer Name="AB1" GUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}" FullName="AB1" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="8902791">
   <LayerObjects>
-   <Object Type="GeomEntity" Layer="AB1" Id="{15B585E5-8EF6-40B1-A148-F18FA12B84E4}" Name="GeomEntity12" Pos="823.9317,328.73544,169.71895" FloorNumber="-1" Rotate="0.19746977,0.050476287,-0.052497856,0.97760004" Scale="1.67,1.67,1.67" ColorRGB="65535" Material="Objects/placeholder_1024_576" MatLayersMask="0" Geometry="Objects/curve.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
+   <Object Type="GeomEntity" Layer="AB1" Id="{F49D76B5-9CB2-4D79-AF08-18409F9E7318}" Name="CoherentBreakableEntity" Pos="827.3797,331.68942,165.59312" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" Material="Objects/placeholder_1024_768" MatLayersMask="0" Geometry="Objects/jointedBreakable_example.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
+    <Properties esFaction="">
+     <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
+     <RenderProxyOptions bAnimateOffScreenShadow="0"/>
+    </Properties>
+   </Object>
+   <Object Type="GeomEntity" Layer="AB1" Id="{15B585E5-8EF6-40B1-A148-F18FA12B84E4}" Name="CoherentStaticEntity" Pos="823.9317,328.73544,169.71895" FloorNumber="-1" Rotate="0.19746977,0.050476287,-0.052497856,0.97760004" Scale="1.67,1.67,1.67" ColorRGB="65535" Material="Objects/placeholder_1024_576" MatLayersMask="0" Geometry="Objects/curve.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
     <Properties esFaction="">
      <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
      <RenderProxyOptions bAnimateOffScreenShadow="0"/>
     </Properties>
     <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
      <Nodes>
-      <Node Id="1" Class="Game:Start" pos="-400,-610,0" flags="0">
+      <Node Id="1" Class="Game:Start" pos="-340,-280,0" flags="0">
        <Inputs InGame="1" InEditor="1"/>
       </Node>
-      <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-190,-610,0" flags="0">
+      <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-160,-280,0" flags="0">
        <Inputs Path="coui://Libs/UI/CoherentUI/hud/hud.html"/>
       </Node>
-      <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-190,-510,0" flags="1" GraphEntity="0">
+      <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-160,-220,0" flags="0" GraphEntity="0">
        <Inputs entityId="0" Url="http://www.google.com" Width="1024" Height="576" Transparent="0" Clickable="1" Mesh="curve.obj" SharedMemory="1"/>
+      </Node>
+      <Node Id="4" Class="CoherentUI_Plugin:OutputEntity" pos="-160,-70,0" flags="0" EntityGUID="{F49D76B5-9CB2-4D79-AF08-18409F9E7318}" EntityGUID_64="4D799CB2F49D76B5">
+       <Inputs entityId="0" Url="http://neography.com/experiment/circles/solarsystem/" Width="1024" Height="768" Transparent="0" Clickable="0" Mesh="" SharedMemory="1"/>
       </Node>
      </Nodes>
      <Edges>
       <Edge nodeIn="2" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
       <Edge nodeIn="3" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+      <Edge nodeIn="4" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
      </Edges>
      <GraphTokens />
     </FlowGraph>

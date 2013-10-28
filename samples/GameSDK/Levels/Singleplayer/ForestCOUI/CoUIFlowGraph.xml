@@ -1,18 +1,22 @@
 <Graph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
  <Nodes>
-  <Node Id="1" Class="Game:Start" pos="-400,-610,0" flags="0">
+  <Node Id="1" Class="Game:Start" pos="-340,-280,0" flags="0">
    <Inputs InGame="1" InEditor="1"/>
   </Node>
-  <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-190,-610,0" flags="0">
+  <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-160,-280,0" flags="0">
    <Inputs Path="coui://Libs/UI/CoherentUI/hud/hud.html"/>
   </Node>
-  <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-190,-510,0" flags="0" GraphEntity="0">
+  <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-160,-220,0" flags="0" EntityGUID="{15B585E5-8EF6-40B1-A148-F18FA12B84E4}" EntityGUID_64="40B18EF615B585E5">
    <Inputs entityId="0" Url="http://www.google.com" Width="1024" Height="576" Transparent="0" Clickable="1" Mesh="curve.obj" SharedMemory="1"/>
+  </Node>
+  <Node Id="4" Class="CoherentUI_Plugin:OutputEntity" pos="-160,-70,0" flags="0" EntityGUID="{F49D76B5-9CB2-4D79-AF08-18409F9E7318}" EntityGUID_64="4D799CB2F49D76B5">
+   <Inputs entityId="0" Url="http://neography.com/experiment/circles/solarsystem/" Width="1024" Height="768" Transparent="0" Clickable="0" Mesh="" SharedMemory="1"/>
   </Node>
  </Nodes>
  <Edges>
   <Edge nodeIn="2" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
   <Edge nodeIn="3" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+  <Edge nodeIn="4" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
  </Edges>
  <GraphTokens />
 </Graph>

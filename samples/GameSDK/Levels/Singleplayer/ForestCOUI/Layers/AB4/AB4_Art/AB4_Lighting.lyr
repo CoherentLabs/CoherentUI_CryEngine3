@@ -2,19 +2,19 @@
  <Layer Name="AB4_Lighting" GUID="{D60D8511-CC5A-46C9-B2D9-A9F838C039BC}" FullName="AB4/AB4_Art/AB4_Lighting" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="1644900" ParentGUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}">
   <LayerObjects>
    <Object Type="Prefab" Layer="AB4_Lighting" Id="{89F0BB02-D92B-4C68-AFAD-59A940F739B2}" Name="TOD_Street_light5" Pos="670.95508,402.81601,164.50163" FloorNumber="-1" Rotate="0.77162457,0,0,-0.63607824" ColorRGB="56575" MatLayersMask="0" PrefabGUID="{9C33D685-7F51-40CB-9E48-0A072AF955FF}" PrefabName="Level.Lights.TOD_Street_light"/>
-   <Object Type="GeomEntity" Layer="AB4_Lighting" Id="{0FB4260D-88CB-444E-A42F-FA9184F7724A}" Name="LightBeam3" Pos="676.60187,403.28543,174.71956" FloorNumber="-1" Rotate="-0.27059805,0.65328151,-0.27059802,-0.65328145" Scale="0.49999994,0.5,0.5" ColorRGB="65535" Flags="2" MatLayersMask="0" Geometry="Objects/effects/lights/beam.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="25" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
+   <Object Type="GeomEntity" Layer="AB4_Lighting" Id="{0FB4260D-88CB-444E-A42F-FA9184F7724A}" Name="LightBeam3" Pos="676.60187,403.28543,174.71956" FloorNumber="-1" Rotate="-0.27059805,0.65328151,-0.27059802,-0.65328145" Scale="0.49999994,0.5,0.5" ColorRGB="65535" MatLayersMask="0" Geometry="Objects/effects/lights/beam.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="25" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
     <Properties esFaction="">
      <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
      <RenderProxyOptions bAnimateOffScreenShadow="0"/>
     </Properties>
    </Object>
-   <Object Type="GeomEntity" Layer="AB4_Lighting" Id="{5A709F14-1818-4F07-82BE-A9C118FE3C66}" Name="LightBeam1" Pos="701.49377,398.82101,175.3297" FloorNumber="-1" Rotate="0.49999994,-0.5,0.5,0.50000006" Scale="0.49999997,0.5,0.5" ColorRGB="65535" Flags="2" MatLayersMask="0" Geometry="Objects/effects/lights/beam.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="25" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
+   <Object Type="GeomEntity" Layer="AB4_Lighting" Id="{5A709F14-1818-4F07-82BE-A9C118FE3C66}" Name="LightBeam1" Pos="701.49377,398.82101,175.3297" FloorNumber="-1" Rotate="0.49999994,-0.5,0.5,0.50000006" Scale="0.49999997,0.5,0.5" ColorRGB="65535" MatLayersMask="0" Geometry="Objects/effects/lights/beam.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="25" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
     <Properties esFaction="">
      <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
      <RenderProxyOptions bAnimateOffScreenShadow="0"/>
     </Properties>
    </Object>
-   <Object Type="GeomEntity" Layer="AB4_Lighting" Id="{2AE7A418-6D08-429A-BB2C-445B3E8FADBE}" Name="LightBeam2" Pos="686.78784,401.69901,175.3492" FloorNumber="-1" Rotate="0.27059805,0.65328151,0.27059802,-0.65328145" Scale="0.49999994,0.5,0.5" ColorRGB="65535" Flags="2" MatLayersMask="0" Geometry="Objects/effects/lights/beam.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="25" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
+   <Object Type="GeomEntity" Layer="AB4_Lighting" Id="{2AE7A418-6D08-429A-BB2C-445B3E8FADBE}" Name="LightBeam2" Pos="686.78784,401.69901,175.3492" FloorNumber="-1" Rotate="0.27059805,0.65328151,0.27059802,-0.65328145" Scale="0.49999994,0.5,0.5" ColorRGB="65535" MatLayersMask="0" Geometry="Objects/effects/lights/beam.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="25" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
     <Properties esFaction="">
      <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
      <RenderProxyOptions bAnimateOffScreenShadow="0"/>
