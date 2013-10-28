@@ -62,14 +62,14 @@ namespace CoherentUIPlugin
             {
                 static const SInputPortConfig inputs[] =
                 {
-                    InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
-                    InputPortConfig<string>( "Path",                  "",        _HELP( "path to html files" ) ),
+                    InputPortConfig_Void( "Activate",                            _HELP( "Activate View" ) ),
+                    InputPortConfig<string>( "Path",                  "",        _HELP( "Initial URL" ) ),
                     InputPortConfig_AnyType( NULL ),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
-                    OutputPortConfig<int>( "ViewID",                             _HELP( "id for further use" ),                        "nViewID" ),
+                    OutputPortConfig<int>( "ViewID",                             _HELP( "ID for Further Use" ),                        "nViewID" ),
                     OutputPortConfig_AnyType( NULL ),
                 };
 

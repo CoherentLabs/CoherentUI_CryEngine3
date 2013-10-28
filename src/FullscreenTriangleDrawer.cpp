@@ -129,6 +129,7 @@ namespace CoherentUIPlugin
         , m_pStateBlock( NULL )
         , m_pVertexShader11( NULL )
         , m_pPixelShader11( NULL )
+        , m_pBlendState11( NULL )
     {
         ERenderType renderType = gEnv->pRenderer->GetRenderType();
 
@@ -453,6 +454,23 @@ namespace CoherentUIPlugin
 
         hr = pDevice->CreatePixelShader( CompiledPS, sizeof( CompiledPS ), NULL, &m_pPixelShader11 );
         CRY_ASSERT( SUCCEEDED( hr ) );
+
+        // Create a One/InvSrcAlpha blend state
+        D3D11_BLEND_DESC blendDesc = { 0 };
+        blendDesc.AlphaToCoverageEnable  = false;
+        blendDesc.IndependentBlendEnable = false;
+
+        blendDesc.RenderTarget[0].BlendEnable			 = true;
+        blendDesc.RenderTarget[0].BlendOp				 = D3D11_BLEND_OP_ADD;
+        blendDesc.RenderTarget[0].BlendOpAlpha			 = D3D11_BLEND_OP_ADD;
+        blendDesc.RenderTarget[0].DestBlend			     = D3D11_BLEND_INV_SRC_ALPHA;
+        blendDesc.RenderTarget[0].DestBlendAlpha		 = D3D11_BLEND_ONE;
+        blendDesc.RenderTarget[0].RenderTargetWriteMask  = D3D11_COLOR_WRITE_ENABLE_ALL;
+        blendDesc.RenderTarget[0].SrcBlend				 = D3D11_BLEND_ONE;
+        blendDesc.RenderTarget[0].SrcBlendAlpha		     = D3D11_BLEND_ONE;
+
+        hr = pDevice->CreateBlendState( &blendDesc, &m_pBlendState11 );
+        CRY_ASSERT( SUCCEEDED( hr ) );
     }
 
     CFullscreenTriangleDrawer::~CFullscreenTriangleDrawer()
@@ -465,6 +483,7 @@ namespace CoherentUIPlugin
 
         SAFE_RELEASE( m_pVertexShader11 );
         SAFE_RELEASE( m_pPixelShader11 );
+        SAFE_RELEASE( m_pBlendState11 );
     }
 
     void CFullscreenTriangleDrawer::Draw( void* pTexture )
@@ -529,6 +548,8 @@ namespace CoherentUIPlugin
         pContext->PSSetSamplers( 0, 1, pNullSampler );
 
         pContext->PSSetShaderResources( 0, 1, &pTextureSRV );
+
+        pContext->OMSetBlendState( m_pBlendState11, NULL, 0xFFFFFFFF );
 
         // Draw
         pContext->Draw( 3, 0 );

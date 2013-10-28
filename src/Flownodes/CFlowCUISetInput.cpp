@@ -42,8 +42,8 @@ namespace CoherentUIPlugin
             {
                 static const SInputPortConfig inputs[] =
                 {
-                    InputPortConfig_Void( "Activate",                            _HELP( "activate input" ) ),
-                    InputPortConfig<bool>( "Enabled",                _HELP( "dis-/enable" ) ),
+                    InputPortConfig_Void( "Activate",                            _HELP( "Activate Input" ) ),
+                    InputPortConfig<bool>( "Enabled",                _HELP( "Is Enabled" ) ),
                     InputPortConfig_AnyType( NULL ),
                 };
 

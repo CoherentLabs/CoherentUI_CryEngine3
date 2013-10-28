@@ -67,16 +67,16 @@ namespace CoherentUIPlugin
             {
                 static const SInputPortConfig inputs[] =
                 {
-                    InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
-                    InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
-                    InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
+                    InputPortConfig_Void( "Activate",                            _HELP( "Activate View" ) ),
+                    InputPortConfig<int>( "ViewID",                   0,         _HELP( "View ID" ) ),
+                    InputPortConfig<string>( "Event",                "",          _HELP( "Event Name" ) ),
                     InputPortConfig_AnyType( NULL ),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
-                    OutputPortConfig<string>( "Arg1",                             _HELP( "string argument (optional)" ),                        "sArg" ),
-                    OutputPortConfig<string>( "Arg2",                             _HELP( "boolean argument (optional)" ),                        "bArg" ),
+                    OutputPortConfig<string>( "Arg1",                             _HELP( "String argument (optional)" ),                        "sArg" ),
+                    OutputPortConfig<string>( "Arg2",                             _HELP( "Boolean argument (optional)" ),                        "bArg" ),
                     OutputPortConfig_AnyType( NULL ),
                 };
 

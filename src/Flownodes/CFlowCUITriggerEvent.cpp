@@ -46,10 +46,10 @@ namespace CoherentUIPlugin
             {
                 static const SInputPortConfig inputs[] =
                 {
-                    InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
-                    InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
-                    InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
-                    InputPortConfig<bool>( "Arg1",                _HELP( "argument 1 (optional: boolean)" ) ),
+                    InputPortConfig_Void( "Activate",                            _HELP( "Activate View" ) ),
+                    InputPortConfig<int>( "ViewID",                   0,         _HELP( "View ID" ) ),
+                    InputPortConfig<string>( "Event",                "",          _HELP( "Event Name" ) ),
+                    InputPortConfig<bool>( "Arg1",                _HELP( "Argument 1 (optional: boolean)" ) ),
                     InputPortConfig_AnyType( NULL ),
                 };
 

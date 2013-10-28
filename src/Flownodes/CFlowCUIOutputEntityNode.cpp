@@ -75,20 +75,20 @@ namespace CoherentUIPlugin
             {
                 static const SInputPortConfig inputs[] =
                 {
-                    InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
-                    InputPortConfig<string>( "Url",                  "",         _HELP( "initial url" ) ),
-                    InputPortConfig<int>( "Width",                   0,          _HELP( "width" ) ),
-                    InputPortConfig<int>( "Height",                  0,          _HELP( "height" ) ),
-                    InputPortConfig<bool>( "Transparent",        false,          _HELP( "is transparent" ) ),
-                    InputPortConfig<bool>( "Clickable",           true,          _HELP( "is clickable" ) ),
-                    InputPortConfig<string>( "Mesh",                "",          _HELP( "collision mesh" ) ),
-                    InputPortConfig<bool>( "SharedMemory",        true,          _HELP( "uses shared memory" ) ),
+                    InputPortConfig_Void( "Activate",                            _HELP( "Activate View" ) ),
+                    InputPortConfig<string>( "Url",                  "",         _HELP( "Initial URL" ) ),
+                    InputPortConfig<int>( "Width",                   0,          _HELP( "Width" ) ),
+                    InputPortConfig<int>( "Height",                  0,          _HELP( "Height" ) ),
+                    InputPortConfig<bool>( "Transparent",        false,          _HELP( "Is Transparent" ) ),
+                    InputPortConfig<bool>( "Clickable",           true,          _HELP( "Is Clickable" ) ),
+                    InputPortConfig<string>( "Mesh",                "",          _HELP( "Collision Mesh" ) ),
+                    InputPortConfig<bool>( "SharedMemory",        true,          _HELP( "Uses Shared Memory" ) ),
                     InputPortConfig_AnyType( NULL ),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
-                    OutputPortConfig<int>( "ViewID",                             _HELP( "id for further use" ),                        "nViewID" ),
+                    OutputPortConfig<int>( "ViewID",                             _HELP( "ID for Further Use" ),                        "nViewID" ),
                     OutputPortConfig_AnyType( NULL ),
                 };
 
