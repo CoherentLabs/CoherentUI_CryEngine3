@@ -32,7 +32,7 @@ namespace CoherentUIPlugin
 
             if ( pViewListener->GetView() != nullptr )
             {
-                pViewListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth / pActor->GetMaxHealth() * 100.0f );
+                pViewListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", cry_floorf(fHealth / pActor->GetMaxHealth() * 100.0f) );
             }
         }
     }
