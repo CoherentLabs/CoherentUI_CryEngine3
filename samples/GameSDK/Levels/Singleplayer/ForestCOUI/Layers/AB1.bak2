@@ -1,0 +1,32 @@
+<ObjectLayer>
+ <Layer Name="AB1" GUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}" FullName="AB1" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="8902791">
+  <LayerObjects>
+   <Object Type="GeomEntity" Layer="AB1" Id="{15B585E5-8EF6-40B1-A148-F18FA12B84E4}" Name="GeomEntity12" Pos="828.52679,332.04733,166.38501" FloorNumber="-1" Rotate="0.54455608,0.01144981,-0.013171499,0.83854288" Scale="1.67,1.67,1.67" ColorRGB="65535" Material="Objects/placeholder_1024_576" MatLayersMask="0" Geometry="Objects/curve.cgf" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="GeomEntity">
+    <Properties esFaction="">
+     <Health bInvulnerable="1" MaxHealth="500" bOnlyEnemyFire="1"/>
+     <RenderProxyOptions bAnimateOffScreenShadow="0"/>
+    </Properties>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Game:Start" pos="-280,-310,0" flags="0">
+       <Inputs InGame="1" InEditor="1"/>
+      </Node>
+      <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-120,-270,0" flags="0">
+       <Inputs Path="coui://Libs/UI/CoherentUI/hud/hud.html"/>
+      </Node>
+     </Nodes>
+     <Edges>
+      <Edge nodeIn="2" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+     </Edges>
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+  </LayerObjects>
+  <ChildLayers>
+   <Layer Name="AB1_Art" GUID="{EA699736-CE3C-4FF4-BAF6-F65CB7E80251}" FullName="AB1/AB1_Art" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}"/>
+   <Layer Name="AB1_Navigation" GUID="{14F40CAF-DA27-4C4C-BD03-4AF5A23A169D}" FullName="AB1/AB1_Navigation" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}"/>
+   <Layer Name="AB1_Logic" GUID="{339BE7CA-D974-4BE6-A18E-17B2657B2C77}" FullName="AB1/AB1_Logic" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}"/>
+   <Layer Name="AB1_High_Spec" GUID="{CA15AECF-FA0B-4F42-BD35-C0D30FCE2910}" FullName="AB1/AB1_High_Spec" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="1" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Specs="1" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}"/>
+  </ChildLayers>
+ </Layer>
+</ObjectLayer>

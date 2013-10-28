@@ -1,6 +1,8 @@
 #pragma once
 
-#include <Player.h>
+struct IActor;
+
+#include <IPlayerEventListener.h>
 
 namespace CoherentUIPlugin
 {
@@ -14,7 +16,7 @@ namespace CoherentUIPlugin
             void AddViewListener( CCoherentViewListener* pViewListener );
             void RemoveViewListener( CCoherentViewListener* pViewListener );
 
-            virtual void OnHealthChange( IActor* pActor, float fHealth ) COHERENT_OVERRIDE;
+            virtual void OnHealthChanged( IActor* pActor, float fHealth ) COHERENT_OVERRIDE;
 
         private:
             std::vector<CCoherentViewListener*> m_ViewEventListeners;

@@ -11,8 +11,8 @@ namespace CoherentUIPlugin
 {
     struct Event
     {
-    	std::string strArg;
-    	bool boolArg;
+        std::string strArg;
+        bool boolArg;
     };
 
     class CFlowCUIHandleEvent : public CFlowBaseNode<eNCT_Instanced>
@@ -70,14 +70,14 @@ namespace CoherentUIPlugin
                     InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
                     InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
                     InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
-                    InputPortConfig_Null(),
+                    InputPortConfig_AnyType( NULL ),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<string>( "Arg1",                             _HELP( "string argument (optional)" ),                        "sArg" ),
                     OutputPortConfig<string>( "Arg2",                             _HELP( "boolean argument (optional)" ),                        "bArg" ),
-                    OutputPortConfig_Null(),
+                    OutputPortConfig_AnyType( NULL ),
                 };
 
                 config.pInputPorts = inputs;
@@ -139,24 +139,24 @@ namespace CoherentUIPlugin
                 }
             }
 
-	        void HandleEvent( Event& e )
-	        {
+            void HandleEvent( Event& e )
+            {
                 m_event = e;
                 m_bReceivedEvent = true;
-	        }
+            }
     };
 }
 
 // Expose the Options structure to JavaScript
 void CoherentBind(Coherent::UI::Binder* binder, CoherentUIPlugin::Event* e)
 {
-	// Specify the exposed name of the type
-	if(auto type = binder->RegisterType("Event", e))
-	{
-		// expose normal data properties
-		type.Property("strArg", &CoherentUIPlugin::Event::strArg);
-		type.Property("boolArg", &CoherentUIPlugin::Event::boolArg);
-	}
+    // Specify the exposed name of the type
+    if(auto type = binder->RegisterType("Event", e))
+    {
+        // expose normal data properties
+        type.Property("strArg", &CoherentUIPlugin::Event::strArg);
+        type.Property("boolArg", &CoherentUIPlugin::Event::boolArg);
+    }
 }
 
 REGISTER_FLOW_NODE_EX( "CoherentUI_Plugin:HandleEvent", CoherentUIPlugin::CFlowCUIHandleEvent, CFlowCUIHandleEvent );

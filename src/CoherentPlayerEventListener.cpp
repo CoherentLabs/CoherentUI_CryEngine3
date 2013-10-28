@@ -23,7 +23,7 @@ namespace CoherentUIPlugin
         m_ViewEventListeners.erase( it );
     }
 
-    void CCoherentPlayerEventListener::OnHealthChange( IActor* pActor, float fHealth )
+    void CCoherentPlayerEventListener::OnHealthChanged( IActor* pActor, float fHealth )
     {
         for ( size_t i = 0, count = m_ViewEventListeners.size(); i < count; ++i )
         {

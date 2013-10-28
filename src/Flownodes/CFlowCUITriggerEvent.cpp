@@ -50,7 +50,7 @@ namespace CoherentUIPlugin
                     InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
                     InputPortConfig<string>( "Event",                "",          _HELP( "event name" ) ),
                     InputPortConfig<bool>( "Arg1",                _HELP( "argument 1 (optional: boolean)" ) ),
-                    InputPortConfig_Null(),
+                    InputPortConfig_AnyType( NULL ),
                 };
 
                 config.pInputPorts = inputs;

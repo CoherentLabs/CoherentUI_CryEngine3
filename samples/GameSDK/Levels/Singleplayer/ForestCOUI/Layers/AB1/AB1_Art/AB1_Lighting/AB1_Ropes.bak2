@@ -1,0 +1,17 @@
+<ObjectLayer>
+ <Layer Name="AB1_Ropes" GUID="{B6EC9A96-CF05-4D0C-91BD-7EC4BB7DEC77}" FullName="AB1/AB1_Art/AB1_Lighting/AB1_Ropes" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8902791" ParentGUID="{103EDCAB-17BF-486D-9289-AEB560CE9261}">
+  <LayerObjects>
+   <Object Type="Rope" Layer="AB1_Ropes" Id="{B9200ACD-27B7-49D9-9A82-FBF806B38BF2}" Name="Rope49" Pos="857.54968,322.14313,176.6006" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65280" Material="Materials/references/base_colors/black" MatLayersMask="0" EntityClass="RopeEntity">
+    <Rope flags="3" radius="0.0099999998" anchor_radius="0.039999999" num_seg="8" num_sides="4" texu="1" texv="10" ph_num_seg="8" ph_sub_vtxs="3" mass="1" friction="2" friction_pull="100" wind="0,0,0" wind_var="0" air_resist="0" water_resist="0" joint_lim="0" max_force="0" tension="0" max_iters="650" max_time_step="0.02" stiffness="10" hardness="20" damping="0.2" sleepSpeed="0.039999999"/>
+    <Properties>
+     <MultiplayerOptions bNetworked="0"/>
+    </Properties>
+    <Points>
+     <Point Pos="0.00067138672,-0.0043640137,0.22970581"/>
+     <Point Pos="-0.00061035156,0.0043640137,-0.22970581"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Roof="0" Floor="0"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

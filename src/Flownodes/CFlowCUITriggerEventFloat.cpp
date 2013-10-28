@@ -56,7 +56,7 @@ namespace CoherentUIPlugin
                     InputPortConfig<float>( "Arg2",                _HELP( "argument 2 (optional: float)" ) ),
                     InputPortConfig<float>( "Arg3",                _HELP( "argument 3 (optional: float)" ) ),
                     InputPortConfig<float>( "Arg4",                _HELP( "argument 4 (optional: float)" ) ),
-                    InputPortConfig_Null(),
+                    InputPortConfig_AnyType( NULL ),
                 };
 
                 config.pInputPorts = inputs;

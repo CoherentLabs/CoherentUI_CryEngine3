@@ -141,7 +141,10 @@ namespace CoherentUIPlugin
             {
                 case eKI_NP_0:
                     m_PlayerInputEnabled = !m_PlayerInputEnabled;
-                    gEnv->pGameFramework->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                    if (gEnv->pGame && gEnv->pGame->GetIGameFramework())
+                    {
+                        gEnv->pGame->GetIGameFramework()->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                    }
                     return false;
 
                     // NP_1 starts raycasting so don't use it
@@ -170,7 +173,7 @@ namespace CoherentUIPlugin
 
                 case eKI_NP_4:
                     {
-                        EntityId id = gEnv->pGameFramework->GetClientActor()->GetGameObject()->GetWorldQuery()->GetLookAtEntityId();
+                        EntityId id = gEnv->pGame->GetIGameFramework()->GetClientActor()->GetGameObject()->GetWorldQuery()->GetLookAtEntityId();
                         IEntity* pEntityInFront = gEnv->pEntitySystem->GetEntity( id );
 
                         if ( pEntityInFront )
@@ -293,9 +296,9 @@ namespace CoherentUIPlugin
             if ( gEnv )
             {
                 // set player input
-                if ( gEnv->pGameFramework )
+                if ( gEnv->pGame && gEnv->pGame->GetIGameFramework() )
                 {
-                    gEnv->pGameFramework->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                    gEnv->pGame->GetIGameFramework()->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
                 }
 
                 // set cursor display

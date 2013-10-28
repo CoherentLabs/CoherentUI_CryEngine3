@@ -1,0 +1,173 @@
+<ObjectLayer>
+ <Layer Name="AB1_Navigation" GUID="{14F40CAF-DA27-4C4C-BD03-4AF5A23A169D}" FullName="AB1/AB1_Navigation" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8902791" ParentGUID="{0199749C-0578-445C-ABD7-CE0AE05C4169}">
+  <LayerObjects>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{1BFE003A-EE52-4033-B56E-2FD73C0CF431}" Name="NavigationArea24" Pos="734.48999,340.7421,159.67717" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="2.2888794,-1.6019287,0"/>
+     <Point Pos="0.85070801,-6.7128906,0"/>
+     <Point Pos="1.2763672,-9.278595,0"/>
+     <Point Pos="-7.9335938,-10.624695,0"/>
+     <Point Pos="-9.8818359,-6.3197937,0"/>
+     <Point Pos="-10.310913,0.243927,0"/>
+     <Point Pos="-7.277771,3.7033081,0"/>
+     <Point Pos="-2.4365845,1.4933472,0"/>
+     <Point Pos="-1.0216675,4.3062439,0"/>
+     <Point Pos="0.1338501,4.5296631,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{5E49253B-2D64-442E-A04D-56BB3AB20D16}" Name="NavigationArea20" Pos="678.93793,335.46497,160" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3.1854248,2.9061279,0"/>
+     <Point Pos="-6.2307129,2.9452209,0"/>
+     <Point Pos="-7.8409424,1.0480652,0"/>
+     <Point Pos="-2.8309937,-3.1740723,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{4C9EB643-64EC-4E01-B513-B867905E7ED2}" Name="NavigationArea18" Pos="839.73242,344.06638,160" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-2.9512329,3.9143066,0"/>
+     <Point Pos="-4.6333618,9.5270996,0"/>
+     <Point Pos="3.3007202,11.439301,0"/>
+     <Point Pos="7.0593872,10.050385,0"/>
+     <Point Pos="8.0709229,4.653595,0"/>
+     <Point Pos="2.8084717,3.8442688,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{064DCF4A-2CAD-435C-9A63-CB9AD327AC52}" Name="NavigationArea25" Pos="756.17151,339.22821,159.73099" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-4.6853638,-0.72799683,0"/>
+     <Point Pos="-11.165894,-4.4475098,0"/>
+     <Point Pos="-14.9776,-2.9761963,0"/>
+     <Point Pos="-14.737122,2.7948303,0"/>
+     <Point Pos="-17.287598,3.9448853,0"/>
+     <Point Pos="-16.006042,9.402771,0"/>
+     <Point Pos="-10.04718,11.79129,0"/>
+     <Point Pos="-2.9822388,12.257538,0"/>
+     <Point Pos="-2.5608521,6.1576233,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{6A866253-9D07-4D95-8E58-E194C7821F34}" Name="NavigationArea27" Pos="704.48682,398.05734,164.11914" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="8" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="3.7703857,8.9801941,0"/>
+     <Point Pos="1.2839355,10.497192,0"/>
+     <Point Pos="-1.3718872,4.785614,0"/>
+     <Point Pos="-9.0042725,8.5832214,0"/>
+     <Point Pos="-9.5027466,6.9512329,0"/>
+     <Point Pos="-4.0136719,0.81692505,0"/>
+     <Point Pos="-2.5645142,-1.1607056,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{2AA77070-7D49-4138-94BE-468D11A93085}" Name="NavigationArea26" Pos="706.73499,384.27856,160" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-3.7732544,3.1239319,0"/>
+     <Point Pos="-6.5878296,-2.5049744,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{A8CAF88B-B1A2-4F83-8831-356B977C78C2}" Name="NavigationArea12" Pos="757.40137,348.71521,160" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="1.8137207,3.4680786,0"/>
+     <Point Pos="8.3389282,3.6438904,0"/>
+     <Point Pos="12.389221,-1.5795898,0"/>
+     <Point Pos="14.839172,0.92449951,0"/>
+     <Point Pos="23.770935,1.803771,0"/>
+     <Point Pos="27.609863,0.98379517,0"/>
+     <Point Pos="27.492981,-2.5900269,0"/>
+     <Point Pos="24.749878,-3.6072998,0"/>
+     <Point Pos="23.466248,-2.0611877,0"/>
+     <Point Pos="18.792175,-3.7883606,0"/>
+     <Point Pos="15.326904,-6.4427795,0"/>
+     <Point Pos="11.37616,-6.1590271,0"/>
+     <Point Pos="6.9656982,-3.0731812,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{2E2BBF96-B449-42A3-A3A0-F2DAE1826556}" Name="NavigationArea7" Pos="817.03369,347.06583,150.67224" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="20" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-4.4865723,1.9130554,0"/>
+     <Point Pos="-11.537903,0.12561035,0"/>
+     <Point Pos="-16.985901,-7.8968811,0"/>
+     <Point Pos="-11.039185,-11.306152,0"/>
+     <Point Pos="0.34759521,-11.34967,0"/>
+     <Point Pos="7.8197021,-9.5903625,0"/>
+     <Point Pos="16.746338,-4.0310974,0"/>
+     <Point Pos="14.486938,1.726593,0"/>
+     <Point Pos="8.8986816,2.5597839,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{212DF996-510B-4EE7-A133-F39B397C9909}" Name="NavigationArea19" Pos="713.2887,343.52054,160" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-1.8302612,-0.99081421,0"/>
+     <Point Pos="-6.3898315,1.826355,0"/>
+     <Point Pos="-9.7437744,-1.4391785,0"/>
+     <Point Pos="-7.2245483,-5.7135925,0"/>
+     <Point Pos="-2.6405029,-5.9523621,0"/>
+     <Point Pos="1.3560791,-1.728363,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB1_Navigation" Id="{32F66B9B-C794-46F3-874E-6DCA7325EF43}" Name="NavigationArea16" Pos="655.78186,339.39728,160" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-17.431885,1.0345154,0"/>
+     <Point Pos="-19.682251,-4.6848755,0"/>
+     <Point Pos="-24.091919,-6.4556274,0"/>
+     <Point Pos="-27.276978,0.70162964,0"/>
+     <Point Pos="-17.781006,5.1619568,0"/>
+     <Point Pos="-8.237854,4.0056458,0"/>
+     <Point Pos="1.1271362,1.9689941,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object RndFlags="4194304" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB1_Navigation" Id="{92DAEE9C-E33D-439E-8365-D8CDFB92B9B9}" Name="Solid8" Pos="779.57867,338.84702,163.81422" FloorNumber="-1" Rotate="-0.45766747,0.38183492,0.16313525,0.78621209" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-0.96426386,4.2795095,1.0645248" p2="-0.96411079,-4.2795687,1.064428" p3="-0.96422225,-4.2795687,-1.0644646" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-0.96422225,-4.2795687,-1.0644646" p1="-0.96411079,-4.2795687,1.064428" p2="-0.96426386,4.2795095,1.0645248" p3="-0.9643752,4.2795095,-1.0643678" p4="-0.9643752,4.2795095,-1.0643678" p5="-0.96426386,4.2795095,1.0645248" p6="0.96422225,4.2795691,1.0644648" p7="0.96411091,4.2795691,-1.0644279" p8="0.96411091,4.2795691,-1.0644279" p9="0.96422225,4.2795691,1.0644648" p10="0.96437508,-4.2795095,1.0643679" p11="0.96426362,-4.2795095,-1.0645248" p12="0.96426362,-4.2795095,-1.0645248" p13="0.96437508,-4.2795095,1.0643679" p14="-0.96411079,-4.2795687,1.064428" p15="-0.96422225,-4.2795687,-1.0644646" p16="0.96422225,4.2795691,1.0644648" p17="-0.96426386,4.2795095,1.0645248" p18="-0.96411079,-4.2795687,1.064428" p19="0.96437508,-4.2795095,1.0643679" p20="-0.96422225,-4.2795687,-1.0644646" p21="-0.9643752,4.2795095,-1.0643678" p22="0.96411091,4.2795691,-1.0644279" p23="0.96426362,-4.2795095,-1.0645248"/>
+     </Face>
+     <Face p1="0.96422225,4.2795691,1.0644648" p2="-0.96426386,4.2795095,1.0645248" p3="-0.9643752,4.2795095,-1.0643678" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.96437508,-4.2795095,1.0643679" p2="0.96422225,4.2795691,1.0644648" p3="0.96411091,4.2795691,-1.0644279" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.96411079,-4.2795687,1.064428" p2="0.96437508,-4.2795095,1.0643679" p3="0.96426362,-4.2795095,-1.0645248" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.96411079,-4.2795687,1.064428" p2="-0.96426386,4.2795095,1.0645248" p3="0.96422225,4.2795691,1.0644648" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.96411091,4.2795691,-1.0644279" p2="-0.9643752,4.2795095,-1.0643678" p3="-0.96422225,-4.2795687,-1.0644646" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB1_Navigation" Id="{FB0FE9F8-05B4-45F9-9B00-B861DBDA00D2}" Name="Solid7" Pos="779.78351,339.17065,163.83696" FloorNumber="-1" Rotate="-0.46793237,0.3260614,0.13081259,0.8109324" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-0.96426386,4.2795095,1.0645248" p2="-0.96411079,-4.2795687,1.064428" p3="-0.96422225,-4.2795687,-1.0644646" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-0.96422225,-4.2795687,-1.0644646" p1="-0.96411079,-4.2795687,1.064428" p2="-0.96426386,4.2795095,1.0645248" p3="-0.9643752,4.2795095,-1.0643678" p4="-0.9643752,4.2795095,-1.0643678" p5="-0.96426386,4.2795095,1.0645248" p6="0.96422225,4.2795691,1.0644648" p7="0.96411091,4.2795691,-1.0644279" p8="0.96411091,4.2795691,-1.0644279" p9="0.96422225,4.2795691,1.0644648" p10="0.96437508,-4.2795095,1.0643679" p11="0.96426362,-4.2795095,-1.0645248" p12="0.96426362,-4.2795095,-1.0645248" p13="0.96437508,-4.2795095,1.0643679" p14="-0.96411079,-4.2795687,1.064428" p15="-0.96422225,-4.2795687,-1.0644646" p16="0.96422225,4.2795691,1.0644648" p17="-0.96426386,4.2795095,1.0645248" p18="-0.96411079,-4.2795687,1.064428" p19="0.96437508,-4.2795095,1.0643679" p20="-0.96422225,-4.2795687,-1.0644646" p21="-0.9643752,4.2795095,-1.0643678" p22="0.96411091,4.2795691,-1.0644279" p23="0.96426362,-4.2795095,-1.0645248"/>
+     </Face>
+     <Face p1="0.96422225,4.2795691,1.0644648" p2="-0.96426386,4.2795095,1.0645248" p3="-0.9643752,4.2795095,-1.0643678" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.96437508,-4.2795095,1.0643679" p2="0.96422225,4.2795691,1.0644648" p3="0.96411091,4.2795691,-1.0644279" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.96411079,-4.2795687,1.064428" p2="0.96437508,-4.2795095,1.0643679" p3="0.96426362,-4.2795095,-1.0645248" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.96411079,-4.2795687,1.064428" p2="-0.96426386,4.2795095,1.0645248" p3="0.96422225,4.2795691,1.0644648" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.96411091,4.2795691,-1.0644279" p2="-0.9643752,4.2795095,-1.0643678" p3="-0.96422225,-4.2795687,-1.0644646" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

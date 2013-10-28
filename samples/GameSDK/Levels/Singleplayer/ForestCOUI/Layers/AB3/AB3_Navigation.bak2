@@ -1,0 +1,332 @@
+<ObjectLayer>
+ <Layer Name="AB3_Navigation" GUID="{94017750-6067-4549-9E0C-7A274D6D9479}" FullName="AB3/AB3_Navigation" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}">
+  <LayerObjects>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{2CBECE00-A2E5-4EEE-92D6-D9730301D9E7}" Name="CoverSurface19" Pos="540.86682,451.29962,144.26398" FloorNumber="-1" Rotate="0.25037977,0,0,0.9681477" ColorRGB="11829830" SurfaceID="12" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1.5" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{831BC517-A6DE-463F-AC92-CA041B011B8C}" Name="CoverSurface10" Pos="532.52399,487.67896,144.72649" FloorNumber="-1" Rotate="-0.034899723,0,0,0.99939084" ColorRGB="11829830" SurfaceID="13" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1.2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{CEAA2719-D3BA-4573-A27F-47013FE5600C}" Name="CoverSurface39" Pos="576.47003,449.24539,155.78909" FloorNumber="-1" Rotate="0.46947142,0,0,0.88294768" ColorRGB="11829830" SurfaceID="14" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="3" LimitRight="3" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{9B64E51A-BAD2-4680-B180-5BED11A7ECA0}" Name="NavigationArea3" Pos="561.09613,459.9342,141.36644" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="20" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="8.5740356,12.440613,0"/>
+     <Point Pos="20.80304,18.383606,0"/>
+     <Point Pos="20.009583,5.0887146,0"/>
+     <Point Pos="15.137024,-3.4864502,0"/>
+     <Point Pos="7.6558838,-12.114716,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{CE31E226-9BA2-40AB-9AB6-2A2A1CEBA845}" Name="CoverSurface38" Pos="576.90997,450.57004,155.7999" FloorNumber="-1" Rotate="0.96814764,0,0,0.25038013" ColorRGB="11829830" SurfaceID="15" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="3" LimitRight="3" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{FFC68F28-FADE-4CC7-B893-A0CA6B1F9011}" Name="CoverSurface44" Pos="589.20203,449.45761,154.56099" FloorNumber="-1" Rotate="0.54463881,0,0,0.83867073" ColorRGB="11829830" SurfaceID="16" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="3" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{449BB12A-4C20-4BAD-9D10-DEA25E24F68E}" Name="CoverSurface12" Pos="559.11584,468.43933,144.31915" FloorNumber="-1" Rotate="0.99996191,0,0,-0.0087262886" ColorRGB="11829830" SurfaceID="17" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{8C99B32A-F7C6-4F47-AE01-8BDBA8BD44B1}" Name="CoverSurface43" Pos="586.59424,451.35141,154.56099" FloorNumber="-1" Rotate="0.77162439,0,0,0.63607842" ColorRGB="11829830" SurfaceID="18" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="5" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{C1B2E82A-AD90-4EB4-AC84-7A0D2985F3DF}" Name="CoverSurface82" Pos="493.53625,447.76114,142.47189" FloorNumber="-1" Rotate="0.94264156,0,0,-0.33380669" ColorRGB="11829830" SurfaceID="19" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{DA65132B-26D0-41C3-84D2-378ED430FFA6}" Name="CoverSurface28" Pos="517.46185,456.46716,144.47446" FloorNumber="-1" Rotate="0.54463899,0,0,0.83867073" ColorRGB="11829830" SurfaceID="20" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{97C53734-ED0D-45D9-80DF-2720C7B24CDC}" Name="CoverSurface29" Pos="508.48526,456.85791,144.56638" FloorNumber="-1" Rotate="-0.33380714,0,0,0.94264138" ColorRGB="11829830" SurfaceID="21" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{D186CF39-41C2-4E78-AEF1-57006EE821BD}" Name="CoverSurface7" Pos="541.29016,502.53412,144.7746" FloorNumber="-1" Rotate="0.18223533,0,0,0.98325497" ColorRGB="11829830" SurfaceID="22" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB3_Navigation" Id="{F19DF841-8185-4C60-8A9E-E46788324B42}" Name="Solid17" Pos="554.74011,433.8421,143.39827" FloorNumber="-1" Rotate="0.38184744,0.11248971,-0.046884973,0.91615528" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-1.6815872,1.8528748,0.33020782" p2="-1.6815872,-1.8529358,0.33020782" p3="-1.6815872,-1.8529358,-0.33020782" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-1.6815872,-1.8529358,-0.33020782" p1="-1.6815872,-1.8529358,0.33020782" p2="-1.6815872,1.8528748,0.33020782" p3="-1.6815872,1.8528748,-0.33020782" p4="-1.6815872,1.8528748,-0.33020782" p5="-1.6815872,1.8528748,0.33020782" p6="1.6815876,1.8529358,0.33020782" p7="1.6815876,1.8529358,-0.33020782" p8="1.6815876,1.8529358,-0.33020782" p9="1.6815876,1.8529358,0.33020782" p10="1.6815876,-1.8528748,0.33020782" p11="1.6815876,-1.8528748,-0.33020782" p12="1.6815876,-1.8528748,-0.33020782" p13="1.6815876,-1.8528748,0.33020782" p14="-1.6815872,-1.8529358,0.33020782" p15="-1.6815872,-1.8529358,-0.33020782" p16="1.6815876,1.8529358,0.33020782" p17="-1.6815872,1.8528748,0.33020782" p18="-1.6815872,-1.8529358,0.33020782" p19="1.6815876,-1.8528748,0.33020782" p20="-1.6815872,-1.8529358,-0.33020782" p21="-1.6815872,1.8528748,-0.33020782" p22="1.6815876,1.8529358,-0.33020782" p23="1.6815876,-1.8528748,-0.33020782"/>
+     </Face>
+     <Face p1="1.6815876,1.8529358,0.33020782" p2="-1.6815872,1.8528748,0.33020782" p3="-1.6815872,1.8528748,-0.33020782" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="1.6815876,-1.8528748,0.33020782" p2="1.6815876,1.8529358,0.33020782" p3="1.6815876,1.8529358,-0.33020782" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-1.6815872,-1.8529358,0.33020782" p2="1.6815876,-1.8528748,0.33020782" p3="1.6815876,-1.8528748,-0.33020782" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-1.6815872,-1.8529358,0.33020782" p2="-1.6815872,1.8528748,0.33020782" p3="1.6815876,1.8529358,0.33020782" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="1.6815876,1.8529358,-0.33020782" p2="-1.6815872,1.8528748,-0.33020782" p3="-1.6815872,-1.8529358,-0.33020782" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{FBFE3E43-4860-4AA9-A5DC-C7C36FAF889F}" Name="CoverSurface21" Pos="542.00751,436.7128,144.33336" FloorNumber="-1" Rotate="0.99996191,0,0,-0.0087263212" ColorRGB="11829830" SurfaceID="38" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB3_Navigation" Id="{C267A444-0A86-4750-99F4-ECCEBD01161B}" Name="Solid12" Pos="521.25745,516.66858,145.63071" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-2.7666931,2.2151794,0.8447876" p2="-2.7666931,-2.2151794,0.8447876" p3="-2.7666931,-2.2151794,-0.8447876" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-2.7666931,-2.2151794,-0.8447876" p1="-2.7666931,-2.2151794,0.8447876" p2="-2.7666931,2.2151794,0.8447876" p3="-2.7666931,2.2151794,-0.8447876" p4="-2.7666931,2.2151794,-0.8447876" p5="-2.7666931,2.2151794,0.8447876" p6="2.7666931,2.2151794,0.8447876" p7="2.7666931,2.2151794,-0.8447876" p8="2.7666931,2.2151794,-0.8447876" p9="2.7666931,2.2151794,0.8447876" p10="2.7666931,-2.2151794,0.8447876" p11="2.7666931,-2.2151794,-0.8447876" p12="2.7666931,-2.2151794,-0.8447876" p13="2.7666931,-2.2151794,0.8447876" p14="-2.7666931,-2.2151794,0.8447876" p15="-2.7666931,-2.2151794,-0.8447876" p16="2.7666931,2.2151794,0.8447876" p17="-2.7666931,2.2151794,0.8447876" p18="-2.7666931,-2.2151794,0.8447876" p19="2.7666931,-2.2151794,0.8447876" p20="-2.7666931,-2.2151794,-0.8447876" p21="-2.7666931,2.2151794,-0.8447876" p22="2.7666931,2.2151794,-0.8447876" p23="2.7666931,-2.2151794,-0.8447876"/>
+     </Face>
+     <Face p1="2.7666931,2.2151794,0.8447876" p2="-2.7666931,2.2151794,0.8447876" p3="-2.7666931,2.2151794,-0.8447876" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="2.7666931,-2.2151794,0.8447876" p2="2.7666931,2.2151794,0.8447876" p3="2.7666931,2.2151794,-0.8447876" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-2.7666931,-2.2151794,0.8447876" p2="2.7666931,-2.2151794,0.8447876" p3="2.7666931,-2.2151794,-0.8447876" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-2.7666931,-2.2151794,0.8447876" p2="-2.7666931,2.2151794,0.8447876" p3="2.7666931,2.2151794,0.8447876" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="2.7666931,2.2151794,-0.8447876" p2="-2.7666931,2.2151794,-0.8447876" p3="-2.7666931,-2.2151794,-0.8447876" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{7CAC2845-53C6-4A8C-B6C3-6874AAE9E921}" Name="CoverSurface83" Pos="504.51831,454.55261,143.38373" FloorNumber="-1" Rotate="0.78260821,0,0,-0.62251455" ColorRGB="11829830" SurfaceID="39" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{8BA1DB47-B282-4580-8EA0-A01A92BF7437}" Name="CoverSurface27" Pos="524.41785,459.3461,144.54736" FloorNumber="-1" Rotate="0.66913068,0,0,-0.74314481" ColorRGB="11829830" SurfaceID="40" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{348A7948-669B-4C2D-A63A-FC4EB29AA141}" Name="NavigationArea21" Pos="557.19708,397.31662,147.83223" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="10" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="4.8378906,2.8983459,0"/>
+     <Point Pos="-1.0494995,4.375885,0"/>
+     <Point Pos="-2.1721802,1.1695862,0"/>
+     <Point Pos="-4.0836792,-4.4582825,0"/>
+     <Point Pos="0.020874023,-11.299194,0"/>
+     <Point Pos="0.55419922,-18.487549,0"/>
+     <Point Pos="1.9258423,-18.922668,0"/>
+     <Point Pos="6.6134033,-20.185699,0"/>
+     <Point Pos="8.4147949,-8.0036011,0"/>
+     <Point Pos="6.9585571,-6.3458862,0"/>
+     <Point Pos="0.071899414,-3.5924988,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{D68A1B52-2C29-4F9F-940D-05DF9028DBB3}" Name="CoverSurface20" Pos="534.17761,445.12564,144.33336" FloorNumber="-1" Rotate="0.66913074,0,0,-0.74314475" ColorRGB="11829830" SurfaceID="41" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{AF427E5D-494B-4E77-B2F7-13B170BC799E}" Name="CoverSurface22" Pos="538.61841,438.01031,144.33336" FloorNumber="-1" Rotate="0.99996191,0,0,-0.0087263333" ColorRGB="11829830" SurfaceID="42" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{D22D445E-29C8-43BC-B076-44E030424632}" Name="CoverSurface14" Pos="547.71307,476.83151,144.31915" FloorNumber="-1" Rotate="0.63607836,0,0,-0.77162451" ColorRGB="11829830" SurfaceID="43" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{5C5F865F-D482-46C7-A2E8-63EFC1D10694}" Name="CoverSurface42" Pos="576.60547,445.23407,155.78909" FloorNumber="-1" Rotate="0.13917284,0,0,0.99026811" ColorRGB="11829830" SurfaceID="44" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="5" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{4E877E70-935A-43E5-8573-393DFB016D49}" Name="CoverSurface9" Pos="539.90387,485.31396,144.39276" FloorNumber="-1" Rotate="0.63607842,0,0,-0.77162445" ColorRGB="11829830" SurfaceID="45" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{32302872-B68D-468E-A3DB-95EF76505621}" Name="NavigationArea9" Pos="548.96204,411.19955,137.86163" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="12" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="2.0403442,2.7630005,0"/>
+     <Point Pos="6.1647339,11.96524,0"/>
+     <Point Pos="5.9898682,17.195923,0"/>
+     <Point Pos="4.029541,23.013733,0"/>
+     <Point Pos="-0.33599854,27.599548,0"/>
+     <Point Pos="-7.9195557,20.863251,0"/>
+     <Point Pos="-8.5634155,19.329956,0"/>
+     <Point Pos="-2.9960938,10.276886,0"/>
+     <Point Pos="-5.6066284,4.4016418,0"/>
+     <Point Pos="-2.2128296,0.011260986,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB3_Navigation" Id="{1DA8F072-699D-4DFD-BC28-745EF06E7D22}" Name="Solid2" Pos="509.42435,522.13617,145.84293" FloorNumber="-1" Rotate="0.94832367,0,-0.3173047,0" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-0.42833921,1.8529053,0.33020782" p2="-0.42833921,-1.8529053,0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-0.42833921,-1.8529053,-0.33020782" p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" p4="-0.42833921,1.8529053,-0.33020782" p5="-0.42833921,1.8529053,0.33020782" p6="0.42833915,1.8529053,0.33020782" p7="0.42833915,1.8529053,-0.33020782" p8="0.42833915,1.8529053,-0.33020782" p9="0.42833915,1.8529053,0.33020782" p10="0.42833915,-1.8529053,0.33020782" p11="0.42833915,-1.8529053,-0.33020782" p12="0.42833915,-1.8529053,-0.33020782" p13="0.42833915,-1.8529053,0.33020782" p14="-0.42833921,-1.8529053,0.33020782" p15="-0.42833921,-1.8529053,-0.33020782" p16="0.42833915,1.8529053,0.33020782" p17="-0.42833921,1.8529053,0.33020782" p18="-0.42833921,-1.8529053,0.33020782" p19="0.42833915,-1.8529053,0.33020782" p20="-0.42833921,-1.8529053,-0.33020782" p21="-0.42833921,1.8529053,-0.33020782" p22="0.42833915,1.8529053,-0.33020782" p23="0.42833915,-1.8529053,-0.33020782"/>
+     </Face>
+     <Face p1="0.42833915,1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,-1.8529053,0.33020782" p2="0.42833915,1.8529053,0.33020782" p3="0.42833915,1.8529053,-0.33020782" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="0.42833915,-1.8529053,0.33020782" p3="0.42833915,-1.8529053,-0.33020782" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="0.42833915,1.8529053,0.33020782" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,1.8529053,-0.33020782" p2="-0.42833921,1.8529053,-0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{00887B77-4AA4-452A-9808-879BA97CDAA5}" Name="CoverSurface40" Pos="575.68524,449.40927,155.78909" FloorNumber="-1" Rotate="-0.29237193,0,0,0.95630467" ColorRGB="11829830" SurfaceID="46" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{5610DA7B-FFA7-49D6-BF92-C84713F4A628}" Name="CoverSurface16" Pos="554.42853,485.12677,144.5" FloorNumber="-1" Rotate="0.79863536,0,0,0.60181516" ColorRGB="11829830" SurfaceID="47" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{4BA5EA80-8801-4916-8BC2-F0C51CF64C31}" Name="CoverSurface84" Pos="535.1922,503.87988,143.90021" FloorNumber="-1" Rotate="-0.069756664,0,0,0.99756402" ColorRGB="11829830" SurfaceID="48" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB3_Navigation" Id="{8E8B3382-CFDB-4C9C-A1BA-6650F42EC03F}" Name="Solid3" Pos="507.88586,519.67737,145.28719" FloorNumber="-1" Rotate="0.68216693,0.22041836,-0.22824991,0.65876091" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-0.42833921,1.8529053,0.33020782" p2="-0.42833921,-1.8529053,0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-0.42833921,-1.8529053,-0.33020782" p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" p4="-0.42833921,1.8529053,-0.33020782" p5="-0.42833921,1.8529053,0.33020782" p6="0.42833915,1.8529053,0.33020782" p7="0.42833915,1.8529053,-0.33020782" p8="0.42833915,1.8529053,-0.33020782" p9="0.42833915,1.8529053,0.33020782" p10="0.42833915,-1.8529053,0.33020782" p11="0.42833915,-1.8529053,-0.33020782" p12="0.42833915,-1.8529053,-0.33020782" p13="0.42833915,-1.8529053,0.33020782" p14="-0.42833921,-1.8529053,0.33020782" p15="-0.42833921,-1.8529053,-0.33020782" p16="0.42833915,1.8529053,0.33020782" p17="-0.42833921,1.8529053,0.33020782" p18="-0.42833921,-1.8529053,0.33020782" p19="0.42833915,-1.8529053,0.33020782" p20="-0.42833921,-1.8529053,-0.33020782" p21="-0.42833921,1.8529053,-0.33020782" p22="0.42833915,1.8529053,-0.33020782" p23="0.42833915,-1.8529053,-0.33020782"/>
+     </Face>
+     <Face p1="0.42833915,1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,-1.8529053,0.33020782" p2="0.42833915,1.8529053,0.33020782" p3="0.42833915,1.8529053,-0.33020782" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="0.42833915,-1.8529053,0.33020782" p3="0.42833915,-1.8529053,-0.33020782" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="0.42833915,1.8529053,0.33020782" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,1.8529053,-0.33020782" p2="-0.42833921,1.8529053,-0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{1013C082-070A-4E17-B1AA-3BFF89F46B06}" Name="CoverSurface3" Pos="514.49542,526.38171,146.81966" FloorNumber="-1" Rotate="0.91354549,0,0,0.40673667" ColorRGB="11829830" SurfaceID="49" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{66E54283-8E2E-47DB-ABAC-2E40EA9147FB}" Name="CoverSurface8" Pos="548.83447,491.77036,144.39276" FloorNumber="-1" Rotate="-0.33380711,0,0,0.94264138" ColorRGB="11829830" SurfaceID="50" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{BAA3BC85-EA84-4BAB-B8C4-7DDD3BBDC0B3}" Name="CoverSurface78" Pos="517.59302,456.83768,144.56638" FloorNumber="-1" Rotate="0.69465816,0,0,0.71934009" ColorRGB="11829830" SurfaceID="51" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{72979288-12C0-48A6-848C-B165145347E4}" Name="CoverSurface30" Pos="508.28552,451.45117,144.85391" FloorNumber="-1" Rotate="0.65605927,0,0,-0.75470942" ColorRGB="11829830" SurfaceID="52" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{9CE84C99-031C-4513-8C36-F2F014794F05}" Name="CoverSurface4" Pos="507.2171,528.2959,146.81798" FloorNumber="-1" Rotate="0.7253744,0,0,-0.68835455" ColorRGB="11829830" SurfaceID="53" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{385386A0-F7E5-455F-BE54-5C63AA962654}" Name="CoverSurface47" Pos="608.69794,427.10312,152.16277" FloorNumber="-1" Rotate="0.54463875,0,0,0.83867073" ColorRGB="11829830" SurfaceID="54" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="3" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{872DDBA3-3C23-4CA8-9D3E-F963A0E6A403}" Name="CoverSurface25" Pos="523.81482,448.42059,144.50787" FloorNumber="-1" Rotate="0.90258539,0,0,-0.43051085" ColorRGB="11829830" SurfaceID="55" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{7EEA74A4-81E5-428B-81F6-2035A7D0D83F}" Name="CoverSurface33" Pos="545.04584,447.29016,144.22844" FloorNumber="-1" Rotate="0.90996116,0,0,0.41469353" ColorRGB="11829830" SurfaceID="56" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{48E03CAB-5F1A-4F30-9BE7-EC933C086F82}" Name="CoverSurface13" Pos="554.34772,481.34512,144.31915" FloorNumber="-1" Rotate="0.052335739,0,0,0.99862957" ColorRGB="11829830" SurfaceID="57" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{974757B2-6B51-4BAC-A7ED-A24AAFF07B6D}" Name="CoverSurface37" Pos="575.62817,451.04767,155.83746" FloorNumber="-1" Rotate="0.86162919,0,0,-0.50753826" ColorRGB="11829830" SurfaceID="58" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="3" LimitRight="3" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{F8289FB3-F53A-46FF-8F95-57F0A976F258}" Name="CoverSurface18" Pos="554.41595,495.82114,144.63303" FloorNumber="-1" Rotate="0.70090944,0,0,-0.71325028" ColorRGB="11829830" SurfaceID="59" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{D47C95B7-8799-4216-8805-BEDA49406CAC}" Name="CoverSurface24" Pos="530.69116,447.7092,144.27074" FloorNumber="-1" Rotate="0.92718375,0,0,0.37460682" ColorRGB="11829830" SurfaceID="60" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{DB0B98BC-A799-45EB-8DDF-2197DDBD2EEE}" Name="CoverSurface41" Pos="581.58618,443.80588,155.78909" FloorNumber="-1" Rotate="0.13917284,0,0,0.99026811" ColorRGB="11829830" SurfaceID="61" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="5" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{3DCB9CBE-71F7-4115-9891-34E7CA4B90C0}" Name="CoverSurface15" Pos="545.05762,478.83676,144.31915" FloorNumber="-1" Rotate="0.99939084,0,0,0.034899626" ColorRGB="11829830" SurfaceID="62" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{D67617C5-CF6D-41CA-A776-B387BE8BC2D0}" Name="CoverSurface32" Pos="548.42078,442.64188,144.22842" FloorNumber="-1" Rotate="0.68199807,0,0,0.73135394" ColorRGB="11829830" SurfaceID="63" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1.5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{DD8199CE-CB58-4FB1-A5C0-E43390DA72FA}" Name="CoverSurface46" Pos="586.63171,447.53391,155.74503" FloorNumber="-1" Rotate="0.60181522,0,0,-0.79863536" ColorRGB="11829830" SurfaceID="64" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="3" LimitRight="5" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{C936CECE-B048-4A76-AD79-9D4C1CCB75F0}" Name="NavigationArea5" Pos="537.38495,409.49319,141.36644" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="15" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="0.43493652,12.308838,0"/>
+     <Point Pos="-6.7037964,25.41452,0"/>
+     <Point Pos="-22.667847,31.939362,0"/>
+     <Point Pos="-30.485657,33.650726,0"/>
+     <Point Pos="-43.795135,28.388367,0"/>
+     <Point Pos="-64.928406,32.328979,0"/>
+     <Point Pos="-67.900238,24.955933,0"/>
+     <Point Pos="-73.009003,24.53833,0"/>
+     <Point Pos="-75.712677,22.379395,0"/>
+     <Point Pos="-72.056244,14.344208,0"/>
+     <Point Pos="-64.533417,16.044891,0"/>
+     <Point Pos="-58.515167,17.521698,0"/>
+     <Point Pos="-53.064301,16.362335,0"/>
+     <Point Pos="-33.588135,18.385925,0"/>
+     <Point Pos="-20.210449,12.139374,0"/>
+     <Point Pos="-8.696106,1.0054016,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Side15="0" Side16="0" Side17="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{1C3163D0-2BD0-4AAE-BB67-E14C5C582960}" Name="NavigationArea23" Pos="382.89899,406.21649,140" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="25" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="19.948303,17.032928,0"/>
+     <Point Pos="30.994202,21.185394,0"/>
+     <Point Pos="34.125519,14.189636,0"/>
+     <Point Pos="25.226379,9.3502502,0"/>
+     <Point Pos="28.428009,-1.5650024,0"/>
+     <Point Pos="22.07486,-3.1246643,0"/>
+     <Point Pos="20.154999,3.1032104,0"/>
+     <Point Pos="13.841217,1.4067688,0"/>
+     <Point Pos="16.302612,-14.045135,0"/>
+     <Point Pos="4.4776306,-12.7258,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{EAA7A5D3-4020-447D-988D-29D876AE21B7}" Name="CoverSurface31" Pos="513.6181,448.86707,144.37914" FloorNumber="-1" Rotate="0.83388603,0,0,-0.55193669" ColorRGB="11829830" SurfaceID="65" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{373226DC-4BF6-4166-94FB-32BE775AE391}" Name="CoverSurface23" Pos="536.72937,441.022,144.33336" FloorNumber="-1" Rotate="0.052335735,0,0,0.99862957" ColorRGB="11829830" SurfaceID="66" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="2" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{B2BB14DE-2EA7-46EF-BE0E-28520BE8969B}" Name="CoverSurface5" Pos="524.25946,519.16583,144.78592" FloorNumber="-1" Rotate="0.2672382,0,0,0.9636305" ColorRGB="11829830" SurfaceID="67" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{622136DE-BFD8-46CF-8874-756D7168AEAB}" Name="NavigationArea6" Pos="570.52606,443.79114,141.36644" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="35" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="16.034607,-4.2709961,0"/>
+     <Point Pos="18.076233,4.157074,0"/>
+     <Point Pos="23.688477,2.3283081,0"/>
+     <Point Pos="36.859375,-16.10556,0"/>
+     <Point Pos="36.242493,-23.385284,0"/>
+     <Point Pos="28.750366,-16.028778,0"/>
+     <Point Pos="16.438354,-12.210388,0"/>
+     <Point Pos="10.933777,-14.739655,0"/>
+     <Point Pos="15.340881,-21.41275,0"/>
+     <Point Pos="26.512207,-20.41394,0"/>
+     <Point Pos="36.140381,-44.574829,0"/>
+     <Point Pos="34.931091,-63.1633,0"/>
+     <Point Pos="36.710876,-72.253998,0"/>
+     <Point Pos="60.028625,-73.161102,0"/>
+     <Point Pos="57.00708,-76.386932,0"/>
+     <Point Pos="73.783691,-81.872589,0"/>
+     <Point Pos="73.405701,-93.538055,0"/>
+     <Point Pos="65.14679,-94.244507,0"/>
+     <Point Pos="57.489502,-87.563629,0"/>
+     <Point Pos="51.587219,-91.370667,0"/>
+     <Point Pos="47.302124,-85.443237,0"/>
+     <Point Pos="39.686584,-92.28125,0"/>
+     <Point Pos="44.597534,-96.842957,0"/>
+     <Point Pos="33.721802,-104.69006,0"/>
+     <Point Pos="19.602356,-105.88364,0"/>
+     <Point Pos="21.389221,-93.357239,0"/>
+     <Point Pos="8.5342407,-76.874725,0"/>
+     <Point Pos="14.881958,-72.204285,0"/>
+     <Point Pos="12.986023,-69.685516,0"/>
+     <Point Pos="6.0539551,-72.815155,0"/>
+     <Point Pos="0.8067627,-70.023956,0"/>
+     <Point Pos="-1.1663208,-65.203979,0"/>
+     <Point Pos="-0.55004883,-58.233948,0"/>
+     <Point Pos="2.7852783,-58.293701,0"/>
+     <Point Pos="7.3428345,-54.785645,0"/>
+     <Point Pos="8.1213989,-49.201965,0"/>
+     <Point Pos="5.9277344,-45.192017,0"/>
+     <Point Pos="0.057006836,-41.358765,0"/>
+     <Point Pos="-8.5913696,-42.966644,0"/>
+     <Point Pos="-13.525513,-41.733734,0"/>
+     <Point Pos="-6.1099854,-20.880219,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Side15="0" Side16="0" Side17="0" Side18="0" Side19="0" Side20="0" Side21="0" Side22="0" Side23="0" Side24="0" Side25="0" Side26="0" Side27="0" Side28="0" Side29="0" Side30="0" Side31="0" Side32="0" Side33="0" Side34="0" Side35="0" Side36="0" Side37="0" Side38="0" Side39="0" Side40="0" Side41="0" Side42="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB3_Navigation" Id="{C1AFCCE0-9A5B-4554-BCF9-419CDA7EB509}" Name="Solid4" Pos="522.17102,447.47382,143.87128" FloorNumber="-1" Rotate="0.73698592,0.20395952,-0.2430695,0.59679937" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-0.42833921,1.8529053,0.33020782" p2="-0.42833921,-1.8529053,0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-0.42833921,-1.8529053,-0.33020782" p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" p4="-0.42833921,1.8529053,-0.33020782" p5="-0.42833921,1.8529053,0.33020782" p6="0.42833915,1.8529053,0.33020782" p7="0.42833915,1.8529053,-0.33020782" p8="0.42833915,1.8529053,-0.33020782" p9="0.42833915,1.8529053,0.33020782" p10="0.42833915,-1.8529053,0.33020782" p11="0.42833915,-1.8529053,-0.33020782" p12="0.42833915,-1.8529053,-0.33020782" p13="0.42833915,-1.8529053,0.33020782" p14="-0.42833921,-1.8529053,0.33020782" p15="-0.42833921,-1.8529053,-0.33020782" p16="0.42833915,1.8529053,0.33020782" p17="-0.42833921,1.8529053,0.33020782" p18="-0.42833921,-1.8529053,0.33020782" p19="0.42833915,-1.8529053,0.33020782" p20="-0.42833921,-1.8529053,-0.33020782" p21="-0.42833921,1.8529053,-0.33020782" p22="0.42833915,1.8529053,-0.33020782" p23="0.42833915,-1.8529053,-0.33020782"/>
+     </Face>
+     <Face p1="0.42833915,1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,-1.8529053,0.33020782" p2="0.42833915,1.8529053,0.33020782" p3="0.42833915,1.8529053,-0.33020782" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="0.42833915,-1.8529053,0.33020782" p3="0.42833915,-1.8529053,-0.33020782" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="0.42833915,1.8529053,0.33020782" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,1.8529053,-0.33020782" p2="-0.42833921,1.8529053,-0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{D77B24E5-52C4-4703-BBAC-934D7B6102D9}" Name="NavigationArea14" Pos="580.50281,485.64636,137.86163" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="20" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="-6.5278931,-7.3826904,0"/>
+     <Point Pos="-11.811646,-7.6997681,0"/>
+     <Point Pos="-14.186279,-2.321167,0"/>
+     <Point Pos="-11.298584,2.7234802,0"/>
+     <Point Pos="-16.903992,6.6073608,0"/>
+     <Point Pos="-14.787354,9.0772705,0"/>
+     <Point Pos="-20.857056,15.358612,0"/>
+     <Point Pos="-23.18927,12.530396,0"/>
+     <Point Pos="-27.009155,14.272797,0"/>
+     <Point Pos="-34.750549,22.372864,0"/>
+     <Point Pos="-33.596619,26.07312,0"/>
+     <Point Pos="-23.203369,25.07666,0"/>
+     <Point Pos="-13.329651,30.211426,0"/>
+     <Point Pos="-3.2047729,54.047119,0"/>
+     <Point Pos="-11.521057,60.003723,0"/>
+     <Point Pos="-11.190491,66.003967,0"/>
+     <Point Pos="-6.7003174,68.303833,0"/>
+     <Point Pos="2.4125977,62.128052,0"/>
+     <Point Pos="3.6416016,43.941895,0"/>
+     <Point Pos="-5.9929199,22.118347,0"/>
+     <Point Pos="4.3710327,1.8092041,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Side15="0" Side16="0" Side17="0" Side18="0" Side19="0" Side20="0" Side21="0" Side22="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{16B950E6-CFFD-4BD5-9276-77B2F5786D77}" Name="CoverSurface17" Pos="561.9765,489.98282,144.63303" FloorNumber="-1" Rotate="0.92718375,0,0,0.37460685" ColorRGB="11829830" SurfaceID="68" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{29D388E6-D228-4A5A-A3FF-14FF6417D731}" Name="CoverSurface2" Pos="513.72504,520.74463,146.46457" FloorNumber="-1" Rotate="0.62251467,0,0,0.78260815" ColorRGB="11829830" SurfaceID="69" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{FD8772E8-9984-48A9-A86A-B39D7192A570}" Name="CoverSurface26" Pos="524.62097,456.93973,144.54736" FloorNumber="-1" Rotate="0.63607842,0,0,-0.77162445" ColorRGB="11829830" SurfaceID="70" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="1" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{03881DEA-DD39-4A9F-96F7-BE91F5D6DD3A}" Name="CoverSurface6" Pos="523.55255,513.68774,144.78592" FloorNumber="-1" Rotate="0.99996191,0,0,-0.008726378" ColorRGB="11829830" SurfaceID="71" Sampler="Default" LimitDepth="0.75" LimitHeight="1" LimitLeft="2" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{2376A6EB-B1A6-4D80-8E4C-D1319D4E77E7}" Name="CoverSurface11" Pos="553.87244,467.49719,144.63303" FloorNumber="-1" Rotate="0.99996191,0,0,-0.0087262886" ColorRGB="11829830" SurfaceID="72" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{2670C5EC-2A45-4F81-BFBE-EF0672C672C7}" Name="CoverSurface34" Pos="583.68225,455.40012,156.01874" FloorNumber="-1" Rotate="0.13917291,0,0,0.99026811" ColorRGB="11829830" SurfaceID="73" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="2" LimitRight="1" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+   <Object RndFlags="1077936136" ViewDistRatio="100" LMQuality="1" ExcludePickingMaterial="0" Type="Solid" Layer="AB3_Navigation" Id="{B4CA35ED-2B24-4FB2-867B-AB14F698975D}" Name="Solid18" Pos="505.52356,452.01926,143.87128" FloorNumber="-1" Rotate="0.94828749,0.0027689661,-0.31729263,-0.0082756393" ColorRGB="16776960" Material="Materials/special/collision_proxy_entitiesonly" MatLayersMask="0">
+    <Brush ZeroTolerance="1">
+     <Face p1="-0.42833921,1.8529053,0.33020782" p2="-0.42833921,-1.8529053,0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="0" v1="1" v2="2" v3="3" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0">
+      <Vertex NumberOfVertices="24" p0="-0.42833921,-1.8529053,-0.33020782" p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" p4="-0.42833921,1.8529053,-0.33020782" p5="-0.42833921,1.8529053,0.33020782" p6="0.42833915,1.8529053,0.33020782" p7="0.42833915,1.8529053,-0.33020782" p8="0.42833915,1.8529053,-0.33020782" p9="0.42833915,1.8529053,0.33020782" p10="0.42833915,-1.8529053,0.33020782" p11="0.42833915,-1.8529053,-0.33020782" p12="0.42833915,-1.8529053,-0.33020782" p13="0.42833915,-1.8529053,0.33020782" p14="-0.42833921,-1.8529053,0.33020782" p15="-0.42833921,-1.8529053,-0.33020782" p16="0.42833915,1.8529053,0.33020782" p17="-0.42833921,1.8529053,0.33020782" p18="-0.42833921,-1.8529053,0.33020782" p19="0.42833915,-1.8529053,0.33020782" p20="-0.42833921,-1.8529053,-0.33020782" p21="-0.42833921,1.8529053,-0.33020782" p22="0.42833915,1.8529053,-0.33020782" p23="0.42833915,-1.8529053,-0.33020782"/>
+     </Face>
+     <Face p1="0.42833915,1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="-0.42833921,1.8529053,-0.33020782" NumberOfPoints="4" v0="4" v1="5" v2="6" v3="7" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,-1.8529053,0.33020782" p2="0.42833915,1.8529053,0.33020782" p3="0.42833915,1.8529053,-0.33020782" NumberOfPoints="4" v0="8" v1="9" v2="10" v3="11" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="0.42833915,-1.8529053,0.33020782" p3="0.42833915,-1.8529053,-0.33020782" NumberOfPoints="4" v0="12" v1="13" v2="14" v3="15" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="-0.42833921,-1.8529053,0.33020782" p2="-0.42833921,1.8529053,0.33020782" p3="0.42833915,1.8529053,0.33020782" NumberOfPoints="4" v0="16" v1="17" v2="18" v3="19" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+     <Face p1="0.42833915,1.8529053,-0.33020782" p2="-0.42833921,1.8529053,-0.33020782" p3="-0.42833921,-1.8529053,-0.33020782" NumberOfPoints="4" v0="20" v1="21" v2="22" v3="23" MatId="0" TexScale="1,1,0" TexShift="0,0,0" TexRotate="0"/>
+    </Brush>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{D7967BEE-369B-4FD4-828A-A6F9FA5C8121}" Name="NavigationArea4" Pos="534.72803,449.92151,141.36644" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="5" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="17.572693,14.145264,0"/>
+     <Point Pos="-0.97064209,35.979401,0"/>
+     <Point Pos="-9.2567139,29.691101,0"/>
+     <Point Pos="-12.401978,33.413422,0"/>
+     <Point Pos="-0.29870605,43.026367,0"/>
+     <Point Pos="3.2139282,38.915649,0"/>
+     <Point Pos="9.7618408,43.807343,0"/>
+     <Point Pos="7.8165283,45.834595,0"/>
+     <Point Pos="-0.5602417,43.897278,0"/>
+     <Point Pos="-2.5772705,53.117279,0"/>
+     <Point Pos="-2.4334717,53.452637,0"/>
+     <Point Pos="-1.423584,58.770966,0"/>
+     <Point Pos="-61.428131,2.6523743,0"/>
+     <Point Pos="-55.096741,-2.1264038,0"/>
+     <Point Pos="-42.478607,1.2629089,0"/>
+     <Point Pos="-38.425629,-2.403656,0"/>
+     <Point Pos="-34.029541,4.5087891,0"/>
+     <Point Pos="-29.385834,6.468811,0"/>
+     <Point Pos="-29.378235,9.5898132,0"/>
+     <Point Pos="-17.591431,9.8907471,0"/>
+     <Point Pos="-12.61084,8.77771,0"/>
+     <Point Pos="-10.853088,16.671906,0"/>
+     <Point Pos="-6.5369263,15.889191,0"/>
+     <Point Pos="-8.1171875,7.7929077,0"/>
+     <Point Pos="-1.817749,6.7728577,0"/>
+     <Point Pos="-2.7804565,0.75198364,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0" Side7="0" Side8="0" Side9="0" Side10="0" Side11="0" Side12="0" Side13="0" Side14="0" Side15="0" Side16="0" Side17="0" Side18="0" Side19="0" Side20="0" Side21="0" Side22="0" Side23="0" Side24="0" Side25="0" Side26="0" Side27="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="NavigationArea" Layer="AB3_Navigation" Id="{86860FFB-60A8-43AA-819D-7AAD9874F534}" Name="NavigationArea17" Pos="520.2998,448.90652,137.86163" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="200" Height="8" Exclusion="1" DisplayFilled="0">
+    <AffectedAgentTypes MediumSizedCharacters="1" VehicleMedium="0"/>
+    <Points>
+     <Point Pos="0,0,0"/>
+     <Point Pos="1.045105,5.3688354,0"/>
+     <Point Pos="-2.9377441,6.0731201,0"/>
+     <Point Pos="-3.0534058,0.30767822,0"/>
+    </Points>
+    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Roof="0" Floor="0"/>
+   </Object>
+   <Object Type="CoverSurface" Layer="AB3_Navigation" Id="{5EF915FD-E398-4E72-812A-DB321D3BDA6C}" Name="CoverSurface1" Pos="515.41461,517.08826,147.48544" FloorNumber="-1" Rotate="0.70090926,0,0,-0.71325046" ColorRGB="11829830" SurfaceID="74" Sampler="Default" LimitDepth="0.75" LimitHeight="2.75" LimitLeft="12" LimitRight="12" SampleWidth="0.25" SampleHeight="0.25" MaxStartHeight="0.5" SimplifyThreshold="0.075000003"/>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

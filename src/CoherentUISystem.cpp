@@ -38,9 +38,9 @@ namespace CoherentUIPlugin
         // unregister listeners
         if ( m_pUISystem && gEnv )
         {
-            if ( gEnv->pGameFramework )
+            if ( gEnv->pGame && gEnv->pGame->GetIGameFramework() )
             {
-                gEnv->pGameFramework->UnregisterListener( this );
+                gEnv->pGame->GetIGameFramework()->UnregisterListener( this );
             }
 
             if ( gEnv->pSystem && m_InputEventsListener )
@@ -72,16 +72,22 @@ namespace CoherentUIPlugin
         m_SystemEventsListener.reset( new CCoherentSystemEventListener( this ) );
         m_InputEventsListener.reset( new CCoherentInputEventListener() );
 
-        gEnv->pGameFramework->RegisterListener( this, "CCoherentUISystem", eFLPriority_HUD );
-        gEnv->pInput->AddEventListener( m_InputEventsListener.get() );
+        if ( gEnv->pGame && gEnv->pGame->GetIGameFramework() )
+        {
+            gEnv->pGame->GetIGameFramework()->RegisterListener( this, "CCoherentUISystem", FRAMEWORKLISTENERPRIORITY_HUD );
+        }
+        if ( gEnv->pInput )
+        {
+            gEnv->pInput->AddEventListener( m_InputEventsListener.get() );
+        }
 
         std::string sPath( gPluginManager->GetPluginDirectory( PLUGIN_NAME ) );
         sPath += "\\host";
         std::wstring sPathW;
         sPathW.assign( sPath.begin(), sPath.end() );
 
-        Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999 );
-        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, nullptr, &m_PakFileHandler );
+        Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999, false, NULL );
+        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, NULL, &m_PakFileHandler );
 
         return m_pUISystem != NULL;
     }
@@ -254,7 +260,7 @@ namespace CoherentUIPlugin
                 return true;
             }
         }
-		
+        
 
         // check other views
         float minDist = std::numeric_limits<float>::max();

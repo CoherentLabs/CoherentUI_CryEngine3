@@ -1,0 +1,10 @@
+<ObjectLayer>
+ <Layer Name="AB3" GUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}" FullName="AB3" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="8772314">
+  <LayerObjects />
+  <ChildLayers>
+   <Layer Name="AB3_Navigation" GUID="{94017750-6067-4549-9E0C-7A274D6D9479}" FullName="AB3/AB3_Navigation" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}"/>
+   <Layer Name="AB3_Art" GUID="{E40DE68B-7A2C-4772-924E-2CAFD808917A}" FullName="AB3/AB3_Art" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}"/>
+   <Layer Name="AB3_Logic" GUID="{AEF81BA9-8BEC-4562-BCB4-5FBCE76A310F}" FullName="AB3/AB3_Logic" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="8772314" ParentGUID="{66B3B212-ED45-4A38-8A52-0DFC2D1DF46F}"/>
+  </ChildLayers>
+ </Layer>
+</ObjectLayer>

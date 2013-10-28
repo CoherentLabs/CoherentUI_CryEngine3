@@ -1,4 +1,5 @@
 #include <StdAfx.h>
+#include <IGameTokens.h>
 #include <Nodes/G2FlowBaseNode.h>
 #include <CPluginCoherentUI.h>
 #include <Coherent/UI/View.h>
@@ -53,7 +54,7 @@ namespace CoherentUIPlugin
                     InputPortConfig_Void( "Activate",                            _HELP( "activate view" ) ),
                     InputPortConfig<int>( "ViewID",                   0,         _HELP( "view id" ) ),
                     InputPortConfig<string>( "Event", "GameTokens",  NULL, _HELP( "event name" ), NULL ),
-                    InputPortConfig_Null(),
+                    InputPortConfig_AnyType( NULL ),
                 };
 
                 config.pInputPorts = inputs;

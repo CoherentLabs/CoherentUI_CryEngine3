@@ -1,0 +1,178 @@
+<ObjectLayer>
+ <Layer Name="Night_lightsetup" GUID="{FC0DA5F3-C56D-43F8-B308-B6367568CA9F}" FullName="Night_lightsetup" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="1" ID="0">
+  <LayerObjects>
+   <Object Type="Entity" Layer="Night_lightsetup" Id="{8D46A659-8455-4B16-ADB8-10A1E7AB2632}" Name="RainSetupFG" Pos="703.91974,336.26114,167.65964" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="FlowgraphEntity">
+    <FlowGraph Description="" Group="rain" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="2" Class="entity:Rain" pos="820,-120,0" flags="0" EntityGUID="{3531CE7F-2A55-43EE-AA0C-635FA8499673}" EntityGUID_64="43EE2A553531CE7F">
+       <Inputs entityId="0" Amount="0" Disable="0" Enable="0" MistAmount="0" PuddlesAmount="0" Radius="0" RainDropsAmount="0" RainDropsSpeed="0"/>
+      </Node>
+      <Node Id="4" Class="Time:Timer" pos="-550,-150,0" flags="0">
+       <Inputs period="1" min="0" max="0" paused="0"/>
+      </Node>
+      <Node Id="6" Class="Interpol:Float" pos="440,-190,0" flags="0">
+       <Inputs StartValue="0.3" EndValue="0" Time="4" UpdateFrequency="0"/>
+      </Node>
+      <Node Id="7" Class="Interpol:Float" pos="440,-70,0" flags="0">
+       <Inputs StartValue="0" EndValue="0.3" Time="4" UpdateFrequency="0"/>
+      </Node>
+      <Node Id="9" Class="Time:TimeOfDay" pos="-220,-150,0" flags="0">
+       <Inputs Time="0" ForceUpdate="1" Speed="0"/>
+      </Node>
+      <Node Id="13" Class="Math:InRange" pos="-10,-150,0" flags="0">
+       <Inputs In="0" Min="0" Max="3"/>
+      </Node>
+      <Node Id="17" Class="Logic:Gate" pos="180,-70,0" flags="0">
+       <Inputs Closed="0"/>
+      </Node>
+      <Node Id="18" Class="Logic:Gate" pos="180,-190,0" flags="0">
+       <Inputs Closed="1"/>
+      </Node>
+      <Node Id="20" Class="Logic:Any" pos="700,-120,0" flags="0" InHideMask="63" OutHideMask="1">
+       <Inputs />
+      </Node>
+      <Node Id="22" Class="Logic:Any" pos="330,-190,0" flags="0" InHideMask="63" OutHideMask="1">
+       <Inputs />
+      </Node>
+      <Node Id="23" Class="Logic:Any" pos="330,-70,0" flags="0" InHideMask="63" OutHideMask="1">
+       <Inputs />
+      </Node>
+      <Node Id="25" Class="Game:Start" pos="-550,-70,0" flags="0">
+       <Inputs InGame="1" InEditor="1"/>
+      </Node>
+      <Node Id="26" Class="Logic:Gate" pos="-370,-150,0" flags="0">
+       <Inputs Closed="1"/>
+      </Node>
+     </Nodes>
+     <Edges>
+      <Edge nodeIn="26" nodeOut="4" portIn="In" portOut="out" enabled="1"/>
+      <Edge nodeIn="17" nodeOut="6" portIn="Open" portOut="Done" enabled="1"/>
+      <Edge nodeIn="20" nodeOut="6" portIn="in1" portOut="Value" enabled="1"/>
+      <Edge nodeIn="18" nodeOut="7" portIn="Open" portOut="Done" enabled="1"/>
+      <Edge nodeIn="20" nodeOut="7" portIn="in2" portOut="Value" enabled="1"/>
+      <Edge nodeIn="13" nodeOut="9" portIn="In" portOut="CurTime" enabled="1"/>
+      <Edge nodeIn="2" nodeOut="13" portIn="Disable" portOut="false" enabled="1"/>
+      <Edge nodeIn="2" nodeOut="13" portIn="Enable" portOut="true" enabled="1"/>
+      <Edge nodeIn="17" nodeOut="13" portIn="In" portOut="true" enabled="1"/>
+      <Edge nodeIn="18" nodeOut="13" portIn="In" portOut="false" enabled="1"/>
+      <Edge nodeIn="23" nodeOut="17" portIn="in1" portOut="Out" enabled="1"/>
+      <Edge nodeIn="22" nodeOut="18" portIn="in1" portOut="Out" enabled="1"/>
+      <Edge nodeIn="2" nodeOut="20" portIn="Amount" portOut="out" enabled="1"/>
+      <Edge nodeIn="6" nodeOut="22" portIn="Start" portOut="out" enabled="1"/>
+      <Edge nodeIn="18" nodeOut="22" portIn="Close" portOut="out" enabled="1"/>
+      <Edge nodeIn="7" nodeOut="23" portIn="Start" portOut="out" enabled="1"/>
+      <Edge nodeIn="17" nodeOut="23" portIn="Close" portOut="out" enabled="1"/>
+      <Edge nodeIn="26" nodeOut="25" portIn="Open" portOut="output" enabled="1"/>
+      <Edge nodeIn="9" nodeOut="26" portIn="Get" portOut="Out" enabled="1"/>
+     </Edges>
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="Entity" Layer="Night_lightsetup" Id="{3531CE7F-2A55-43EE-AA0C-635FA8499673}" Name="Rain1" Pos="703.91974,336.26114,169.8206" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Rain">
+    <Properties fAmount="0.6" clrColor="0.344026,0.344026,0.344026" bDisableOcclusion="0" bEnabled="0" fFakeGlossiness="4" fFakeReflectionsAmount="1" bIgnoreVisareas="0" fMistAmount="1" fMistHeight="2" fPuddlesAmount="1" fPuddlesMaskAmount="0.7" fPuddlesRippleAmount="20" fRadius="10000" fRainDropsAmount="1" fRainDropsLighting="0.5" fRainDropsSpeed="1.3" fSplashesAmount="80"/>
+   </Object>
+   <Object Type="Entity" Layer="Night_lightsetup" Id="{2E5B2E89-1B06-455F-A8F3-420CDB235EE4}" Name="Light41" Pos="765.57782,366.99399,180.25313" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="8" LodRatio="100" ViewDistRatio="10" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="0" _bCheapLight="0" bForceDisableCheapLight="0" Radius="25" _nVersion="0">
+     <Color clrDiffuse="1,1,1" fDiffuseMultiplier="0.3" fHDRDynamic="0" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbient="1" fAttenuationFalloffMax="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bDisableX360Opto="0" bFakeLight="0" flare_Flare="" bFlareEnable="1" fFlareFOV="360" bIgnoresVisAreas="0" bIrradianceVolumes="0" fShadowBias="1" nShadowMinResPercent="0" fShadowResolutionScale="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" SortPriority="0"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Shape bAreaLight="0" fDiffuseSoftness="0.75" fLightFov="180" fPlaneHeight="1" fPlaneWidth="1" texture_Texture="" bTextureReflection="1" vFadeDimensionsBottom="0" vFadeDimensionsFar="0" vFadeDimensionsLeft="0" vFadeDimensionsNear="0" vFadeDimensionsRight="0" vFadeDimensionsTop="0"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" bAttachToSun="0" lightanimation_LightAnimation="" nLightStyle="0" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Night_lightsetup" Id="{22186DF1-C9CA-4818-850B-5DFC84CE2088}" Name="NightLightsFG" Pos="703.91974,336.26114,168.70857" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="FlowgraphEntity">
+    <FlowGraph Description="" Group="Lighting" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="4" Class="Time:Timer" pos="-510,180,0" flags="0">
+       <Inputs period="3" min="0" max="0" paused="0"/>
+      </Node>
+      <Node Id="9" Class="Time:TimeOfDay" pos="-32,140,0" flags="0">
+       <Inputs Time="0" ForceUpdate="1" Speed="0"/>
+      </Node>
+      <Node Id="13" Class="Math:InRange" pos="190,150,0" flags="0">
+       <Inputs In="0" Min="6" Max="18"/>
+      </Node>
+      <Node Id="25" Class="Game:Start" pos="-530,270,0" flags="0">
+       <Inputs InGame="1" InEditor="1"/>
+      </Node>
+      <Node Id="26" Class="Logic:Gate" pos="-182,180,0" flags="0">
+       <Inputs Closed="1"/>
+      </Node>
+      <Node Id="50" Class="entity:Light" pos="550,160,0" flags="0" EntityGUID="{2E5B2E89-1B06-455F-A8F3-420CDB235EE4}" EntityGUID_64="455F1B062E5B2E89">
+       <Inputs entityId="0" Active="0" DiffuseColor="0,0,0" DiffuseMultiplier="0" Disable="0" Enable="0" HDRDynamic="0" Radius="0" SpecularMultiplier="0"/>
+      </Node>
+      <Node Id="54" Class="Logic:Any" pos="360,230,0" flags="0">
+       <Inputs />
+      </Node>
+      <Node Id="56" Class="Logic:Any" pos="360,120,0" flags="0">
+       <Inputs />
+      </Node>
+      <Node Id="57" Name="DAY" Class="_comment" pos="360,90,0" flags="0"/>
+      <Node Id="58" Name="NIGHT" Class="_comment" pos="360,340,0" flags="0"/>
+      <Node Id="61" Class="Logic:Any" pos="-320,180,0" flags="0" InHideMask="63" OutHideMask="1">
+       <Inputs />
+      </Node>
+      <Node Id="62" Class="entity:Light" pos="550,80,0" flags="0" EntityGUID="{60A1A5DA-F483-4C7F-9AA7-3F757679D9DC}" EntityGUID_64="4C7FF48360A1A5DA">
+       <Inputs entityId="0" Active="0" DiffuseColor="0,0,0" DiffuseMultiplier="0" Disable="0" Enable="0" HDRDynamic="0" Radius="0" SpecularMultiplier="0"/>
+      </Node>
+      <Node Id="10079" Class="Movement:RotateEntity" pos="30,540,0" flags="0" EntityGUID="{E942251E-27BC-4654-BD27-0E75B418F347}" EntityGUID_64="465427BCE942251E">
+       <Inputs entityId="0" Speed="0,0,25" Paused="0" Ref="0"/>
+      </Node>
+      <Node Id="10080" Class="Movement:RotateEntity" pos="30,620,0" flags="0" EntityGUID="{3D8C24F5-B8C3-40A2-8521-EE717B12954D}" EntityGUID_64="40A2B8C33D8C24F5">
+       <Inputs entityId="0" Speed="0,0,25" Paused="0" Ref="0"/>
+      </Node>
+      <Node Id="10081" Name="Lighthouse_Light_and_Beam_rotation" Class="_commentbox" pos="16.389893,499.04434,0" flags="0">
+       <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+       <ResizeBorder X="0" Y="0" Width="217" Height="179"/>
+       <NodeSize Width="332.14313" Height="206.39063"/>
+      </Node>
+      <Node Id="10083" Class="entity:GeomEntity" pos="550,320,0" flags="0" EntityGUID="{E942251E-27BC-4654-BD27-0E75B418F347}" EntityGUID_64="465427BCE942251E">
+       <Inputs entityId="0" Hide="0" MakeInvulnerable="0" MakeVulnerable="0" Remove="0" ResetHealth="0" UnHide="0"/>
+      </Node>
+      <Node Id="10085" Class="entity:Light" pos="550,240,0" flags="0" EntityGUID="{3D8C24F5-B8C3-40A2-8521-EE717B12954D}" EntityGUID_64="40A2B8C33D8C24F5">
+       <Inputs entityId="0" Active="0" DiffuseColor="0,0,0" DiffuseMultiplier="0" Disable="0" Enable="0" HDRDynamic="0" Radius="0" SpecularMultiplier="0"/>
+      </Node>
+      <Node Id="10086" Name="Turn_lights_on_or_off,_depending_on_time_of_day" Class="_commentbox" pos="-552.85748,-47.177002,0" flags="0">
+       <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+       <ResizeBorder X="0" Y="0" Width="1309.6155" Height="491.47745"/>
+       <NodeSize Width="1309.6155" Height="518.86804"/>
+      </Node>
+      <Node Id="10088" Class="entity:Light" pos="550,0,0" flags="0" EntityGUID="{83B5ECCF-8F41-42A2-BF0E-E58EB576C188}" EntityGUID_64="42A28F4183B5ECCF">
+       <Inputs entityId="0" Active="0" DiffuseColor="0,0,0" DiffuseMultiplier="0" Disable="0" Enable="0" HDRDynamic="0" Radius="0" SpecularMultiplier="0"/>
+      </Node>
+     </Nodes>
+     <Edges>
+      <Edge nodeIn="61" nodeOut="4" portIn="in1" portOut="out" enabled="1"/>
+      <Edge nodeIn="13" nodeOut="9" portIn="In" portOut="CurTime" enabled="1"/>
+      <Edge nodeIn="54" nodeOut="13" portIn="in1" portOut="false" enabled="1"/>
+      <Edge nodeIn="56" nodeOut="13" portIn="in1" portOut="true" enabled="1"/>
+      <Edge nodeIn="26" nodeOut="25" portIn="Open" portOut="output" enabled="1"/>
+      <Edge nodeIn="61" nodeOut="25" portIn="in2" portOut="output" enabled="1"/>
+      <Edge nodeIn="9" nodeOut="26" portIn="Get" portOut="Out" enabled="1"/>
+      <Edge nodeIn="50" nodeOut="54" portIn="Active" portOut="out" enabled="1"/>
+      <Edge nodeIn="62" nodeOut="54" portIn="Disable" portOut="out" enabled="1"/>
+      <Edge nodeIn="10083" nodeOut="54" portIn="UnHide" portOut="out" enabled="1"/>
+      <Edge nodeIn="10085" nodeOut="54" portIn="Active" portOut="out" enabled="1"/>
+      <Edge nodeIn="10088" nodeOut="54" portIn="Disable" portOut="out" enabled="1"/>
+      <Edge nodeIn="50" nodeOut="56" portIn="Disable" portOut="out" enabled="1"/>
+      <Edge nodeIn="62" nodeOut="56" portIn="Active" portOut="out" enabled="1"/>
+      <Edge nodeIn="10083" nodeOut="56" portIn="Hide" portOut="out" enabled="1"/>
+      <Edge nodeIn="10085" nodeOut="56" portIn="Disable" portOut="out" enabled="1"/>
+      <Edge nodeIn="10088" nodeOut="56" portIn="Active" portOut="out" enabled="1"/>
+      <Edge nodeIn="26" nodeOut="61" portIn="In" portOut="out" enabled="1"/>
+     </Edges>
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="Entity" Layer="Night_lightsetup" Id="{77035DFB-9469-48B6-99F1-26D4130AB5D0}" Name="Light60" Pos="864.52411,325.84479,179.04242" FloorNumber="-1" Rotate="0.73727733,0,0.67559022,0" ColorRGB="65535" Material="EngineAssets/Materials/lens_optics" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="8" LodRatio="100" ViewDistRatio="10" HiddenInGame="0" GlobalInSegmentedWorld="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" EntityClass="Light">
+    <Properties bActive="1" _bCheapLight="0" bForceDisableCheapLight="0" Radius="4" _nVersion="0">
+     <Color clrDiffuse="0.45908,0.238828,0.0802193" fDiffuseMultiplier="1" fHDRDynamic="1" fSpecularMultiplier="1"/>
+     <Options bAffectsThisAreaOnly="1" bAmbient="0" fAttenuationFalloffMax="1" nCastShadows="0" file_deferred_clip_geom="" texture_deferred_cubemap="" bDeferredClipBounds="0" bDeferredLight="1" bDisableX360Opto="0" bFakeLight="0" flare_Flare="" bFlareEnable="0" fFlareFOV="360" bIgnoresVisAreas="0" bIrradianceVolumes="0" fShadowBias="1" nShadowMinResPercent="0" fShadowResolutionScale="1" fShadowSlopeBias="1" fShadowUpdateMinRadius="10" fShadowUpdateRatio="1" SortPriority="0"/>
+     <Projector bProjectInAllDirs="0" fProjectorFov="90" fProjectorNearPlane="0" texture_Texture=""/>
+     <Shape bAreaLight="1" fDiffuseSoftness="0.75" fLightFov="180" fPlaneHeight="1" fPlaneWidth="1" texture_Texture="" bTextureReflection="1" vFadeDimensionsBottom="0" vFadeDimensionsFar="0" vFadeDimensionsLeft="0" vFadeDimensionsNear="0" vFadeDimensionsRight="0" vFadeDimensionsTop="0"/>
+     <Style nAnimationPhase="0" fAnimationSpeed="1" bAttachToSun="0" lightanimation_LightAnimation="" nLightStyle="0" _fTimeScrubbed="0" bTimeScrubbingInTrackView="0"/>
+    </Properties>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

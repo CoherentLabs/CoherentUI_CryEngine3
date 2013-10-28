@@ -1,0 +1,18 @@
+<Graph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+ <Nodes>
+  <Node Id="1" Class="Game:Start" pos="-400,-610,0" flags="0">
+   <Inputs InGame="1" InEditor="1"/>
+  </Node>
+  <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-190,-610,0" flags="0">
+   <Inputs Path="coui://Libs/UI/CoherentUI/hud/hud.html"/>
+  </Node>
+  <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-190,-510,0" flags="0" GraphEntity="0">
+   <Inputs entityId="0" Url="http://www.google.com" Width="1024" Height="576" Transparent="0" Clickable="1" Mesh="curve.obj" SharedMemory="1"/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="2" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+  <Edge nodeIn="3" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>

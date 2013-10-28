@@ -44,7 +44,7 @@ namespace CoherentUIPlugin
                 {
                     InputPortConfig_Void( "Activate",                            _HELP( "activate input" ) ),
                     InputPortConfig<bool>( "Enabled",                _HELP( "dis-/enable" ) ),
-                    InputPortConfig_Null(),
+                    InputPortConfig_AnyType( NULL ),
                 };
 
                 config.pInputPorts = inputs;

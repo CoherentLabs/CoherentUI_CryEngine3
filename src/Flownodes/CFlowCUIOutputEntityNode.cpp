@@ -83,13 +83,13 @@ namespace CoherentUIPlugin
                     InputPortConfig<bool>( "Clickable",           true,          _HELP( "is clickable" ) ),
                     InputPortConfig<string>( "Mesh",                "",          _HELP( "collision mesh" ) ),
                     InputPortConfig<bool>( "SharedMemory",        true,          _HELP( "uses shared memory" ) ),
-                    InputPortConfig_Null(),
+                    InputPortConfig_AnyType( NULL ),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<int>( "ViewID",                             _HELP( "id for further use" ),                        "nViewID" ),
-                    OutputPortConfig_Null(),
+                    OutputPortConfig_AnyType( NULL ),
                 };
 
                 config.pInputPorts = inputs;

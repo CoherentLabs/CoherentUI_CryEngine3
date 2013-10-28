@@ -1,0 +1,10 @@
+<ObjectLayer>
+ <Layer Name="AB4" GUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}" FullName="AB4" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="1644900">
+  <LayerObjects />
+  <ChildLayers>
+   <Layer Name="AB4_Art" GUID="{7FBA5302-EE27-469E-983E-74DCB80A1BBC}" FullName="AB4/AB4_Art" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="1" IsDefaultColor="0" ID="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+   <Layer Name="AB4_Navigation" GUID="{31133E2F-BBFC-4C5C-8546-631CA92FE4C1}" FullName="AB4/AB4_Navigation" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+   <Layer Name="AB4_Logic" GUID="{3E719298-6AC1-4BE4-9CBD-16D87EC15302}" FullName="AB4/AB4_Logic" Hidden="0" Frozen="0" External="1" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" Expanded="0" IsDefaultColor="0" ID="0" Color="1644900" ParentGUID="{553D7148-307E-4BA3-97AC-8432C93C2FB3}"/>
+  </ChildLayers>
+ </Layer>
+</ObjectLayer>
