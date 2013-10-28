@@ -3,6 +3,7 @@
 
 #include "CoherentViewListener.h"
 #include <Coherent/UI/View.h>
+#include <IActorSystem.h>
 
 namespace CoherentUIPlugin
 {
@@ -31,7 +32,7 @@ namespace CoherentUIPlugin
 
             if ( pViewListener->GetView() != nullptr )
             {
-                pViewListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth );
+                pViewListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth / pActor->GetMaxHealth() * 100.0f );
             }
         }
     }

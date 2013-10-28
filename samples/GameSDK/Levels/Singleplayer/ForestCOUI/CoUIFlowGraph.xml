@@ -4,7 +4,7 @@
    <Inputs InGame="1" InEditor="1"/>
   </Node>
   <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-160,-280,0" flags="0">
-   <Inputs Path="coui://Libs/UI/CoherentUI/hud/hud.html"/>
+   <Inputs Path="coui://Libs/UI/hud.html"/>
   </Node>
   <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-160,-220,0" flags="0" EntityGUID="{15B585E5-8EF6-40B1-A148-F18FA12B84E4}" EntityGUID_64="40B18EF615B585E5">
    <Inputs entityId="0" Url="http://www.google.com" Width="1024" Height="576" Transparent="0" Clickable="1" Mesh="curve.obj" SharedMemory="1"/>

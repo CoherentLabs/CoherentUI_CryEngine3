@@ -3990,7 +3990,7 @@ void CGame::OnActionEvent(const SActionEvent& event)
 		m_levelStartTime = gEnv->pTimer->GetFrameStartTime();
 		AddPersistentAccessories();
 
-		if (m_pCoherentUIPlugin)
+		if (!gEnv->IsEditor() && m_pCoherentUIPlugin)
 		{
 			IPlayerEventListener* pPlayerEventListner = m_pCoherentUIPlugin->GetPlayerEventListener();
 			if (pPlayerEventListner)
@@ -5590,6 +5590,25 @@ void CGame::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lparam)
 			}
 			break;
 		}
+		case ESYSTEM_EVENT_EDITOR_GAME_MODE_CHANGED:
+			if (m_pCoherentUIPlugin)
+			{
+				IPlayerEventListener* pPlayerEventListner = m_pCoherentUIPlugin->GetPlayerEventListener();
+				if (pPlayerEventListner)
+				{
+					CPlayer* pPlayer = static_cast<CPlayer*>(gEnv->pGame->GetIGameFramework()->GetClientActor());
+					CRY_ASSERT(pPlayer != NULL);
+					if (gEnv->IsEditorGameMode())
+					{
+						pPlayer->RegisterPlayerEventListener(pPlayerEventListner);
+					}
+					else
+					{
+						pPlayer->UnregisterPlayerEventListener(pPlayerEventListner);
+					}
+				}
+			}
+		break;
 	}
 }
 
