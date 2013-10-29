@@ -1,6 +1,6 @@
-<Material MtlFlags="524288" Shader="Illum" GenMask="0" StringGenMask="" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.063814871,0.063814871,0.063814871" Specular="0.0048000002,0.0048000002,0.0048000002" Emissive="0,0,0" Opacity="1">
+<Material MtlFlags="524320" Shader="Illum" GenMask="0" StringGenMask="" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.063814871,0.063814871,0.063814871" Specular="0.0048000002,0.0048000002,0.0048000002" Emissive="0,0,0" Opacity="1" LayerAct="1">
  <Textures>
   <Texture Map="Diffuse" File="objects/placeholder_nomips_argb_1024_576_dxt1.dds"/>
  </Textures>
- <PublicParams FresnelPower="4" GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.24680044,0.24680044,0.24680044"/>
+ <PublicParams GlossFromDiffuseContrast="1" FresnelScale="1" GlossFromDiffuseOffset="0" FresnelBias="1" GlossFromDiffuseAmount="0" GlossFromDiffuseBrightness="0.333" IndirectColor="0.24680044,0.24680044,0.24680044"/>
 </Material>
