@@ -86,8 +86,10 @@ namespace CoherentUIPlugin
         std::wstring sPathW;
         sPathW.assign( sPath.begin(), sPath.end() );
 
-        Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat", L"cui_cache", L"cui_app_cache", true, false, 9999, false, NULL );
-        m_pUISystem = InitializeUISystem( COHERENT_KEY, settings, m_SystemEventsListener.get(), Coherent::Logging::Debug, NULL, &m_PakFileHandler );
+        Coherent::UI::SystemSettings settings( sPathW.c_str(), false, true, L"coui://cookies.dat",
+            L"cui_cache", L"cui_app_cache", true, false, 9999, false, NULL );
+        m_pUISystem = InitializeUISystem( COHERENT_UI_SDK_VER, COHERENT_KEY, settings,
+            m_SystemEventsListener.get(), Coherent::Logging::Debug, NULL, &m_PakFileHandler );
 
         return m_pUISystem != NULL;
     }
