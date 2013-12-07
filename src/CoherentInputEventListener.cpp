@@ -22,6 +22,7 @@ namespace CoherentUIPlugin
     {
         public:
             static const int MAX_KEYS = 256; // Support only the ASCII set
+            static const double USE_DEFAULT_REPEAT_DELAY;
 
             static void Init()
             {
@@ -57,11 +58,15 @@ namespace CoherentUIPlugin
             /// Returns true if the key should be forwarded to Coherent UI.
             /// Call only for WM_KEYDOWN events, not WM_CHAR.
             /// Note that this is a very simplistic implementation
-            static bool FilterKey( int key, double timestamp )
+            static bool FilterKey( int key, double timestamp, double repeatDelay )
             {
+                if (repeatDelay == USE_DEFAULT_REPEAT_DELAY)
+                {
+                    repeatDelay = s_RepeatDelay;
+                }
                 // TODO: implement properly, this code will just ignore multiple keydown events
                 // before a keyup is received and will not repeat the key as windows would
-                if ( s_IsDown[key] && ( timestamp - s_LastDownTime[key] < s_RepeatDelay ) )
+                if ( s_IsDown[key] && ( timestamp - s_LastDownTime[key] < repeatDelay ) )
                 {
                     return false;
                 }
@@ -91,6 +96,7 @@ namespace CoherentUIPlugin
     bool   RepeatFilter::s_IsDown[MAX_KEYS];
     double RepeatFilter::s_RepeatDelay;
     double RepeatFilter::s_RepeatSpeed;
+    const double RepeatFilter::USE_DEFAULT_REPEAT_DELAY = 0;
 
     //--------------------------------------------------------------------------------------
 
@@ -402,16 +408,35 @@ namespace CoherentUIPlugin
                     return false; // Produce WM_CHAR messages only for printable symbols
 
                 case eIS_Down:
-                    if ( !RepeatFilter::FilterKey( character, ::GetTickCount() / 1000.0 ) )
+                    if ( !RepeatFilter::FilterKey(
+                            character,
+                            ::GetTickCount() / 1000.0,
+                            RepeatFilter::USE_DEFAULT_REPEAT_DELAY )
+                        )
                     {
                         return false;
                     }
 
                     break;
-
                 case eIS_Released:
                     RepeatFilter::ReleaseKey( character );
                     break;
+            }
+        }
+        else
+        {
+            if (event.modifiers & eMM_Ctrl)
+            {
+                // Do not send printable characters as WM_CHAR while Ctrl is down
+                if (event.state == eIS_Pressed)
+                {
+                    return false;
+                }
+                // Boost the delay for repeated keys to 1 second when Ctrl is down
+                else if ( !RepeatFilter::FilterKey( character, ::GetTickCount() / 1000.0, 1.0) )
+                {
+                    return false;
+                }
             }
         }
 
