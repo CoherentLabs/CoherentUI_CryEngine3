@@ -181,7 +181,7 @@ namespace CoherentUIPlugin
         Coherent::UI::ViewInfo info;
         info.Width = gEnv->pRenderer->GetWidth();
         info.Height = gEnv->pRenderer->GetHeight();
-        info.UsesSharedMemory = true;
+        info.UsesSharedMemory = false;
         info.IsTransparent = true;
         info.SupportClickThrough = true;
 
@@ -542,16 +542,18 @@ namespace CoherentUIPlugin
             return Coherent::UI::CoherentHandle( 0 );
         }
 
-        ITexture* pCryTex = gD3DSystem->InjectTexture( pD3DTex, task.Width, task.Height, eTF_A8R8G8B8, 0 );
+        // TODO: Test code; this is valid for HUD textures only since CE3 does not need to have an internal texture
+        ITexture* pCryTex = NULL; // gD3DSystem->InjectTexture(pD3DTex, task.Width, task.Height, eTF_A8R8G8B8, 0);
         // The native texture has one more reference after InjectTexture
 
         if ( outTexturePair )
         {
-            outTexturePair->CryTextureID = pCryTex->GetTextureID();
+            outTexturePair->CryTextureID = pCryTex ? pCryTex->GetTextureID() : -1;
             outTexturePair->NativeTexture.pTexDX11 = pD3DTex;
         }
 
-        SAFE_RELEASE( pD3DTex );
+        // TODO: Test code; if InjectTexture was called, we should release 1 reference
+        //SAFE_RELEASE( pD3DTex );
 
         return Coherent::UI::CoherentHandle( result );
     }
@@ -566,6 +568,8 @@ namespace CoherentUIPlugin
         if ( pListener && pListener->GetTexture() == NULL )
         {
             void* pD3DTextureDst = NULL;
+            // TODO: Test code; create a texture without letting CE3 know so we can use a custom format
+            /*
             ITexture* pCryTex = gD3DSystem->CreateTexture(
                                     &pD3DTextureDst,
                                     gEnv->pRenderer->GetWidth(),
@@ -576,6 +580,23 @@ namespace CoherentUIPlugin
                                 );
 
             pListener->SetTexture( pD3DTextureDst, pCryTex->GetTextureID() );
+            */
+            D3D11_TEXTURE2D_DESC desc;
+            ZeroMemory(&desc, sizeof(desc));
+            desc.Width = gEnv->pRenderer->GetWidth();
+            desc.Height = gEnv->pRenderer->GetHeight();
+            desc.ArraySize = 1;
+            desc.MipLevels = 1;
+            desc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+            desc.SampleDesc.Count = 1;
+            desc.Usage = D3D11_USAGE_DEFAULT;
+            desc.BindFlags = D3D11_BIND_SHADER_RESOURCE;
+
+            ID3D11Device* pDevice = static_cast<ID3D11Device*>(gD3DDevice);
+            HRESULT r = pDevice->CreateTexture2D(&desc, NULL, (ID3D11Texture2D**)&pD3DTextureDst);
+
+            pListener->SetTexture(pD3DTextureDst, -1);
+
         }
 
         // Create textures for entities
