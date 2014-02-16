@@ -1111,6 +1111,8 @@ bool CGame::Init(IGameFramework *pFramework)
 	{
 		m_pGameAudio = new CGameAudio();
 	}
+	gEnv->pMusicSystem->SetAutoEndThemeBehavior( eAETB_EndThemeOnGamePlayStart );
+
 
 	InlineInitializationProcessing("CGame::Init GameAudio");
 
@@ -1327,7 +1329,6 @@ bool CGame::Init(IGameFramework *pFramework)
 		gEnv->pInput->SetExclusiveListener(this);
 	}
 
-#if !defined(DEDICATED_SERVER)
 	ICVar* pEnableAI = gEnv->pConsole->GetCVar("sv_AISystem");
 	if(!gEnv->bMultiplayer || (pEnableAI && pEnableAI->GetIVal()))
 	{
@@ -1335,7 +1336,6 @@ bool CGame::Init(IGameFramework *pFramework)
 
 		InlineInitializationProcessing("CGame::Init GameAISystem");
 	}
-#endif
 
 	//if (gEnv->IsEditor())
 	{
@@ -1610,7 +1610,7 @@ void CGame::InitGameType(bool multiplayer, bool fromInit /*= false*/)
 	{
 		gEnv->pSoundSystem->ClearAudioDataCache();
 		pFilename->Set(multiplayer ? "AudioPreloads_mp" : "AudioPreloads");
-		gEnv->pSoundSystem->CacheAudioData(NULL);
+		gEnv->pSoundSystem->CacheAudioData(NULL, 1);
 	}
 
 	if (gameTypeChanged)
@@ -3270,6 +3270,14 @@ void CGame::EditorResetGame(bool bStart)
 		m_pBurnEffectManager->Reset();
 
 		m_pAutoAimManager->OnEditorReset();
+
+		if(CGameRules *gameRules = GetGameRules())
+		{
+			if(CCorpseManager *corpseManager = gameRules->GetCorpseManager())
+			{
+				corpseManager->ClearCorpses();
+			}
+		}
 	}
 
 	if (m_pMovingPlatformMgr)
@@ -3279,55 +3287,6 @@ void CGame::EditorResetGame(bool bStart)
 void CGame::PlayerIdSet(EntityId playerId)
 {
 	m_clientActorId = playerId;
-}
-
-string CGame::InitMapReloading()
-{
-	string levelFileName = GetIGameFramework()->GetLevelName();
-	levelFileName = PathUtil::GetFileName(levelFileName);
-	if(const char* visibleName = GetMappedLevelName(levelFileName))
-		levelFileName = visibleName;
-	levelFileName.append("_crysis");
-	levelFileName.append(CRY_SAVEGAME_FILE_EXT);
-	if (m_pPlayerProfileManager)
-	{
-		const char* userName = m_pPlayerProfileManager->GetCurrentUser();
-		IPlayerProfile* pProfile = m_pPlayerProfileManager->GetCurrentProfile(userName);
-		if (pProfile)
-		{
-			// Ian: Need to reload the profile game attributes to reset unsaved persistent stats and prevent exploits.
-			m_pPlayerProfileManager->ReloadProfile(pProfile, ePR_Game);
-
-			const char* sharedSaveGameFolder = m_pPlayerProfileManager->GetSharedSaveGameFolder();
-			if (sharedSaveGameFolder && *sharedSaveGameFolder)
-			{
-				string prefix = pProfile->GetName();
-				prefix+="_";
-				levelFileName = prefix + levelFileName;
-			}
-			ISaveGameEnumeratorPtr pSGE = pProfile->CreateSaveGameEnumerator();
-			ISaveGameEnumerator::SGameDescription desc;	
-			const int nSaveGames = pSGE->GetCount();
-			for (int i=0; i<nSaveGames; ++i)
-			{
-				if (pSGE->GetDescription(i, desc))
-				{
-					if(!stricmp(desc.name,levelFileName.c_str()))
-					{
-						m_bReload = true;
-						return levelFileName;
-					}
-				}
-			}
-		}
-	}
-#ifndef WIN32
-	m_bReload = true; //using map command
-#else
-	m_bReload = false;
-	levelFileName.clear();
-#endif
-	return levelFileName;
 }
 
 void CGame::Shutdown()
@@ -3379,14 +3338,12 @@ void CGame::Shutdown()
 
 const char *CGame::GetLongName()
 {
-	CRY_TODO(22, 2, 2010, "Can we remove this function (and the matching pure virtual function in IGame.h)? It is never called and does something different to what the comments in IGame.h say it does! [TF]");
-	return "Crysis";
+	return GAME_LONGNAME;
 }
 
 const char *CGame::GetName()
 {
-	CRY_TODO(22, 2, 2010, "Can we remove this function (and the matching pure virtual function in IGame.h)? It is never called and does something different to what the comments in IGame.h say it does! [TF]");
-	return "Crysis";
+	return GAME_NAME;
 }
 
 EPlatform CGame::GetPlatform() const
@@ -4325,40 +4282,9 @@ void CGame::CheckReloadLevel()
 		return;
 	}
 
-	// (MATT) Crysis 2 doesn't yet support serialisation - so all platforms should reload the level from scratch {2009/12/11}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	CryFixedStringT<256> command;
 	command.Format("map %s nb", m_pFramework->GetLevelName());
 	gEnv->pConsole->ExecuteString(command.c_str());
-
 }
 
 void CGame::RegisterGameObjectEvents()
@@ -4536,6 +4462,8 @@ IGame::TSaveGameName CGame::CreateSaveGameName()
 	const char* mappedName = GetMappedLevelName(levelName);
 	saveGameName += mappedName;
 
+	saveGameName += "_";
+	saveGameName += GetName();
 	saveGameName += "_";
 	string timeString;
 
@@ -5355,7 +5283,7 @@ void CGame::OnPlatformEvent(const IPlatformOS::SPlatformEvent& event)
 				}
 				else if(event.m_uParams.m_fileError.m_errorType & IPlatformOS::eFOC_WriteMask)
 				{
-					GetIGameFramework()->SaveGame(CRY_SAVEGAME_FILENAME CRY_SAVEGAME_FILE_EXT);
+					GetIGameFramework()->SaveGame(CreateSaveGameName().c_str());
 				}
 			}
 			break;
@@ -6120,14 +6048,7 @@ bool CGame::GameEndLevel(const char* nextLevel)
 {
 	// Ensure objectives cleared when chaining levels
 	g_pGame->GetMOSystem()->DeactivateObjectives();
-
-	if (nextLevel == 0 || nextLevel[0] == 0)
-		return false;
-
-	if (g_pGameCVars->g_flashrenderingduringloading)
-		return false;
-	else
-		return true;
+	return false;
 }
 
 //This is used for NPDRM encryption on PS3. The RSA encryption key(s) are loaded from files as they need to be available very early on.
@@ -6166,7 +6087,7 @@ void CGame::OnRenderScene(const SRenderingPassInfo &passInfo)
 
 uint32 CGame::GetRandomNumber()
 {
-	return m_randomGenerator.Generate();
+	return m_randomGenerator.GenerateUint32();
 }
 
 float CGame::GetRandomFloat()

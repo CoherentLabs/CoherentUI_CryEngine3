@@ -40,6 +40,8 @@ namespace CoherentUIPlugin
 
             virtual bool RaycastGeometry( const Vec3& origin, const Vec3& dir, float& outDist, int& outViewX, int& outViewY );
 
+            virtual bool ShouldSwapRedAndBlueChannels() const;
+
             void SetCollisionMesh( const char* objFileName );
             bool HasCollisionMesh() const;
             void SetEngineObjectAndMaterialNames( const char* engineObjectName, const char* materialToOverrideName );

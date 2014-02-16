@@ -1092,7 +1092,7 @@ void CGameStartup::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR l
 	switch (event)
 	{
 	case ESYSTEM_EVENT_RANDOM_SEED:
-		g_random_generator.seed(gEnv->bNoRandomSeed?0:(uint32)wparam);
+		g_random_generator.Seed(gEnv->bNoRandomSeed?0:(uint32)wparam);
 		break;
 	case ESYSTEM_EVENT_CHANGE_FOCUS:
 		{

@@ -33,8 +33,8 @@
 #include "Network/GameNetworkDefines.h"
 #include "Network/Lobby/MatchMakingTelemetry.h"
 
-#define GAME_NAME				"CryEngine"
-#define GAME_LONGNAME		"CryEngine"
+#define GAME_NAME				"GAMESDK"
+#define GAME_LONGNAME		"CRYENGINE GAME SDK"
 
 #if 1 || !defined(_RELEASE)
 #define USE_DEDICATED_INPUT 1
@@ -371,7 +371,6 @@ public:
 	VIRTUAL int   Update(bool haveFocus, unsigned int updateFlags);
 	VIRTUAL void  EditorResetGame(bool bStart);
 	VIRTUAL void  PlayerIdSet(EntityId playerId);
-	virtual string  InitMapReloading();
 	virtual bool IsReloading() { return m_bReload; }
 	VIRTUAL IGameFramework *GetIGameFramework() { return m_pFramework; }
 

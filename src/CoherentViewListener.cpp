@@ -148,23 +148,30 @@ namespace CoherentUIPlugin
         }
 
         char* pDest = static_cast<char*>( mapped.pData );
-
-        // copy and convert from BGRA to RGBA
-        int offsetSrc = 0;
-        int offsetDst = 0;
-        int rowOffset = mapped.RowPitch % width;
-        for ( int row = 0; row < height; ++row )
+        
+        if (ShouldSwapRedAndBlueChannels())
         {
-            for ( int col = 0; col < width; ++col )
+            // copy and convert from BGRA to RGBA
+            int offsetSrc = 0;
+            int offsetDst = 0;
+            int rowOffset = mapped.RowPitch % width;
+            for (int row = 0; row < height; ++row)
             {
-                pDest[offsetDst] = pSrc[offsetSrc + 2];
-                pDest[offsetDst + 1] = pSrc[offsetSrc + 1];
-                pDest[offsetDst + 2] = pSrc[offsetSrc];
-                pDest[offsetDst + 3] = pSrc[offsetSrc + 3];
-                offsetSrc += 4;
-                offsetDst += 4;
+                for (int col = 0; col < width; ++col)
+                {
+                    pDest[offsetDst] = pSrc[offsetSrc + 2];
+                    pDest[offsetDst + 1] = pSrc[offsetSrc + 1];
+                    pDest[offsetDst + 2] = pSrc[offsetSrc];
+                    pDest[offsetDst + 3] = pSrc[offsetSrc + 3];
+                    offsetSrc += 4;
+                    offsetDst += 4;
+                }
+                offsetDst += rowOffset;
             }
-            offsetDst += rowOffset;
+        }
+        else
+        {
+            ::memcpy( pDest, pSrc, size );
         }
 
         ::UnmapViewOfFile( pMapped );
@@ -360,6 +367,20 @@ namespace CoherentUIPlugin
         }
 
         return false;
+    }
+
+    bool CCoherentViewListener::ShouldSwapRedAndBlueChannels() const
+    {
+        ERenderType rendererType = gEnv->pRenderer->GetRenderType();
+        // Swap for DX11
+        if (rendererType == eRT_DX11)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void CCoherentViewListener::SetCollisionMesh( const char* objFileName )

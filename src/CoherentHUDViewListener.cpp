@@ -42,4 +42,12 @@ namespace CoherentUIPlugin
         return false;
     }
 
+    bool CCoherentHUDViewListener::ShouldSwapRedAndBlueChannels() const
+    {
+        // The red and blue channels are swapped in the shader for DX11,
+        // no need to do it in RAM (see FullscreenTriangleDrawer).
+        // For DX9, there is no need either, so just return false.
+        return false;
+    }
+
 }
