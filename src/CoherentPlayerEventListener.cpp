@@ -3,20 +3,37 @@
 
 #include "CoherentViewListener.h"
 #include <Coherent/UI/View.h>
+#include <IActorSystem.h>
 
 namespace CoherentUIPlugin
 {
 
-    CCoherentPlayerEventListener::CCoherentPlayerEventListener( CCoherentViewListener* pViewListener )
-        : m_pViewEventListener( pViewListener )
+    CCoherentPlayerEventListener::CCoherentPlayerEventListener()
     {
     }
 
-    void CCoherentPlayerEventListener::OnHealthChange( IActor* pActor, float fHealth )
+    void CCoherentPlayerEventListener::AddViewListener( CCoherentViewListener* pViewListener )
     {
-        if ( m_pViewEventListener && m_pViewEventListener->GetView() )
+        m_ViewEventListeners.push_back( pViewListener );
+    }
+
+    void CCoherentPlayerEventListener::RemoveViewListener( CCoherentViewListener* pViewListener )
+    {
+        std::vector<CCoherentViewListener*>::iterator it = std::find( m_ViewEventListeners.begin(),
+                m_ViewEventListeners.end(), pViewListener );
+        m_ViewEventListeners.erase( it );
+    }
+
+    void CCoherentPlayerEventListener::OnHealthChanged( IActor* pActor, float fHealth )
+    {
+        for ( size_t i = 0, count = m_ViewEventListeners.size(); i < count; ++i )
         {
-            m_pViewEventListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", fHealth );
+            CCoherentViewListener* pViewListener = m_ViewEventListeners[i];
+
+            if ( pViewListener->GetView() != nullptr )
+            {
+                pViewListener->GetView()->TriggerEvent( "OnPlayerHealthChanged", cry_floorf(fHealth / pActor->GetMaxHealth() * 100.0f) );
+            }
         }
     }
 

@@ -22,6 +22,7 @@ namespace CoherentUIPlugin
     {
         public:
             static const int MAX_KEYS = 256; // Support only the ASCII set
+            static const double USE_DEFAULT_REPEAT_DELAY;
 
             static void Init()
             {
@@ -57,11 +58,15 @@ namespace CoherentUIPlugin
             /// Returns true if the key should be forwarded to Coherent UI.
             /// Call only for WM_KEYDOWN events, not WM_CHAR.
             /// Note that this is a very simplistic implementation
-            static bool FilterKey( int key, double timestamp )
+            static bool FilterKey( int key, double timestamp, double repeatDelay )
             {
+                if (repeatDelay == USE_DEFAULT_REPEAT_DELAY)
+                {
+                    repeatDelay = s_RepeatDelay;
+                }
                 // TODO: implement properly, this code will just ignore multiple keydown events
                 // before a keyup is received and will not repeat the key as windows would
-                if ( s_IsDown[key] && ( timestamp - s_LastDownTime[key] < s_RepeatDelay ) )
+                if ( s_IsDown[key] && ( timestamp - s_LastDownTime[key] < repeatDelay ) )
                 {
                     return false;
                 }
@@ -91,6 +96,7 @@ namespace CoherentUIPlugin
     bool   RepeatFilter::s_IsDown[MAX_KEYS];
     double RepeatFilter::s_RepeatDelay;
     double RepeatFilter::s_RepeatSpeed;
+    const double RepeatFilter::USE_DEFAULT_REPEAT_DELAY = 0;
 
     //--------------------------------------------------------------------------------------
 
@@ -101,7 +107,6 @@ namespace CoherentUIPlugin
         , m_PlayerInputEnabled( true )
         , m_DrawCoherentUI( true )
         , m_DrawCursor( false )
-        , m_DrawMap( false )
     {
         RepeatFilter::Init();
     }
@@ -142,7 +147,10 @@ namespace CoherentUIPlugin
             {
                 case eKI_NP_0:
                     m_PlayerInputEnabled = !m_PlayerInputEnabled;
-                    gEnv->pGameFramework->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                    if (gEnv->pGame && gEnv->pGame->GetIGameFramework())
+                    {
+                        gEnv->pGame->GetIGameFramework()->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                    }
                     return false;
 
                     // NP_1 starts raycasting so don't use it
@@ -171,7 +179,7 @@ namespace CoherentUIPlugin
 
                 case eKI_NP_4:
                     {
-                        EntityId id = gEnv->pGameFramework->GetClientActor()->GetGameObject()->GetWorldQuery()->GetLookAtEntityId();
+                        EntityId id = gEnv->pGame->GetIGameFramework()->GetClientActor()->GetGameObject()->GetWorldQuery()->GetLookAtEntityId();
                         IEntity* pEntityInFront = gEnv->pEntitySystem->GetEntity( id );
 
                         if ( pEntityInFront )
@@ -218,16 +226,6 @@ namespace CoherentUIPlugin
                         int dummyx, dummyy;
                         CCoherentViewListener* pViewListener;
                         TraceMouse( dummyx, dummyy, pViewListener );
-                    }
-
-                    return false;
-
-                case eKI_Tab:
-                    m_DrawMap = !m_DrawMap;
-
-                    if ( gCoherentUISystem )
-                    {
-                        gCoherentUISystem->ShowMap( m_DrawMap );
                     }
 
                     return false;
@@ -287,6 +285,43 @@ namespace CoherentUIPlugin
     bool CCoherentInputEventListener::OnInputEventUI( const SInputEvent& event )
     {
         return false;
+    }
+
+    void CCoherentInputEventListener::SetPlayerInput( bool enabled )
+    {
+        // if enabled == false, all player input will be sent to coherent ui
+        // and a cursor will be displayed
+        m_PlayerInputEnabled = enabled;
+
+        if ( m_DrawCursor != !enabled )
+        {
+            m_DrawCursor = !enabled;
+
+            ::ShowCursor( m_DrawCursor );
+
+            if ( gEnv )
+            {
+                // set player input
+                if ( gEnv->pGame && gEnv->pGame->GetIGameFramework() )
+                {
+                    gEnv->pGame->GetIGameFramework()->GetIActionMapManager()->EnableActionMap( "player", m_PlayerInputEnabled );
+                }
+
+                // set cursor display
+                if ( gEnv->pSystem && gEnv->pSystem->GetIHardwareMouse() )
+                {
+                    if ( m_DrawCursor )
+                    {
+                        gEnv->pSystem->GetIHardwareMouse()->IncrementCounter();
+                    }
+
+                    else
+                    {
+                        gEnv->pSystem->GetIHardwareMouse()->DecrementCounter();
+                    }
+                }
+            }
+        }
     }
 
     bool CCoherentInputEventListener::ToKeyEventData( const SInputEvent& event, Coherent::UI::KeyEventData& keyEvent )
@@ -373,16 +408,35 @@ namespace CoherentUIPlugin
                     return false; // Produce WM_CHAR messages only for printable symbols
 
                 case eIS_Down:
-                    if ( !RepeatFilter::FilterKey( character, ::GetTickCount() / 1000.0 ) )
+                    if ( !RepeatFilter::FilterKey(
+                            character,
+                            ::GetTickCount() / 1000.0,
+                            RepeatFilter::USE_DEFAULT_REPEAT_DELAY )
+                        )
                     {
                         return false;
                     }
 
                     break;
-
                 case eIS_Released:
                     RepeatFilter::ReleaseKey( character );
                     break;
+            }
+        }
+        else
+        {
+            if (event.modifiers & eMM_Ctrl)
+            {
+                // Do not send printable characters as WM_CHAR while Ctrl is down
+                if (event.state == eIS_Pressed)
+                {
+                    return false;
+                }
+                // Boost the delay for repeated keys to 1 second when Ctrl is down
+                else if ( !RepeatFilter::FilterKey( character, ::GetTickCount() / 1000.0, 1.0) )
+                {
+                    return false;
+                }
             }
         }
 
@@ -518,7 +572,7 @@ namespace CoherentUIPlugin
 
             POINT cursorPos;
             ::GetCursorPos( &cursorPos );
-            ::ScreenToClient( HWND( gEnv->pRenderer->GetHWND() ), &cursorPos );
+            ::ScreenToClient( HWND( gEnv->pRenderer->GetCurrentContextHWND() ), &cursorPos );
             m_MouseX = cursorPos.x;
             m_MouseY = cursorPos.y;
 

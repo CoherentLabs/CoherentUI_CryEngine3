@@ -43,6 +43,11 @@ namespace CoherentUIPlugin
         return m_pView;
     }
 
+    void CCoherentViewListener::OnError( const Coherent::UI::ViewError& error )
+    {
+        CryLogAlways( error.Error );
+    }
+
     void CCoherentViewListener::OnViewCreated( Coherent::UI::View* pView )
     {
         m_pView = pView;
@@ -143,13 +148,30 @@ namespace CoherentUIPlugin
         }
 
         char* pDest = static_cast<char*>( mapped.pData );
-        int bytesPerRow = width * 4; // 32 BPP
-
-        for ( int row = 0; row < height; ++row )
+        
+        if (ShouldSwapRedAndBlueChannels())
         {
-            ::memcpy( pDest, pSrc, bytesPerRow );
-            pSrc += bytesPerRow;
-            pDest += mapped.RowPitch;
+            // copy and convert from BGRA to RGBA
+            int offsetSrc = 0;
+            int offsetDst = 0;
+            int rowOffset = mapped.RowPitch % width;
+            for (int row = 0; row < height; ++row)
+            {
+                for (int col = 0; col < width; ++col)
+                {
+                    pDest[offsetDst] = pSrc[offsetSrc + 2];
+                    pDest[offsetDst + 1] = pSrc[offsetSrc + 1];
+                    pDest[offsetDst + 2] = pSrc[offsetSrc];
+                    pDest[offsetDst + 3] = pSrc[offsetSrc + 3];
+                    offsetSrc += 4;
+                    offsetDst += 4;
+                }
+                offsetDst += rowOffset;
+            }
+        }
+        else
+        {
+            ::memcpy( pDest, pSrc, size );
         }
 
         ::UnmapViewOfFile( pMapped );
@@ -310,6 +332,8 @@ namespace CoherentUIPlugin
         if ( m_pTexture )
         {
             gEnv->pRenderer->RemoveTexture( m_CryTextureID );
+            ID3D11Texture2D* pTexture = static_cast<ID3D11Texture2D*>( m_pTexture );
+            pTexture->Release();
             m_pTexture = NULL;
             m_CryTextureID = 0;
         }
@@ -343,6 +367,20 @@ namespace CoherentUIPlugin
         }
 
         return false;
+    }
+
+    bool CCoherentViewListener::ShouldSwapRedAndBlueChannels() const
+    {
+        ERenderType rendererType = gEnv->pRenderer->GetRenderType();
+        // Swap for DX11
+        if (rendererType == eRT_DX11)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void CCoherentViewListener::SetCollisionMesh( const char* objFileName )

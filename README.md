@@ -1,27 +1,16 @@
 CoherentUI Plugin for CryEngine SDK
 =====================================
 
-Coherent UI for CryEngine 3.4.4 (build 6289) Free SDK
+Coherent UI for CryEngine 3.5.7 Free SDK
 
 Visit [our blog](http://blog.coherent-labs.com/2013/01/coherent-ui-in-cryengine-3-redux.html) for a review of the plugin and code walkthrough.
 
-Installation / Integration
+NOTE: build instructions in the blog post may be outdated, we changed the directory structure; Use the build instructions in this file.
+
+Installation, Integration & Usage
 ==========================
-Use the installer or extract the files to your CryEngine SDK Folder so that the Code and BinXX/Plugins directories match up.
+[Setup and build of the plugin](https://github.com/CoherentLabs/CoherentUI_CryEngine3/wiki/Installation-of-Coherent-UI-Plugin)
 
-The plugin manager will automatically load up the plugin when the game/editor is restarted or if you directly load it.
+[Integrating with the GameSDK](https://github.com/CoherentLabs/CoherentUI_CryEngine3/wiki/Integrating-the-plugin-with-the-GameSDK)
 
-CVars / Commands
-================
-* ```prefix_samplecvar```
-  TODO: Describe the cvar
-
-Flownodes
-=========
-TODO: Describe the flownodes inside your plugin
-
-Objects
-=======
-TODO: Describe custom object classes inside your plugin
-
-...
+[Using the Coherent UI Plugin, Materials, Flownodes](https://github.com/CoherentLabs/CoherentUI_CryEngine3/wiki/Using-the-Coherent-UI-plugin)

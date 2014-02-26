@@ -41,6 +41,13 @@
     <ClCompile Include="..\src\CoherentViewListener.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUI.cpp" />
     <ClCompile Include="..\src\CPluginCoherentUIModule.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUIHandleEvent.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUIOutputEntityNode.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUIOutputHUD.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUISendTokens.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUISetInput.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEvent.cpp" />
+    <ClCompile Include="..\src\Flownodes\CFlowCUITriggerEventFloat.cpp" />
     <ClCompile Include="..\src\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="..\src\PakFileHandler.cpp" />
     <ClCompile Include="..\src\StdAfx.cpp">
@@ -63,18 +70,11 @@
     <ClInclude Include="..\src\FullscreenTriangleDrawer.h" />
     <ClInclude Include="..\src\PakFileHandler.h" />
     <ClInclude Include="..\src\StdAfx.h" />
+    <ClInclude Include="..\src\ViewConfig.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="version.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Plugin_D3D\project\D3D.vcxproj">
-      <Project>{3e7cb34e-8c3c-49be-a5a2-cee7e3fb430d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Plugin_SDK\project\PluginManager.vcxproj">
-      <Project>{90193419-7421-4233-bebd-148d6566622b}</Project>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{611E60F1-B300-47F1-9E33-591B5BAD59ED}</ProjectGuid>
@@ -148,6 +148,7 @@
     <TargetName>Plugin_$(ProjectName)</TargetName>
     <LocalDebuggerCommand>$(OutDir)\..\..\Launcher.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -155,12 +156,13 @@
     <TargetName>Plugin_$(ProjectName)</TargetName>
     <LocalDebuggerCommand>$(OutDir)\..\..\Launcher.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <OmitFramePointers>true</OmitFramePointers>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\..\..\..\..\;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories);$(ProjectDir)..\CoherentUI\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Plugin_D3D\inc;$(SolutionDir)..\..\..\..\..\..\;$(SolutionDir)..\..\SDKs\boost;%(AdditionalIncludeDirectories);$(ProjectDir)..\CoherentUI\include;$(ProjectDir)..\inc\rapidjson</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_FORCEDLL;PURE_CLIENT;CoherentUIPLUGIN_EXPORTS;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <FloatingPointModel>Precise</FloatingPointModel>
@@ -244,8 +246,8 @@ stylecode.bat
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\CoherentUI\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CoherentUI64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\CoherentUI\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>cd $(ProjectDir)\..\tools
@@ -274,8 +276,8 @@ stylecode.bat
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\CoherentUI\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CoherentUI64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\CoherentUI\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkStatus>true</LinkStatus>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>

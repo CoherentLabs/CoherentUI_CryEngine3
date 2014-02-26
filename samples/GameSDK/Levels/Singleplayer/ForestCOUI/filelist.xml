@@ -1,0 +1,6 @@
+<download name="ForestCOUI" type="Map">
+ <index src="filelist.xml" dest="filelist.xml"/>
+ <files>
+  <file src="level.pak" dest="level.pak" size="10619993" md5="9bc728be4a122226709332fa5793f8a5"/>
+ </files>
+</download>

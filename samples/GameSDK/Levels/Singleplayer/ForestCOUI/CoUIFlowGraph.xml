@@ -1,0 +1,22 @@
+<Graph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+ <Nodes>
+  <Node Id="1" Class="Game:Start" pos="-300,-310,0" flags="0">
+   <Inputs InGame="1" InEditor="1"/>
+  </Node>
+  <Node Id="2" Class="CoherentUI_Plugin:OutputHUD" pos="-100,-310,0" flags="0">
+   <Inputs Path="coui://Libs/UI/hud.html"/>
+  </Node>
+  <Node Id="3" Class="CoherentUI_Plugin:OutputEntity" pos="-100,-250,0" flags="0" EntityGUID="{B54F6217-F7AE-43ED-A47B-B0E54D3FF9DB}" EntityGUID_64="43EDF7AEB54F6217">
+   <Inputs entityId="0" Url="http://www.google.com" Width="1024" Height="576" Transparent="0" Clickable="1" Mesh="curve.obj" SharedMemory="1"/>
+  </Node>
+  <Node Id="4" Class="CoherentUI_Plugin:OutputEntity" pos="-100,-100,0" flags="0" EntityGUID="{04FCF1B4-E179-47C5-8E8D-581E652F135E}" EntityGUID_64="47C5E17904FCF1B4">
+   <Inputs entityId="0" Url="neography.com/experiment/circles/solarsystem/" Width="1024" Height="768" Transparent="0" Clickable="0" Mesh="" SharedMemory="1"/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="2" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+  <Edge nodeIn="3" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+  <Edge nodeIn="4" nodeOut="1" portIn="Activate" portOut="output" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>

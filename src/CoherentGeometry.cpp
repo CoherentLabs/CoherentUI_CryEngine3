@@ -60,6 +60,15 @@ namespace CoherentUIPlugin
 
                 for ( int i = 0; i < 3; ++i )
                 {
+                    if (p[i] < 0)
+                    {
+                        p[i] += positions.size() / 3 + 1;
+                    }
+                    if (t[i] < 0)
+                    {
+                        t[i] += texCoords.size() / 2 + 1;
+                    }
+
                     float* posstart = &positions[( p[i] - 1 ) * 3];
                     float* texstart = &texCoords[( t[i] - 1 ) * 2];
 

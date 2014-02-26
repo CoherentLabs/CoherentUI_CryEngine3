@@ -16,4 +16,8 @@ namespace CoherentUIPlugin
         m_pUISystem->OnSystemReady();
     }
 
+    void CCoherentSystemEventListener::OnError( const Coherent::UI::SystemError& error )
+    {
+        m_pUISystem->OnError( error );
+    }
 }

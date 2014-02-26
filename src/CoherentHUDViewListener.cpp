@@ -17,7 +17,8 @@ namespace CoherentUIPlugin
         // ignoring the input ray.
         POINT cursorPos;
         ::GetCursorPos( &cursorPos );
-        ::ScreenToClient( HWND( gEnv->pRenderer->GetHWND() ), &cursorPos );
+        ::ScreenToClient( HWND( gEnv->pRenderer->GetCurrentContextHWND() ),
+            &cursorPos );
 
         // When using shared textures you should issue the query at the beginning
         // of the frame and fetch as late as possible for optimal performance.
@@ -38,6 +39,14 @@ namespace CoherentUIPlugin
             return true;
         }
 
+        return false;
+    }
+
+    bool CCoherentHUDViewListener::ShouldSwapRedAndBlueChannels() const
+    {
+        // The red and blue channels are swapped in the shader for DX11,
+        // no need to do it in RAM (see FullscreenTriangleDrawer).
+        // For DX9, there is no need either, so just return false.
         return false;
     }
 
