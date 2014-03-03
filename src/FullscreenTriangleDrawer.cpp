@@ -15,8 +15,8 @@ namespace CoherentUIPlugin
     {
         public:
             CDX11StateGuard()
-                : m_VertexShaderClassInstancesCount(0)
-                , m_PixelShaderClassInstancesCount(0)
+                : m_VertexShaderClassInstancesCount(D3D11_SHADER_MAX_INTERFACES)
+                , m_PixelShaderClassInstancesCount(D3D11_SHADER_MAX_INTERFACES)
             {
                 ID3D11Device* pDevice = static_cast<ID3D11Device*>( gD3DDevice );
                 ID3D11DeviceContext* pContext = NULL;
