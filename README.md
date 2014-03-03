@@ -1,7 +1,7 @@
 CoherentUI Plugin for CryEngine SDK
 =====================================
 
-Coherent UI for CryEngine 3.5.4 Free SDK
+Coherent UI for CryEngine 3.5.7 Free SDK
 
 Visit [our blog](http://blog.coherent-labs.com/2013/01/coherent-ui-in-cryengine-3-redux.html) for a review of the plugin and code walkthrough.
 
