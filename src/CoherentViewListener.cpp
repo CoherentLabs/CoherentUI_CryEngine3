@@ -171,7 +171,23 @@ namespace CoherentUIPlugin
         }
         else
         {
-            ::memcpy( pDest, pSrc, size );
+            if (width * 4 == mapped.RowPitch)
+            {
+                ::memcpy( pDest, pSrc, size );
+            }
+            else
+            {
+                const int bytesPerRow = width * 4;
+                CRY_ASSERT_MESSAGE(bytesPerRow < int(mapped.RowPitch), "Destination texture's width is less than the source's!");
+                int offsetSrc = 0;
+                int offsetDst = 0;
+                for (int row = 0; row < height; ++row )
+                {
+                    ::memcpy( pDest + offsetDst, pSrc + offsetSrc, bytesPerRow );
+                    offsetSrc += bytesPerRow;
+                    offsetDst += mapped.RowPitch;
+                }
+            }
         }
 
         ::UnmapViewOfFile( pMapped );
